@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LightLevelSeekBar">
+        <attr name="level_background_color" format="color" />
+        <attr name="level_corner_radius" format="dimension" />
+        <attr name="level_gap" format="dimension" />
+        <attr name="level_progress_color" format="color" />
+    </declare-styleable>
+</resources>

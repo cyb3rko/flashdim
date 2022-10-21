@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+//    signingConfigs {
+//        Properties properties = new Properties()
+//        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//
+//        signingConf1 {
+//            storeFile file(properties.getProperty("signing.file"))
+//            storePassword properties.getProperty("signing.password")
+//            keyAlias properties.getProperty("signing.key1.alias")
+//            keyPassword properties.getProperty("signing.key1.password")
+//        }
+//        signingConf2 {
+//            storeFile file(properties.getProperty("signing.file"))
+//            storePassword properties.getProperty("signing.password")
+//            keyAlias properties.getProperty("signing.key2.alias")
+//            keyPassword properties.getProperty("signing.key2.password")
+//        }
+//    }
+
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.cyb3rko.flashdim"
+        minSdk 33
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        debug {
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        releaseGP {
+            versionNameSuffix "-googleplay"
+            minifyEnabled true
+            shrinkResources true
+//            signingConfig signingConfigs.signingConf1
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        releaseFD {
+            versionNameSuffix "-fdroid"
+            minifyEnabled true
+            shrinkResources true
+//            signingConfig signingConfigs.signingConf2
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'com.google.android.material:material:1.8.0-alpha01'
+}

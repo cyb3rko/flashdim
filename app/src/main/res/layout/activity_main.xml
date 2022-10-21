@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name"
+            style="@style/Widget.Material3.ActionBar.Solid" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/error_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/material_dynamic_primary90"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:text="The error message." />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/quick_actions_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintStart_toStartOf="@id/button_container"
+        app:layout_constraintEnd_toEndOf="@id/button_container"
+        android:textColor="@color/material_dynamic_primary90"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="Quick Actions" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/level_indicator_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Light Level:"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:textColor="@color/material_dynamic_primary90"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintStart_toStartOf="@id/seek_bar"
+        app:layout_constraintEnd_toEndOf="@id/seek_bar"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/level_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/material_dynamic_primary90"
+        app:layout_constraintTop_toBottomOf="@id/level_indicator_desc"
+        app:layout_constraintStart_toStartOf="@id/seek_bar"
+        app:layout_constraintEnd_toEndOf="@id/seek_bar"
+        tools:text="10 / 50" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/level_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.cyb3rko.flashdim.seekbar.LightLevelSeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        app:level_background_color="@color/material_dynamic_neutral_variant30"
+        app:level_progress_color="@color/material_dynamic_primary50"
+        app:level_gap="2dp"
+        app:level_corner_radius="8dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/level_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"/>
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/level_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/seek_bar"
+        android:orientation="vertical"
+        android:weightSum="5.1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sos_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="22dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:text="SOS"
+            app:icon="@android:drawable/stat_notify_error"
+            style="@style/Widget.Material3.Button.TonalButton" />
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/max_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1.3"
+            android:text="Maximum" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/half_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="Half" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/min_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="Minimum" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/off_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.3"
+            android:text="Off" />
+        
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
