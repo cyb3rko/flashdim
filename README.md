@@ -8,6 +8,7 @@
 
 - [About this project](#about-this-project)   
 - [Features](#features)  
+- [Download](#download)
 - [Screenshots](#screenshots)
 - [Contribute](#contribute)
 - [Used Icons](#used-icons)
@@ -22,8 +23,6 @@ To be able to use this new feature I've developed this app.
 Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashlight-Tiramisu) 💛  
 Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar) 💛
 
-Coming soon on Google Play and F-Droid, until then download the apk from the [releases](https://github.com/cyb3rko/flashdim/releases/).
-
 ## Features
 - 🔦 dimming your flashlight level by level
 - 🎚 shortcut buttons for different brightness levels
@@ -32,6 +31,14 @@ Coming soon on Google Play and F-Droid, until then download the apk from the [re
 - 🔒 private, no ads, no internet connection
 - 💯 modern Material You (M3) design elements
 - 🎨 app colors adapt to device's system colors
+
+## Download
+
+[<img height=80 alt="Get it on Google Play"
+src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+/>](http://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
+
+F-Droid download coming soon
 
 ## Screenshots
 |<img src="https://imgur.com/cGVXTZj.png" width="270">|<img src="https://imgur.com/anopRSq.png" width="270">|
