@@ -17,8 +17,8 @@ open class LightLevelSeekBar @JvmOverloads constructor(
 
     private var mCanvasWidth = 0
     private var mCanvasHeight = 0
-    private val mWavePaint = Paint(Paint.ANTI_ALIAS_FLAG)
-    private val mWaveRect = RectF()
+    private val mLevelPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+    private val mLevelRect = RectF()
     private lateinit var progressBitmap: Bitmap
 
     var onProgressChanged: SeekBarChangeListener? = null
@@ -38,11 +38,11 @@ open class LightLevelSeekBar @JvmOverloads constructor(
 
     private var levelBackgroundColor: Int = Color.LTGRAY
 
-    private var levelProgressColor: Int = Color.WHITE
+    private var levelCornerRadius: Float = calculateDp(4)
 
     private var levelGap: Float = calculateDp(2)
 
-    private var levelCornerRadius: Float = calculateDp(4)
+    private var levelProgressColor: Int = Color.WHITE
 
     init {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LightLevelSeekBar)
@@ -77,27 +77,27 @@ open class LightLevelSeekBar @JvmOverloads constructor(
         )
         val availableWidth = getAvailableWidth()
         val availableHeight = getAvailableHeight()
-        val totalWaveHeight = availableHeight / maxProgress
-        val waveHeight = totalWaveHeight - levelGap
+        val totalLevelHeight = availableHeight / maxProgress
+        val levelHeight = totalLevelHeight - levelGap
 
-        var previousWaveBottom = paddingTop.toFloat()
+        var previousLevelBottom = paddingTop.toFloat()
 
         val progressYPosition: Float = availableHeight * progress / maxProgress
 
         for (i in 0 until maxProgress.roundToInt()) {
-            mWaveRect.set(
+            mLevelRect.set(
                 paddingLeft.toFloat(),
-                previousWaveBottom,
+                previousLevelBottom,
                 availableWidth.toFloat() + paddingRight.toFloat(),
-                previousWaveBottom + waveHeight
+                previousLevelBottom + levelHeight
             )
-            if (mWaveRect.centerY() <= progressYPosition) {
-                mWavePaint.color = levelBackgroundColor
+            if (mLevelRect.centerY() <= progressYPosition) {
+                mLevelPaint.color = levelBackgroundColor
             } else {
-                mWavePaint.color = levelProgressColor
+                mLevelPaint.color = levelProgressColor
             }
-            canvas.drawRoundRect(mWaveRect, levelCornerRadius, levelCornerRadius, mWavePaint)
-            previousWaveBottom = mWaveRect.bottom + levelGap
+            canvas.drawRoundRect(mLevelRect, levelCornerRadius, levelCornerRadius, mLevelPaint)
+            previousLevelBottom = mLevelRect.bottom + levelGap
         }
     }
 
