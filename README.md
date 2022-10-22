@@ -16,13 +16,13 @@
 ---
 
 ## About this project
-Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.
-
-This app allows you to control these light levels. Furthermore it has a built-in SOS function.
-Additionally you can use a quick settings tile for fast access to the app.
+Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.  
+To be able to use this new feature I've developed this app.
 
 Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashlight-Tiramisu) 💛  
 Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar) 💛
+
+Coming soon on Google Play and F-Droid, until then download the apk from the [releases](https://github.com/cyb3rko/flashdim/releases/).
 
 ## Features
 - 🔦 dimming your flashlight level by level
