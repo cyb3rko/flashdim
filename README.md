@@ -9,7 +9,8 @@
 - [About this project](#about-this-project)  
 - [Features](#features)  
 - [Screenshots](#screenshots)
-- [Contribute](#contribute)  
+- [Contribute](#contribute)
+- [Used Icons](#used-icons)
 - [License](#license)
 
 ---
@@ -18,8 +19,10 @@
 Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.
 
 This app allows you to control these light levels. Furthermore it has a built-in SOS function.
-
 Additionally you can use a quick settings tile for fast access to the app.
+
+Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashlight-Tiramisu) 💛  
+Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar) 💛
 
 ## Features
 - dimming your flashlight level by level
@@ -37,6 +40,21 @@ Of course I'm happy about any kind of contribution.
 For creating [issues](https://github.com/cyb3rko/flashdim/issues) there's no real guideline you should follow.
 If you create [pull requests](https://github.com/cyb3rko/flashdim/pulls) please try to use the syntax I use.
 Using a unified code format makes it much easier for me and for everyone else.
+
+## Used Icons
+
+<details>
+  <summary><strong>Click here to see the list</strong></summary>
+<br>
+<table>
+  <tr>
+    <td><a href="https://www.flaticon.com/free-icons/flashlight" title="flashlight icons">Flashlight icons created by Freepik - Flaticon</a></td>
+  </tr>  
+  <tr>
+    <td><a href="https://www.flaticon.com/free-icons/knob" title="knob icons">Knob icons created by Debi Alpa Nugraha - Flaticon</a></td>
+  </tr>
+</table>
+</details>
 
 ## License
 
