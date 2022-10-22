@@ -21,7 +21,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
-            versionNameSuffix "-release"
             minifyEnabled true
             shrinkResources true
 //            signingConfig signingConfigs.signingConf1
