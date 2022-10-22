@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
         maxLevel = cameraInfo[CameraCharacteristics.FLASH_INFO_STRENGTH_MAXIMUM_LEVEL] ?: -1
 
         if (maxLevel > 1) {
-            cameraManager.setTorchMode(cameraId, false)
             binding.seekBar.apply {
                 maxProgress = maxLevel.toFloat()
                 onProgressChanged = object : SeekBarChangeListener {
@@ -85,7 +84,10 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            updateLightLevelView(0)
+            if (intent.extras?.getBoolean(SETTINGS_TILE_CLICKED) == null) {
+                cameraManager.setTorchMode(cameraId, false)
+                updateLightLevelView(0)
+            }
         } else {
             switchToSimpleMode()
         }
@@ -151,6 +153,15 @@ class MainActivity : AppCompatActivity() {
                 }
                 cameraManager.setTorchMode(cameraId, false)
             }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (intent.extras?.getBoolean(SETTINGS_TILE_CLICKED) == true) {
+            cameraManager.setTorchMode(cameraId, true)
+            updateLightLevelView(maxLevel)
+            binding.seekBar.setProgress(maxLevel)
         }
     }
 
