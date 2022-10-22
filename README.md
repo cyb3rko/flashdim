@@ -6,7 +6,7 @@
 
 ![flashdim](https://socialify.git.ci/cyb3rko/flashdim/image?description=1&font=Bitter&forks=1&issues=1&logo=https%3A%2F%2Fcdn.cyb3rko.de%2FApps%2FFlashDim%2Flogo.png&name=1&owner=1&pattern=Diagonal%20Stripes&pulls=1&stargazers=1&theme=Dark)
 
-- [About this project](#about-this-project)  
+- [About this project](#about-this-project)   
 - [Features](#features)  
 - [Screenshots](#screenshots)
 - [Contribute](#contribute)
@@ -25,10 +25,13 @@ Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashligh
 Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar) 💛
 
 ## Features
-- dimming your flashlight level by level
-- shortcut buttons for different brightness levels
-- SOS flash button
-- quick settings tile for fast access
+- 🔦 dimming your flashlight level by level
+- 🎚 shortcut buttons for different brightness levels
+- 🆘 SOS flash button
+- ⚡ quick settings tile for fast access
+- 🔒 private, no ads, no internet connection
+- 💯 modern Material You (M3) design elements
+- 🎨 app colors adapt to device's system colors
 
 ## Screenshots
 |<img src="https://imgur.com/cGVXTZj.png" width="270">|<img src="https://imgur.com/anopRSq.png" width="270">|
@@ -43,9 +46,6 @@ Using a unified code format makes it much easier for me and for everyone else.
 
 ## Used Icons
 
-<details>
-  <summary><strong>Click here to see the list</strong></summary>
-<br>
 <table>
   <tr>
     <td><a href="https://www.flaticon.com/free-icons/flashlight" title="flashlight icons">Flashlight icons created by Freepik - Flaticon</a></td>
@@ -54,7 +54,6 @@ Using a unified code format makes it much easier for me and for everyone else.
     <td><a href="https://www.flaticon.com/free-icons/knob" title="knob icons">Knob icons created by Debi Alpa Nugraha - Flaticon</a></td>
   </tr>
 </table>
-</details>
 
 ## License
 
