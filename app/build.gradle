@@ -20,6 +20,12 @@ android {
 //            keyAlias properties.getProperty("signing.key2.alias")
 //            keyPassword properties.getProperty("signing.key2.password")
 //        }
+//        signingConf3 {
+//            storeFile file(properties.getProperty("signing.file"))
+//            storePassword properties.getProperty("signing.password")
+//            keyAlias properties.getProperty("signing.key3.alias")
+//            keyPassword properties.getProperty("signing.key3.password")
+//        }
 //    }
 
     compileSdk 33
@@ -37,18 +43,25 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        release {
+            versionNameSuffix "-release"
+            minifyEnabled true
+            shrinkResources true
+//            signingConfig signingConfigs.signingConf1
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
         releaseGP {
             versionNameSuffix "-googleplay"
             minifyEnabled true
             shrinkResources true
-//            signingConfig signingConfigs.signingConf1
+//            signingConfig signingConfigs.signingConf2
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         releaseFD {
             versionNameSuffix "-fdroid"
             minifyEnabled true
             shrinkResources true
-//            signingConfig signingConfigs.signingConf2
+//            signingConfig signingConfigs.signingConf3
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
