@@ -1,1 +1,55 @@
 # FlashDim
+[![API](https://img.shields.io/badge/API-33%2B-brightgreen.svg?style=flat)](https://apilevels.com)
+[![release](https://img.shields.io/github/release/cyb3rko/flashdim.svg)](https://github.com/cyb3rko/flashdim/releases/latest)
+[![last commit](https://img.shields.io/github/last-commit/cyb3rko/flashdim?color=F34C9F)](https://github.com/cyb3rko/flashdim/commits/master)
+[![license](https://img.shields.io/github/license/cyb3rko/logviewer-for-openhab-app)](https://www.apache.org/licenses/LICENSE-2.0)
+
+![flashdim](https://socialify.git.ci/cyb3rko/flashdim/image?description=1&font=Bitter&forks=1&issues=1&logo=https%3A%2F%2Fcdn.cyb3rko.de%2FApps%2FFlashDim%2Flogo.png&name=1&owner=1&pattern=Diagonal%20Stripes&pulls=1&stargazers=1&theme=Dark)
+
+- [About this project](#about-this-project)  
+- [Features](#features)  
+- [Screenshots](#screenshots)
+- [Contribute](#contribute)  
+- [License](#license)
+
+---
+
+## About this project
+Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.
+
+This app allows you to control these light levels. Furthermore it has a built-in SOS function.
+
+Additionally you can use a quick settings tile for fast access to the app.
+
+## Features
+- dimming your flashlight level by level
+- shortcut buttons for different brightness levels
+- SOS flash button
+- quick settings tile for fast access
+
+## Screenshots
+|<img src="https://imgur.com/cGVXTZj.png" width="270">|<img src="https://imgur.com/anopRSq.png" width="270">|
+|:---:|:---:|
+
+## Contribute
+Of course I'm happy about any kind of contribution.
+
+For creating [issues](https://github.com/cyb3rko/flashdim/issues) there's no real guideline you should follow.
+If you create [pull requests](https://github.com/cyb3rko/flashdim/pulls) please try to use the syntax I use.
+Using a unified code format makes it much easier for me and for everyone else.
+
+## License
+
+    Copyright 2022, Cyb3rKo
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
