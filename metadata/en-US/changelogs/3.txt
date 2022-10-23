@@ -1,0 +1,5 @@
+Additions:
+ - quick settings tile
+
+Changes:
+ - disable ability to store app archive

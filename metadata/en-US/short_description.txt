@@ -1,0 +1,1 @@
+Simple app to dim your flashlight on Android 13+
