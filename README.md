@@ -41,8 +41,8 @@ src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
 F-Droid download coming soon
 
 ## Screenshots
-|<img src="https://imgur.com/cGVXTZj.png" width="270">|<img src="https://imgur.com/anopRSq.png" width="270">|
-|:---:|:---:|
+|<img src="https://i.imgur.com/zl0BHy9.png" width="220">|<img src="https://i.imgur.com/6A8b73F.png" width="220">|<img src="https://i.imgur.com/eZboyhv.png" width="220">|<img src="https://i.imgur.com/tCRzboh.png" width="220">|
+|:---:|:---:|:---:|:---:|
 
 ## Contribute
 Of course I'm happy about any kind of contribution.
