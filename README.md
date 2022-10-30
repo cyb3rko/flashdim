@@ -37,8 +37,9 @@ Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.c
 [<img height=80 alt="Get it on Google Play"
 src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
 />](http://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
-
-F-Droid download coming soon
+[<img height="80" alt="Get it on F-Droid"
+src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+/>](https://f-droid.org/app/com.cyb3rko.flashdim)
 
 ## Screenshots
 |<img src="https://i.imgur.com/zl0BHy9.png" width="220">|<img src="https://i.imgur.com/6A8b73F.png" width="220">|<img src="https://i.imgur.com/eZboyhv.png" width="220">|<img src="https://i.imgur.com/tCRzboh.png" width="220">|
