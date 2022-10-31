@@ -1,21 +1,15 @@
 package com.cyb3rko.flashdim
 
 import android.annotation.SuppressLint
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
-import android.net.Uri
 import android.os.Bundle
-import android.os.VibrationEffect
 import android.os.VibratorManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -46,14 +40,13 @@ class MainActivity : AppCompatActivity() {
 
         if (!doesDeviceHaveFlash()) {
             setContentView(View(this))
-            MaterialAlertDialogBuilder(this)
-                .setCancelable(false)
-                .setTitle("Device not supported")
-                .setMessage("This device does not have a flash light.")
-                .setPositiveButton("Close") { _, _ ->
-                    exitProcess(0)
-                }
-                .show()
+            showDialog(
+                "Device not supported",
+                "This device does not have a flash light.",
+                { exitProcess(0) },
+                "Exit",
+                false
+            )
             return
         }
 
@@ -71,9 +64,7 @@ class MainActivity : AppCompatActivity() {
                 maxProgress = maxLevel
                 onProgressChanged = object : SeekBarChangeListener {
                     override fun onProgressChanged(progress: Int) {
-                        vibrator.vibrate(
-                            VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK)
-                        )
+                        Vibrator.vibrateTick(vibrator)
                         if (progress > 0) {
                             if (progress <= maxLevel) {
                                 cameraManager.sendLightLevel(progress)
@@ -115,9 +106,7 @@ class MainActivity : AppCompatActivity() {
                 showMorseDialog()
             }
             maxButton.setOnClickListener {
-                vibrator.vibrate(
-                    VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK)
-                )
+                Vibrator.vibrateDoubleClick(vibrator)
                 if (isDimAllowed()) {
                     updateLightLevelView(maxLevel)
                     cameraManager.sendLightLevel(maxLevel)
@@ -128,21 +117,21 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             halfButton.setOnClickListener {
-                vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
+                Vibrator.vibrateClick(vibrator)
                 updateLightLevelView(maxLevel / 2)
                 cameraManager.sendLightLevel(maxLevel / 2)
                 currentLevel = maxLevel / 2
                 seekBar.setProgress(maxLevel / 2)
             }
             minButton.setOnClickListener {
-                vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
+                Vibrator.vibrateClick(vibrator)
                 updateLightLevelView(1)
                 cameraManager.sendLightLevel(1)
                 currentLevel = 1
                 seekBar.setProgress(1)
             }
             offButton.setOnClickListener {
-                vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
+                Vibrator.vibrateClick(vibrator)
                 morseActivated = false
                 if (isDimAllowed()) {
                     updateLightLevelView(0)
@@ -262,11 +251,7 @@ class MainActivity : AppCompatActivity() {
             var lastLetter = Char.MIN_VALUE
             val handler = MorseHandler { letter, code, delay, on ->
                 cameraManager.setTorchMode(cameraId, on)
-                if (on) {
-                    vibrator.vibrate(
-                        VibrationEffect.createOneShot(delay, 80)
-                    )
-                }
+                if (on) Vibrator.vibrate(vibrator, delay)
 
                 if (lastLetter != letter) {
                     @SuppressLint("SetTextI18n")
@@ -296,61 +281,20 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.icon_credits_action -> {
-                MaterialAlertDialogBuilder(this)
-                    .setTitle("Icon Credits")
-                    .setMessage("Flashlight icon created by Freepik - Flaticon\n\n" +
-                            "Knob icon created by Debi Alpa Nugraha - Flaticon")
-                    .setPositiveButton("Open Flaticon") { _, _ ->
-                        openURL("https://flaticon.com")
-                    }
-                    .show()
+                showDialog(
+                    "Icon Credits",
+                    "Flashlight icon created by Freepik - Flaticon\n\n" +
+                            "Knob icon created by Debi Alpa Nugraha - Flaticon",
+                    { openUrl("https://flaticon.com", "Flaticon") },
+                    "Open Flaticon"
+                )
                 return true
             }
             R.id.github_action -> {
-                openURL("https://github.com/cyb3rko/flashdim")
+                openUrl("https://github.com/cyb3rko/flashdim", "GitHub Repo")
                 return true
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun View.disable() {
-        this.isEnabled = false
-    }
-
-    private fun View.enable() {
-        this.isEnabled = true
-    }
-
-    private fun View.hide() {
-        this.visibility = View.GONE
-    }
-
-    private fun View.makeInvisible() {
-        this.visibility = View.INVISIBLE
-    }
-
-    private fun View.show() {
-        this.visibility = View.VISIBLE
-    }
-
-    private fun openURL(url: String) {
-        try {
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse(url)
-            )
-            startActivity(intent)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            val clip = ClipData.newPlainText("Flaticon", url)
-            (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager)
-                .setPrimaryClip(clip)
-            Toast.makeText(
-                this,
-                "Opening URL failed, copied URL instead",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
     }
 }
