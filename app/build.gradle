@@ -14,6 +14,29 @@ android {
         versionCode 4
         versionName "1.1.2"
     }
+//    signingConfigs {
+//        Properties properties = new Properties()
+//        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//
+//        signingConf1 {
+//            storeFile file(properties.getProperty("signing.file"))
+//            storePassword properties.getProperty("signing.password")
+//            keyAlias properties.getProperty("signing.key1.alias")
+//            keyPassword properties.getProperty("signing.key1.password")
+//        }
+//        signingConf2 {
+//            storeFile file(properties.getProperty("signing.file"))
+//            storePassword properties.getProperty("signing.password")
+//            keyAlias properties.getProperty("signing.key2.alias")
+//            keyPassword properties.getProperty("signing.key2.password")
+//        }
+//        signingConf3 {
+//            storeFile file(properties.getProperty("signing.file"))
+//            storePassword properties.getProperty("signing.password")
+//            keyAlias properties.getProperty("signing.key3.alias")
+//            keyPassword properties.getProperty("signing.key3.password")
+//        }
+//    }
     buildTypes {
         debug {
             versionNameSuffix "-debug"
@@ -49,29 +72,6 @@ android {
             enable = false
         }
     }
-//    signingConfigs {
-//        Properties properties = new Properties()
-//        properties.load(project.rootProject.file('local.properties').newDataInputStream())
-//
-//        signingConf1 {
-//            storeFile file(properties.getProperty("signing.file"))
-//            storePassword properties.getProperty("signing.password")
-//            keyAlias properties.getProperty("signing.key1.alias")
-//            keyPassword properties.getProperty("signing.key1.password")
-//        }
-//        signingConf2 {
-//            storeFile file(properties.getProperty("signing.file"))
-//            storePassword properties.getProperty("signing.password")
-//            keyAlias properties.getProperty("signing.key2.alias")
-//            keyPassword properties.getProperty("signing.key2.password")
-//        }
-//        signingConf3 {
-//            storeFile file(properties.getProperty("signing.file"))
-//            storePassword properties.getProperty("signing.password")
-//            keyAlias properties.getProperty("signing.key3.alias")
-//            keyPassword properties.getProperty("signing.key3.password")
-//        }
-//    }
 }
 
 dependencies {
