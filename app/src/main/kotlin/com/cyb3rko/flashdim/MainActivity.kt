@@ -10,18 +10,17 @@ import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.cyb3rko.flashdim.databinding.ActivityMainBinding
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import kotlin.math.roundToInt
 import kotlin.system.exitProcess
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,8 +31,7 @@ class MainActivity : AppCompatActivity() {
     private var currentLevel = -1
     private var maxLevel = -1
 
-    private var sosActivated = false
-    private val sosHandler by lazy { Handler(Looper.getMainLooper()) }
+    private var morseActivated = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,15 +96,16 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             sosButton.setOnClickListener {
                 sosButton.disable()
-                sosActivated = true
+                morseActivated = true
                 cameraManager.setTorchMode(cameraId, false)
                 seekBar.setProgress(0)
-                updateLightLevelView(0, " (SOS)")
+                @SuppressLint("SetTextI18n")
+                binding.levelIndicator.text = "SOS mode"
                 maxButton.hide()
                 halfButton.hide()
                 minButton.hide()
                 seekBar.disable()
-                handleSosCall()
+                handleMorseCall("SOS")
             }
             maxButton.setOnClickListener {
                 if (isDimAllowed()) {
@@ -131,21 +130,8 @@ class MainActivity : AppCompatActivity() {
                 seekBar.setProgress(1)
             }
             offButton.setOnClickListener {
-                val dimAllowed = isDimAllowed()
-                if (sosActivated) {
-                    sosHandler.removeCallbacksAndMessages(null)
-                    sosActivated = false
-                    binding.apply {
-                        maxButton.show()
-                        sosButton.enable()
-                        if (dimAllowed) {
-                            halfButton.show()
-                            minButton.show()
-                            seekBar.enable()
-                        }
-                    }
-                }
-                if (dimAllowed) {
+                morseActivated = false
+                if (isDimAllowed()) {
                     updateLightLevelView(0)
                     currentLevel = 0
                     seekBar.setProgress(0)
@@ -193,56 +179,41 @@ class MainActivity : AppCompatActivity() {
 
     private fun isDimAllowed() = binding.maxButton.text == "Maximum"
 
-    private fun handleSosCall() {
-        if (!sosActivated) return
-        val t = 250L
-        val runnableOn = Runnable {
-            cameraManager.setTorchMode(cameraId, true)
-            updateLightLevelView(maxLevel, " (SOS)")
-            binding.seekBar.setProgress(maxLevel)
+    private fun handleMorseCall(message: String) {
+        lifecycleScope.launch {
+            var lastLetter = Char.MIN_VALUE
+            val handler = MorseHandler { letter, on ->
+                cameraManager.setTorchMode(cameraId, on)
+
+                if (lastLetter != letter) {
+                    @SuppressLint("SetTextI18n")
+                    binding.quickActionsView.text = "Morse:\n$letter"
+                    lastLetter = letter
+                }
+
+                morseActivated
+            }
+            while (morseActivated) {
+                handler.flashMessage(message)
+                if (morseActivated) handler.waitForRepeat()
+            }
+            binding.apply {
+                @SuppressLint("SetTextI18n")
+                quickActionsView.text = "Quick Actions"
+                maxButton.show()
+                sosButton.enable()
+                if (isDimAllowed()) {
+                    halfButton.show()
+                    minButton.show()
+                    seekBar.enable()
+                }
+            }
         }
-        val runnableOff = Runnable {
-            cameraManager.setTorchMode(cameraId, false)
-            updateLightLevelView(0, " (SOS)")
-            binding.seekBar.setProgress(0)
-        }
-        val runnableFinishRound = Runnable {
-            handleSosCall()
-        }
-
-        handleSosS(runnableOn, runnableOff, t, 4 * t)
-        handleSosO(runnableOn, runnableOff, t, 12 * t)
-        handleSosS(runnableOn, runnableOff, t, 26 * t)
-        finishSosRound(runnableFinishRound, 34 * t)
-    }
-
-    private fun handleSosS(on: Runnable, off: Runnable, t: Long, offset: Long) {
-        sosHandler.postDelayed(on, 3 * t + offset)
-        sosHandler.postDelayed(off, 4 * t + offset)
-        sosHandler.postDelayed(on, 5 * t + offset)
-        sosHandler.postDelayed(off, 6 * t + offset)
-        sosHandler.postDelayed(on, 7 * t + offset)
-        sosHandler.postDelayed(off, 8 * t + offset)
-    }
-
-    private fun handleSosO(on: Runnable, off: Runnable, t: Long, offset: Long) {
-        sosHandler.postDelayed(on, 3 * t + offset)
-        sosHandler.postDelayed(off, 6 * t + offset)
-        sosHandler.postDelayed(on, 7 * t + offset)
-        sosHandler.postDelayed(off, 10 * t + offset)
-        sosHandler.postDelayed(on, 11 * t + offset)
-        sosHandler.postDelayed(off, 14 * t + offset)
-    }
-
-    private fun finishSosRound(r: Runnable, offset: Long) {
-        sosHandler.postDelayed(r, offset)
     }
 
     private fun doesDeviceHaveFlash(): Boolean {
         return packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
     }
-
-
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
