@@ -11,7 +11,7 @@ internal class MorseHandler(
     ) -> Boolean
 ) {
     companion object {
-        private const val TIME_UNIT = 250L
+        private const val TIME_UNIT = 200L
         private const val DELAY_DOT = TIME_UNIT
         private const val DELAY_DASH = TIME_UNIT * 3
         private const val DELAY_INTRA_CHARACTER = TIME_UNIT
