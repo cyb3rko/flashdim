@@ -14,11 +14,14 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.cyb3rko.flashdim.databinding.ActivityMainBinding
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import kotlin.system.exitProcess
 import kotlinx.coroutines.launch
 
@@ -96,16 +99,12 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             sosButton.setOnClickListener {
                 sosButton.disable()
-                morseActivated = true
-                cameraManager.setTorchMode(cameraId, false)
-                seekBar.setProgress(0)
-                @SuppressLint("SetTextI18n")
-                binding.levelIndicator.text = "SOS mode"
-                maxButton.hide()
-                halfButton.hide()
-                minButton.hide()
-                seekBar.disable()
+                morseButton.hide()
+                switchMorseMode(true, "SOS mode")
                 handleMorseCall("SOS")
+            }
+            morseButton.setOnClickListener {
+                showMorseDialog()
             }
             maxButton.setOnClickListener {
                 if (isDimAllowed()) {
@@ -166,6 +165,71 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun showMorseDialog() {
+        @SuppressLint("InflateParams")
+        val inputLayout = layoutInflater.inflate(R.layout.dialog_morse_input, null)
+            .findViewById<TextInputLayout>(R.id.text_input_layout)
+
+        @SuppressLint("InflateParams")
+        val inputText = inputLayout.findViewById<TextInputEditText>(R.id.text_input_text)
+
+        MaterialAlertDialogBuilder(this@MainActivity)
+            .setView(inputLayout)
+            .setTitle("Flash morse code")
+            .setPositiveButton(android.R.string.ok, null)
+            .create().apply {
+                setOnShowListener {
+                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                        val message = inputText.text.toString().trim()
+                        if (message.isEmpty()) {
+                            inputLayout.error = "Please enter your message"
+                        } else if (message.length > 50) {
+                            inputLayout.error = "Maximum length (50) exceeded"
+                        } else if (!Regex("[a-zA-Z0-9 ]+").matches(message)) {
+                            inputLayout.error = "Use characters a-z, A-Z, 0-9 and space"
+                        } else {
+                            dismiss()
+                            binding.sosButton.hide()
+                            binding.morseButton.disable()
+                            switchMorseMode(true, "Morse mode")
+                            handleMorseCall(message)
+                        }
+                    }
+                }
+            }.show()
+    }
+
+    private fun switchMorseMode(activate: Boolean, message: String = "") {
+        if (activate) {
+            cameraManager.setTorchMode(cameraId, false)
+            morseActivated = true
+            binding.apply {
+                binding.seekBar.setProgress(0)
+                maxButton.hide()
+                halfButton.hide()
+                minButton.hide()
+                seekBar.disable()
+                @SuppressLint("SetTextI18n")
+                binding.levelIndicator.text = message
+            }
+        } else {
+            binding.apply {
+                @SuppressLint("SetTextI18n")
+                quickActionsView.text = "Quick Actions"
+                maxButton.show()
+                sosButton.enable()
+                sosButton.show()
+                morseButton.enable()
+                morseButton.show()
+                if (isDimAllowed()) {
+                    halfButton.show()
+                    minButton.show()
+                    seekBar.enable()
+                }
+            }
+        }
+    }
+
     @SuppressLint("SetTextI18n")
     private fun updateLightLevelView(level: Int, note: String = "") {
         binding.levelIndicator.text = "$level / $maxLevel$note"
@@ -197,17 +261,7 @@ class MainActivity : AppCompatActivity() {
                 handler.flashMessage(message)
                 if (morseActivated) handler.waitForRepeat()
             }
-            binding.apply {
-                @SuppressLint("SetTextI18n")
-                quickActionsView.text = "Quick Actions"
-                maxButton.show()
-                sosButton.enable()
-                if (isDimAllowed()) {
-                    halfButton.show()
-                    minButton.show()
-                    seekBar.enable()
-                }
-            }
+            switchMorseMode(false)
         }
     }
 
