@@ -10,6 +10,8 @@ import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.VibratorManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -33,6 +35,9 @@ class MainActivity : AppCompatActivity() {
     private val cameraManager by lazy { getSystemService(Context.CAMERA_SERVICE) as CameraManager }
     private var currentLevel = -1
     private var maxLevel = -1
+    private val vibrator by lazy {
+        (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager).defaultVibrator
+    }
 
     private var morseActivated = false
 
@@ -66,6 +71,9 @@ class MainActivity : AppCompatActivity() {
                 maxProgress = maxLevel
                 onProgressChanged = object : SeekBarChangeListener {
                     override fun onProgressChanged(progress: Int) {
+                        vibrator.vibrate(
+                            VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK)
+                        )
                         if (progress > 0) {
                             if (progress <= maxLevel) {
                                 cameraManager.sendLightLevel(progress)
@@ -107,6 +115,9 @@ class MainActivity : AppCompatActivity() {
                 showMorseDialog()
             }
             maxButton.setOnClickListener {
+                vibrator.vibrate(
+                    VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK)
+                )
                 if (isDimAllowed()) {
                     updateLightLevelView(maxLevel)
                     cameraManager.sendLightLevel(maxLevel)
@@ -117,18 +128,21 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             halfButton.setOnClickListener {
+                vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
                 updateLightLevelView(maxLevel / 2)
                 cameraManager.sendLightLevel(maxLevel / 2)
                 currentLevel = maxLevel / 2
                 seekBar.setProgress(maxLevel / 2)
             }
             minButton.setOnClickListener {
+                vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
                 updateLightLevelView(1)
                 cameraManager.sendLightLevel(1)
                 currentLevel = 1
                 seekBar.setProgress(1)
             }
             offButton.setOnClickListener {
+                vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
                 morseActivated = false
                 if (isDimAllowed()) {
                     updateLightLevelView(0)
@@ -246,8 +260,13 @@ class MainActivity : AppCompatActivity() {
     private fun handleMorseCall(message: String) {
         lifecycleScope.launch {
             var lastLetter = Char.MIN_VALUE
-            val handler = MorseHandler { letter, code, on ->
+            val handler = MorseHandler { letter, code, delay, on ->
                 cameraManager.setTorchMode(cameraId, on)
+                if (on) {
+                    vibrator.vibrate(
+                        VibrationEffect.createOneShot(delay, 80)
+                    )
+                }
 
                 if (lastLetter != letter) {
                     @SuppressLint("SetTextI18n")
