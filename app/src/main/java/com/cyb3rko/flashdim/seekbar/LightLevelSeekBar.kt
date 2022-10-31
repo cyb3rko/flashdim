@@ -23,14 +23,14 @@ open class LightLevelSeekBar @JvmOverloads constructor(
 
     var onProgressChanged: SeekBarChangeListener? = null
 
-    var maxProgress: Float = 1F
+    var maxProgress: Int = 1
         set(value) {
             field = value
             progress = value
             invalidate()
         }
 
-    private var progress: Float = 0F
+    private var progress: Int = 1
         set(value) {
             field = value
             invalidate()
@@ -82,9 +82,9 @@ open class LightLevelSeekBar @JvmOverloads constructor(
 
         var previousLevelBottom = paddingTop.toFloat()
 
-        val progressYPosition: Float = availableHeight * progress / maxProgress
+        val progressYPosition: Float = (availableHeight * progress / maxProgress).toFloat()
 
-        for (i in 0 until maxProgress.roundToInt()) {
+        for (i in 0 until maxProgress) {
             mLevelRect.set(
                 paddingLeft.toFloat(),
                 previousLevelBottom,
@@ -102,11 +102,15 @@ open class LightLevelSeekBar @JvmOverloads constructor(
     }
 
     private fun updateProgress(event: MotionEvent) {
-        progress = getRawProgress(event)
-        onProgressChanged?.onProgressChanged(maxProgress - progress)
+        if (getRawProgress(event) != progress) {
+            progress = getRawProgress(event)
+            onProgressChanged?.onProgressChanged(maxProgress - progress)
+        }
     }
 
-    private fun getRawProgress(event: MotionEvent) = maxProgress * event.y / getAvailableHeight()
+    private fun getRawProgress(event: MotionEvent): Int {
+        return (maxProgress * event.y / getAvailableHeight()).roundToInt()
+    }
 
     internal fun setProgress(progress: Int) {
         this.progress = maxProgress - progress

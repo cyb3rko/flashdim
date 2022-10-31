@@ -62,21 +62,20 @@ class MainActivity : AppCompatActivity() {
 
         if (maxLevel > 1) {
             binding.seekBar.apply {
-                maxProgress = maxLevel.toFloat()
+                maxProgress = maxLevel
                 onProgressChanged = object : SeekBarChangeListener {
-                    override fun onProgressChanged(progress: Float) {
-                        val progressInt = progress.roundToInt()
-                        if (progressInt > 0) {
-                            if (progressInt <= maxLevel) {
-                                cameraManager.sendLightLevel(progressInt)
-                                updateLightLevelView(progressInt)
-                                currentLevel = progressInt
+                    override fun onProgressChanged(progress: Int) {
+                        if (progress > 0) {
+                            if (progress <= maxLevel) {
+                                cameraManager.sendLightLevel(progress)
+                                updateLightLevelView(progress)
+                                currentLevel = progress
                             } else {
                                 cameraManager.sendLightLevel(maxLevel)
                                 updateLightLevelView(maxLevel)
-                                currentLevel = progressInt
+                                currentLevel = progress
                             }
-                        } else if (progressInt == 0) {
+                        } else if (progress == 0) {
                             cameraManager.setTorchMode(cameraId, false)
                             updateLightLevelView(0)
                             currentLevel = 0
