@@ -246,12 +246,12 @@ class MainActivity : AppCompatActivity() {
     private fun handleMorseCall(message: String) {
         lifecycleScope.launch {
             var lastLetter = Char.MIN_VALUE
-            val handler = MorseHandler { letter, on ->
+            val handler = MorseHandler { letter, code, on ->
                 cameraManager.setTorchMode(cameraId, on)
 
                 if (lastLetter != letter) {
                     @SuppressLint("SetTextI18n")
-                    binding.quickActionsView.text = "Morse:\n$letter"
+                    binding.quickActionsView.text = "Morse:\n$letter ($code)"
                     lastLetter = letter
                 }
 

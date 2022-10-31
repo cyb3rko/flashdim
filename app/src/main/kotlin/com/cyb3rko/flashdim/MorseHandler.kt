@@ -2,7 +2,9 @@ package com.cyb3rko.flashdim
 
 import kotlinx.coroutines.delay
 
-internal class MorseHandler(private val onBlink: (letter: Char, on: Boolean) -> Boolean) {
+internal class MorseHandler(
+    private val onBlink: (letter: Char, code: String, on: Boolean) -> Boolean
+) {
     companion object {
         private const val TIME_UNIT = 250L
         private const val DELAY_DOT = TIME_UNIT
@@ -68,7 +70,7 @@ internal class MorseHandler(private val onBlink: (letter: Char, on: Boolean) -> 
                         else -> 0L
                     }
                     firstCodePart = false
-                    val allowedContinuation = blink(char, delay)
+                    val allowedContinuation = blink(char, code!!, delay)
                     if (!allowedContinuation) return
                 }
                 firstLetter = false
@@ -76,10 +78,14 @@ internal class MorseHandler(private val onBlink: (letter: Char, on: Boolean) -> 
         }
     }
 
-    private suspend fun blink(char: Char, delay: Long): Boolean {
-        onBlink(char, true)
+    private suspend fun blink(
+        char: Char,
+        code: String,
+        delay: Long
+    ): Boolean {
+        onBlink(char, code, true)
         delay(delay)
-        return onBlink(char, false)
+        return onBlink(char, code, false)
     }
 
     internal suspend fun waitForRepeat() {
