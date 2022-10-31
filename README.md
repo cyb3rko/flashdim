@@ -28,6 +28,7 @@ Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.c
 - 🔦 dimming your flashlight level by level
 - 🎚 shortcut buttons for different brightness levels
 - 🆘 SOS flash button
+- 📫 morse code flash mode
 - ⚡ quick settings tile for fast access
 - 🔒 private, no ads, no internet connection
 - 💯 modern Material You (M3) design elements
@@ -43,7 +44,7 @@ src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 />](https://f-droid.org/app/com.cyb3rko.flashdim)
 
 ## Screenshots
-|<img src="https://i.imgur.com/zl0BHy9.png" width="220">|<img src="https://i.imgur.com/6A8b73F.png" width="220">|<img src="https://i.imgur.com/eZboyhv.png" width="220">|<img src="https://i.imgur.com/tCRzboh.png" width="220">|
+|<img src="https://i.imgur.com/oIUHkTg.png" width="220">|<img src="https://i.imgur.com/0hoCzcE.png" width="220">|<img src="https://i.imgur.com/pTO3CMs.png" width="220">|<img src="https://i.imgur.com/ltkU3so.png" width="220">|
 |:---:|:---:|:---:|:---:|
 
 ## Contribute
