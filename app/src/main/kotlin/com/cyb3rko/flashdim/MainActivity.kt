@@ -64,9 +64,9 @@ class MainActivity : AppCompatActivity() {
                 maxProgress = maxLevel
                 onProgressChanged = object : SeekBarChangeListener {
                     override fun onProgressChanged(progress: Int) {
-                        Vibrator.vibrateTick(vibrator)
                         if (progress > 0) {
                             if (progress <= maxLevel) {
+                                Vibrator.vibrateTick(vibrator)
                                 cameraManager.sendLightLevel(progress)
                                 updateLightLevelView(progress)
                                 currentLevel = progress
