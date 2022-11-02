@@ -10,6 +10,7 @@
 - [About this project](#about-this-project)   
 - [Features](#features)  
 - [Download](#download)
+- [Supported devices](#supported-devices)
 - [Screenshots](#screenshots)
 - [Contribute](#contribute)
 - [Used Icons](#used-icons)
@@ -42,6 +43,16 @@ src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
 [<img height="80" alt="Get it on F-Droid"
 src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 />](https://f-droid.org/app/com.cyb3rko.flashdim)
+
+## Supported Devices
+The full functionalizy of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
+Here's a list of devices I know of which do work FOR SURE. If you've used a device that works too please let me know so I can add it here.
+
+- Google Pixel 6
+- Google Pixel 6 Pro
+- Google Pixel 6a
+- Google Pixel 7
+- Google Pixel 7 Pro
 
 ## Screenshots
 |<img src="https://i.imgur.com/oIUHkTg.png" width="220">|<img src="https://i.imgur.com/0hoCzcE.png" width="220">|<img src="https://i.imgur.com/pTO3CMs.png" width="220">|<img src="https://i.imgur.com/ltkU3so.png" width="220">|
