@@ -11,8 +11,8 @@ android {
         applicationId "com.cyb3rko.flashdim"
         minSdk 33
         targetSdk 33
-        versionCode 5
-        versionName "1.2.0"
+        versionCode 6
+        versionName "1.2.1"
     }
 //    signingConfigs {
 //        Properties properties = new Properties()
