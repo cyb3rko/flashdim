@@ -48,6 +48,7 @@ internal fun Context.showDialog(
     val builder = MaterialAlertDialogBuilder(this)
         .setTitle(title)
         .setMessage(message)
+        .setCancelable(cancelable)
 
     if (actionMessage.isNotBlank()) {
         builder.setPositiveButton(actionMessage) { _, _ ->
