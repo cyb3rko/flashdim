@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">FlashDim</string>
+    <string name="dialog_not_supported_title">Device not supported</string>
+    <string name="dialog_not_supported_message">This device does not have a flash light.</string>
+    <string name="dialog_not_supported_button">Exit</string>
+    <string name="dialog_morse_title">Flash morse code</string>
+    <string name="dialog_morse_input_hint">Your Message</string>
+    <string name="dialog_morse_error_empty">Please enter your message</string>
+    <string name="dialog_morse_error_length">Maximum length (50) exceeded</string>
+    <string name="dialog_morse_error_characters">Use characters a–z, A–Z, 0–9 and space</string>
+    <string name="hint_dim_not_supported">This device only supports 1 light level.\nDim feature deactivated.</string>
+    <string name="light_level_sos">SOS mode</string>
+    <string name="light_level_morse">Morse mode</string>
+    <string name="textview_quick_actions_title">Quick Actions</string>
+    <string name="textview_quick_actions_morse">Morse:\n%1$s (%2$s)</string>
+    <string name="textview_light_level_text">Light Level:</string>
+    <string name="button_sos_text">SOS</string>
+    <string name="button_morse_text">Morse</string>
+    <string name="button_max_maximum">Maximum</string>
+    <string name="button_max_on">On</string>
+    <string name="button_half_text">Half</string>
+    <string name="button_minimum_text">Minimum</string>
+    <string name="button_off_text">Off</string>
+    <string name="dialog_credits_title">Icon Credits</string>
+    <string name="dialog_credits_message">Flashlight icon created by Freepik - Flaticon\n\nKnob icon created by Debi Alpa Nugraha - Flaticon</string>
+    <string name="dialog_credits_button">Open Flaticon</string>
+    <string name="toast_url_failed">"Opening URL failed, copied URL instead"</string>
 </resources>

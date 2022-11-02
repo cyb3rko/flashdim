@@ -70,7 +70,7 @@ internal fun Context.openUrl(url: String, label: String) {
     } catch (e: Exception) {
         e.printStackTrace()
         this.storeToClipboard(label, url)
-        this.showToast("Opening URL failed, copied URL instead", Toast.LENGTH_LONG)
+        this.showToast(getString(R.string.toast_url_failed), Toast.LENGTH_LONG)
     }
 }
 

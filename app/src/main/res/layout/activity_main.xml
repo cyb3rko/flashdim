@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -52,14 +53,14 @@
         android:textColor="@color/material_dynamic_primary90"
         android:textStyle="bold"
         android:textSize="16sp"
-        android:text="Quick Actions" />
+        android:text="@string/textview_quick_actions_title" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/level_indicator_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Light Level:"
+        android:text="@string/textview_light_level_text"
         android:textStyle="bold"
         android:textSize="12sp"
         android:textColor="@color/material_dynamic_primary90"
@@ -130,7 +131,7 @@
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:layout_weight="0.5"
-            android:text="SOS"
+            android:text="@string/button_sos_text"
             app:icon="@android:drawable/stat_notify_error"
             style="@style/Widget.Material3.Button.TonalButton" />
 
@@ -142,7 +143,7 @@
             android:layout_marginBottom="12dp"
             android:layout_gravity="center"
             android:layout_weight="0.5"
-            android:text="Morse"
+            android:text="@string/button_morse_text"
             app:icon="@android:drawable/stat_notify_chat"
             style="@style/Widget.Material3.Button.TonalButton" />
         
@@ -152,7 +153,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="15dp"
             android:layout_weight="1.3"
-            android:text="Maximum" />
+            android:text="@string/button_max_maximum" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/half_button"
@@ -160,7 +161,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:text="Half" />
+            android:text="@string/button_half_text" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/min_button"
@@ -168,7 +169,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:text="Minimum" />
+            android:text="@string/button_minimum_text" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/off_button"
@@ -176,7 +177,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:layout_weight="1.3"
-            android:text="Off" />
+            android:text="@string/button_off_text" />
         
     </LinearLayout>
 

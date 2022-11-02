@@ -17,7 +17,7 @@
         android:lines="1"
         android:singleLine="true"
         android:inputType="textShortMessage"
-        android:hint="Your Message"
+        android:hint="@string/dialog_morse_input_hint"
         tools:ignore="HardcodedText" />
 
 </com.google.android.material.textfield.TextInputLayout>

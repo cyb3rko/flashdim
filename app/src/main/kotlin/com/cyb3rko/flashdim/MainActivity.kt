@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
         if (!doesDeviceHaveFlash()) {
             setContentView(View(this))
             showDialog(
-                "Device not supported",
-                "This device does not have a flash light.",
+                getString(R.string.dialog_not_supported_title),
+                getString(R.string.dialog_not_supported_message),
                 { exitProcess(0) },
-                "Exit",
+                getString(R.string.dialog_not_supported_button),
                 false
             )
             return
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             sosButton.setOnClickListener {
                 sosButton.disable()
                 morseButton.hide()
-                switchMorseMode(true, "SOS mode")
+                switchMorseMode(true, getString(R.string.light_level_sos))
                 handleMorseCall("SOS")
             }
             morseButton.setOnClickListener {
@@ -156,13 +156,13 @@ class MainActivity : AppCompatActivity() {
     private fun switchToSimpleMode() {
         binding.apply {
             buttonContainer.setPadding(0, 24, 64, 24)
-            maxButton.text = "On"
+            maxButton.text = getString(R.string.button_max_on)
             halfButton.hide()
             minButton.hide()
             seekBar.hide()
             levelIndicatorDesc.makeInvisible()
             levelIndicator.makeInvisible()
-            errorView.text = "This evice only supports 1 light level.\nDim feature deactivated."
+            errorView.text = getString(R.string.hint_dim_not_supported)
             errorView.show()
             quickActionsView.hide()
         }
@@ -178,23 +178,23 @@ class MainActivity : AppCompatActivity() {
 
         MaterialAlertDialogBuilder(this@MainActivity)
             .setView(inputLayout)
-            .setTitle("Flash morse code")
+            .setTitle(getString(R.string.dialog_morse_title))
             .setPositiveButton(android.R.string.ok, null)
             .create().apply {
                 setOnShowListener {
                     getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                         val message = inputText.text.toString().trim()
                         if (message.isEmpty()) {
-                            inputLayout.error = "Please enter your message"
+                            inputLayout.error = getString(R.string.dialog_morse_error_empty)
                         } else if (message.length > 50) {
-                            inputLayout.error = "Maximum length (50) exceeded"
+                            inputLayout.error = getString(R.string.dialog_morse_error_length)
                         } else if (!Regex("[a-zA-Z0-9 ]+").matches(message)) {
-                            inputLayout.error = "Use characters a-z, A-Z, 0-9 and space"
+                            inputLayout.error = getString(R.string.dialog_morse_error_characters)
                         } else {
                             dismiss()
                             binding.sosButton.hide()
                             binding.morseButton.disable()
-                            switchMorseMode(true, "Morse mode")
+                            switchMorseMode(true, getString(R.string.light_level_morse))
                             handleMorseCall(message)
                         }
                     }
@@ -218,7 +218,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             binding.apply {
                 @SuppressLint("SetTextI18n")
-                quickActionsView.text = "Quick Actions"
+                quickActionsView.text = getString(R.string.textview_quick_actions_title)
                 maxButton.show()
                 sosButton.enable()
                 sosButton.show()
@@ -244,7 +244,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun isDimAllowed() = binding.maxButton.text == "Maximum"
+    private fun isDimAllowed() = binding.maxButton.text == getString(R.string.button_max_maximum)
 
     private fun handleMorseCall(message: String) {
         lifecycleScope.launch {
@@ -255,7 +255,11 @@ class MainActivity : AppCompatActivity() {
 
                 if (lastLetter != letter) {
                     @SuppressLint("SetTextI18n")
-                    binding.quickActionsView.text = "Morse:\n$letter ($code)"
+                    binding.quickActionsView.text = getString(
+                        R.string.textview_quick_actions_morse,
+                        letter,
+                        code
+                    )
                     lastLetter = letter
                 }
 
@@ -282,11 +286,10 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.icon_credits_action -> {
                 showDialog(
-                    "Icon Credits",
-                    "Flashlight icon created by Freepik - Flaticon\n\n" +
-                            "Knob icon created by Debi Alpa Nugraha - Flaticon",
+                    getString(R.string.dialog_credits_title),
+                    getString(R.string.dialog_credits_message),
                     { openUrl("https://flaticon.com", "Flaticon") },
-                    "Open Flaticon"
+                    getString(R.string.dialog_credits_button)
                 )
                 return true
             }
