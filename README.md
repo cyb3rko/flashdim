@@ -18,6 +18,10 @@
 
 ---
 
+[<img alt="Read Medium article" src="https://i.imgur.com/p6PHIK7.png" />](https://medium.com/p/835cdf2d6f3e)
+
+---
+
 ## About this project
 Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.  
 To be able to use this new feature I've developed this app.
