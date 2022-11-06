@@ -149,6 +149,7 @@ class MainActivity : AppCompatActivity() {
             cameraManager.setTorchMode(cameraId, true)
             updateLightLevelView(maxLevel)
             binding.seekBar.setProgress(maxLevel)
+            intent.removeExtra(SETTINGS_TILE_CLICKED)
         }
     }
 
