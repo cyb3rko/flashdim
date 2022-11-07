@@ -61,26 +61,24 @@ class MainActivity : AppCompatActivity() {
         maxLevel = cameraInfo[CameraCharacteristics.FLASH_INFO_STRENGTH_MAXIMUM_LEVEL] ?: -1
 
         if (maxLevel > 1) {
-            binding.seekBar.apply {
-                maxProgress = maxLevel
-                onProgressChanged = object : SeekBarChangeListener {
-                    override fun onProgressChanged(progress: Int) {
-                        if (progress > 0) {
-                            if (progress <= maxLevel) {
-                                Vibrator.vibrateTick(vibrator)
-                                cameraManager.sendLightLevel(progress)
-                                updateLightLevelView(progress)
-                                currentLevel = progress
-                            } else {
-                                cameraManager.sendLightLevel(maxLevel)
-                                updateLightLevelView(maxLevel)
-                                currentLevel = progress
-                            }
-                        } else if (progress == 0) {
-                            cameraManager.setTorchMode(cameraId, false)
-                            updateLightLevelView(0)
-                            currentLevel = 0
+            binding.seekBar.maxProgress = maxLevel
+            binding.seekBar.onProgressChanged = object : SeekBarChangeListener {
+                override fun onProgressChanged(progress: Int) {
+                    if (progress > 0) {
+                        if (progress <= maxLevel) {
+                            Vibrator.vibrateTick(vibrator)
+                            cameraManager.sendLightLevel(progress)
+                            updateLightLevelView(progress)
+                            currentLevel = progress
+                        } else {
+                            cameraManager.sendLightLevel(maxLevel)
+                            updateLightLevelView(maxLevel)
+                            currentLevel = progress
                         }
+                    } else if (progress == 0) {
+                        cameraManager.setTorchMode(cameraId, false)
+                        updateLightLevelView(0)
+                        currentLevel = 0
                     }
                 }
             }
