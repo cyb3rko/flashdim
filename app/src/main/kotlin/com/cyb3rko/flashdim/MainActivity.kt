@@ -308,7 +308,7 @@ class MainActivity : AppCompatActivity() {
                 showDialog(
                     getString(R.string.dialog_credits_title),
                     getString(R.string.dialog_credits_message),
-                    android.R.drawable.ic_menu_info_details,
+                    R.drawable._ic_information,
                     { openUrl("https://flaticon.com", "Flaticon") },
                     getString(R.string.dialog_credits_button)
                 )

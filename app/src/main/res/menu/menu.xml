@@ -6,7 +6,7 @@
     <item
         android:id="@+id/github_action"
         android:title="Visit on GitHub"
-        android:icon="@drawable/ic_github"
+        android:icon="@drawable/_ic_github"
         app:showAsAction="ifRoom"
         tools:ignore="HardcodedText" />
 
@@ -20,7 +20,7 @@
     <item
         android:id="@+id/icon_credits_action"
         android:title="Icon Credits"
-        android:icon="@android:drawable/ic_menu_info_details"
+        android:icon="@drawable/_ic_information_scaled"
         app:showAsAction="ifRoom"
         tools:ignore="HardcodedText" />
 

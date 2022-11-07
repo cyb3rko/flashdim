@@ -27,7 +27,7 @@
     <string name="button_minimum_text">Minimum</string>
     <string name="button_off_text">Off</string>
     <string name="dialog_credits_title">Icon Credits</string>
-    <string name="dialog_credits_message">Flashlight icon created by Freepik - Flaticon\n\nKnob icon created by Debi Alpa Nugraha - Flaticon</string>
+    <string name="dialog_credits_message">Flashlight icon created by Freepik - Flaticon\nKnob icon created by Debi Alpa Nugraha - Flaticon\nGithub icon created by Laisa Islam Ani - Flaticon\nInformation icon created by Freepik - Flaticon\nMorse icon created by Freepik - Flaticon\nSetting icon created by Freepik - Flaticon\nShuttle icon created by Freepik - Flaticon\nVibrate icon created by Bombasticon Studio - Flaticon</string>
     <string name="dialog_credits_button">Open Flaticon</string>
     <string name="toast_url_failed">"Opening URL failed, copied URL instead"</string>
     <string name="preference_category_flashlight">Flashlight controls</string>
