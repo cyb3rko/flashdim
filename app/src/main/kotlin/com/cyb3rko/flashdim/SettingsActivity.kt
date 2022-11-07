@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
@@ -30,7 +31,15 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         when (key) {
             Safe.MORSE_VIBRATION, Safe.BUTTON_VIBRATION -> {
-                MaterialAlertDialogBuilder(this)
+                MaterialAlertDialogBuilder(
+                    this,
+                    com.google.android.material.R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+                )
+                    .setIcon(ResourcesCompat.getDrawable(
+                        resources,
+                        android.R.drawable.stat_notify_sync,
+                        theme
+                    ))
                     .setTitle(getString(R.string.dialog_restart_title))
                     .setMessage(getString(R.string.dialog_restart_message))
                     .setPositiveButton(getString(R.string.dialog_restart_positive_button)) { _, _ ->

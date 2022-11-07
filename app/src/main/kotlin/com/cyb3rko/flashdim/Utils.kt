@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.VibrationEffect
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 // For View class
@@ -41,14 +42,24 @@ internal fun Context.showToast(message: String, length: Int = Toast.LENGTH_SHORT
 internal fun Context.showDialog(
     title: String,
     message: CharSequence,
+    icon: Int?,
     action: () -> Unit = {},
     actionMessage: String = "",
     cancelable: Boolean = true
 ) {
-    val builder = MaterialAlertDialogBuilder(this)
+    val builder = MaterialAlertDialogBuilder(
+        this,
+        com.google.android.material.R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+    )
         .setTitle(title)
         .setMessage(message)
         .setCancelable(cancelable)
+
+    if (icon != null) {
+        builder.setIcon(
+            ResourcesCompat.getDrawable(resources, icon, theme)
+        )
+    }
 
     if (actionMessage.isNotBlank()) {
         builder.setPositiveButton(actionMessage) { _, _ ->

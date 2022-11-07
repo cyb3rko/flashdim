@@ -13,6 +13,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.lifecycleScope
 import com.cyb3rko.flashdim.databinding.ActivityMainBinding
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             showDialog(
                 getString(R.string.dialog_not_supported_title),
                 getString(R.string.dialog_not_supported_message),
+                android.R.drawable.ic_dialog_alert,
                 { exitProcess(0) },
                 getString(R.string.dialog_not_supported_button),
                 false
@@ -186,7 +188,15 @@ class MainActivity : AppCompatActivity() {
         @SuppressLint("InflateParams")
         val inputText = inputLayout.findViewById<TextInputEditText>(R.id.text_input_text)
 
-        MaterialAlertDialogBuilder(this@MainActivity)
+        MaterialAlertDialogBuilder(
+            this@MainActivity,
+            com.google.android.material.R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+        )
+            .setIcon(ResourcesCompat.getDrawable(
+                resources,
+                R.drawable._ic_morse,
+                theme
+            ))
             .setView(inputLayout)
             .setTitle(getString(R.string.dialog_morse_title))
             .setPositiveButton(android.R.string.ok, null)
@@ -298,6 +308,7 @@ class MainActivity : AppCompatActivity() {
                 showDialog(
                     getString(R.string.dialog_credits_title),
                     getString(R.string.dialog_credits_message),
+                    android.R.drawable.ic_menu_info_details,
                     { openUrl("https://flaticon.com", "Flaticon") },
                     getString(R.string.dialog_credits_button)
                 )

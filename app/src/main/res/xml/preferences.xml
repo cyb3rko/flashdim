@@ -29,7 +29,7 @@
             app:defaultValue="true"
             app:title="@string/preference_item_tactile_morse"
             app:summary="@string/preference_item_tactile_morse_summary"
-            app:icon="@drawable/_ic_morse" />
+            app:icon="@drawable/_ic_morse_scaled" />
 
     </PreferenceCategory>
 
