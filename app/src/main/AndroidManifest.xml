@@ -26,6 +26,7 @@
 
         <activity
             android:name="com.cyb3rko.flashdim.SettingsActivity"
+            android:parentActivityName=".MainActivity"
             android:fitsSystemWindows="true"
             android:screenOrientation="portrait"
             android:exported="false" />

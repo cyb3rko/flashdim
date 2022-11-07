@@ -23,6 +23,9 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
             .replace(binding.settingsContainer.id, SettingsFragment())
             .commit()
 
+        setSupportActionBar(binding.topAppBar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
         PreferenceManager.getDefaultSharedPreferences(this)
             .registerOnSharedPreferenceChangeListener(this)
