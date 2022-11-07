@@ -11,6 +11,13 @@
         tools:ignore="HardcodedText" />
 
     <item
+        android:id="@+id/settings_action"
+        android:title="Settings"
+        android:icon="@drawable/_ic_settings"
+        app:showAsAction="ifRoom"
+        tools:ignore="HardcodedText" />
+
+    <item
         android:id="@+id/icon_credits_action"
         android:title="Icon Credits"
         android:icon="@android:drawable/ic_menu_info_details"

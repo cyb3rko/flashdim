@@ -10,12 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:supportsRtl="false"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="LockedOrientationActivity">
         <activity
             android:name="com.cyb3rko.flashdim.MainActivity"
             android:fitsSystemWindows="true"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.cyb3rko.flashdim.SettingsActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:exported="false" />
 
         <service
             android:name=".SettingsTile"

@@ -2,6 +2,7 @@ package com.cyb3rko.flashdim
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
@@ -292,6 +293,10 @@ class MainActivity : AppCompatActivity() {
                     { openUrl("https://flaticon.com", "Flaticon") },
                     getString(R.string.dialog_credits_button)
                 )
+                return true
+            }
+            R.id.settings_action -> {
+                startActivity(Intent(this, SettingsActivity::class.java))
                 return true
             }
             R.id.github_action -> {

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">FlashDim</string>
+    <string name="settings">Settings</string>
     <string name="dialog_not_supported_title">Device not supported</string>
     <string name="dialog_not_supported_message">This device does not have a flash light.</string>
     <string name="dialog_not_supported_button">Exit</string>
@@ -25,4 +26,12 @@
     <string name="dialog_credits_message">Flashlight icon created by Freepik - Flaticon\n\nKnob icon created by Debi Alpa Nugraha - Flaticon</string>
     <string name="dialog_credits_button">Open Flaticon</string>
     <string name="toast_url_failed">"Opening URL failed, copied URL instead"</string>
+    <string name="preference_category_flashlight">Flashlight controls</string>
+    <string name="preference_item_instant_flash">Instant Flash</string>
+    <string name="preference_item_instant_flash_summary">Activate flashlight on app startup</string>
+    <string name="preference_category_vibration">Vibration</string>
+    <string name="preference_item_tactile_buttons">Tactile buttons</string>
+    <string name="preference_item_tactile_buttons_summary">Vibrate on button clicks and seekbar swipes</string>
+    <string name="preference_item_tactile_morse">Tactile morse</string>
+    <string name="preference_item_tactile_morse_summary">Vibrate morse code when flashing</string>
 </resources>

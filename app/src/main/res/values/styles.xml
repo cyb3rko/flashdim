@@ -3,6 +3,12 @@
     <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
         <item name="android:statusBarColor">@color/material_dynamic_neutral10</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="switchPreferenceStyle">@style/Preference.SwitchPreferenceCompat</item>
+    </style>
+
+    <style name="Preference.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="widgetLayout">@layout/preference_switch</item>
     </style>
 
 </resources>

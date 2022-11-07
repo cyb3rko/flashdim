@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="@string/preference_category_flashlight">
+
+        <SwitchPreferenceCompat
+            app:key="appstart_flash"
+            app:defaultValue="false"
+            app:title="@string/preference_item_instant_flash"
+            app:summary="@string/preference_item_instant_flash_summary"
+            app:icon="@drawable/_ic_rocket" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/preference_category_vibration">
+
+        <SwitchPreferenceCompat
+            app:key="button_vibration"
+            app:defaultValue="true"
+            app:title="@string/preference_item_tactile_buttons"
+            app:summary="@string/preference_item_tactile_buttons_summary"
+            app:icon="@drawable/_ic_vibration" />
+
+        <SwitchPreferenceCompat
+            app:key="morse_vibration"
+            app:defaultValue="true"
+            app:title="@string/preference_item_tactile_morse"
+            app:summary="@string/preference_item_tactile_morse_summary"
+            app:icon="@drawable/_ic_morse" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
