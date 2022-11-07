@@ -93,14 +93,14 @@ class MainActivity : AppCompatActivity() {
         } else {
             switchToSimpleMode()
         }
-        if (Safe.getBoolean(this, Safe.APPSTART_FLASH)) {
+        if (Safe.getBoolean(this, Safe.APPSTART_FLASH, false)) {
             cameraManager.setTorchMode(cameraId, true)
             updateLightLevelView(maxLevel)
             binding.seekBar.setProgress(maxLevel)
         }
 
-        vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION)
-        vibrateMorse = Safe.getBoolean(this, Safe.MORSE_VIBRATION)
+        vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION, true)
+        vibrateMorse = Safe.getBoolean(this, Safe.MORSE_VIBRATION, true)
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
