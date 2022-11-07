@@ -9,6 +9,10 @@
     <string name="dialog_morse_error_empty">Please enter your message</string>
     <string name="dialog_morse_error_length">Maximum length (50) exceeded</string>
     <string name="dialog_morse_error_characters">Use characters a–z, A–Z, 0–9 and space</string>
+    <string name="dialog_restart_title">Restart app?</string>
+    <string name="dialog_restart_message">For performance reasons the change will be visible on next app start.\n\nDo you want to restart now?</string>
+    <string name="dialog_restart_positive_button">Okay</string>
+    <string name="dialog_restart_negative_button">Later</string>
     <string name="hint_dim_not_supported">This device only supports 1 light level.\nDim feature deactivated.</string>
     <string name="light_level_sos">SOS mode</string>
     <string name="light_level_morse">Morse mode</string>

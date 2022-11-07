@@ -1,12 +1,16 @@
 package com.cyb3rko.flashdim
 
+import android.content.Intent
+import android.content.SharedPreferences
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-internal class SettingsActivity : AppCompatActivity() {
+internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     private lateinit var binding: ActivitySettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +23,27 @@ internal class SettingsActivity : AppCompatActivity() {
             .commit()
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
+        PreferenceManager.getDefaultSharedPreferences(this)
+            .registerOnSharedPreferenceChangeListener(this)
+    }
+
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
+        when (key) {
+            Safe.MORSE_VIBRATION, Safe.BUTTON_VIBRATION -> {
+                MaterialAlertDialogBuilder(this)
+                    .setTitle(getString(R.string.dialog_restart_title))
+                    .setMessage(getString(R.string.dialog_restart_message))
+                    .setPositiveButton(getString(R.string.dialog_restart_positive_button)) { _, _ ->
+                        val intent = packageManager.getLaunchIntentForPackage(packageName)
+                        val componentName = intent!!.component
+                        val mainIntent = Intent.makeRestartActivityTask(componentName)
+                        startActivity(mainIntent)
+                        Runtime.getRuntime().exit(0)
+                    }
+                    .setNegativeButton(getString(R.string.dialog_restart_negative_button), null)
+                    .show()
+            }
+        }
     }
 
     internal class SettingsFragment : PreferenceFragmentCompat() {
