@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private var morseActivated = false
+    private var vibrateButtons = false
+    private var vibrateMorse = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onProgressChanged(progress: Int) {
                     if (progress > 0) {
                         if (progress <= maxLevel) {
-                            Vibrator.vibrateTick(vibrator)
+                            if (vibrateButtons) Vibrator.vibrateTick(vibrator)
                             cameraManager.sendLightLevel(progress)
                             updateLightLevelView(progress)
                             currentLevel = progress
@@ -89,6 +91,14 @@ class MainActivity : AppCompatActivity() {
         } else {
             switchToSimpleMode()
         }
+        if (Safe.getBoolean(this, Safe.APPSTART_FLASH)) {
+            cameraManager.setTorchMode(cameraId, true)
+            updateLightLevelView(maxLevel)
+            binding.seekBar.setProgress(maxLevel)
+        }
+
+        vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION)
+        vibrateMorse = Safe.getBoolean(this, Safe.MORSE_VIBRATION)
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -105,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                 showMorseDialog()
             }
             maxButton.setOnClickListener {
-                Vibrator.vibrateDoubleClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateDoubleClick(vibrator)
                 if (isDimAllowed()) {
                     updateLightLevelView(maxLevel)
                     cameraManager.sendLightLevel(maxLevel)
@@ -116,21 +126,21 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             halfButton.setOnClickListener {
-                Vibrator.vibrateClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateClick(vibrator)
                 updateLightLevelView(maxLevel / 2)
                 cameraManager.sendLightLevel(maxLevel / 2)
                 currentLevel = maxLevel / 2
                 seekBar.setProgress(maxLevel / 2)
             }
             minButton.setOnClickListener {
-                Vibrator.vibrateClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateClick(vibrator)
                 updateLightLevelView(1)
                 cameraManager.sendLightLevel(1)
                 currentLevel = 1
                 seekBar.setProgress(1)
             }
             offButton.setOnClickListener {
-                Vibrator.vibrateClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateClick(vibrator)
                 morseActivated = false
                 if (isDimAllowed()) {
                     updateLightLevelView(0)
@@ -251,7 +261,7 @@ class MainActivity : AppCompatActivity() {
             var lastLetter = Char.MIN_VALUE
             val handler = MorseHandler { letter, code, delay, on ->
                 cameraManager.setTorchMode(cameraId, on)
-                if (on) Vibrator.vibrate(vibrator, delay)
+                if (vibrateMorse && on) Vibrator.vibrate(vibrator, delay)
 
                 if (lastLetter != letter) {
                     @SuppressLint("SetTextI18n")
