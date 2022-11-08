@@ -4,12 +4,17 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
+import android.view.Gravity
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.slider.Slider
 
 internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     private lateinit var binding: ActivitySettingsBinding
@@ -60,7 +65,77 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
 
     internal class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+            val myContext = requireContext()
             setPreferencesFromResource(R.xml.preferences, rootKey)
+
+            findPreference<Preference>(Safe.INITIAL_LEVEL)?.apply {
+                if (!Safe.getBoolean(myContext, Safe.MULTILEVEL, false)) {
+                    isEnabled = false
+                    return@apply
+                }
+
+                val initialLevel = Safe.getInt(myContext, Safe.INITIAL_LEVEL, 1)
+                val summaryString = getString(R.string.preference_item_initial_level_summary)
+                summary = "$summaryString: $initialLevel"
+
+                setOnPreferenceClickListener { preference ->
+                    val currentInitialLevel = Safe.getInt(myContext, Safe.INITIAL_LEVEL, 1)
+                    val content = LinearLayout(myContext).apply {
+                        orientation = LinearLayout.VERTICAL
+                        setPadding(75, 0, 75, 0)
+                    }
+                    val levelView = TextView(myContext).apply {
+                        textSize = 18f
+                        setPadding(24, 24, 24, 50)
+                        gravity = Gravity.CENTER_HORIZONTAL
+                        text = String.format(
+                            getString(R.string.preference_item_initial_level_dialog_message),
+                            currentInitialLevel,
+                            currentInitialLevel
+                        )
+                    }
+                    content.addView(levelView)
+                    val slider = Slider(myContext).apply {
+                        valueFrom = 1F
+                        valueTo = Safe.getInt(myContext, Safe.MAX_LEVEL, 0).toFloat()
+                        value = currentInitialLevel.toFloat()
+                        stepSize = 1F
+                        addOnChangeListener { _, value, _ ->
+                            levelView.text = String.format(
+                                getString(R.string.preference_item_initial_level_dialog_message),
+                                value.toInt(),
+                                currentInitialLevel
+                            )
+                        }
+                    }
+                    content.addView(slider)
+
+                    MaterialAlertDialogBuilder(
+                        requireContext(),
+                        com.google.android.material.R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+                    )
+                        .setIcon(ResourcesCompat.getDrawable(
+                            resources,
+                            R.drawable._ic_level,
+                            requireContext().theme
+                        ))
+                        .setTitle(getString(R.string.preference_item_initial_level_dialog_title))
+                        .setView(content)
+                        .setPositiveButton(android.R.string.ok) { _, _ ->
+                            val value = slider.value.toInt()
+                            Safe.writeInt(myContext, Safe.INITIAL_LEVEL, value)
+
+                            val summary = getString(R.string.preference_item_initial_level_summary)
+                            preference.summary = "$summary: $value"
+                        }
+                        .setNegativeButton(getString(
+                            R.string.preference_item_initial_level_dialog_negative_button
+                        ), null)
+                        .show()
+
+                    true
+                }
+            }
         }
     }
 }

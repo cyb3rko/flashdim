@@ -12,6 +12,12 @@
             app:summary="@string/preference_item_instant_flash_summary"
             app:icon="@drawable/_ic_rocket" />
 
+        <Preference
+            app:key="initial_level"
+            app:title="@string/preference_item_initial_level"
+            app:summary="@string/preference_item_initial_level_summary"
+            app:icon="@drawable/_ic_level_scaled" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

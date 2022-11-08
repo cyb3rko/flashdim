@@ -33,6 +33,11 @@
     <string name="preference_category_flashlight">Flashlight controls</string>
     <string name="preference_item_instant_flash">Instant Flash</string>
     <string name="preference_item_instant_flash_summary">Activate flashlight on app startup</string>
+    <string name="preference_item_initial_level">Initial level</string>
+    <string name="preference_item_initial_level_summary">Dim level for Initial Flash and Quick settings tile shortcut</string>
+    <string name="preference_item_initial_level_dialog_title">Set Initial Level</string>
+    <string name="preference_item_initial_level_dialog_message">New: %1$s\nCurrent: %2$s</string>
+    <string name="preference_item_initial_level_dialog_negative_button">Cancel</string>
     <string name="preference_category_vibration">Vibration</string>
     <string name="preference_item_tactile_buttons">Tactile buttons</string>
     <string name="preference_item_tactile_buttons_summary">Vibrate on button clicks and seekbar swipes</string>

@@ -63,6 +63,10 @@ class MainActivity : AppCompatActivity() {
 
         val cameraInfo = cameraManager.getCameraCharacteristics(cameraId)
         maxLevel = cameraInfo[CameraCharacteristics.FLASH_INFO_STRENGTH_MAXIMUM_LEVEL] ?: -1
+        Safe.writeInt(this, Safe.MAX_LEVEL, maxLevel)
+        if (Safe.getInt(this, Safe.INITIAL_LEVEL, -1) == -1) {
+            Safe.writeInt(this, Safe.INITIAL_LEVEL, maxLevel)
+        }
 
         if (maxLevel > 1) {
             binding.seekBar.maxProgress = maxLevel
@@ -90,13 +94,20 @@ class MainActivity : AppCompatActivity() {
                 cameraManager.setTorchMode(cameraId, false)
                 updateLightLevelView(0)
             }
+            Safe.writeBoolean(this, Safe.MULTILEVEL, true)
         } else {
             switchToSimpleMode()
+            Safe.writeBoolean(this, Safe.MULTILEVEL, false)
         }
         if (Safe.getBoolean(this, Safe.APPSTART_FLASH, false)) {
-            cameraManager.setTorchMode(cameraId, true)
-            updateLightLevelView(maxLevel)
-            binding.seekBar.setProgress(maxLevel)
+            if (maxLevel > 1) {
+                val level = Safe.getInt(this, Safe.INITIAL_LEVEL, -1)
+                cameraManager.sendLightLevel(level)
+                updateLightLevelView(level)
+                binding.seekBar.setProgress(level)
+            } else {
+                cameraManager.setTorchMode(cameraId, true)
+            }
         }
 
         vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION, true)
@@ -157,9 +168,14 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (intent.extras?.getBoolean(SETTINGS_TILE_CLICKED) == true) {
-            cameraManager.setTorchMode(cameraId, true)
-            updateLightLevelView(maxLevel)
-            binding.seekBar.setProgress(maxLevel)
+            if (maxLevel > 1) {
+                val level = Safe.getInt(this, Safe.INITIAL_LEVEL, -1)
+                cameraManager.sendLightLevel(level)
+                updateLightLevelView(level)
+                binding.seekBar.setProgress(level)
+            } else {
+                cameraManager.setTorchMode(cameraId, true)
+            }
             intent.removeExtra(SETTINGS_TILE_CLICKED)
         }
     }
