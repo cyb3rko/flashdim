@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager).defaultVibrator
     }
 
+    private var settingsOpened = false
     private var morseActivated = false
     private var vibrateButtons = false
     private var vibrateMorse = false
@@ -168,15 +169,23 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         if (intent.extras?.getBoolean(SETTINGS_TILE_CLICKED) == true) {
-            if (maxLevel > 1) {
-                val level = Safe.getInt(this, Safe.INITIAL_LEVEL, -1)
-                cameraManager.sendLightLevel(level)
-                updateLightLevelView(level)
-                binding.seekBar.setProgress(level)
-            } else {
-                cameraManager.setTorchMode(cameraId, true)
-            }
+            activateInitialFlash()
             intent.removeExtra(SETTINGS_TILE_CLICKED)
+        } else if (!settingsOpened && Safe.getBoolean(this, Safe.APPSTART_FLASH, false) &&
+            Safe.getBoolean(this, Safe.APPOPEN_FLASH, false)
+        ) {
+            activateInitialFlash()
+        } else settingsOpened = false
+    }
+
+    private fun activateInitialFlash() {
+        if (maxLevel > 1) {
+            val level = Safe.getInt(this, Safe.INITIAL_LEVEL, -1)
+            cameraManager.sendLightLevel(level)
+            updateLightLevelView(level)
+            binding.seekBar.setProgress(level)
+        } else {
+            cameraManager.setTorchMode(cameraId, true)
         }
     }
 
@@ -331,6 +340,7 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.settings_action -> {
+                settingsOpened = true
                 startActivity(Intent(this, SettingsActivity::class.java))
                 return true
             }

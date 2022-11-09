@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.preference.PreferenceManager
 
 internal object Safe {
+    internal const val APPOPEN_FLASH = "appopen_flash"
     internal const val APPSTART_FLASH = "appstart_flash"
     internal const val BUTTON_VIBRATION = "button_vibration"
     internal const val INITIAL_LEVEL = "initial_level"

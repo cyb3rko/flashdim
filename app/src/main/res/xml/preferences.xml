@@ -12,6 +12,14 @@
             app:summary="@string/preference_item_instant_flash_summary"
             app:icon="@drawable/_ic_rocket" />
 
+        <SwitchPreferenceCompat
+            app:key="appopen_flash"
+            app:defaultValue="false"
+            app:dependency="appstart_flash"
+            app:title="@string/preference_item_instant_flash_extension"
+            app:summary="@string/preference_item_instant_flash_extension_summary"
+            app:icon="@drawable/_ic_restart" />
+
         <Preference
             app:key="initial_level"
             app:title="@string/preference_item_initial_level"

@@ -33,6 +33,8 @@
     <string name="preference_category_flashlight">Flashlight controls</string>
     <string name="preference_item_instant_flash">Instant Flash</string>
     <string name="preference_item_instant_flash_summary">Activate flashlight on app startup</string>
+    <string name="preference_item_instant_flash_extension">Instant Flash Extension</string>
+    <string name="preference_item_instant_flash_extension_summary">Activate flashlight every time you open the app</string>
     <string name="preference_item_initial_level">Initial level</string>
     <string name="preference_item_initial_level_summary">Dim level for Initial Flash and Quick settings tile shortcut</string>
     <string name="preference_item_initial_level_dialog_title">Set Initial Level</string>
