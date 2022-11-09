@@ -72,13 +72,15 @@ Using a unified code format makes it much easier for me and for everyone else.
 | 💛 |
 | --- |  
 | <a href="https://www.flaticon.com/free-icons/flashlight" title="flashlight icons">Flashlight icons created by Freepik - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/knob" title="knob icons">Knob icons created by Debi Alpa Nugraha - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Laisa Islam Ani - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Freepik - Flaticon</a> |
+| <a href="https://www.flaticon.com/free-icons/knob" title="knob icons">Knob icons created by Debi Alpa Nugraha - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/morse-code" title="morse code icons">Morse code icons created by Freepik - Flaticon</a> |
+| <a href="https://www.flaticon.com/free-icons/restart" title="restart icons">Restart icons created by AlternativeStd - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/start-button" title="start button icons">Start button icons created by Freepik - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/vibrate" title="vibrate icons">Vibrate icons created by Bombasticon Studio - Flaticon</a> |
+| <a href="https://www.flaticon.com/free-icons/volume" title="volume icons">Volume icons created by Freepik - Flaticon</a> |
 
 ## License
 

@@ -7,4 +7,12 @@ To be able to use this new feature I've developed this app.
 
 <b>Used Icons</b>
 <a href="https://www.flaticon.com/free-icons/flashlight">Flashlight icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/github">Github icons created by Laisa Islam Ani - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/information">Information icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/knob">Knob icons created by Debi Alpa Nugraha - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/morse-code">Morse code icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/restart">Restart icons created by AlternativeStd - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/settings">Settings icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/start-button">Start button icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/vibrate">Vibrate icons created by Bombasticon Studio - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/volume">Volume icons created by Freepik - Flaticon</a>
