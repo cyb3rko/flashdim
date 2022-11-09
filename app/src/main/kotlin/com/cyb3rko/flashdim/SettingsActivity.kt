@@ -1,9 +1,11 @@
 package com.cyb3rko.flashdim
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
+import android.os.VibratorManager
 import android.view.Gravity
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -64,8 +66,14 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
     }
 
     internal class SettingsFragment : PreferenceFragmentCompat() {
+        private lateinit var myContext: Context
+        private val vibrator by lazy {
+            (myContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE)
+                    as VibratorManager).defaultVibrator
+        }
+
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-            val myContext = requireContext()
+            myContext = requireContext()
             setPreferencesFromResource(R.xml.preferences, rootKey)
 
             findPreference<Preference>(Safe.INITIAL_LEVEL)?.apply {
@@ -80,6 +88,7 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
 
                 setOnPreferenceClickListener { preference ->
                     val currentInitialLevel = Safe.getInt(myContext, Safe.INITIAL_LEVEL, 1)
+                    val withVibration = Safe.getBoolean(myContext, Safe.BUTTON_VIBRATION, true)
                     val content = LinearLayout(myContext).apply {
                         orientation = LinearLayout.VERTICAL
                         setPadding(75, 0, 75, 0)
@@ -101,6 +110,7 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                         value = currentInitialLevel.toFloat()
                         stepSize = 1F
                         addOnChangeListener { _, value, _ ->
+                            if (withVibration) Vibrator.vibrateTick(vibrator)
                             levelView.text = String.format(
                                 getString(R.string.preference_item_initial_level_dialog_message),
                                 value.toInt(),
