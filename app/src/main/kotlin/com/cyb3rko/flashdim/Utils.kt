@@ -85,23 +85,3 @@ internal fun Context.openUrl(url: String, label: String) {
         this.showToast(getString(R.string.toast_url_failed), Toast.LENGTH_LONG)
     }
 }
-
-internal object Vibrator {
-    internal fun vibrate(vibrator: android.os.Vibrator, duration: Long) {
-        vibrator.vibrate(
-            VibrationEffect.createOneShot(duration, 80)
-        )
-    }
-
-    internal fun vibrateClick(vibrator: android.os.Vibrator) {
-        vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
-    }
-
-    internal fun vibrateDoubleClick(vibrator: android.os.Vibrator) {
-        vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK))
-    }
-
-    internal fun vibrateTick(vibrator: android.os.Vibrator) {
-        vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK))
-    }
-}
