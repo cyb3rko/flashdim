@@ -29,7 +29,7 @@ internal class MorseHandler(
             'H' to "....",
             'I' to "..",
             'J' to ".---",
-            'K' to "-.-.",
+            'K' to "-.-",
             'L' to ".-..",
             'M' to "--",
             'N' to "-.",
