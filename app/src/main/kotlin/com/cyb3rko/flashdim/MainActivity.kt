@@ -91,10 +91,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            if (intent.extras?.getBoolean(SETTINGS_TILE_CLICKED) == null) {
-                cameraManager.setTorchMode(cameraId, false)
-                updateLightLevelView(0)
-            }
             Safe.writeBoolean(this, Safe.MULTILEVEL, true)
         } else {
             switchToSimpleMode()
@@ -168,10 +164,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (intent.extras?.getBoolean(SETTINGS_TILE_CLICKED) == true) {
-            activateInitialFlash()
-            intent.removeExtra(SETTINGS_TILE_CLICKED)
-        } else if (!settingsOpened && Safe.getBoolean(this, Safe.APPSTART_FLASH, false) &&
+        if (!settingsOpened && Safe.getBoolean(this, Safe.APPSTART_FLASH, false) &&
             Safe.getBoolean(this, Safe.APPOPEN_FLASH, false)
         ) {
             activateInitialFlash()
