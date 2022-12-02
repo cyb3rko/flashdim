@@ -20,6 +20,13 @@
             app:summary="@string/preference_item_instant_flash_extension_summary"
             app:icon="@drawable/_ic_restart" />
 
+        <SwitchPreferenceCompat
+            app:key="quick_settings_link"
+            app:defaultValue="false"
+            app:title="@string/preference_item_quick_settings_link"
+            app:summary="@string/preference_item_quick_settings_link_summary"
+            app:icon="@drawable/_ic_link" />
+
         <Preference
             app:key="initial_level"
             app:title="@string/preference_item_initial_level"

@@ -11,6 +11,7 @@ internal object Safe {
     internal const val MAX_LEVEL = "max_level"
     internal const val MORSE_VIBRATION = "morse_vibration"
     internal const val MULTILEVEL = "multilevel"
+    internal const val QUICK_SETTINGS_LINK = "quick_settings_link"
 
     internal fun getBoolean(
         context: Context,

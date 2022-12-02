@@ -27,7 +27,7 @@
     <string name="button_minimum_text">Minimum</string>
     <string name="button_off_text">Off</string>
     <string name="dialog_credits_title">Icon Credits</string>
-    <string name="dialog_credits_message">Flashlight icon created by Freepik - Flaticon\n\nKnob icon created by Debi Alpa Nugraha - Flaticon\n\nGithub icon created by Laisa Islam Ani - Flaticon\n\nInformation icon created by Freepik - Flaticon\n\nVolume icons created by Freepik - Flaticon\n\nMorse icon created by Freepik - Flaticon\n\nRestart icons created by AlternativeStd - Flaticon\n\nSetting icon created by Freepik - Flaticon\n\nShuttle icon created by Freepik - Flaticon\n\nVibrate icon created by Bombasticon Studio - Flaticon</string>
+    <string name="dialog_credits_message">Flashlight icon created by Freepik - Flaticon\n\nKnob icon created by Debi Alpa Nugraha - Flaticon\n\nGithub icon created by Laisa Islam Ani - Flaticon\n\nInformation icon created by Freepik - Flaticon\n\nVolume icons created by Freepik - Flaticon\n\nMorse icon created by Freepik - Flaticon\n\nRestart icons created by AlternativeStd - Flaticon\n\nSetting icon created by Freepik - Flaticon\n\nShuttle icon created by Freepik - Flaticon\n\nVibrate icon created by Bombasticon Studio - Flaticon\n\nLink icon created by Creaticca Creative Agency - Flaticon</string>
     <string name="dialog_credits_button">Open Flaticon</string>
     <string name="toast_url_failed">"Opening URL failed, copied URL instead"</string>
     <string name="preference_category_flashlight">Flashlight controls</string>
@@ -35,8 +35,10 @@
     <string name="preference_item_instant_flash_summary">Activate flashlight on app startup</string>
     <string name="preference_item_instant_flash_extension">Instant Flash Extension</string>
     <string name="preference_item_instant_flash_extension_summary">Activate flashlight every time you open the app</string>
+    <string name="preference_item_quick_settings_link">Quick Settings Link</string>
+    <string name="preference_item_quick_settings_link_summary">Link the initial level to the quick settings tile</string>
     <string name="preference_item_initial_level">Initial level</string>
-    <string name="preference_item_initial_level_summary">Dim level for Initial Flash and Quick settings tile shortcut</string>
+    <string name="preference_item_initial_level_summary">Dim level for Initial Flash and optionally for quick settings tile shortcut</string>
     <string name="preference_item_initial_level_dialog_title">Set Initial Level</string>
     <string name="preference_item_initial_level_dialog_message">New: %1$s\nCurrent: %2$s</string>
     <string name="preference_item_initial_level_dialog_negative_button">Cancel</string>
