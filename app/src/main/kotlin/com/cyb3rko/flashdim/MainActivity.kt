@@ -105,6 +105,9 @@ class MainActivity : AppCompatActivity() {
             } else {
                 cameraManager.setTorchMode(cameraId, true)
             }
+        } else {
+            cameraManager.setTorchMode(cameraId, false)
+            updateLightLevelView(0)
         }
 
         vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION, true)
