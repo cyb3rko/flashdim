@@ -1,0 +1,9 @@
+Additions:
+ - morse input feature
+ - vibration feedback
+
+Changes:
+ - simplified seekbar calculation and optimized change listener output
+
+Enhancements:
+ - internal updates

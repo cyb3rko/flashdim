@@ -1,0 +1,5 @@
+Fixes:
+ - fix incorrect progress bar level shown
+
+Additions:
+ - About section

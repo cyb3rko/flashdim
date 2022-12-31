@@ -1,0 +1,5 @@
+Fixes:
+ - empty light level view
+
+Additions:
+ - option to link initial level to quick settings tile

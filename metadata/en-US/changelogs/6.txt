@@ -1,0 +1,5 @@
+Fixes:
+ - fixed vibration for unrealistic dim levels
+
+Changes:
+ - make important dialog non cancelable
