@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
+import android.os.Build
 import android.os.Bundle
 import android.os.VibratorManager
 import android.view.Menu
@@ -326,13 +327,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.icon_credits_action -> {
-                showDialog(
-                    getString(R.string.dialog_credits_title),
-                    getString(R.string.dialog_credits_message),
-                    R.drawable._ic_information,
-                    { openUrl("https://flaticon.com", "Flaticon") },
-                    getString(R.string.dialog_credits_button)
-                )
+                showAboutDialog()
                 return true
             }
             R.id.settings_action -> {
@@ -346,5 +341,47 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun showAboutDialog() {
+        showDialog(
+            getString(R.string.dialog_about_title),
+            getString(
+                R.string.dialog_about_message,
+                BuildConfig.VERSION_NAME,
+                BuildConfig.VERSION_CODE,
+                BuildConfig.BUILD_TYPE,
+                Build.MANUFACTURER,
+                Build.MODEL,
+                Build.DEVICE,
+                when (Build.VERSION.SDK_INT) {
+                    19, 20 -> "4"
+                    21, 22 -> "5"
+                    23 -> "6"
+                    24, 25 -> "7"
+                    26, 27 -> "8"
+                    28 -> "9"
+                    29 -> "10"
+                    30 -> "11"
+                    31, 32 -> "12"
+                    33 -> "13"
+                    else -> "> 13"
+                },
+                Build.VERSION.SDK_INT
+            ),
+            R.drawable._ic_information,
+            { showIconCreditsDialog() },
+            getString(R.string.dialog_about_button)
+        )
+    }
+
+    private fun showIconCreditsDialog() {
+        showDialog(
+            getString(R.string.dialog_credits_title),
+            getString(R.string.dialog_credits_message),
+            R.drawable._ic_information,
+            { openUrl("https://flaticon.com", "Flaticon") },
+            getString(R.string.dialog_credits_button)
+        )
     }
 }
