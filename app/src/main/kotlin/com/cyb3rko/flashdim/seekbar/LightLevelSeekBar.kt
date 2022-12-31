@@ -68,12 +68,11 @@ open class LightLevelSeekBar @JvmOverloads constructor(
     }
 
     override fun onDraw(canvas: Canvas) {
-        super.onDraw(canvas)
         canvas.clipRect(
             paddingLeft,
             paddingTop,
-            mCanvasWidth - paddingRight,
-            mCanvasHeight - paddingBottom
+            mCanvasWidth,
+            mCanvasHeight
         )
         val availableWidth = getAvailableWidth()
         val availableHeight = getAvailableHeight()
@@ -82,8 +81,6 @@ open class LightLevelSeekBar @JvmOverloads constructor(
 
         var previousLevelBottom = paddingTop.toFloat()
 
-        val progressYPosition: Float = (availableHeight * progress / maxProgress).toFloat()
-
         for (i in 0 until maxProgress) {
             mLevelRect.set(
                 paddingLeft.toFloat(),
@@ -91,7 +88,7 @@ open class LightLevelSeekBar @JvmOverloads constructor(
                 availableWidth.toFloat() + paddingRight.toFloat(),
                 previousLevelBottom + levelHeight
             )
-            if (mLevelRect.centerY() <= progressYPosition) {
+            if (i + 1 <= progress) {
                 mLevelPaint.color = levelBackgroundColor
             } else {
                 mLevelPaint.color = levelProgressColor
