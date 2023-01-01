@@ -18,7 +18,9 @@
 
 ---
 
-[<img alt="Featured on HowToMen: Best Android Apps" src="https://i.imgur.com/vd3gOzP.png" />](https://youtu.be/C-qvkT2dawI?t=120)
+[<img alt="Featured on Sam Beckman: Top 20 Android Apps 2023" src="https://i.imgur.com/IQbl2CU.png" />](https://youtu.be/TOxEvJ_YM5g?t=279)
+---
+[<img alt="Featured on HowToMen: Best Android Apps - December 2022" src="https://i.imgur.com/wmKOj19.png" />](https://youtu.be/C-qvkT2dawI?t=120)
 ---
 [<img alt="Read Medium article" src="https://i.imgur.com/p6PHIK7.png" />](https://medium.com/p/835cdf2d6f3e)
 
