@@ -1,0 +1,5 @@
+Additions:
+ - error handling for rather rare errors
+
+Enhancements:
+ - new app icon
