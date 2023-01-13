@@ -37,14 +37,18 @@ class SettingsTile : TileService() {
         level: Int,
         activated: Boolean
     ) {
-        if (!activated) {
-            cameraManager.setTorchMode(cameraManager.cameraIdList[0], false)
-        } else {
-            if (level == -1) {
-                cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
+        try {
+            if (!activated) {
+                cameraManager.setTorchMode(cameraManager.cameraIdList[0], false)
             } else {
-                cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
+                if (level == -1) {
+                    cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
+                } else {
+                    cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
+                }
             }
+        } catch (e: Exception) {
+            handleFlashlightException(e)
         }
     }
 }
