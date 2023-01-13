@@ -56,13 +56,6 @@ android {
 //            signingConfig signingConfigs.signingConf2
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        releaseFD {
-            versionNameSuffix "-fdroid"
-            minifyEnabled true
-            shrinkResources true
-//            signingConfig signingConfigs.signingConf3
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
     }
     buildFeatures {
         viewBinding true
