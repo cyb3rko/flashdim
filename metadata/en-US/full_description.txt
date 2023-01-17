@@ -6,10 +6,8 @@ To be able to use this new feature I've developed this app.
 <ul><li>🔦 dimming your flashlight level by level</li><li>🎚 shortcut buttons for different brightness levels</li><li>🆘 SOS flash button</li><li>📫 morse code flash mode</li><li>⚡ quick settings tile for fast access</li><li>🔒 private, no ads, no internet connection</li><li>💯 modern Material You (M3) design elements</li><li>🎨 app colors adapt to device's system colors</li></ul>
 
 <b>Used Icons</b>
-<a href="https://www.flaticon.com/free-icons/flashlight">Flashlight icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/github">Github icons created by Laisa Islam Ani - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/information">Information icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/knob">Knob icons created by Debi Alpa Nugraha - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/morse-code">Morse code icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/restart">Restart icons created by AlternativeStd - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/settings">Settings icons created by Freepik - Flaticon</a>

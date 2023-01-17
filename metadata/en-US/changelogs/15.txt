@@ -1,0 +1,6 @@
+Additions:
+ - add themed icon of new logo
+
+Enhancements:
+ - improved app logo
+ - internal updates
