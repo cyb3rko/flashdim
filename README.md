@@ -5,7 +5,7 @@
 [![last commit](https://img.shields.io/github/last-commit/cyb3rko/flashdim?color=F34C9F)](https://github.com/cyb3rko/flashdim/commits/main)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e7fd3ea03da4a32aae48ff39693ee91)](https://www.codacy.com/gh/cyb3rko/flashdim/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cyb3rko/flashdim&amp;utm_campaign=Badge_Grade)
 
-![flashdim](https://socialify.git.ci/cyb3rko/flashdim/image?description=1&font=Bitter&forks=1&issues=1&logo=https%3A%2F%2Fi.imgur.com%2FiUxm2T3.png&name=1&owner=1&pattern=Diagonal%20Stripes&pulls=1&stargazers=1&theme=Dark)
+![flashdim](https://socialify.git.ci/cyb3rko/flashdim/image?description=1&font=Bitter&forks=1&issues=1&logo=https%3A%2F%2Fi.imgur.com%2FeGuy6Mb.png&name=1&owner=1&pattern=Diagonal%20Stripes&pulls=1&stargazers=1&theme=Dark)
 
 - [About this project](#about-this-project)   
 - [Features](#features)  
