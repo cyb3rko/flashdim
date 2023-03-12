@@ -59,6 +59,7 @@ Here's a list of devices I know of which do work FOR SURE. If you've used a devi
 - Google Pixel 6 series
 - Google Pixel 7 series
 - nearly every Samsung phone with Android 13
+- many other phones from different manufacturers
 
 ## Screenshots
 |<img src="https://i.imgur.com/oIUHkTg.png" width="220">|<img src="https://i.imgur.com/0hoCzcE.png" width="220">|<img src="https://i.imgur.com/pTO3CMs.png" width="220">|<img src="https://i.imgur.com/ltkU3so.png" width="220">|
