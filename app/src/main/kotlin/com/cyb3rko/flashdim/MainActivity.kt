@@ -26,7 +26,6 @@ import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     private val cameraId by lazy { cameraManager.cameraIdList[0] }
@@ -187,7 +186,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private fun switchToSimpleMode() {
         binding.apply {
             buttonContainer.setPadding(0, 24, 64, 24)
@@ -231,7 +229,7 @@ class MainActivity : AppCompatActivity() {
                             inputLayout.error = getString(R.string.dialog_morse_error_empty)
                         } else if (message.length > 50) {
                             inputLayout.error = getString(R.string.dialog_morse_error_length)
-                        } else if (!Regex("[a-zA-Z0-9 ]+").matches(message)) {
+                        } else if (!Regex("[a-zA-Z\\d ]+").matches(message)) {
                             inputLayout.error = getString(R.string.dialog_morse_error_characters)
                         } else {
                             dismiss()
@@ -255,12 +253,10 @@ class MainActivity : AppCompatActivity() {
                 halfButton.hide()
                 minButton.hide()
                 seekBar.disable()
-                @SuppressLint("SetTextI18n")
                 binding.levelIndicator.text = message
             }
         } else {
             binding.apply {
-                @SuppressLint("SetTextI18n")
                 quickActionsView.text = getString(R.string.textview_quick_actions_title)
                 maxButton.show()
                 sosButton.enable()

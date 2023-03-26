@@ -59,15 +59,15 @@ internal class MorseHandler(
     }
 
     internal suspend fun flashMessage(message: String, ) {
-        var code: String?
+        var code: String
         var delay: Long
         var firstLetter = true
         var firstCodePart = true
         message.uppercase().forEach { char ->
             if (char != ' ') {
                 if (!firstLetter) delay(DELAY_INTER_CHARACTER)
-                code = CHARACTERS[char]
-                code?.forEach { symbol ->
+                code = CHARACTERS[char]!!
+                code.forEach { symbol ->
                     if (!firstCodePart) delay(DELAY_INTRA_CHARACTER)
                     delay = when (symbol) {
                         '.' -> DELAY_DOT
@@ -75,7 +75,7 @@ internal class MorseHandler(
                         else -> 0L
                     }
                     firstCodePart = false
-                    val allowedContinuation = blink(char, code!!, delay)
+                    val allowedContinuation = blink(char, code, delay)
                     if (!allowedContinuation) return
                 }
                 firstLetter = false
