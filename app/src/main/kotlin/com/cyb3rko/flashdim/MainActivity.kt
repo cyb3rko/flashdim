@@ -71,44 +71,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (maxLevel > 1) {
-            binding.seekBar.maxProgress = maxLevel
-            binding.seekBar.onProgressChanged = object : SeekBarChangeListener {
-                override fun onProgressChanged(progress: Int) {
-                    if (progress > 0) {
-                        if (progress <= maxLevel) {
-                            if (vibrateButtons) Vibrator.vibrateTick(vibrator)
-                            cameraManager.sendLightLevel(progress)
-                            updateLightLevelView(progress)
-                            currentLevel = progress
-                        } else {
-                            cameraManager.sendLightLevel(maxLevel)
-                            updateLightLevelView(maxLevel)
-                            currentLevel = progress
-                        }
-                    } else if (progress == 0) {
-                        cameraManager.setTorchMode(cameraId, false)
-                        updateLightLevelView(0)
-                        currentLevel = 0
-                    }
-                }
-            }
+            initSeekbar()
             Safe.writeBoolean(this, Safe.MULTILEVEL, true)
         } else {
             switchToSimpleMode()
             Safe.writeBoolean(this, Safe.MULTILEVEL, false)
         }
-        if (Safe.getBoolean(this, Safe.APPSTART_FLASH, false)) {
-            if (maxLevel > 1) {
-                val level = Safe.getInt(this, Safe.INITIAL_LEVEL, -1)
-                cameraManager.sendLightLevel(level)
-                updateLightLevelView(level)
-                binding.seekBar.setProgress(level)
-            } else {
-                cameraManager.setTorchMode(cameraId, true)
-            }
-        } else {
-            updateLightLevelView(0)
-        }
+        executeAppStartFlash()
 
         vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION, true)
         vibrateMorse = Safe.getBoolean(this, Safe.MORSE_VIBRATION, true)
@@ -117,6 +86,39 @@ class MainActivity : AppCompatActivity() {
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         if (!doesDeviceHaveFlash()) return
+        initButtonClickListeners()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        executeAppOpenFlash()
+        restoreLightLevelUi()
+    }
+
+    private fun initSeekbar() {
+        binding.seekBar.maxProgress = maxLevel
+        binding.seekBar.onProgressChanged = object : SeekBarChangeListener {
+            override fun onProgressChanged(progress: Int) {
+                if (progress > 0) {
+                    if (progress <= maxLevel) {
+                        if (vibrateButtons) Vibrator.vibrateTick(vibrator)
+                        cameraManager.sendLightLevel(progress)
+                        updateLightLevelView(progress)
+                    } else {
+                        cameraManager.sendLightLevel(maxLevel)
+                        updateLightLevelView(maxLevel)
+                    }
+                    currentLevel = progress
+                } else if (progress == 0) {
+                    cameraManager.setTorchMode(cameraId, false)
+                    updateLightLevelView(0)
+                    currentLevel = 0
+                }
+            }
+        }
+    }
+
+    private fun initButtonClickListeners() {
         binding.apply {
             sosButton.setOnClickListener {
                 sosButton.disable()
@@ -165,25 +167,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
+    private fun executeAppStartFlash() {
+        if (Safe.getBoolean(this, Safe.APPSTART_FLASH, false)) {
+            activateInitialFlash()
+        } else {
+            updateLightLevelView(0)
+        }
+    }
+
+    private fun executeAppOpenFlash() {
         if (!settingsOpened && Safe.getBoolean(this, Safe.APPSTART_FLASH, false) &&
             Safe.getBoolean(this, Safe.APPOPEN_FLASH, false)
         ) {
             activateInitialFlash()
         } else settingsOpened = false
-
-        if (maxLevel > 1 && Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
-            val level = if (Safe.getBoolean(this, Safe.QUICK_SETTINGS_LINK, false)) {
-                Safe.getInt(this, Safe.INITIAL_LEVEL, 0)
-            } else {
-                maxLevel
-            }
-            updateLightLevelView(level)
-            binding.seekBar.setProgress(level)
-        } else {
-            cameraManager.setTorchMode(cameraId, false)
-        }
     }
 
     private fun activateInitialFlash() {
@@ -194,6 +191,20 @@ class MainActivity : AppCompatActivity() {
             binding.seekBar.setProgress(level)
         } else {
             cameraManager.setTorchMode(cameraId, true)
+        }
+    }
+
+    private fun restoreLightLevelUi() {
+        if (maxLevel > 1 && Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
+            val level = if (Safe.getBoolean(this, Safe.QUICK_SETTINGS_LINK, false)) {
+                Safe.getInt(this, Safe.INITIAL_LEVEL, 0)
+            } else {
+                maxLevel
+            }
+            updateLightLevelView(level)
+            binding.seekBar.setProgress(level)
+        } else {
+            cameraManager.setTorchMode(cameraId, false)
         }
     }
 
