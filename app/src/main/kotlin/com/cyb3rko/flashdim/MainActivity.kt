@@ -107,7 +107,6 @@ class MainActivity : AppCompatActivity() {
                 cameraManager.setTorchMode(cameraId, true)
             }
         } else {
-            cameraManager.setTorchMode(cameraId, false)
             updateLightLevelView(0)
         }
 
@@ -173,6 +172,18 @@ class MainActivity : AppCompatActivity() {
         ) {
             activateInitialFlash()
         } else settingsOpened = false
+
+        if (maxLevel > 1 && Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
+            val level = if (Safe.getBoolean(this, Safe.QUICK_SETTINGS_LINK, false)) {
+                Safe.getInt(this, Safe.INITIAL_LEVEL, 0)
+            } else {
+                maxLevel
+            }
+            updateLightLevelView(level)
+            binding.seekBar.setProgress(level)
+        } else {
+            cameraManager.setTorchMode(cameraId, false)
+        }
     }
 
     private fun activateInitialFlash() {
