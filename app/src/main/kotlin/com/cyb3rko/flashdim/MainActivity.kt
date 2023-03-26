@@ -21,9 +21,9 @@ import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import kotlinx.coroutines.cancel
-import kotlin.system.exitProcess
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -294,37 +294,35 @@ class MainActivity : AppCompatActivity() {
     private fun isDimAllowed() = binding.maxButton.text == getString(R.string.button_max_maximum)
 
     private fun handleMorseCall(message: String) {
-        lifecycleScope.launch {
-            try {
-                var lastLetter = Char.MIN_VALUE
-                val handler = MorseHandler { letter, code, delay, on ->
-                    cameraManager.setTorchMode(cameraId, on)
-                    if (vibrateMorse && on) Vibrator.vibrate(vibrator, delay)
+        val morseExceptionHandler = CoroutineExceptionHandler { _, error ->
+            switchMorseMode(false)
+            binding.levelIndicator.text = "0"
+            updateLightLevelView(0)
+            handleFlashlightException(error as Exception, this@MainActivity)
+        }
+        lifecycleScope.launch(morseExceptionHandler) {
+            var lastLetter = Char.MIN_VALUE
+            val handler = MorseHandler { letter, code, delay, on ->
+                cameraManager.setTorchMode(cameraId, on)
+                if (vibrateMorse && on) Vibrator.vibrate(vibrator, delay)
 
-                    if (lastLetter != letter) {
-                        @SuppressLint("SetTextI18n")
-                        binding.quickActionsView.text = getString(
-                            R.string.textview_quick_actions_morse,
-                            letter,
-                            code
-                        )
-                        lastLetter = letter
-                    }
+                if (lastLetter != letter) {
+                    binding.quickActionsView.text = getString(
+                        R.string.textview_quick_actions_morse,
+                        letter,
+                        code
+                    )
 
-                    morseActivated
+                    lastLetter = letter
                 }
-                while (morseActivated) {
-                    handler.flashMessage(message)
-                    if (morseActivated) handler.waitForRepeat()
-                }
-                switchMorseMode(false)
-            } catch (e: Exception) {
-                this.cancel()
-                switchMorseMode(false)
-                binding.levelIndicator.text = "0"
-                updateLightLevelView(0)
-                handleFlashlightException(e, this@MainActivity)
+
+                morseActivated
             }
+            while (morseActivated) {
+                handler.flashMessage(message)
+                if (morseActivated) handler.waitForRepeat()
+            }
+            switchMorseMode(false)
         }
     }
 
