@@ -76,8 +76,8 @@ jobs:
           CHANGELOG: ${{ steps.github_release.outputs.changelog }}
         run: echo "$CHANGELOG"
         
-      # - name: Checkout repo
-      #   uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2
           
       - name: Setup JDK
         uses: actions/setup-java@v3
