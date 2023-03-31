@@ -68,7 +68,13 @@ jobs:
                     "target": "$1",
                     "on_property": "title"
                 }
-              ]
+              ],
+                  "transformers": [
+                  {
+                    "pattern": "(.+):(.+)",
+                    "target": "$2"
+                  }
+                ]
             }
       
       - name: Echo Changelog
