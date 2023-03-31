@@ -72,7 +72,7 @@ jobs:
                   "transformers": [
                   {
                     "pattern": "(.+):(.+)",
-                    "target": "- $2"
+                    "target": "-$2"
                   }
                 ]
             }
