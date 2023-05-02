@@ -10,6 +10,7 @@
 - [About this project](#about-this-project)   
 - [Features](#features)  
 - [Download](#download)
+  - [Verification](#verification)
 - [Supported devices](#supported-devices)
 - [Screenshots](#screenshots)
 - [Contribute](#contribute)
@@ -54,6 +55,58 @@ src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
 [<img height="80" alt="Get it on F-Droid"
 src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 />](https://f-droid.org/app/com.cyb3rko.flashdim)
+[<img height="80" src="https://raw.githubusercontent.com/gotify/android/master/download-badge.png"/>](https://github.com/cyb3rko/pincredible/releases/latest)
+
+### Verification
+
+The APK files can be verified using [apksigner](https://developer.android.com/studio/command-line/apksigner.html#options-verify).
+
+```
+apksigner verify --print-certs -v example.apk
+```
+
+---
+
+**Google Play Store**  
+The output should look like this:
+
+```
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+```
+
+The certificate content and digests should look like this:
+
+```
+DN: CN=Android, OU=Android, O=Google Inc., L=Mountain View, ST=California, C=US
+Certificate Digests:
+  SHA-256: 4b:05:58:fa:9d:2e:32:b0:1c:d0:00:7b:13:66:35:b5:ac:67:b5:ca:63:ff:c2:ef:e2:58:9a:80:20:e8:ca:4f
+  SHA-1:   47:2d:b2:9e:57:df:be:48:09:55:3b:f9:c1:d8:15:a5:e3:ed:27:82
+  MD5:     14:cc:12:d7:6b:29:9a:79:64:ac:36:c8:56:ec:a5:78
+```
+
+---
+
+**F-Droid and GitHub** (signed using the same key)    
+The output should look like this:
+
+```
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+```
+
+The certificate content and digests should look like this:
+
+```
+DN: C=DE, CN=Niko Diamadis
+Certificate Digests:
+  SHA-256: 7b:d9:79:cd:5f:f9:29:e0:72:90:e8:8d:67:b2:d8:1f:22:8e:a2:64:e4:33:f7:84:e4:c6:63:73:e3:16:bc:ad
+  SHA-1:   c7:52:14:9f:4d:c3:e4:02:26:92:0b:68:20:94:6e:da:99:01:69:29
+  MD5:     8d:15:71:36:6e:30:7c:23:c9:2c:e8:9d:f2:38:5f:e1
+```
 
 ## Supported Devices
 The full functionalizy of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
@@ -90,7 +143,7 @@ Using a unified code format makes it much easier for me and for everyone else.
 
 ## License
 
-    Copyright 2022, Cyb3rKo
+    Copyright 2023, Cyb3rKo
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
