@@ -12,6 +12,7 @@
 - [Download](#download)
   - [Verification](#verification)
 - [Supported devices](#supported-devices)
+  - [Exluded devices (Play Store) / Unsupported devices](#exluded-devices-play-store--unsupported-devices)
 - [Screenshots](#screenshots)
 - [Contribute](#contribute)
 - [Used Icons](#used-icons)
@@ -116,6 +117,22 @@ Here's a list of devices I know of which do work FOR SURE. If you've used a devi
 - Google Pixel 7 series
 - nearly every Samsung phone with Android 13
 - many other phones from different manufacturers
+
+### Exluded devices (Play Store) / Unsupported devices
+
+The following list shows phones, which were manually excluded by myself in the Google Play Store, because of unsupported flashlight dimming functionality.  
+If the list contains any phone which does has a dimmable flashlight, please let me know.
+
+- Google Pixel 4 (google flame)
+- Google Pixel 4 XL (google coral)
+- Google Pixel 4a (5G) (google bramble)
+- Google Pixel 5 (google redfin)
+- Google Pixel 5a 5G (google barbet)
+- OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)
+- Oppo CPH2293 (OPPO OP52E1L1)
+- Oppo CPH2461 (OPPO OP533FL1)
+- Oppo Reno6 Z 5G (OPPO OP4FA7L1)
+- realme 真我GT 2 (realme RE58B2L1)
 
 ## Screenshots
 |<img src="https://i.imgur.com/oIUHkTg.png" width="220">|<img src="https://i.imgur.com/0hoCzcE.png" width="220">|<img src="https://i.imgur.com/pTO3CMs.png" width="220">|<img src="https://i.imgur.com/ltkU3so.png" width="220">|
