@@ -32,6 +32,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.lifecycleScope
+import com.cyb3rko.flashdim.AppReviewManager
 import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.MorseHandler
 import com.cyb3rko.flashdim.R
@@ -121,6 +122,7 @@ class MainActivity : AppCompatActivity() {
         super.onPostCreate(savedInstanceState)
         if (!doesDeviceHaveFlash()) return
         initButtonClickListeners()
+        AppReviewManager.initiateReviewDialog(this)
     }
 
     override fun onResume() {

@@ -29,6 +29,7 @@ internal object Safe {
     const val MORSE_VIBRATION = "morse_vibration"
     const val MULTILEVEL = "multilevel"
     const val QUICK_SETTINGS_LINK = "quick_settings_link"
+    const val STARTUP_COUNTER = "startup_counter"
 
     fun getBoolean(
         context: Context,
