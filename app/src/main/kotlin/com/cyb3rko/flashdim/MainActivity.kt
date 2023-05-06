@@ -44,7 +44,7 @@ import kotlin.system.exitProcess
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    private val cameraId by lazy { cameraManager.cameraIdList[0] }
+    private val cameraId by lazy { findFlashCameraId() }
     private val cameraManager by lazy { getSystemService(Context.CAMERA_SERVICE) as CameraManager }
     private var currentLevel = -1
     private var maxLevel = -1
@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.topAppBar)
 
+        if (cameraId.isEmpty()) return
         val cameraInfo = cameraManager.getCameraCharacteristics(cameraId)
         maxLevel = cameraInfo[CameraCharacteristics.FLASH_INFO_STRENGTH_MAXIMUM_LEVEL] ?: -1
         Safe.writeInt(this, Safe.MAX_LEVEL, maxLevel)
@@ -368,6 +369,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun doesDeviceHaveFlash(): Boolean {
         return packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
+    }
+
+    private fun findFlashCameraId(): String {
+        val firstCameraWithFlash = cameraManager.cameraIdList.find { camera ->
+            cameraManager.getCameraCharacteristics(camera).keys.any { key ->
+                key == CameraCharacteristics.FLASH_INFO_AVAILABLE
+            }
+        }
+
+        if (firstCameraWithFlash != null) {
+            return firstCameraWithFlash
+        }
+        showErrorDialog(this, "Camera with flashlight not found") {
+            finish()
+        }
+        return ""
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

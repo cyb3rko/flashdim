@@ -21,7 +21,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-fun handleFlashlightException(
+internal fun handleFlashlightException(
     exception: Exception,
     activity: AppCompatActivity? = null
 ) {
@@ -59,11 +59,17 @@ fun handleFlashlightException(
     throw exception
 }
 
-private fun showErrorDialog(activity: AppCompatActivity, message: String) {
+internal fun showErrorDialog(
+    activity: AppCompatActivity,
+    message: String,
+    onClick: () -> Unit = {}
+) {
     MaterialAlertDialogBuilder(activity)
         .setTitle("Exception occured")
         .setMessage(message)
         .setCancelable(false)
-        .setPositiveButton("Roger", null)
+        .setPositiveButton("Roger") { _, _ ->
+            onClick()
+        }
         .show()
 }
