@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyb3rko.flashdim
+package com.cyb3rko.flashdim.utils
 
 import android.os.VibrationEffect
 

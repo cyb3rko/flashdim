@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
         <activity
-            android:name="com.cyb3rko.flashdim.MainActivity"
+            android:name="com.cyb3rko.flashdim.activities.MainActivity"
             android:fitsSystemWindows="true"
             android:screenOrientation="portrait"
             android:exported="true">
@@ -26,8 +26,8 @@
         </activity>
 
         <activity
-            android:name="com.cyb3rko.flashdim.SettingsActivity"
-            android:parentActivityName=".MainActivity"
+            android:name="com.cyb3rko.flashdim.activities.SettingsActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:fitsSystemWindows="true"
             android:screenOrientation="portrait"
             android:exported="false" />

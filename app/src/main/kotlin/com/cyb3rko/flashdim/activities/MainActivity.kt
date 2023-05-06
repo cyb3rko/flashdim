@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyb3rko.flashdim
+package com.cyb3rko.flashdim.activities
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -32,8 +32,22 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.lifecycleScope
+import com.cyb3rko.flashdim.BuildConfig
+import com.cyb3rko.flashdim.MorseHandler
+import com.cyb3rko.flashdim.R
+import com.cyb3rko.flashdim.utils.Safe
+import com.cyb3rko.flashdim.utils.Vibrator
 import com.cyb3rko.flashdim.databinding.ActivityMainBinding
+import com.cyb3rko.flashdim.utils.disable
+import com.cyb3rko.flashdim.utils.enable
+import com.cyb3rko.flashdim.handleFlashlightException
+import com.cyb3rko.flashdim.utils.hide
+import com.cyb3rko.flashdim.utils.makeInvisible
+import com.cyb3rko.flashdim.utils.openUrl
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
+import com.cyb3rko.flashdim.utils.show
+import com.cyb3rko.flashdim.utils.showDialog
+import com.cyb3rko.flashdim.showErrorDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout

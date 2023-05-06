@@ -23,6 +23,7 @@ import android.os.Handler
 import android.os.Looper
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import com.cyb3rko.flashdim.utils.Safe
 
 class SettingsTile : TileService() {
     override fun onClick() {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyb3rko.flashdim
+package com.cyb3rko.flashdim.activities
 
 import android.content.Context
 import android.content.Intent
@@ -30,6 +30,9 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
+import com.cyb3rko.flashdim.R
+import com.cyb3rko.flashdim.utils.Safe
+import com.cyb3rko.flashdim.utils.Vibrator
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.slider.Slider

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.cyb3rko.flashdim
+package com.cyb3rko.flashdim.utils
 
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.os.VibrationEffect
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
+import com.cyb3rko.flashdim.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 // For View class
