@@ -1,3 +1,0 @@
-Fixes:
- - wrong settings on first app start
- - lint error for release versions

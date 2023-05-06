@@ -1,5 +1,0 @@
-Fixes:
- - wrong morse code for 'K'
-
-Enhancements:
- - change behaviour of quick settings tile

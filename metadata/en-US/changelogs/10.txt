@@ -1,6 +1,0 @@
-Additions:
- - setting to change initial light level
- - setting to activate flashlight every time the app is opened
-
-Enhancements:
- - update icons

@@ -1,9 +1,0 @@
-Additions:
- - Settings page
-
-Changes:
- - beautified dialogs
-
-Enhancements:
- - compressed icons
- - small code refactoring

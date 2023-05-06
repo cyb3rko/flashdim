@@ -1,5 +1,0 @@
-Additions:
- - themed icon
-
-Changes:
- - clear intent on Quick tile click
