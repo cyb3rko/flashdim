@@ -93,7 +93,10 @@ class MainActivity : AppCompatActivity() {
             switchToSimpleMode()
             Safe.writeBoolean(this, Safe.MULTILEVEL, false)
         }
-        executeAppStartFlash()
+
+        if (!Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
+            executeAppStartFlash()
+        }
 
         vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION, true)
         vibrateMorse = Safe.getBoolean(this, Safe.MORSE_VIBRATION, true)
@@ -107,8 +110,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        executeAppOpenFlash()
-        restoreLightLevelUi()
+        val restored = restoreLightLevelUi()
+        if (!restored) executeAppOpenFlash()
     }
 
     private fun initSeekbar() {
@@ -210,8 +213,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun restoreLightLevelUi() {
-        if (maxLevel > 1 && Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
+    private fun restoreLightLevelUi(): Boolean {
+        val restored = if (maxLevel > 1 && Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
             val level = if (Safe.getBoolean(this, Safe.QUICK_SETTINGS_LINK, false)) {
                 Safe.getInt(this, Safe.INITIAL_LEVEL, 0)
             } else {
@@ -219,9 +222,12 @@ class MainActivity : AppCompatActivity() {
             }
             updateLightLevelView(level)
             binding.seekBar.setProgress(level)
+            true
         } else {
-            cameraManager.setTorchMode(cameraId, false)
+            false
         }
+        Safe.writeBoolean(this, Safe.FLASH_ACTIVE, false)
+        return restored
     }
 
     private fun switchToSimpleMode() {
