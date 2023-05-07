@@ -19,10 +19,6 @@ package com.cyb3rko.flashdim.activities
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.hardware.camera2.CameraCharacteristics
-import android.hardware.camera2.CameraManager
-import android.os.Build
 import android.os.Bundle
 import android.os.VibratorManager
 import android.view.Menu
@@ -34,6 +30,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.lifecycleScope
 import com.cyb3rko.flashdim.AppReviewManager
 import com.cyb3rko.flashdim.BuildConfig
+import com.cyb3rko.flashdim.Camera
 import com.cyb3rko.flashdim.MorseHandler
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.utils.Safe
@@ -42,13 +39,14 @@ import com.cyb3rko.flashdim.databinding.ActivityMainBinding
 import com.cyb3rko.flashdim.utils.disable
 import com.cyb3rko.flashdim.utils.enable
 import com.cyb3rko.flashdim.handleFlashlightException
+import com.cyb3rko.flashdim.modals.AboutDialog
+import com.cyb3rko.flashdim.modals.BuildInfo
 import com.cyb3rko.flashdim.utils.hide
 import com.cyb3rko.flashdim.utils.makeInvisible
 import com.cyb3rko.flashdim.utils.openUrl
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.cyb3rko.flashdim.utils.show
 import com.cyb3rko.flashdim.utils.showDialog
-import com.cyb3rko.flashdim.showErrorDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -59,10 +57,9 @@ import kotlin.system.exitProcess
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    private val cameraId by lazy { findFlashCameraId() }
-    private val cameraManager by lazy { getSystemService(Context.CAMERA_SERVICE) as CameraManager }
     private var currentLevel = -1
     private var maxLevel = -1
+    private val camera by lazy { Camera(this) }
     private val vibrator by lazy {
         (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager).defaultVibrator
     }
@@ -75,15 +72,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!doesDeviceHaveFlash()) {
+        if (!Camera.doesDeviceHaveFlash(packageManager)) {
             setContentView(View(this))
             showDialog(
-                getString(R.string.dialog_not_supported_title),
-                getString(R.string.dialog_not_supported_message),
-                android.R.drawable.ic_dialog_alert,
-                { exitProcess(0) },
-                getString(R.string.dialog_not_supported_button),
-                false
+                title = getString(R.string.dialog_not_supported_title),
+                message = getString(R.string.dialog_not_supported_message),
+                icon = android.R.drawable.ic_dialog_alert,
+                action = { exitProcess(0) },
+                actionMessage = getString(R.string.dialog_not_supported_button),
+                cancelable = false
             )
             return
         }
@@ -94,9 +91,8 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.topAppBar)
 
-        if (cameraId.isEmpty()) return
-        val cameraInfo = cameraManager.getCameraCharacteristics(cameraId)
-        maxLevel = cameraInfo[CameraCharacteristics.FLASH_INFO_STRENGTH_MAXIMUM_LEVEL] ?: -1
+        if (camera.idEmpty) return
+        maxLevel = camera.maxLevel
         Safe.writeInt(this, Safe.MAX_LEVEL, maxLevel)
         if (Safe.getInt(this, Safe.INITIAL_LEVEL, -1) == -1) {
             Safe.writeInt(this, Safe.INITIAL_LEVEL, maxLevel)
@@ -120,7 +116,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
-        if (!doesDeviceHaveFlash()) return
+        if (!Camera.doesDeviceHaveFlash(packageManager)) return
         initButtonClickListeners()
         AppReviewManager.initiateReviewDialog(this)
     }
@@ -138,15 +134,15 @@ class MainActivity : AppCompatActivity() {
                 if (progress > 0) {
                     if (progress <= maxLevel) {
                         if (vibrateButtons) Vibrator.vibrateTick(vibrator)
-                        cameraManager.sendLightLevel(progress)
+                        camera.sendLightLevel(this@MainActivity, currentLevel, progress)
                         updateLightLevelView(progress)
                     } else {
-                        cameraManager.sendLightLevel(maxLevel)
+                        camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel)
                         updateLightLevelView(maxLevel)
                     }
                     currentLevel = progress
                 } else if (progress == 0) {
-                    cameraManager.setTorchMode(cameraId, false)
+                    camera.setTorchMode(false)
                     updateLightLevelView(0)
                     currentLevel = 0
                 }
@@ -169,24 +165,24 @@ class MainActivity : AppCompatActivity() {
                 if (vibrateButtons) Vibrator.vibrateDoubleClick(vibrator)
                 if (isDimAllowed()) {
                     updateLightLevelView(maxLevel)
-                    cameraManager.sendLightLevel(maxLevel)
+                    camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel)
                     currentLevel = maxLevel
                     seekBar.setProgress(maxLevel)
                 } else {
-                    cameraManager.setTorchMode(cameraId, true)
+                    camera.setTorchMode(true)
                 }
             }
             halfButton.setOnClickListener {
                 if (vibrateButtons) Vibrator.vibrateClick(vibrator)
                 updateLightLevelView(maxLevel / 2)
-                cameraManager.sendLightLevel(maxLevel / 2)
+                camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel / 2)
                 currentLevel = maxLevel / 2
                 seekBar.setProgress(maxLevel / 2)
             }
             minButton.setOnClickListener {
                 if (vibrateButtons) Vibrator.vibrateClick(vibrator)
                 updateLightLevelView(1)
-                cameraManager.sendLightLevel(1)
+                camera.sendLightLevel(this@MainActivity, currentLevel, 1)
                 currentLevel = 1
                 seekBar.setProgress(1)
             }
@@ -198,7 +194,7 @@ class MainActivity : AppCompatActivity() {
                     currentLevel = 0
                     seekBar.setProgress(0)
                 }
-                cameraManager.setTorchMode(cameraId, false)
+                camera.setTorchMode(false)
             }
         }
     }
@@ -222,11 +218,11 @@ class MainActivity : AppCompatActivity() {
     private fun activateInitialFlash() {
         if (maxLevel > 1) {
             val level = Safe.getInt(this, Safe.INITIAL_LEVEL, -1)
-            cameraManager.sendLightLevel(level)
+            camera.sendLightLevel(this@MainActivity, currentLevel, level)
             updateLightLevelView(level)
             binding.seekBar.setProgress(level)
         } else {
-            cameraManager.setTorchMode(cameraId, true)
+            camera.setTorchMode(true)
         }
     }
 
@@ -306,7 +302,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun switchMorseMode(activate: Boolean, message: String = "") {
         if (activate) {
-            cameraManager.setTorchMode(cameraId, false)
+            camera.setTorchMode(false)
             morseActivated = true
             binding.apply {
                 binding.seekBar.setProgress(0)
@@ -338,16 +334,6 @@ class MainActivity : AppCompatActivity() {
         binding.levelIndicator.text = "$level / $maxLevel$note"
     }
 
-    private fun CameraManager.sendLightLevel(level: Int) {
-        if (currentLevel != level) {
-            try {
-                turnOnTorchWithStrengthLevel(cameraId, level)
-            } catch (e: Exception) {
-                handleFlashlightException(e, this@MainActivity)
-            }
-        }
-    }
-
     private fun isDimAllowed() = binding.maxButton.text == getString(R.string.button_max_maximum)
 
     private fun handleMorseCall(message: String) {
@@ -360,7 +346,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch(morseExceptionHandler) {
             var lastLetter = Char.MIN_VALUE
             val handler = MorseHandler { letter, code, delay, on ->
-                cameraManager.setTorchMode(cameraId, on)
+                camera.setTorchMode(on)
                 if (vibrateMorse && on) Vibrator.vibrate(vibrator, delay)
 
                 if (lastLetter != letter) {
@@ -383,26 +369,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun doesDeviceHaveFlash(): Boolean {
-        return packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
-    }
-
-    private fun findFlashCameraId(): String {
-        val firstCameraWithFlash = cameraManager.cameraIdList.find { camera ->
-            cameraManager.getCameraCharacteristics(camera).keys.any { key ->
-                key == CameraCharacteristics.FLASH_INFO_AVAILABLE
-            }
-        }
-
-        if (firstCameraWithFlash != null) {
-            return firstCameraWithFlash
-        }
-        showErrorDialog(this, "Camera with flashlight not found") {
-            finish()
-        }
-        return ""
-    }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return true
@@ -411,7 +377,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.icon_credits_action -> {
-                showAboutDialog()
+                AboutDialog.show(this, BuildInfo(
+                    BuildConfig.VERSION_NAME,
+                    BuildConfig.VERSION_CODE,
+                    BuildConfig.BUILD_TYPE
+                ))
                 return true
             }
             R.id.settings_action -> {
@@ -425,47 +395,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun showAboutDialog() {
-        showDialog(
-            getString(R.string.dialog_about_title),
-            getString(
-                R.string.dialog_about_message,
-                BuildConfig.VERSION_NAME,
-                BuildConfig.VERSION_CODE,
-                BuildConfig.BUILD_TYPE,
-                Build.MANUFACTURER,
-                Build.MODEL,
-                Build.DEVICE,
-                when (Build.VERSION.SDK_INT) {
-                    19, 20 -> "4"
-                    21, 22 -> "5"
-                    23 -> "6"
-                    24, 25 -> "7"
-                    26, 27 -> "8"
-                    28 -> "9"
-                    29 -> "10"
-                    30 -> "11"
-                    31, 32 -> "12"
-                    33 -> "13"
-                    else -> "> 13"
-                },
-                Build.VERSION.SDK_INT
-            ),
-            R.drawable._ic_information,
-            { showIconCreditsDialog() },
-            getString(R.string.dialog_about_button)
-        )
-    }
-
-    private fun showIconCreditsDialog() {
-        showDialog(
-            getString(R.string.dialog_credits_title),
-            getString(R.string.dialog_credits_message),
-            R.drawable._ic_information,
-            { openUrl("https://flaticon.com", "Flaticon") },
-            getString(R.string.dialog_credits_button)
-        )
     }
 }
