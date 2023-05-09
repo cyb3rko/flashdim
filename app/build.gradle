@@ -13,6 +13,7 @@ android {
         targetSdk 33
         versionCode 16
         versionName "1.4.0"
+        resConfigs 'en'
     }
     buildTypes {
         debug {
