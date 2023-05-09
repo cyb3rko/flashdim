@@ -9,6 +9,7 @@
     <string name="dialog_morse_error_empty">Please enter your message</string>
     <string name="dialog_morse_error_length">Maximum length (50) exceeded</string>
     <string name="dialog_morse_error_characters">Use characters a–z, A–Z, 0–9 and space</string>
+    <string name="dialog_morse_button">Flash</string>
     <string name="dialog_interval_title">Interval Flash</string>
     <string name="dialog_interval_input_hint1">Interval time (50–10000ms)</string>
     <string name="dialog_interval_input_hint2">Beats per minute (10–500)</string>

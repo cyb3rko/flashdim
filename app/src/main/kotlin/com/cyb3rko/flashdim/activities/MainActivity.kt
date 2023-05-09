@@ -24,33 +24,29 @@ import android.os.VibratorManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.lifecycleScope
 import com.cyb3rko.flashdim.AppReviewManager
 import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.Camera
 import com.cyb3rko.flashdim.MorseHandler
 import com.cyb3rko.flashdim.R
-import com.cyb3rko.flashdim.utils.Safe
-import com.cyb3rko.flashdim.utils.Vibrator
 import com.cyb3rko.flashdim.databinding.ActivityMainBinding
-import com.cyb3rko.flashdim.utils.disable
-import com.cyb3rko.flashdim.utils.enable
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.modals.AboutDialog
 import com.cyb3rko.flashdim.modals.BuildInfo
 import com.cyb3rko.flashdim.modals.IntervalDialog
+import com.cyb3rko.flashdim.modals.MorseDialog
+import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
+import com.cyb3rko.flashdim.utils.Safe
+import com.cyb3rko.flashdim.utils.Vibrator
+import com.cyb3rko.flashdim.utils.disable
+import com.cyb3rko.flashdim.utils.enable
 import com.cyb3rko.flashdim.utils.hide
 import com.cyb3rko.flashdim.utils.makeInvisible
 import com.cyb3rko.flashdim.utils.openUrl
-import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.cyb3rko.flashdim.utils.show
 import com.cyb3rko.flashdim.utils.showDialog
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
@@ -269,45 +265,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showMorseDialog() {
-        @SuppressLint("InflateParams")
-        val inputLayout = layoutInflater.inflate(R.layout.dialog_morse_input, null)
-            .findViewById<TextInputLayout>(R.id.text_input_layout)
-
-        @SuppressLint("InflateParams")
-        val inputText = inputLayout.findViewById<TextInputEditText>(R.id.text_input_text)
-
-        MaterialAlertDialogBuilder(
-            this@MainActivity,
-            com.google.android.material.R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
-        )
-            .setIcon(ResourcesCompat.getDrawable(
-                resources,
-                R.drawable._ic_morse,
-                theme
-            ))
-            .setView(inputLayout)
-            .setTitle(getString(R.string.dialog_morse_title))
-            .setPositiveButton(android.R.string.ok, null)
-            .create().apply {
-                setOnShowListener {
-                    getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                        val message = inputText.text.toString().trim()
-                        if (message.isEmpty()) {
-                            inputLayout.error = getString(R.string.dialog_morse_error_empty)
-                        } else if (message.length > 50) {
-                            inputLayout.error = getString(R.string.dialog_morse_error_length)
-                        } else if (!Regex("[a-zA-Z\\d ]+").matches(message)) {
-                            inputLayout.error = getString(R.string.dialog_morse_error_characters)
-                        } else {
-                            dismiss()
-                            binding.sosButton.hide()
-                            binding.morseButton.disable()
-                            switchMorseMode(true, getString(R.string.light_level_morse))
-                            handleMorseCall(message)
-                        }
-                    }
-                }
-            }.show()
+        MorseDialog.show(this) { message ->
+            binding.sosButton.hide()
+            binding.morseButton.disable()
+            switchMorseMode(true, getString(R.string.light_level_morse))
+            handleMorseCall(message)
+        }
     }
 
     private fun switchMorseMode(activate: Boolean, message: String = "") {
