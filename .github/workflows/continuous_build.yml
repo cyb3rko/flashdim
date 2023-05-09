@@ -1,0 +1,36 @@
+name: Continuous Builder
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - 'metadata/**'
+      - 'legal/**'
+      - '**.md'
+      - 'LICENSE'
+      - '.github/workflows/release-builder.yml'
+      - '.github/workflows/fossa.yml'
+      - '.github/FUNDING.yml'
+  pull_request:
+
+jobs:
+  build:
+    name: Continuous Builder
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+          
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with: 
+          distribution: 'zulu'
+          java-version: '17'
+        
+      - name: Build APK
+        run: |
+          ./gradlew build --stacktrace
+          
+      - name: List build output
+        run: |
+          cd app/build/outputs/apk/release/
+          ls
