@@ -41,6 +41,7 @@ import com.cyb3rko.flashdim.utils.enable
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.modals.AboutDialog
 import com.cyb3rko.flashdim.modals.BuildInfo
+import com.cyb3rko.flashdim.modals.IntervalDialog
 import com.cyb3rko.flashdim.utils.hide
 import com.cyb3rko.flashdim.utils.makeInvisible
 import com.cyb3rko.flashdim.utils.openUrl
@@ -160,6 +161,15 @@ class MainActivity : AppCompatActivity() {
             }
             morseButton.setOnClickListener {
                 showMorseDialog()
+            }
+            intervalButton.setOnClickListener {
+                IntervalDialog.show(this@MainActivity) { enabled ->
+                    if (enabled) {
+                        camera.setTorchMode(true)
+                    } else {
+                        camera.setTorchMode(false)
+                    }
+                }
             }
             maxButton.setOnClickListener {
                 if (vibrateButtons) Vibrator.vibrateDoubleClick(vibrator)

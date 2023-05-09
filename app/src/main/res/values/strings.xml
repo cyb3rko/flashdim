@@ -9,6 +9,14 @@
     <string name="dialog_morse_error_empty">Please enter your message</string>
     <string name="dialog_morse_error_length">Maximum length (50) exceeded</string>
     <string name="dialog_morse_error_characters">Use characters a–z, A–Z, 0–9 and space</string>
+    <string name="dialog_interval_title">Interval Flash</string>
+    <string name="dialog_interval_input_hint1">Interval time (50–10000ms)</string>
+    <string name="dialog_interval_input_hint2">Beats per minute (10–500)</string>
+    <string name="dialog_interval_error">Value not allowed</string>
+    <string name="dialog_interval_group_button1">Time</string>
+    <string name="dialog_interval_group_button2">BPM</string>
+    <string name="dialog_interval_button1">Flash</string>
+    <string name="dialog_interval_button2">Stop</string>
     <string name="dialog_restart_title">Restart app?</string>
     <string name="dialog_restart_message">For performance reasons the change will be visible on next app start.\n\nDo you want to restart now?</string>
     <string name="dialog_restart_positive_button">Okay</string>
@@ -21,6 +29,7 @@
     <string name="textview_light_level_text">Light Level:</string>
     <string name="button_sos_text">SOS</string>
     <string name="button_morse_text">Morse</string>
+    <string name="button_interval_text">Interval</string>
     <string name="button_max_maximum">Maximum</string>
     <string name="button_max_on">On</string>
     <string name="button_half_text">Half</string>
