@@ -54,5 +54,5 @@ internal object Safe {
         label: String,
         value: Boolean
     ) = PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(label, value)
-            .apply()
+        .apply()
 }

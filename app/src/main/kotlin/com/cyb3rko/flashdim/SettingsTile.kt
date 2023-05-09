@@ -41,13 +41,16 @@ class SettingsTile : TileService() {
 
     override fun onStartListening() {
         val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        cameraManager.registerTorchCallback(object: TorchCallback() {
-            override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
-                Safe.writeBoolean(applicationContext, Safe.FLASH_ACTIVE, enabled)
-                qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
-                qsTile.updateTile()
-            }
-        }, Handler(Looper.getMainLooper()))
+        cameraManager.registerTorchCallback(
+            object : TorchCallback() {
+                override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
+                    Safe.writeBoolean(applicationContext, Safe.FLASH_ACTIVE, enabled)
+                    qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
+                    qsTile.updateTile()
+                }
+            },
+            Handler(Looper.getMainLooper())
+        )
     }
 
     private fun sendFlashlightSignal(

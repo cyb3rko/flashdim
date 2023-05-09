@@ -218,7 +218,9 @@ class MainActivity : AppCompatActivity() {
             Safe.getBoolean(this, Safe.APPOPEN_FLASH, false)
         ) {
             activateInitialFlash()
-        } else settingsOpened = false
+        } else {
+            settingsOpened = false
+        }
     }
 
     private fun activateInitialFlash() {
@@ -350,11 +352,14 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.icon_credits_action -> {
-                AboutDialog.show(this, BuildInfo(
-                    BuildConfig.VERSION_NAME,
-                    BuildConfig.VERSION_CODE,
-                    BuildConfig.BUILD_TYPE
-                ))
+                AboutDialog.show(
+                    this,
+                    BuildInfo(
+                        BuildConfig.VERSION_NAME,
+                        BuildConfig.VERSION_CODE,
+                        BuildConfig.BUILD_TYPE
+                    )
+                )
                 return true
             }
             R.id.settings_action -> {

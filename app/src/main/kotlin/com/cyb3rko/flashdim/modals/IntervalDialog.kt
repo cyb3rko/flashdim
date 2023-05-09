@@ -23,8 +23,8 @@ import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.databinding.DialogIntervalBinding
 import com.cyb3rko.flashdim.utils.disable
 import com.cyb3rko.flashdim.utils.enable
-import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.R as MaterialR
 
 internal object IntervalDialog {
     private lateinit var binding: DialogIntervalBinding

@@ -74,7 +74,7 @@ internal class MorseHandler(
         )
     }
 
-    internal suspend fun flashMessage(message: String, ) {
+    internal suspend fun flashMessage(message: String) {
         var code: String
         var delay: Long
         var firstLetter = true
@@ -95,7 +95,9 @@ internal class MorseHandler(
                     if (!allowedContinuation) return
                 }
                 firstLetter = false
-            } else delay(DELAY_INTER_WORD)
+            } else {
+                delay(DELAY_INTER_WORD)
+            }
         }
     }
 

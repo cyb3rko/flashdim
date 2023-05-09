@@ -17,7 +17,11 @@
 package com.cyb3rko.flashdim.seekbar
 
 import android.content.Context
-import android.graphics.*
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.RectF
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.MotionEvent
@@ -63,14 +67,17 @@ open class LightLevelSeekBar @JvmOverloads constructor(
     init {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.LightLevelSeekBar)
         levelBackgroundColor = typedArray.getColor(
-            R.styleable.LightLevelSeekBar_level_background_color, levelBackgroundColor
+            R.styleable.LightLevelSeekBar_level_background_color,
+            levelBackgroundColor
         )
         levelCornerRadius = typedArray.getDimension(
-            R.styleable.LightLevelSeekBar_level_corner_radius, levelCornerRadius
+            R.styleable.LightLevelSeekBar_level_corner_radius,
+            levelCornerRadius
         )
         levelGap = typedArray.getDimension(R.styleable.LightLevelSeekBar_level_gap, levelGap)
         levelProgressColor = typedArray.getColor(
-            R.styleable.LightLevelSeekBar_level_progress_color, levelProgressColor
+            R.styleable.LightLevelSeekBar_level_progress_color,
+            levelProgressColor
         )
         typedArray.recycle()
     }
@@ -142,8 +149,7 @@ open class LightLevelSeekBar @JvmOverloads constructor(
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        if (!isEnabled)
-            return false
+        if (!isEnabled) return false
 
         event?.let {
             updateProgress(it)

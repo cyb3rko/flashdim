@@ -31,8 +31,8 @@ internal object AppReviewManager {
             context.showDialog(
                 title = "Do you like the app?",
                 message = "This app is ad-free and free to use.\n" +
-                        "Please consider rating the app if you like it.\n\n" +
-                        "($n/2 reminders)",
+                    "Please consider rating the app if you like it.\n\n" +
+                    "($n/2 reminders)",
                 icon = android.R.drawable.btn_star,
                 action = {
                     try {

@@ -37,18 +37,22 @@ internal class IntervalHandler(private val onBlink: (on: Boolean) -> Unit) {
         running = true
         val timer = Timer(true)
         val handler = Handler(Looper.getMainLooper())
-        timer.scheduleAtFixedRate(object : TimerTask() {
-            override fun run() {
-                if (!running) {
-                    timer.cancel()
-                    return
+        timer.scheduleAtFixedRate(
+            object : TimerTask() {
+                override fun run() {
+                    if (!running) {
+                        timer.cancel()
+                        return
+                    }
+                    onBlink(true)
+                    handler.postDelayed({
+                        onBlink(false)
+                    }, FLASH_DURATION)
                 }
-                onBlink(true)
-                handler.postDelayed({
-                    onBlink(false)
-                }, FLASH_DURATION)
-            }
-        }, 0, time)
+            },
+            0,
+            time
+        )
     }
 
     fun stop() {

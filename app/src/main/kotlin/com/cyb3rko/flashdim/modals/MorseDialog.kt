@@ -20,10 +20,10 @@ import android.content.Context
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.FragmentActivity
 import com.cyb3rko.flashdim.R
-import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import com.google.android.material.R as MaterialR
 
 internal object MorseDialog {
     fun show(context: Context, onFlash: (message: String) -> Unit) {

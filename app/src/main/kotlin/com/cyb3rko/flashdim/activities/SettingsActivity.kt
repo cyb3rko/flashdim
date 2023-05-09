@@ -34,9 +34,9 @@ import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
 import com.cyb3rko.flashdim.utils.Safe
 import com.cyb3rko.flashdim.utils.Vibrator
-import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.slider.Slider
+import com.google.android.material.R as MaterialR
 
 internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     private lateinit var binding: ActivitySettingsBinding
@@ -88,8 +88,9 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
     internal class SettingsFragment : PreferenceFragmentCompat() {
         private lateinit var myContext: Context
         private val vibrator by lazy {
-            (myContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE)
-                    as VibratorManager).defaultVibrator
+            val vibratorManager = myContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE)
+                as VibratorManager
+            vibratorManager.defaultVibrator
         }
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -162,9 +163,10 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     onSave()
                 }
-                .setNegativeButton(getString(
-                    R.string.preference_item_initial_level_dialog_negative_button
-                ), null)
+                .setNegativeButton(
+                    getString(R.string.preference_item_initial_level_dialog_negative_button),
+                    null
+                )
                 .show()
         }
     }
