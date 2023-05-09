@@ -62,6 +62,23 @@ if (project.hasProperty('sign')) {
     android.buildTypes.release.signingConfig android.signingConfigs.release
 }
 
+if (project.hasProperty('gplay_upload')) {
+    android {
+        signingConfigs {
+            upload {
+                Properties properties = new Properties()
+                properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+                storeFile file(properties.getProperty('uploadsigning.file'))
+                storePassword properties.getProperty('uploadsigning.password')
+                keyAlias properties.getProperty('uploadsigning.key.alias')
+                keyPassword properties.getProperty('uploadsigning.key.password')
+            }
+        }
+    }
+    android.buildTypes.release.signingConfig android.signingConfigs.upload
+}
+
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
