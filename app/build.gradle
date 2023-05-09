@@ -41,6 +41,9 @@ android {
             enable = false
         }
     }
+    packagingOptions {
+        exclude 'META-INF/*.version'
+    }
 }
 
 if (project.hasProperty('sign')) {
