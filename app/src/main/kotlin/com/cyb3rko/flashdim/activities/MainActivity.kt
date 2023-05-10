@@ -152,6 +152,7 @@ class MainActivity : AppCompatActivity() {
             sosButton.setOnClickListener {
                 sosButton.disable()
                 morseButton.hide()
+                intervalButton.hide()
                 switchMorseMode(true, getString(R.string.light_level_sos))
                 handleMorseCall("SOS")
             }
@@ -270,6 +271,7 @@ class MainActivity : AppCompatActivity() {
         MorseDialog.show(this) { message ->
             binding.sosButton.hide()
             binding.morseButton.disable()
+            binding.intervalButton.hide()
             switchMorseMode(true, getString(R.string.light_level_morse))
             handleMorseCall(message)
         }
@@ -295,6 +297,8 @@ class MainActivity : AppCompatActivity() {
                 sosButton.show()
                 morseButton.enable()
                 morseButton.show()
+                intervalButton.enable()
+                intervalButton.show()
                 if (isDimAllowed()) {
                     halfButton.show()
                     minButton.show()
