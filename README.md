@@ -46,6 +46,7 @@ Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.c
 - 🎚 shortcut buttons for different brightness levels
 - 🆘 SOS flash button
 - 📫 morse code flash mode
+- ⏲️ Interval / BPM mode
 - ⚡ quick settings tile for fast access
 - 🔒 private, no ads, no internet connection
 - 💯 modern Material You (M3) design elements
@@ -138,8 +139,8 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - realme 真我GT 2 (realme RE58B2L1)
 
 ## Screenshots
-|<img src="https://i.imgur.com/oIUHkTg.png" width="220">|<img src="https://i.imgur.com/0hoCzcE.png" width="220">|<img src="https://i.imgur.com/pTO3CMs.png" width="220">|<img src="https://i.imgur.com/ltkU3so.png" width="220">|
-|:---:|:---:|:---:|:---:|
+|<img src="https://i.imgur.com/8SuDUBt.png" width="200">|<img src="https://i.imgur.com/0SW3zRo.png" width="200">|<img src="https://i.imgur.com/2xQJjzM.png" width="200">|<img src="https://i.imgur.com/LKBDxJc.png" width="200">|<img src="https://i.imgur.com/46o5Ykk.png" width="200">|
+|:---:|:---:|:---:|:---:|:---:|
 
 ## Contribute
 Of course I'm happy about any kind of contribution.

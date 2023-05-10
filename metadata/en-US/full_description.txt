@@ -3,7 +3,7 @@ Starting with Android 13, it's possible to control multiple brightness levels of
 To be able to use this new feature I've developed this app.
 
 <b>Features</b>
-<ul><li>🔦 dimming your flashlight level by level</li><li>🎚 shortcut buttons for different brightness levels</li><li>🆘 SOS flash button</li><li>📫 morse code flash mode</li><li>⚡ quick settings tile for fast access</li><li>🔒 private, no ads, no internet connection</li><li>💯 modern Material You (M3) design elements</li><li>🎨 app colors adapt to device's system colors</li></ul>
+<ul><li>🔦 dimming your flashlight level by level</li><li>🎚 shortcut buttons for different brightness levels</li><li>🆘 SOS flash button</li><li>📫 morse code flash mode</li><li>⏲️ Interval / BPM mode</li><li>⚡ quick settings tile for fast access</li><li>🔒 private, no ads, no internet connection</li><li>💯 modern Material You (M3) design elements</li><li>🎨 app colors adapt to device's system colors</li></ul>
 
 <b>Used Icons</b>
 <a href="https://www.flaticon.com/free-icons/github">Github icons created by Laisa Islam Ani - Flaticon</a>
