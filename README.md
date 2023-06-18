@@ -132,10 +132,14 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Google Pixel 4a (5G) (google bramble)
 - Google Pixel 5 (google redfin)
 - Google Pixel 5a 5G (google barbet)
+- OnePlus 11R 5G (OnePlus OP5961L1)
 - OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)
+- Oppo CPH2145 (OPPO OP4F1BL1)
 - Oppo CPH2293 (OPPO OP52E1L1)
 - Oppo CPH2461 (OPPO OP533FL1)
 - Oppo Reno6 Z 5G (OPPO OP4FA7L1)
+- realme 10 Pro+ 5G (realme RE58A5L1)
+- realme GT Master Edition (realme RE54ABL1)
 - realme 真我GT 2 (realme RE58B2L1)
 
 ## Screenshots
