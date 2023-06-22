@@ -28,8 +28,9 @@ import com.cyb3rko.flashdim.utils.Safe
 class SettingsTile : TileService() {
     override fun onClick() {
         var level = -1
-        if (Safe.getBoolean(applicationContext, Safe.QUICK_SETTINGS_LINK, false)) {
-            level = Safe.getInt(applicationContext, Safe.INITIAL_LEVEL, 1)
+        Safe.initialize(applicationContext)
+        if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
+            level = Safe.getInt(Safe.INITIAL_LEVEL, 1)
         }
 
         val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
@@ -44,7 +45,8 @@ class SettingsTile : TileService() {
         cameraManager.registerTorchCallback(
             object : TorchCallback() {
                 override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
-                    Safe.writeBoolean(applicationContext, Safe.FLASH_ACTIVE, enabled)
+                    Safe.initialize(applicationContext)
+                    Safe.writeBoolean(Safe.FLASH_ACTIVE, enabled)
                     qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
                     qsTile.updateTile()
                 }

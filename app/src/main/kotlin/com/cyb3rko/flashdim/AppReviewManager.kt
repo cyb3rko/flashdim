@@ -24,7 +24,7 @@ import com.cyb3rko.flashdim.utils.showDialog
 
 internal object AppReviewManager {
     fun initiateReviewDialog(context: Context) {
-        val count = Safe.getInt(context, Safe.STARTUP_COUNTER, 0)
+        val count = Safe.getInt(Safe.STARTUP_COUNTER, 0)
         if (count > 15) return
         if (count == 5 || count == 15) {
             val n = if (count == 5) 1 else 2
@@ -47,10 +47,10 @@ internal object AppReviewManager {
                 actionMessage = "Rate"
             )
         }
-        increaseCounter(context, count)
+        increaseCounter(count)
     }
 
-    private fun increaseCounter(context: Context, prevCount: Int) {
-        Safe.writeInt(context, Safe.STARTUP_COUNTER, prevCount + 1)
+    private fun increaseCounter(prevCount: Int) {
+        Safe.writeInt(Safe.STARTUP_COUNTER, prevCount + 1)
     }
 }

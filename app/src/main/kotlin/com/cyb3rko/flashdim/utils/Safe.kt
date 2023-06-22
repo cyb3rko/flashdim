@@ -17,6 +17,7 @@
 package com.cyb3rko.flashdim.utils
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 
 internal object Safe {
@@ -31,28 +32,21 @@ internal object Safe {
     const val QUICK_SETTINGS_LINK = "quick_settings_link"
     const val STARTUP_COUNTER = "startup_counter"
 
-    fun getBoolean(
-        context: Context,
-        label: String,
-        default: Boolean
-    ) = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(label, default)
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
-    fun getInt(
-        context: Context,
-        label: String,
-        default: Int
-    ) = PreferenceManager.getDefaultSharedPreferences(context).getInt(label, default)
+    fun initialize(context: Context) {
+        if (!this::sharedPreferences.isInitialized) {
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+            editor = sharedPreferences.edit()
+        }
+    }
 
-    fun writeInt(
-        context: Context,
-        label: String,
-        value: Int
-    ) = PreferenceManager.getDefaultSharedPreferences(context).edit().putInt(label, value).apply()
+    fun getBoolean(label: String, default: Boolean) = sharedPreferences.getBoolean(label, default)
 
-    fun writeBoolean(
-        context: Context,
-        label: String,
-        value: Boolean
-    ) = PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(label, value)
-        .apply()
+    fun getInt(label: String, default: Int) = sharedPreferences.getInt(label, default)
+
+    fun writeInt(label: String, value: Int) = editor.putInt(label, value).apply()
+
+    fun writeBoolean(label: String, value: Boolean) = editor.putBoolean(label, value).apply()
 }

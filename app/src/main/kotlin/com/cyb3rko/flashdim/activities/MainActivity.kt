@@ -57,9 +57,6 @@ class MainActivity : AppCompatActivity() {
     private var currentLevel = -1
     private var maxLevel = -1
     private val camera by lazy { Camera(this) }
-    private val vibrator by lazy {
-        (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager).defaultVibrator
-    }
 
     private var settingsOpened = false
     private var morseActivated = false
@@ -90,25 +87,29 @@ class MainActivity : AppCompatActivity() {
 
         if (camera.idEmpty) return
         maxLevel = camera.maxLevel
-        Safe.writeInt(this, Safe.MAX_LEVEL, maxLevel)
-        if (Safe.getInt(this, Safe.INITIAL_LEVEL, -1) == -1) {
-            Safe.writeInt(this, Safe.INITIAL_LEVEL, maxLevel)
+        Safe.initialize(this)
+        Safe.writeInt(Safe.MAX_LEVEL, maxLevel)
+        if (Safe.getInt(Safe.INITIAL_LEVEL, -1) == -1) {
+            Safe.writeInt(Safe.INITIAL_LEVEL, maxLevel)
         }
 
         if (maxLevel > 1) {
             initSeekbar()
-            Safe.writeBoolean(this, Safe.MULTILEVEL, true)
+            Safe.writeBoolean(Safe.MULTILEVEL, true)
         } else {
             switchToSimpleMode()
-            Safe.writeBoolean(this, Safe.MULTILEVEL, false)
+            Safe.writeBoolean(Safe.MULTILEVEL, false)
         }
 
-        if (!Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
+        if (!Safe.getBoolean(Safe.FLASH_ACTIVE, false)) {
             executeAppStartFlash()
         }
 
-        vibrateButtons = Safe.getBoolean(this, Safe.BUTTON_VIBRATION, true)
-        vibrateMorse = Safe.getBoolean(this, Safe.MORSE_VIBRATION, true)
+        vibrateButtons = Safe.getBoolean(Safe.BUTTON_VIBRATION, true)
+        vibrateMorse = Safe.getBoolean(Safe.MORSE_VIBRATION, true)
+        val systemVibrator = (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager)
+            .defaultVibrator
+        Vibrator.initialize(systemVibrator)
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -130,7 +131,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(progress: Int) {
                 if (progress > 0) {
                     if (progress <= maxLevel) {
-                        if (vibrateButtons) Vibrator.vibrateTick(vibrator)
+                        if (vibrateButtons) Vibrator.vibrateTick()
                         camera.sendLightLevel(this@MainActivity, currentLevel, progress)
                         updateLightLevelView(progress)
                     } else {
@@ -169,7 +170,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             maxButton.setOnClickListener {
-                if (vibrateButtons) Vibrator.vibrateDoubleClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateDoubleClick()
                 if (isDimAllowed()) {
                     updateLightLevelView(maxLevel)
                     camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel)
@@ -180,21 +181,21 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             halfButton.setOnClickListener {
-                if (vibrateButtons) Vibrator.vibrateClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateClick()
                 updateLightLevelView(maxLevel / 2)
                 camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel / 2)
                 currentLevel = maxLevel / 2
                 seekBar.setProgress(maxLevel / 2)
             }
             minButton.setOnClickListener {
-                if (vibrateButtons) Vibrator.vibrateClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateClick()
                 updateLightLevelView(1)
                 camera.sendLightLevel(this@MainActivity, currentLevel, 1)
                 currentLevel = 1
                 seekBar.setProgress(1)
             }
             offButton.setOnClickListener {
-                if (vibrateButtons) Vibrator.vibrateClick(vibrator)
+                if (vibrateButtons) Vibrator.vibrateClick()
                 morseActivated = false
                 if (isDimAllowed()) {
                     updateLightLevelView(0)
@@ -207,7 +208,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun executeAppStartFlash() {
-        if (Safe.getBoolean(this, Safe.APPSTART_FLASH, false)) {
+        if (Safe.getBoolean(Safe.APPSTART_FLASH, false)) {
             activateInitialFlash()
         } else {
             updateLightLevelView(0)
@@ -215,8 +216,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun executeAppOpenFlash() {
-        if (!settingsOpened && Safe.getBoolean(this, Safe.APPSTART_FLASH, false) &&
-            Safe.getBoolean(this, Safe.APPOPEN_FLASH, false)
+        if (!settingsOpened && Safe.getBoolean(Safe.APPSTART_FLASH, false) &&
+            Safe.getBoolean(Safe.APPOPEN_FLASH, false)
         ) {
             activateInitialFlash()
         } else {
@@ -226,7 +227,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun activateInitialFlash() {
         if (maxLevel > 1) {
-            val level = Safe.getInt(this, Safe.INITIAL_LEVEL, -1)
+            val level = Safe.getInt(Safe.INITIAL_LEVEL, -1)
             camera.sendLightLevel(this@MainActivity, currentLevel, level)
             updateLightLevelView(level)
             binding.seekBar.setProgress(level)
@@ -236,9 +237,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun restoreLightLevelUi(): Boolean {
-        val restored = if (maxLevel > 1 && Safe.getBoolean(this, Safe.FLASH_ACTIVE, false)) {
-            val level = if (Safe.getBoolean(this, Safe.QUICK_SETTINGS_LINK, false)) {
-                Safe.getInt(this, Safe.INITIAL_LEVEL, 0)
+        val restored = if (maxLevel > 1 && Safe.getBoolean(Safe.FLASH_ACTIVE, false)) {
+            val level = if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
+                Safe.getInt(Safe.INITIAL_LEVEL, 0)
             } else {
                 maxLevel
             }
@@ -248,7 +249,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             false
         }
-        Safe.writeBoolean(this, Safe.FLASH_ACTIVE, false)
+        Safe.writeBoolean(Safe.FLASH_ACTIVE, false)
         return restored
     }
 
@@ -326,7 +327,7 @@ class MainActivity : AppCompatActivity() {
             var lastLetter = Char.MIN_VALUE
             val handler = MorseHandler { letter, code, delay, on ->
                 camera.setTorchMode(on)
-                if (vibrateMorse && on) Vibrator.vibrate(vibrator, delay)
+                if (vibrateMorse && on) Vibrator.vibrate(delay)
 
                 if (lastLetter != letter) {
                     binding.quickActionsView.text = getString(

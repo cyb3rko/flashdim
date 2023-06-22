@@ -19,21 +19,27 @@ package com.cyb3rko.flashdim.utils
 import android.os.VibrationEffect
 
 internal object Vibrator {
-    internal fun vibrate(vibrator: android.os.Vibrator, duration: Long) {
+    private lateinit var vibrator: android.os.Vibrator
+
+    fun initialize(vibrator: android.os.Vibrator) {
+        this.vibrator = vibrator
+    }
+
+    fun vibrate(duration: Long) {
         vibrator.vibrate(
             VibrationEffect.createOneShot(duration, 80)
         )
     }
 
-    internal fun vibrateClick(vibrator: android.os.Vibrator) {
+    fun vibrateClick() {
         vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
     }
 
-    internal fun vibrateDoubleClick(vibrator: android.os.Vibrator) {
+    fun vibrateDoubleClick() {
         vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK))
     }
 
-    internal fun vibrateTick(vibrator: android.os.Vibrator) {
+    fun vibrateTick() {
         vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK))
     }
 }

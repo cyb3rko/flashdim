@@ -21,7 +21,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
-import android.os.VibratorManager
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
@@ -87,29 +86,24 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
 
     internal class SettingsFragment : PreferenceFragmentCompat() {
         private lateinit var myContext: Context
-        private val vibrator by lazy {
-            val vibratorManager = myContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE)
-                as VibratorManager
-            vibratorManager.defaultVibrator
-        }
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             myContext = requireContext()
             setPreferencesFromResource(R.xml.preferences, rootKey)
 
             findPreference<Preference>(Safe.INITIAL_LEVEL)?.apply {
-                if (!Safe.getBoolean(myContext, Safe.MULTILEVEL, false)) {
+                if (!Safe.getBoolean(Safe.MULTILEVEL, false)) {
                     isEnabled = false
                     return@apply
                 }
 
-                val initialLevel = Safe.getInt(myContext, Safe.INITIAL_LEVEL, 1)
+                val initialLevel = Safe.getInt(Safe.INITIAL_LEVEL, 1)
                 val summaryString = getString(R.string.preference_item_initial_level_summary)
                 summary = "$summaryString: $initialLevel"
 
                 setOnPreferenceClickListener { preference ->
-                    val currentInitialLevel = Safe.getInt(myContext, Safe.INITIAL_LEVEL, 1)
-                    val withVibration = Safe.getBoolean(myContext, Safe.BUTTON_VIBRATION, true)
+                    val currentInitialLevel = Safe.getInt(Safe.INITIAL_LEVEL, 1)
+                    val withVibration = Safe.getBoolean(Safe.BUTTON_VIBRATION, true)
                     val content = LinearLayout(myContext).apply {
                         orientation = LinearLayout.VERTICAL
                         setPadding(75, 0, 75, 0)
@@ -127,11 +121,11 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                     content.addView(levelView)
                     val slider = Slider(myContext).apply {
                         valueFrom = 1F
-                        valueTo = Safe.getInt(myContext, Safe.MAX_LEVEL, 0).toFloat()
+                        valueTo = Safe.getInt(Safe.MAX_LEVEL, 0).toFloat()
                         value = currentInitialLevel.toFloat()
                         stepSize = 1F
                         addOnChangeListener { _, value, _ ->
-                            if (withVibration) Vibrator.vibrateTick(vibrator)
+                            if (withVibration) Vibrator.vibrateTick()
                             levelView.text = String.format(
                                 getString(R.string.preference_item_initial_level_dialog_message),
                                 value.toInt(),
@@ -142,7 +136,7 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                     content.addView(slider)
                     showInitialLevelDialog(content) {
                         val value = slider.value.toInt()
-                        Safe.writeInt(myContext, Safe.INITIAL_LEVEL, value)
+                        Safe.writeInt(Safe.INITIAL_LEVEL, value)
 
                         val summary = getString(R.string.preference_item_initial_level_summary)
                         preference.summary = "$summary: $value"
