@@ -8,7 +8,7 @@
     <string name="dialog_morse_title">Flash morse code</string>
     <string name="dialog_morse_input_hint">Your Message</string>
     <string name="dialog_morse_error_empty">Please enter your message</string>
-    <string name="dialog_morse_error_length">Maximum length (50) exceeded</string>
+    <string name="dialog_morse_error_length">Maximum length (200) exceeded</string>
     <string name="dialog_morse_error_characters">Use characters a–z, A–Z, 0–9 and space</string>
     <string name="dialog_morse_button">Flash</string>
     <string name="dialog_interval_title">Interval Flash</string>

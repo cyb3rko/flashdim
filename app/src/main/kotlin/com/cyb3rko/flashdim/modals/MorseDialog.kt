@@ -50,7 +50,7 @@ internal object MorseDialog {
                         if (message.isEmpty()) {
                             error = context.getString(R.string.dialog_morse_error_empty)
                             inputLayout.error = error
-                        } else if (message.length > 50) {
+                        } else if (message.length > 200) {
                             error = context.getString(R.string.dialog_morse_error_length)
                             inputLayout.error = error
                         } else if (!Regex("[a-zA-Z\\d ]+").matches(message)) {
