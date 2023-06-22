@@ -34,9 +34,9 @@ import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
 import com.cyb3rko.flashdim.utils.Safe
 import com.cyb3rko.flashdim.utils.Vibrator
+import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.slider.Slider
-import com.google.android.material.R as MaterialR
 
 internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
     private lateinit var binding: ActivitySettingsBinding

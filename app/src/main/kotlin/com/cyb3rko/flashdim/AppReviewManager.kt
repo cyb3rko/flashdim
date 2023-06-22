@@ -39,9 +39,7 @@ internal object AppReviewManager {
                         context.startActivity(
                             Intent(
                                 Intent.ACTION_VIEW,
-                                Uri.parse(
-                                    "https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"
-                                )
+                                Uri.parse(context.getString(R.string.playstore_link))
                             )
                         )
                     } catch (_: Exception) {}

@@ -47,9 +47,9 @@ import com.cyb3rko.flashdim.utils.makeInvisible
 import com.cyb3rko.flashdim.utils.openUrl
 import com.cyb3rko.flashdim.utils.show
 import com.cyb3rko.flashdim.utils.showDialog
+import kotlin.system.exitProcess
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
-import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

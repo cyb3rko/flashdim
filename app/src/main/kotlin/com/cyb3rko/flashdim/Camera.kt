@@ -38,7 +38,10 @@ internal class Camera(activity: AppCompatActivity) {
         cameraId = findFlashCameraId(activity, cameraManager)
     }
 
-    private fun findFlashCameraId(activity: AppCompatActivity, cameraManager: CameraManager): String {
+    private fun findFlashCameraId(
+        activity: AppCompatActivity,
+        cameraManager: CameraManager
+    ): String {
         val firstCameraWithFlash = cameraManager.cameraIdList.find { camera ->
             cameraManager.getCameraCharacteristics(camera).keys.any { key ->
                 key == CameraCharacteristics.FLASH_INFO_AVAILABLE
