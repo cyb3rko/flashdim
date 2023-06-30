@@ -127,6 +127,7 @@ Here's a list of devices I know of which do work FOR SURE. If you've used a devi
 The following list shows phones, which were manually excluded by myself in the Google Play Store, because of unsupported flashlight dimming functionality.  
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
+- Asus ROG Phone 6 (ASUS_AI2201)
 - Google Pixel 4 (google flame)
 - Google Pixel 4 XL (google coral)
 - Google Pixel 4a (5G) (google bramble)
