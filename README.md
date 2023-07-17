@@ -142,6 +142,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - realme 10 Pro+ 5G (realme RE58A5L1)
 - realme GT Master Edition (realme RE54ABL1)
 - realme 真我GT 2 (realme RE58B2L1)
+- Xiaomi 12T Pro (Xiaomi diting)
 
 ## Screenshots
 |<img src="https://i.imgur.com/8SuDUBt.png" width="200">|<img src="https://i.imgur.com/0SW3zRo.png" width="200">|<img src="https://i.imgur.com/2xQJjzM.png" width="200">|<img src="https://i.imgur.com/LKBDxJc.png" width="200">|<img src="https://i.imgur.com/46o5Ykk.png" width="200">|
