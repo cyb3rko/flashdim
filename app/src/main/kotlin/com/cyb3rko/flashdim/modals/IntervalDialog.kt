@@ -29,15 +29,13 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 internal object IntervalDialog {
     private lateinit var binding: DialogIntervalBinding
     private var mode = 0
-    private var time: String? = null
-    private var bpm: String? = null
+    private var time = "100"
+    private var bpm = "100"
 
     fun show(
         context: Context,
         onBlink: (on: Boolean) -> Unit
     ) {
-        time = null
-        bpm = null
         val intervalHandler = IntervalHandler(onBlink)
         binding = DialogIntervalBinding.inflate((context as FragmentActivity).layoutInflater)
         binding.timeButton.setOnClickListener {
@@ -99,7 +97,13 @@ internal object IntervalDialog {
     }
 
     private fun validateInput(input: String): Boolean {
-        return if (mode == 0) validateTime(input) else validateBpm(input)
+        return if (input.isEmpty()) {
+            false
+        } else if (mode == 0) {
+            validateTime(input)
+        } else {
+            validateBpm(input)
+        }
     }
 
     private fun validateTime(time: String) = time.toInt() in 50..10000

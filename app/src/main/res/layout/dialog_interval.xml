@@ -19,6 +19,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
@@ -57,18 +58,20 @@
         android:layout_gravity="center_horizontal"
         android:paddingEnd="24dp"
         android:paddingStart="24dp"
+        android:paddingTop="6dp"
         app:counterEnabled="true"
         app:counterMaxLength="4"
-        android:paddingTop="6dp"
         app:suffixText="ms">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/number_input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/dialog_interval_input_hint1"
             android:inputType="number"
             android:singleLine="true"
-            android:hint="@string/dialog_interval_input_hint1" />
+            android:text="100"
+            tools:ignore="HardcodedText" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,11 +88,10 @@
         android:id="@+id/stop_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="4dp"
         android:text="@string/dialog_interval_button2"
-        android:enabled="false"
         app:icon="@android:drawable/ic_menu_close_clear_cancel" />
 
 </LinearLayout>
-
