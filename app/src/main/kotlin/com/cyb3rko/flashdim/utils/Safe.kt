@@ -31,6 +31,7 @@ internal object Safe {
     const val MULTILEVEL = "multilevel"
     const val QUICK_SETTINGS_LINK = "quick_settings_link"
     const val STARTUP_COUNTER = "startup_counter"
+    const val QUICKTILE_DIM_MODE = "dim_mode"
 
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor

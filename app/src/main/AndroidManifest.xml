@@ -33,8 +33,8 @@
             android:exported="false" />
 
         <service
-            android:name=".SettingsTile"
-            android:label="FlashDim"
+            android:name=".tiles.ToggleSettingsTile"
+            android:label="FlashDim Toggle"
             android:icon="@drawable/logo"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:enabled="true"
@@ -44,6 +44,20 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                 android:value="true" />
+        </service>
+
+        <service
+            android:name=".tiles.DimmerSettingsTile"
+            android:label="FlashDimmer"
+            android:icon="@drawable/logo"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="false" />
         </service>
 
     </application>

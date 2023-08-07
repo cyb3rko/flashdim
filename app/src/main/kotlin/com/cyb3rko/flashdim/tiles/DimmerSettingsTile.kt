@@ -14,45 +14,46 @@
  * limitations under the License.
  */
 
-package com.cyb3rko.flashdim
+package com.cyb3rko.flashdim.tiles
 
 import android.content.Context
 import android.hardware.camera2.CameraManager
-import android.hardware.camera2.CameraManager.TorchCallback
-import android.os.Handler
-import android.os.Looper
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
 
-class SettingsTile : TileService() {
+class DimmerSettingsTile : TileService() {
     override fun onClick() {
-        var level = -1
+        if (qsTile.state == Tile.STATE_UNAVAILABLE) return
         Safe.initialize(applicationContext)
-        if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
-            level = Safe.getInt(Safe.INITIAL_LEVEL, 1)
+        val mode = Safe.getInt(Safe.QUICKTILE_DIM_MODE, DIMMER_MIN)
+
+        val maxLevel = Safe.getInt(Safe.MAX_LEVEL, -1)
+        val newLevel = when (mode) {
+            DIMMER_MAX -> maxLevel
+            DIMMER_HALF -> maxLevel / 2
+            DIMMER_MIN -> 1
+            DIMMER_OFF -> 0
+            else -> DIMMER_MAX
         }
 
         val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        when (qsTile.state) {
-            Tile.STATE_INACTIVE -> sendFlashlightSignal(cameraManager, level, true)
-            Tile.STATE_ACTIVE -> sendFlashlightSignal(cameraManager, level, false)
-        }
+        sendFlashlightSignal(cameraManager, newLevel, newLevel != DIMMER_OFF)
+        qsTile.subtitle = "State: ${mode.description()}"
+        qsTile.updateTile()
+        Safe.writeInt(Safe.QUICKTILE_DIM_MODE, mode.next())
     }
 
     override fun onStartListening() {
-        val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        cameraManager.registerTorchCallback(
-            object : TorchCallback() {
-                override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
-                    Safe.initialize(applicationContext)
-                    Safe.writeBoolean(Safe.FLASH_ACTIVE, enabled)
-                    qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
-                    qsTile.updateTile()
-                }
-            },
-            Handler(Looper.getMainLooper())
-        )
+        Safe.initialize(this)
+        if (Safe.getInt(Safe.MAX_LEVEL, -1) < 2) {
+            qsTile.state = Tile.STATE_UNAVAILABLE
+            qsTile.updateTile()
+        } else {
+            qsTile.state = Tile.STATE_INACTIVE
+            qsTile.updateTile()
+        }
     }
 
     private fun sendFlashlightSignal(
@@ -73,5 +74,28 @@ class SettingsTile : TileService() {
         } catch (e: Exception) {
             handleFlashlightException(e)
         }
+    }
+
+    private fun Int.next() = when (this) {
+        DIMMER_OFF -> DIMMER_MIN
+        DIMMER_MIN -> DIMMER_HALF
+        DIMMER_HALF -> DIMMER_MAX
+        DIMMER_MAX -> DIMMER_OFF
+        else -> DIMMER_MAX
+    }
+
+    private fun Int.description() = when (this) {
+        DIMMER_OFF -> "Off"
+        DIMMER_MIN -> "Min"
+        DIMMER_HALF -> "Half"
+        DIMMER_MAX -> "Max"
+        else -> "Unknown"
+    }
+
+    companion object {
+        const val DIMMER_MAX = 3
+        const val DIMMER_HALF = 2
+        const val DIMMER_MIN = 1
+        const val DIMMER_OFF = 0
     }
 }
