@@ -87,7 +87,7 @@ internal class Camera(activity: AppCompatActivity) {
         ) {
             try {
                 val cameraManager = context.getSystemService(Context.CAMERA_SERVICE)
-                        as CameraManager
+                    as CameraManager
                 val cameraId = cameraManager.cameraIdList[0]
                 if (activate) {
                     if (level == -1) {

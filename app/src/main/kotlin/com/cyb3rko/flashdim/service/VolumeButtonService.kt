@@ -46,8 +46,8 @@ class VolumeButtonService : AccessibilityService() {
 
     override fun onKeyEvent(event: KeyEvent?): Boolean {
         if (event == null) return false
-        if ((event.keyCode == KeyEvent.KEYCODE_VOLUME_UP)
-            || (event.keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)
+        if ((event.keyCode == KeyEvent.KEYCODE_VOLUME_UP) ||
+            (event.keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)
         ) {
             val pressed = event.action == KeyEvent.ACTION_DOWN
             when (event.keyCode) {
@@ -70,7 +70,9 @@ class VolumeButtonService : AccessibilityService() {
     private fun getFlashLevel(): Int {
         return if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
             Safe.getInt(Safe.INITIAL_LEVEL, -1)
-        } else -1
+        } else {
+            -1
+        }
     }
 
     override fun onInterrupt() {
