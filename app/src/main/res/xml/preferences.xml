@@ -27,11 +27,24 @@
             app:summary="@string/preference_item_quick_settings_link_summary"
             app:icon="@drawable/_ic_link" />
 
+        <SwitchPreferenceCompat
+            app:key="volume_buttons_link"
+            app:defaultValue="false"
+            app:title="@string/preference_item_volume_buttons_link"
+            app:summary="@string/preference_item_volume_buttons_link_summary"
+            app:icon="@drawable/_ic_link" />
+
         <Preference
             app:key="initial_level"
             app:title="@string/preference_item_initial_level"
             app:summary="@string/preference_item_initial_level_summary"
             app:icon="@drawable/_ic_level_scaled" />
+
+        <Preference
+            app:key="volume_buttons"
+            app:title="@string/preference_item_volume_buttons"
+            app:summary="@string/preference_item_volume_buttons_summary"
+            app:icon="@drawable/_ic_volume" />
 
     </PreferenceCategory>
 

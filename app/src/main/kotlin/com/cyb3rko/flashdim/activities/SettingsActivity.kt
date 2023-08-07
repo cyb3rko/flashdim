@@ -21,6 +21,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
+import android.provider.Settings
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
@@ -143,6 +144,10 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                     }
                     true
                 }
+            }
+            findPreference<Preference>("volume_buttons")?.setOnPreferenceClickListener {
+                startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
+                true
             }
         }
 

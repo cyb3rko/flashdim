@@ -79,5 +79,28 @@ internal class Camera(activity: AppCompatActivity) {
         fun doesDeviceHaveFlash(packageManager: PackageManager): Boolean {
             return packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
         }
+
+        fun sendLightLevel(
+            context: Context,
+            level: Int,
+            activate: Boolean
+        ) {
+            try {
+                val cameraManager = context.getSystemService(Context.CAMERA_SERVICE)
+                        as CameraManager
+                val cameraId = cameraManager.cameraIdList[0]
+                if (activate) {
+                    if (level == -1) {
+                        cameraManager.setTorchMode(cameraId, true)
+                    } else {
+                        cameraManager.turnOnTorchWithStrengthLevel(cameraId, level)
+                    }
+                } else {
+                    cameraManager.setTorchMode(cameraId, false)
+                }
+            } catch (e: Exception) {
+                handleFlashlightException(e)
+            }
+        }
     }
 }

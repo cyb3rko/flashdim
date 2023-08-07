@@ -41,7 +41,7 @@
     <string name="dialog_about_message">App Version: %1$s (%2$d)\nBuild Type: %3$s\nDevice: %4$s %5$s (%6$s)\nSoftware: Android %7$s (%8$d)</string>
     <string name="dialog_about_button">Show Icon Credits</string>
     <string name="dialog_credits_title">Icon Credits</string>
-    <string name="dialog_credits_message">Github icon created by Laisa Islam Ani - Flaticon\n\nInformation icon created by Freepik - Flaticon\n\nVolume icons created by Freepik - Flaticon\n\nMorse icon created by Freepik - Flaticon\n\nRestart icons created by AlternativeStd - Flaticon\n\nSetting icon created by Freepik - Flaticon\n\nShuttle icon created by Freepik - Flaticon\n\nVibrate icon created by Bombasticon Studio - Flaticon\n\nLink icon created by Creaticca Creative Agency - Flaticon</string>
+    <string name="dialog_credits_message">Github icon created by Laisa Islam Ani - Flaticon\n\nInformation icon created by Freepik - Flaticon\n\nVolume icons created by Freepik - Flaticon\n\nMorse icon created by Freepik - Flaticon\n\nRestart icons created by AlternativeStd - Flaticon\n\nSetting icon created by Freepik - Flaticon\n\nShuttle icon created by Freepik - Flaticon\n\nVibrate icon created by Bombasticon Studio - Flaticon\n\nLink icon created by Creaticca Creative Agency - Flaticon\n\nHigh Volume icon created by flashicon - Flaticon</string>
     <string name="dialog_credits_button">Open Flaticon</string>
     <string name="toast_url_failed">"Opening URL failed, copied URL instead"</string>
     <string name="preference_category_flashlight">Flashlight controls</string>
@@ -51,8 +51,12 @@
     <string name="preference_item_instant_flash_extension_summary">Activate flashlight every time you open the app</string>
     <string name="preference_item_quick_settings_link">Quick Settings Link</string>
     <string name="preference_item_quick_settings_link_summary">Link the initial level to the quick settings tile</string>
+    <string name="preference_item_volume_buttons_link">Volume Buttons Link</string>
+    <string name="preference_item_volume_buttons_link_summary">Link the initial level to the action when pressing both volume buttons.</string>
     <string name="preference_item_initial_level">Initial level</string>
-    <string name="preference_item_initial_level_summary">Dim level for Initial Flash and optionally for quick settings tile shortcut</string>
+    <string name="preference_item_initial_level_summary">Dim level for Initial Flash, optionally for quick settings tile and volume button press.</string>
+    <string name="preference_item_volume_buttons">Volume Buttons Service</string>
+    <string name="preference_item_volume_buttons_summary">Activate the service for toggling the flashlight when pressing both volume buttons.</string>
     <string name="preference_item_initial_level_dialog_title">Set Initial Level</string>
     <string name="preference_item_initial_level_dialog_message">New: %1$s\nCurrent: %2$s</string>
     <string name="preference_item_initial_level_dialog_negative_button">Cancel</string>
@@ -61,4 +65,6 @@
     <string name="preference_item_tactile_buttons_summary">Vibrate on button clicks and seekbar swipes</string>
     <string name="preference_item_tactile_morse">Tactile morse</string>
     <string name="preference_item_tactile_morse_summary">Vibrate morse code when flashing</string>
+    <string name="accessibility_service_summary">When enabled, pressing both volume buttons toggles the flashlight.</string>
+    <string name="accessibility_service_description">This accessibility setting allows to toggle the flashlight by pressing both volume buttons together.\n\nDo not activate a shortcut for this service on this page, that could override the key event.</string>
 </resources>
