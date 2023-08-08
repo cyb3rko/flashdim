@@ -15,7 +15,7 @@ android {
         targetSdk 33
         versionCode 17
         versionName '2.0.0'
-        resConfigs 'en'
+        resourceConfigurations += ['en']
     }
     buildTypes {
         debug {
@@ -44,7 +44,9 @@ android {
         }
     }
     packagingOptions {
-        exclude 'META-INF/*.version'
+        resources {
+            excludes += ['META-INF/*.version']
+        }
     }
 }
 
@@ -88,7 +90,7 @@ dependencies {
 }
 
 configurations {
-    all {
+    configureEach {
         exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel-ktx'
     }
 }
