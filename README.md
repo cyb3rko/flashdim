@@ -8,7 +8,11 @@
 
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B35689%2Fgithub.com%2Fcyb3rko%2Fflashdim.svg?type=small)](https://fossa.com/)
 
-![flashdim](https://socialify.git.ci/cyb3rko/flashdim/image?description=1&font=Bitter&forks=1&issues=1&logo=https%3A%2F%2Fi.imgur.com%2FeGuy6Mb.png&name=1&owner=1&pattern=Diagonal%20Stripes&pulls=1&stargazers=1&theme=Dark)
+<p align="center">
+  <img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/>
+</p>
+
+---
 
 - [About this project](#about-this-project)   
 - [Features](#features)  
@@ -27,7 +31,8 @@
 ---
 [<img alt="Featured on Sam Beckman: Top 20 Android Apps 2023" src="https://i.imgur.com/IQbl2CU.png" />](https://youtu.be/TOxEvJ_YM5g?t=279)
 [<img alt="Featured on Sam Beckman: The Best Free and Open Source Apps in 2023" src="https://i.imgur.com/sunDB4F.png" />](https://youtu.be/4gbSnaASTt0?t=140)
-[<img alt="Featured on HowToMen: Top 20 Best Android Apps 2023!" src="https://i.imgur.com/CUTXWGL.png" />](https://youtu.be/jFnLA5KV0L8?t=484)
+[<img alt="Featured on Sam Beckman: Top 20 Android Apps I Can't live without in 2023!" src="https://i.imgur.com/1Tiyk5L.png" />](https://youtu.be/s6KNdNlNXho?t=257)
+[<img alt="Featured on HowToMen: 20 Best Android Apps 2023!" src="https://i.imgur.com/CUTXWGL.png" />](https://youtu.be/jFnLA5KV0L8?t=484)
 [<img alt="Featured on HowToMen: Best Android Apps - December 2022" src="https://i.imgur.com/U57jXpn.png" />](https://youtu.be/C-qvkT2dawI?t=120)
 ---
 [<img alt="Read Medium article" src="https://i.imgur.com/p6PHIK7.png" />](https://medium.com/p/835cdf2d6f3e)
@@ -48,6 +53,7 @@ Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.c
 - 📫 morse code flash mode
 - ⏲️ Interval / BPM mode
 - ⚡ quick settings tile for fast access
+- 🔊 press both volume buttons for easy flashlight toggle
 - 🔒 private, no ads, no internet connection
 - 💯 modern Material You (M3) design elements
 - 🎨 app colors adapt to device's system colors
@@ -145,8 +151,10 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Xiaomi 12T Pro (Xiaomi diting)
 
 ## Screenshots
-|<img src="https://i.imgur.com/8SuDUBt.png" width="200">|<img src="https://i.imgur.com/0SW3zRo.png" width="200">|<img src="https://i.imgur.com/2xQJjzM.png" width="200">|<img src="https://i.imgur.com/LKBDxJc.png" width="200">|<img src="https://i.imgur.com/46o5Ykk.png" width="200">|
-|:---:|:---:|:---:|:---:|:---:|
+|<img src="https://i.imgur.com/v0sPQYL.png" width="250">|<img src="https://i.imgur.com/iCfW7qm.png" width="250">|<img src="https://i.imgur.com/SoUi95t.png" width="250">|<img src="https://i.imgur.com/mQONbW5.png" width="250">|
+|:---:|:---:|:---:|:---:|
+|<img src="https://i.imgur.com/lAkL2Cn.png" width="250">|<img src="https://i.imgur.com/R9LiPry.png" width="250">|
+
 
 ## Contribute
 Of course I'm happy about any kind of contribution.
@@ -161,10 +169,12 @@ Using a unified code format makes it much easier for me and for everyone else.
 | --- |  
 | <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Laisa Islam Ani - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Freepik - Flaticon</a> |
+| <a href="https://www.flaticon.com/free-icons/link" title="link icons">Link icons created by Creaticca Creative Agency - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/morse-code" title="morse code icons">Morse code icons created by Freepik - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/restart" title="restart icons">Restart icons created by AlternativeStd - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/start-button" title="start button icons">Start button icons created by Freepik - Flaticon</a> |
+| <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by flashicon - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/vibrate" title="vibrate icons">Vibrate icons created by Bombasticon Studio - Flaticon</a> |
 | <a href="https://www.flaticon.com/free-icons/volume" title="volume icons">Volume icons created by Freepik - Flaticon</a> |
 
