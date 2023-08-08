@@ -23,6 +23,7 @@ import android.os.Handler
 import android.os.Looper
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import android.util.Log
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
 
@@ -34,10 +35,16 @@ class ToggleSettingsTile : TileService() {
             level = Safe.getInt(Safe.INITIAL_LEVEL, 1)
         }
 
-        val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        when (qsTile.state) {
-            Tile.STATE_INACTIVE -> sendFlashlightSignal(cameraManager, level, true)
-            Tile.STATE_ACTIVE -> sendFlashlightSignal(cameraManager, level, false)
+        try {
+            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            when (qsTile.state) {
+                Tile.STATE_INACTIVE -> sendFlashlightSignal(cameraManager, level, true)
+                Tile.STATE_ACTIVE -> sendFlashlightSignal(cameraManager, level, false)
+            }
+        } catch (e: Exception) {
+            Log.e("FlashDim", "Camera access failed in ToggleSettingsTile")
+            handleFlashlightException(e)
+            e.printStackTrace()
         }
     }
 
@@ -62,18 +69,14 @@ class ToggleSettingsTile : TileService() {
         level: Int,
         activate: Boolean
     ) {
-        try {
-            if (activate) {
-                if (level == -1) {
-                    cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
-                } else {
-                    cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
-                }
+        if (activate) {
+            if (level == -1) {
+                cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
             } else {
-                cameraManager.setTorchMode(cameraManager.cameraIdList[0], false)
+                cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
             }
-        } catch (e: Exception) {
-            handleFlashlightException(e)
+        } else {
+            cameraManager.setTorchMode(cameraManager.cameraIdList[0], false)
         }
     }
 }

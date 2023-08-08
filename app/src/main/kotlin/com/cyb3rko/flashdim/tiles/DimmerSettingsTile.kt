@@ -20,6 +20,7 @@ import android.content.Context
 import android.hardware.camera2.CameraManager
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import android.util.Log
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
 
@@ -38,8 +39,14 @@ class DimmerSettingsTile : TileService() {
             else -> DIMMER_MAX
         }
 
-        val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        sendFlashlightSignal(cameraManager, newLevel, newLevel != DIMMER_OFF)
+        try {
+            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            sendFlashlightSignal(cameraManager, newLevel, newLevel != DIMMER_OFF)
+        } catch (e: Exception) {
+            Log.e("FlashDim", "Camera access failed in DimmerSettingsTile")
+            handleFlashlightException(e)
+            e.printStackTrace()
+        }
         qsTile.subtitle = "State: ${mode.description()}"
         qsTile.updateTile()
         Safe.writeInt(Safe.QUICKTILE_DIM_MODE, mode.next())
@@ -61,18 +68,14 @@ class DimmerSettingsTile : TileService() {
         level: Int,
         activate: Boolean
     ) {
-        try {
-            if (activate) {
-                if (level == -1) {
-                    cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
-                } else {
-                    cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
-                }
+        if (activate) {
+            if (level == -1) {
+                cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
             } else {
-                cameraManager.setTorchMode(cameraManager.cameraIdList[0], false)
+                cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
             }
-        } catch (e: Exception) {
-            handleFlashlightException(e)
+        } else {
+            cameraManager.setTorchMode(cameraManager.cameraIdList[0], false)
         }
     }
 
