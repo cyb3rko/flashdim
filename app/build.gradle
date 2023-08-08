@@ -13,8 +13,8 @@ android {
         applicationId "com.cyb3rko.flashdim"
         minSdk 33
         targetSdk 33
-        versionCode 18
-        versionName '2.1.0'
+        versionCode 19
+        versionName '2.1.1'
         resourceConfigurations += ['en']
     }
     buildTypes {
