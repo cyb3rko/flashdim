@@ -23,6 +23,10 @@
     <string name="dialog_restart_message">For performance reasons the change will be visible on next app start.\n\nDo you want to restart now?</string>
     <string name="dialog_restart_positive_button">Okay</string>
     <string name="dialog_restart_negative_button">Later</string>
+    <string name="dialog_accessibility_title">Accessibility Service Info</string>
+    <string name="dialog_accessibility_message">For this feature to work FlashDim uses an accessibility service. It is able to read key events and react to the click of the volume buttons.\n\nI do not collect any kind of data other than the volume button key events. To verify that, you can access this app\'s source code on GitHub.</string>
+    <string name="dialog_accessibility_button1">Proceed</string>
+    <string name="dialog_accessibility_button2">Cancel</string>
     <string name="hint_dim_not_supported">This device only supports 1 light level.\nDim feature deactivated.</string>
     <string name="light_level_sos">SOS mode</string>
     <string name="light_level_morse">Morse mode</string>
