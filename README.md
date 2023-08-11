@@ -142,6 +142,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - OnePlus 11R 5G (OnePlus OP5961L1)
 - OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)
 - Oppo CPH2145 (OPPO OP4F1BL1)
+- Oppo CPH2249 (OPPO OP4F81L1)
 - Oppo CPH2293 (OPPO OP52E1L1)
 - Oppo CPH2461 (OPPO OP533FL1)
 - Oppo Reno6 Z 5G (OPPO OP4FA7L1)
