@@ -139,6 +139,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Google Pixel 4a (5G) (google bramble)
 - Google Pixel 5 (google redfin)
 - Google Pixel 5a 5G (google barbet)
+- iQOO I2011 (iQOO 2011)
 - OnePlus 11R 5G (OnePlus OP5961L1)
 - OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)
 - Oppo CPH2145 (OPPO OP4F1BL1)
