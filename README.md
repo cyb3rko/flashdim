@@ -147,6 +147,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Oppo CPH2293 (OPPO OP52E1L1)
 - Oppo CPH2461 (OPPO OP533FL1)
 - Oppo Reno6 Z 5G (OPPO OP4FA7L1)
+- realme 8 5G (realme RE513CL1)
 - realme 10 Pro+ 5G (realme RE58A5L1)
 - realme GT Master Edition (realme RE54ABL1)
 - realme 真我GT 2 (realme RE58B2L1)
