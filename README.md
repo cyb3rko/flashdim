@@ -140,6 +140,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Google Pixel 5 (google redfin)
 - Google Pixel 5a 5G (google barbet)
 - iQOO I2011 (iQOO 2011)
+- OnePlus 11 5G (OnePlus OP594DL1)
 - OnePlus 11R 5G (OnePlus OP5961L1)
 - OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)
 - Oppo CPH2145 (OPPO OP4F1BL1)
@@ -152,6 +153,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - realme GT Master Edition (realme RE54ABL1)
 - realme 真我GT 2 (realme RE58B2L1)
 - Xiaomi 12T Pro (Xiaomi diting)
+- Xiaomi 13T (Xiaomi aristotle)
 
 ## Screenshots
 |<img src="https://i.imgur.com/v0sPQYL.png" width="250">|<img src="https://i.imgur.com/iCfW7qm.png" width="250">|<img src="https://i.imgur.com/SoUi95t.png" width="250">|<img src="https://i.imgur.com/mQONbW5.png" width="250">|
