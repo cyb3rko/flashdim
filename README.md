@@ -152,6 +152,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - realme 10 Pro+ 5G (realme RE58A5L1)
 - realme GT Master Edition (realme RE54ABL1)
 - realme 真我GT 2 (realme RE58B2L1)
+- Vivo V2053 (vivo 2041)
 - Xiaomi 12T Pro (Xiaomi diting)
 - Xiaomi 13T (Xiaomi aristotle)
 
