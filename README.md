@@ -134,6 +134,7 @@ The following list shows phones, which were manually excluded by myself in the G
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 - Asus ROG Phone 6 (asus ASUS_AI2201)
+- Asus ROG Phone 5 (asus ASUS_I005_1)
 - Google Pixel 4 (google flame)
 - Google Pixel 4 XL (google coral)
 - Google Pixel 4a 5G (google bramble)
@@ -141,6 +142,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Google Pixel 5a 5G (google barbet)
 - Lava Blaze 5G (LAVA LXX503)
 - Motorola motorola edge 30 (motorola dubai)
+- Nothing Phone 2 (Nothing Pong)
 - OnePlus 8T (OnePlus OnePlus8T)
 - OnePlus 11 5G (OnePlus OP594DL1)
 - OnePlus 11R 5G (OnePlus OP5961L1)
@@ -150,6 +152,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Oppo CPH2293 (OPPO OP52E1L1)
 - Oppo OPPO Reno6 Z 5G (OPPO OP4FA7L1)
 - Oppo OPPO Reno7 (OPPO OP533FL1)
+- POCO F4 (POCO munch)
 - Redmi Note 10 Pro (Redmi sweetin)
 - realme 10 Pro+ 5G (realme RE58A5L1)
 - realme 11 Pro+ 5G (realme RE58B6L1)
