@@ -65,6 +65,12 @@
             app:summary="@string/preference_item_tactile_morse_summary"
             app:icon="@drawable/_ic_morse_scaled" />
 
+        <Preference
+            app:summary=""
+            app:title=""
+            app:selectable="false"
+            />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -63,14 +63,17 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
         PreferenceManager.getDefaultSharedPreferences(this)
             .registerOnSharedPreferenceChangeListener(this)
 
-        window.setDecorFitsSystemWindows( false )
 
+
+        window.setDecorFitsSystemWindows( false )
 
         binding.appBarLayout.setOnApplyWindowInsetsListener { view, windowInsets ->
             val insets = windowInsets.getInsets( WindowInsets.Type.statusBars() )
             view.updatePadding( top = insets.top )
+            view.clipToOutline = false
             windowInsets
         }
+
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
