@@ -23,9 +23,15 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
+import android.view.WindowInsets
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
@@ -56,6 +62,15 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
         PreferenceManager.getDefaultSharedPreferences(this)
             .registerOnSharedPreferenceChangeListener(this)
+
+        window.setDecorFitsSystemWindows( false )
+
+
+        binding.appBarLayout.setOnApplyWindowInsetsListener { view, windowInsets ->
+            val insets = windowInsets.getInsets( WindowInsets.Type.statusBars() )
+            view.updatePadding( top = insets.top )
+            windowInsets
+        }
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
