@@ -8,6 +8,15 @@
         <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat</item>
     </style>
 
+    <style name="AppThemeTransparentBar" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor">@color/material_dynamic_neutral10</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat</item>
+
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+
     <style name="Preference.SwitchPreferenceCompat" parent="@style/Preference.SwitchPreferenceCompat.Material" tools:ignore="ResourceCycle">
         <item name="widgetLayout">@layout/preference_switch</item>
     </style>
