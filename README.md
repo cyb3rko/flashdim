@@ -168,6 +168,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Vivo I2011 (iQOO 2011)
 - Vivo I2012 (iQOO 2012)
 - Vivo I2017 (iQOO 2017)
+- Vivo T2x 5G (vivo V2225)
 - Vivo V2053 (vivo 2041)
 - Vivo V2141 (vivo 2141)
 - Vivo V27 (vivo V2231)
