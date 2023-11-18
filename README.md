@@ -144,6 +144,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Motorola motorola edge 20 (motorola berlin)
 - Motorola motorola edge 30 (motorola dubai)
 - Motorola motorola edge 40 (motorola lyriq)
+- Nothing Phone 1 (Nothing Spacewar)
 - Nothing Phone 2 (Nothing Pong)
 - OnePlus 8T (OnePlus OnePlus8T)
 - OnePlus 9RT 5G (OnePlus OP5154L1 / OnePlus OP5155L1)
@@ -172,6 +173,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Vivo V2053 (vivo 2041)
 - Vivo V2141 (vivo 2141)
 - Vivo V27 (vivo V2231)
+- Vivo vivo 2018 (vivo 2018)
 - Xiaomi 12T Pro (Xiaomi diting)
 - Xiaomi 13T (Xiaomi aristotle)
 
