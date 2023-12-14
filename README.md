@@ -135,6 +135,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 
 - Asus ROG Phone 5 (asus ASUS_I005_1)
 - Asus ROG Phone 6 (asus ASUS_AI2201)
+- Blu G33 (BLU G0890 / BLU G0892)
 - Google Pixel 4 (google flame)
 - Google Pixel 4 XL (google coral)
 - Google Pixel 4a 5G (google bramble)
@@ -148,6 +149,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Nothing Phone 1 (Nothing Spacewar)
 - Nothing Phone 2 (Nothing Pong)
 - OnePlus 8T (OnePlus OnePlus8T)
+- OnePlus 9 Pro 5G (OnePlus OnePlus9Pro / OnePlus OnePlus9ProTMO)
 - OnePlus 9RT 5G (OnePlus OP5154L1 / OnePlus OP5155L1)
 - OnePlus 10T 5G (OnePlus OP5552L1)
 - OnePlus 11 5G (OnePlus OP594DL1)
