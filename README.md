@@ -18,9 +18,9 @@
 - [Features](#features)  
 - [Download](#download)
   - [Verification](#verification)
+- [Screenshots](#screenshots)
 - [Supported devices](#supported-devices)
   - [Exluded devices (Play Store) / Unsupported devices](#exluded-devices-play-store--unsupported-devices)
-- [Screenshots](#screenshots)
 - [Contribute](#contribute)
 - [Used Icons](#used-icons)
 - [License](#license)
@@ -119,6 +119,11 @@ Certificate Digests:
   MD5:     09:05:c3:62:fa:94:a0:2e:c4:9c:d0:4e:b8:a3:cc:99
 ```
 
+## Screenshots
+|<img src="https://i.imgur.com/v0sPQYL.png" width="250">|<img src="https://i.imgur.com/iCfW7qm.png" width="250">|<img src="https://i.imgur.com/SoUi95t.png" width="250">|<img src="https://i.imgur.com/mQONbW5.png" width="250">|
+|:---:|:---:|:---:|:---:|
+|<img src="https://i.imgur.com/lAkL2Cn.png" width="250">|<img src="https://i.imgur.com/R9LiPry.png" width="250">|
+
 ## Supported Devices
 The full functionalizy of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
 Here's a list of devices I know of which do work FOR SURE. If you've used a device that works too please let me know so I can add it here.
@@ -138,6 +143,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Blu G33 (BLU G0890 / BLU G0892)
 - Google Pixel 4 (google flame)
 - Google Pixel 4 XL (google coral)
+- Google Pixel 4a (google sunfish)
 - Google Pixel 4a 5G (google bramble)
 - Google Pixel 5 (google redfin)
 - Google Pixel 5a 5G (google barbet)
@@ -156,6 +162,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - OnePlus 11R 5G (OnePlus OP5961L1)
 - OnePlus Nord CE 2 (OnePlus OP555BL1)
 - OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)
+- OnePlus Nord CE 5G (OnePlus OnePlusNordCE)
 - Oppo CPH2145 (OPPO OP4F1BL1)
 - Oppo CPH2249 (OPPO OP4F81L1)
 - Oppo CPH2251 (OPPO OP4F83L1)
@@ -168,6 +175,8 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Redmi 12 5G (Redmi XIG03 / Redmi river)
 - Redmi Note 10 Pro (Redmi sweet / Redmi sweetin / POCO chopin)
 - Redmi Note 12 (Redmi tapas / Redmi topaz)
+- Redmi Note 12 Pro 5G (Redmi ruby)
+- Redmi Note 12 Pro+ 5G (Redmi rubypro)
 - realme 10 Pro 5G (realme RE58B8L1 / realme RE588BL1)
 - realme 10 Pro+ 5G (realme RE58A5L1)
 - realme 11 Pro+ 5G (realme RE58B6L1)
@@ -185,12 +194,6 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Vivo vivo 2018 (vivo 2018)
 - Xiaomi 12T Pro (Xiaomi diting)
 - Xiaomi 13T (Xiaomi aristotle)
-
-## Screenshots
-|<img src="https://i.imgur.com/v0sPQYL.png" width="250">|<img src="https://i.imgur.com/iCfW7qm.png" width="250">|<img src="https://i.imgur.com/SoUi95t.png" width="250">|<img src="https://i.imgur.com/mQONbW5.png" width="250">|
-|:---:|:---:|:---:|:---:|
-|<img src="https://i.imgur.com/lAkL2Cn.png" width="250">|<img src="https://i.imgur.com/R9LiPry.png" width="250">|
-
 
 ## Contribute
 Of course I'm happy about any kind of contribution.
