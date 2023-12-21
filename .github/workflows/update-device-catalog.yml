@@ -1,0 +1,46 @@
+name: Device Catalog Updater
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/excluded-devices.csv'
+
+jobs:
+  update:
+    name: Device Catalog Updater
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            README.md
+            .github/excluded-devices.csv
+            .github/device-catalog-manager.py
+
+      - name: List root folder
+        run: |
+          pwd
+          ls -la
+
+      - name: List .github folder
+        run: |
+          cd .github
+          pwd
+          ls -la
+
+      - name: Update excluded devices in README via Python
+        shell: sh
+        run: |
+          cd .github
+          python device-catalog-manager.py
+
+      - name: Commit updated README.md
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git checkout main
+          git add README.md
+          git commit -m "repo: Fill README with excluded devices"
+          git push

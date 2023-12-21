@@ -20,7 +20,7 @@
   - [Verification](#verification)
 - [Screenshots](#screenshots)
 - [Supported devices](#supported-devices)
-  - [Exluded devices (Play Store) / Unsupported devices](#exluded-devices-play-store--unsupported-devices)
+  - [Excluded devices (Play Store) / Unsupported devices](#excluded-devices-play-store--unsupported-devices)
 - [Contribute](#contribute)
 - [Used Icons](#used-icons)
 - [License](#license)
@@ -42,6 +42,8 @@
 ## About this project
 Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.  
 To be able to use this new feature I've developed this app.
+
+📱 The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited). 📱
 
 Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashlight-Tiramisu) 💛  
 Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar) 💛
@@ -125,19 +127,19 @@ Certificate Digests:
 |<img src="https://i.imgur.com/lAkL2Cn.png" width="250">|<img src="https://i.imgur.com/R9LiPry.png" width="250">|
 
 ## Supported Devices
-The full functionalizy of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
-Here's a list of devices I know of which do work FOR SURE. If you've used a device that works too please let me know so I can add it here.
+The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
+Here's a list of devices I know of which do support flashlight dimming.
 
-- Google Pixel 6 series
-- Google Pixel 7 series
+- Google Pixel 6/7/8 series
 - nearly every Samsung phone with Android 13
-- many other phones from different manufacturers
+- many other devices from different manufacturers
 
-### Exluded devices (Play Store) / Unsupported devices
+### Excluded devices (Play Store) / Unsupported devices
 
 The following list shows phones, which were manually excluded by myself in the Google Play Store, because of unsupported flashlight dimming functionality.  
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
+<!--- marker1 -->
 - Asus ROG Phone 5 (asus ASUS_I005_1)
 - Asus ROG Phone 6 (asus ASUS_AI2201)
 - Blu G33 (BLU G0890 / BLU G0892)
@@ -194,9 +196,10 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 - Vivo vivo 2018 (vivo 2018)
 - Xiaomi 12T Pro (Xiaomi diting)
 - Xiaomi 13T (Xiaomi aristotle)
+<!--- marker2 -->
 
 ## Contribute
-Of course I'm happy about any kind of contribution.
+Of course, I'm happy about any kind of contribution.
 
 For creating [issues](https://github.com/cyb3rko/flashdim/issues) there's no real guideline you should follow.
 If you create [pull requests](https://github.com/cyb3rko/flashdim/pulls) please try to use the syntax I use.

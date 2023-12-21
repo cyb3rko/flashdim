@@ -6,6 +6,7 @@ on:
       - 'metadata/**'
       - 'legal/**'
       - '**.md'
+      - '**.csv'
       - '.github/workflows/**'
       - '.github/FUNDING.yml'
   
