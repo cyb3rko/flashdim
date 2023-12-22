@@ -1,0 +1,11 @@
+<component name="CopyrightManager">
+  <settings>
+    <module2copyright>
+      <element module="FlashDim" copyright="Apache" />
+    </module2copyright>
+    <LanguageOptions name="XML">
+      <option name="fileLocation" value="2" />
+      <option name="prefixLines" value="false" />
+    </LanguageOptions>
+  </settings>
+</component>
