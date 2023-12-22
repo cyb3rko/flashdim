@@ -70,7 +70,7 @@
             android:hint="@string/dialog_interval_input_hint1"
             android:inputType="number"
             android:singleLine="true"
-            android:text="100"
+            android:text="500"
             tools:ignore="HardcodedText" />
 
     </com.google.android.material.textfield.TextInputLayout>

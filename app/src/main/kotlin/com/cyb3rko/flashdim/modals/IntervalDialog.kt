@@ -29,7 +29,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 internal object IntervalDialog {
     private lateinit var binding: DialogIntervalBinding
     private var mode = 0
-    private var time = "100"
+    private var time = "500"
     private var bpm = "100"
 
     fun show(
@@ -83,7 +83,6 @@ internal object IntervalDialog {
         binding.numberInputLayout.setHint(R.string.dialog_interval_input_hint1)
         binding.numberInputLayout.suffixText = "ms"
         binding.numberInputLayout.counterMaxLength = 5
-        println(time)
         binding.numberInputText.setText(time)
     }
 
@@ -106,7 +105,7 @@ internal object IntervalDialog {
         }
     }
 
-    private fun validateTime(time: String) = time.toInt() in 50..10000
+    private fun validateTime(time: String) = time.toInt() in 200..10000
 
-    private fun validateBpm(bpm: String) = bpm.toInt() in 10..500
+    private fun validateBpm(bpm: String) = bpm.toInt() in 10..200
 }
