@@ -61,11 +61,7 @@ internal class Camera(activity: AppCompatActivity) {
         cameraManager.setTorchMode(cameraId, enabled)
     }
 
-    fun sendLightLevel(
-        activity: AppCompatActivity,
-        currentLevel: Int,
-        level: Int
-    ) {
+    fun sendLightLevel(activity: AppCompatActivity, currentLevel: Int, level: Int) {
         if (currentLevel != level) {
             try {
                 cameraManager.turnOnTorchWithStrengthLevel(cameraId, level)
@@ -80,11 +76,7 @@ internal class Camera(activity: AppCompatActivity) {
             return packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
         }
 
-        fun sendLightLevel(
-            context: Context,
-            level: Int,
-            activate: Boolean
-        ) {
+        fun sendLightLevel(context: Context, level: Int, activate: Boolean) {
             try {
                 val cameraManager = context.getSystemService(Context.CAMERA_SERVICE)
                     as CameraManager

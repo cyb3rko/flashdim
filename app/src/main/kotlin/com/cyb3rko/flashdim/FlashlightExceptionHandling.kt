@@ -21,10 +21,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-internal fun handleFlashlightException(
-    exception: Exception,
-    activity: AppCompatActivity? = null
-) {
+internal fun handleFlashlightException(exception: Exception, activity: AppCompatActivity? = null) {
     if (exception is CameraAccessException) {
         val message = when (exception.reason) {
             CameraAccessException.CAMERA_DISABLED -> {

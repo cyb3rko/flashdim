@@ -63,11 +63,7 @@ class DimmerSettingsTile : TileService() {
         }
     }
 
-    private fun sendFlashlightSignal(
-        cameraManager: CameraManager,
-        level: Int,
-        activate: Boolean
-    ) {
+    private fun sendFlashlightSignal(cameraManager: CameraManager, level: Int, activate: Boolean) {
         if (activate) {
             if (level == -1) {
                 cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)

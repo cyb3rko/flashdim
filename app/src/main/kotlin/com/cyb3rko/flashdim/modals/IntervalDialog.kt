@@ -32,10 +32,7 @@ internal object IntervalDialog {
     private var time = "500"
     private var bpm = "100"
 
-    fun show(
-        context: Context,
-        onBlink: (on: Boolean) -> Unit
-    ) {
+    fun show(context: Context, onBlink: (on: Boolean) -> Unit) {
         val intervalHandler = IntervalHandler(onBlink)
         binding = DialogIntervalBinding.inflate((context as FragmentActivity).layoutInflater)
         binding.timeButton.setOnClickListener {

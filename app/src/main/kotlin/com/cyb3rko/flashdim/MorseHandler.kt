@@ -101,11 +101,7 @@ internal class MorseHandler(
         }
     }
 
-    private suspend fun blink(
-        char: Char,
-        code: String,
-        delay: Long
-    ): Boolean {
+    private suspend fun blink(char: Char, code: String, delay: Long): Boolean {
         onBlink(char, code, delay, true)
         delay(delay)
         return onBlink(char, code, delay, false)
