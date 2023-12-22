@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="android:statusBarColor">@color/material_dynamic_neutral10</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
 
         <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat</item>
