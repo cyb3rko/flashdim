@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">FlashDim</string>
     <string name="playstore_link">https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim</string>
     <string name="settings">Settings</string>
     <string name="dialog_not_supported_title">Device not supported</string>

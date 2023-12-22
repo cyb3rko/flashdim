@@ -1,28 +1,30 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'org.jmailen.kotlinter' version '3.15.0' // lintKotlin, formatKotlin
+    id 'org.jmailen.kotlinter' version '4.1.0' // lintKotlin, formatKotlin
     id 'com.getkeepsafe.dexcount' version '4.0.0' // :app:countReleaseDexMethods
 }
 
 android {
     namespace 'com.cyb3rko.flashdim'
 
-    compileSdk 33
+    compileSdk 34
     defaultConfig {
-        applicationId "com.cyb3rko.flashdim"
+        applicationId 'com.cyb3rko.flashdim'
         minSdk 33
-        targetSdk 33
+        targetSdk 34
         versionCode 19
         versionName '2.1.1'
+        resValue 'string', 'app_name', 'FlashDim Dev'
         resourceConfigurations += ['en']
     }
     buildTypes {
         debug {
-            versionNameSuffix "-debug"
             minifyEnabled false
+            applicationIdSuffix '.dev'
         }
         release {
+            resValue 'string', 'app_name', 'FlashDim'
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -37,6 +39,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
     bundle {
         storeArchive {
@@ -84,9 +87,9 @@ if (project.hasProperty('gplay_upload')) {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.core:core-ktx:1.10.1'
-    implementation 'androidx.preference:preference-ktx:1.2.0'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+    implementation 'com.google.android.material:material:1.11.0'
 }
 
 configurations {
