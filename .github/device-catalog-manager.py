@@ -4,16 +4,16 @@ import os
 
 def get_file_line_count():
     if os.name == "posix":
-        return int(os.popen("wc -l < excluded-devices.csv").read()[:-1])
+        return int(os.popen("wc -l < excluded_devices.csv").read()[:-1])
     elif os.name == "nt":
-        return int(os.popen("type excluded-devices.csv | find /v /c \"\"").read()[:-1]) - 1
+        return int(os.popen("type excluded_devices.csv | find /v /c \"\"").read()[:-1]) - 1
     else:
         raise Exception("Who are you?")
 
 
 output = ""
 print(f"Reading CSV file in {os.getcwd()}")
-with open("excluded-devices.csv", "r", encoding="utf-8") as file:
+with open("excluded_devices.csv", "r", encoding="utf-8") as file:
     reader = csv.reader(file, delimiter=',')
     row_count = get_file_line_count()
     print(f"Found {row_count} entries")
