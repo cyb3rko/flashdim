@@ -7,9 +7,11 @@ on:
       - 'legal/**'
       - '**.md'
       - '**.csv'
+      - '**.py'
       - 'LICENSE'
       - '.github/workflows/release-builder.yml'
       - '.github/workflows/fossa.yml'
+      - '.github/workflows/update-device-catalog.yml'
       - '.github/FUNDING.yml'
   pull_request:
 
