@@ -19,6 +19,7 @@ package com.cyb3rko.flashdim.utils
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
+import com.cyb3rko.flashdim.BuildConfig
 
 internal object Safe {
     const val APPOPEN_FLASH = "appopen_flash"
@@ -29,9 +30,10 @@ internal object Safe {
     const val MAX_LEVEL = "max_level"
     const val MORSE_VIBRATION = "morse_vibration"
     const val MULTILEVEL = "multilevel"
-    const val QUICK_SETTINGS_LINK = "quick_settings_link"
-    const val STARTUP_COUNTER = "startup_counter"
     const val QUICKTILE_DIM_MODE = "dim_mode"
+    const val QUICK_SETTINGS_LINK = "quick_settings_link"
+    const val REPORT_DIALOG_SHOWN = "${BuildConfig.VERSION_CODE}-report_dialog"
+    const val STARTUP_COUNTER = "startup_counter"
     const val VOLUME_BUTTONS_LINK = "volume_buttons_link"
 
     private lateinit var sharedPreferences: SharedPreferences

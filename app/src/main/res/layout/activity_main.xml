@@ -106,15 +106,15 @@
         android:id="@+id/seek_bar"
         android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/device_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toEndOf="@id/button_container"
-        app:layout_constraintTop_toBottomOf="@id/level_indicator"
+        app:layout_constraintTop_toBottomOf="@id/divider"
         app:level_background_color="@color/material_dynamic_neutral_variant30"
         app:level_corner_radius="8dp"
         app:level_gap="2dp"
@@ -124,16 +124,16 @@
         android:id="@+id/button_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="6dp"
         android:orientation="vertical"
         android:weightSum="6.1"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/device_name"
         app:layout_constraintEnd_toStartOf="@id/seek_bar"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/level_indicator">
+        app:layout_constraintTop_toBottomOf="@id/divider">
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.Material3.Button.TonalButton"
@@ -141,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="0.5"
             android:text="@string/button_sos_text"
             app:icon="@android:drawable/stat_notify_error" />
@@ -202,5 +202,20 @@
             android:text="@string/button_off_text" />
 
     </LinearLayout>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:chipMinTouchTargetSize="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp"
+        tools:text="Google Pixel 7 Pro"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,25 +18,16 @@ package com.cyb3rko.flashdim.modals
 
 import android.content.Context
 import android.os.Build
+import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.utils.openUrl
 import com.cyb3rko.flashdim.utils.showDialog
 
 internal object AboutDialog {
-    fun show(context: Context, buildInfo: BuildInfo) {
+    fun show(context: Context, maxLevel: Int) {
         context.showDialog(
             title = context.getString(R.string.dialog_about_title),
-            message = context.getString(
-                R.string.dialog_about_message,
-                buildInfo.versionName,
-                buildInfo.versionCode,
-                buildInfo.buildType,
-                Build.MANUFACTURER,
-                Build.MODEL,
-                Build.DEVICE,
-                getAndroidVersionName(),
-                Build.VERSION.SDK_INT
-            ),
+            message = getDeviceInfo(maxLevel),
             icon = R.drawable._ic_information,
             action = { showIconCreditsDialog(context) },
             actionMessage = context.getString(R.string.dialog_about_button)
@@ -53,16 +44,17 @@ internal object AboutDialog {
         )
     }
 
-    private fun getAndroidVersionName() = when (Build.VERSION.SDK_INT) {
-        33 -> "13"
-        34 -> "14"
-        35 -> "15"
-        else -> "> 15"
-    }
+    fun getDeviceInfo(maxLevel: Int) = StringBuilder()
+        .appendLine(
+            "App Version: ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
+        )
+        .appendLine("Build Type: ${BuildConfig.BUILD_TYPE}")
+        .appendLine("Manufacturer: ${Build.MANUFACTURER}")
+        .appendLine("Model: ${Build.MODEL}")
+        .appendLine("Device: ${Build.DEVICE}")
+        .appendLine("Light Levels: $maxLevel")
+        .appendLine(
+            "Software: Android ${Build.VERSION.RELEASE} (${Build.VERSION.SDK_INT})"
+        )
+        .toString()
 }
-
-internal data class BuildInfo(
-    internal val versionName: String,
-    internal val versionCode: Int,
-    internal val buildType: String
-)

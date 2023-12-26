@@ -19,6 +19,7 @@ package com.cyb3rko.flashdim.activities
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.VibratorManager
 import android.view.Menu
@@ -34,10 +35,11 @@ import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.databinding.ActivityMainBinding
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.modals.AboutDialog
-import com.cyb3rko.flashdim.modals.BuildInfo
+import com.cyb3rko.flashdim.modals.DeviceSupportDialog
 import com.cyb3rko.flashdim.modals.IntervalDialog
 import com.cyb3rko.flashdim.modals.MorseDialog
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
+import com.cyb3rko.flashdim.utils.DeviceSupportManager
 import com.cyb3rko.flashdim.utils.Safe
 import com.cyb3rko.flashdim.utils.Vibrator
 import com.cyb3rko.flashdim.utils.disable
@@ -49,7 +51,9 @@ import com.cyb3rko.flashdim.utils.show
 import com.cyb3rko.flashdim.utils.showDialog
 import kotlin.system.exitProcess
 import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -116,6 +120,7 @@ class MainActivity : AppCompatActivity() {
         super.onPostCreate(savedInstanceState)
         if (!Camera.doesDeviceHaveFlash(packageManager)) return
         initButtonClickListeners()
+        checkDeviceSupport()
         AppReviewManager.initiateReviewDialog(this)
     }
 
@@ -205,6 +210,38 @@ class MainActivity : AppCompatActivity() {
                 camera.setTorchMode(false)
             }
         }
+    }
+
+    private fun checkDeviceSupport() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val excluded = DeviceSupportManager.isExcluded(resources)
+            withContext(Dispatchers.Main) {
+                if (excluded && maxLevel > 1) {
+                    showDeviceChipAndDialog(false)
+                } else if (!excluded && maxLevel <= 1) {
+                    showDeviceChipAndDialog(true)
+                }
+            }
+        }
+    }
+
+    private fun showDeviceChipAndDialog(newReport: Boolean) {
+        @SuppressLint("SetTextI18n")
+        binding.deviceName.text = "${Build.MANUFACTURER} ${Build.MODEL} (${Build.DEVICE})"
+        binding.deviceName.setChipIconResource(android.R.drawable.ic_dialog_alert)
+        if (newReport) {
+            binding.deviceName.textSize = 12f
+            binding.deviceName.setOnClickListener {
+                DeviceSupportDialog.show(this@MainActivity, maxLevel, true)
+            }
+            DeviceSupportDialog.show(this@MainActivity, maxLevel, false)
+        } else {
+            binding.deviceName.setOnClickListener {
+                DeviceSupportDialog.showWrong(this@MainActivity, maxLevel, true)
+            }
+            DeviceSupportDialog.showWrong(this@MainActivity, maxLevel, false)
+        }
+        binding.deviceName.show()
     }
 
     private fun executeAppStartFlash() {
@@ -357,14 +394,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.icon_credits_action -> {
-                AboutDialog.show(
-                    this,
-                    BuildInfo(
-                        BuildConfig.VERSION_NAME,
-                        BuildConfig.VERSION_CODE,
-                        BuildConfig.BUILD_TYPE
-                    )
-                )
+                AboutDialog.show(this, maxLevel)
                 return true
             }
             R.id.settings_action -> {
