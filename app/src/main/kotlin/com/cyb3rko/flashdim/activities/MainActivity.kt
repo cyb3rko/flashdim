@@ -42,6 +42,7 @@ import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.cyb3rko.flashdim.utils.DeviceSupportManager
 import com.cyb3rko.flashdim.utils.Safe
 import com.cyb3rko.flashdim.utils.Vibrator
+import com.cyb3rko.flashdim.utils.couldBeRunningOnEmulator
 import com.cyb3rko.flashdim.utils.disable
 import com.cyb3rko.flashdim.utils.enable
 import com.cyb3rko.flashdim.utils.hide
@@ -97,7 +98,7 @@ class MainActivity : AppCompatActivity() {
             Safe.writeInt(Safe.INITIAL_LEVEL, maxLevel)
         }
 
-        if (maxLevel > 1) {
+        if (maxLevel > 1 || couldBeRunningOnEmulator()) {
             initSeekbar()
             Safe.writeBoolean(Safe.MULTILEVEL, true)
         } else {
@@ -208,6 +209,12 @@ class MainActivity : AppCompatActivity() {
                     seekBar.setProgress(0)
                 }
                 camera.setTorchMode(false)
+            }
+            if (BuildConfig.DEBUG) {
+                offButton.setOnLongClickListener {
+                    switchToSimpleMode()
+                    true
+                }
             }
         }
     }

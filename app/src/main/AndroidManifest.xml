@@ -12,6 +12,7 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity">
+        <profileable android:shell="true" />
         <activity
             android:name="com.cyb3rko.flashdim.activities.MainActivity"
             android:fitsSystemWindows="true"
