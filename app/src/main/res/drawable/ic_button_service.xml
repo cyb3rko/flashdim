@@ -1,0 +1,16 @@
+<!--
+Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com
+License - https://fontawesome.com/license/free
+Copyright 2023 Fonticons, Inc.
+-->
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="85.333336dp"
+    android:viewportWidth="768"
+    android:viewportHeight="1024">
+    <path
+        android:fillColor="#BABABA"
+        android:pathData="M208,320C208,284.7 236.7,256 272,256h224c35.3,0 64,28.7 64,64v384c0,35.3 -28.7,64 -64,64L272,768c-35.3,0 -64,-28.7 -64,-64L208,320zM336,704c0,8.8 7.2,16 16,16h64c8.8,0 16,-7.2 16,-16s-7.2,-16 -16,-16h-64c-8.8,0 -16,7.2 -16,16zM496,320L272,320v320h224L496,320z" />
+</vector>

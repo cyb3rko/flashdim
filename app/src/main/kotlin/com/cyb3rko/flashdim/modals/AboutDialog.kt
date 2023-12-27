@@ -39,7 +39,9 @@ internal object AboutDialog {
             title = context.getString(R.string.dialog_credits_title),
             message = context.getString(R.string.dialog_credits_message),
             icon = R.drawable._ic_information,
-            action = { context.openUrl("https://flaticon.com", "Flaticon") },
+            action = {
+                context.openUrl("https://pictogrammers.com/library/mdi", "Pictogrammers")
+            },
             actionMessage = context.getString(R.string.dialog_credits_button)
         )
     }

@@ -155,7 +155,7 @@
             android:layout_marginTop="10dp"
             android:layout_weight="0.5"
             android:text="@string/button_morse_text"
-            app:icon="@drawable/_ic_morse" />
+            app:icon="@android:drawable/stat_notify_chat" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.Material3.Button.TonalButton"

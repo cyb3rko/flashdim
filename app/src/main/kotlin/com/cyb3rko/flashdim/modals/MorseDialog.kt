@@ -38,7 +38,7 @@ internal object MorseDialog {
             context,
             MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
         )
-            .setIcon(R.drawable._ic_morse)
+            .setIcon(android.R.drawable.stat_notify_chat)
             .setView(inputLayout)
             .setTitle(R.string.dialog_morse_title)
             .setPositiveButton(R.string.dialog_morse_button, null)

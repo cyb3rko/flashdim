@@ -156,7 +156,7 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                 requireContext(),
                 MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
             )
-                .setIcon(R.drawable._ic_level)
+                .setIcon(R.drawable.ic_level)
                 .setTitle(getString(R.string.preference_item_initial_level_dialog_title))
                 .setView(content)
                 .setPositiveButton(android.R.string.ok) { _, _ ->

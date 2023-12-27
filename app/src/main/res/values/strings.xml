@@ -44,8 +44,8 @@
     <string name="dialog_about_title">About</string>
     <string name="dialog_about_button">Show Icon Credits</string>
     <string name="dialog_credits_title">Icon Credits</string>
-    <string name="dialog_credits_message">Github icon created by Laisa Islam Ani - Flaticon\n\nInformation icon created by Freepik - Flaticon\n\nVolume icons created by Freepik - Flaticon\n\nMorse icon created by Freepik - Flaticon\n\nRestart icons created by AlternativeStd - Flaticon\n\nSetting icon created by Freepik - Flaticon\n\nShuttle icon created by Freepik - Flaticon\n\nVibrate icon created by Bombasticon Studio - Flaticon\n\nLink icon created by Creaticca Creative Agency - Flaticon\n\nHigh Volume icon created by flashicon - Flaticon</string>
-    <string name="dialog_credits_button">Open Flaticon</string>
+    <string name="dialog_credits_message">information-slab-circle-outline created by Jeff Anders - Pictogrammers\n\nvibrate created by Google - Pictogrammers\n\nrocket-launch-outline created by Michael Irigoyen - Pictogrammers</string>
+    <string name="dialog_credits_button">Open Pictogrammers</string>
     <string name="dialog_device_support_title">Device Support</string>
     <string name="dialog_device_support_message1">It seems that your device does support flashlight dimming, even though it was reported otherwise.\n\nPlease consider contacting me to let me know via GitHub Issues or email (niko@cyb3rko.de).</string>
     <string name="dialog_device_support_button1_1">Only copy device info</string>

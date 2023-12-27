@@ -156,7 +156,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
             android:text="@string/button_morse_text"
-            app:icon="@drawable/_ic_morse"
+            app:icon="@android:drawable/stat_notify_chat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sos_button" />

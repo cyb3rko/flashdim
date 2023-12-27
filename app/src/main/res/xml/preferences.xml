@@ -18,33 +18,33 @@
             app:dependency="appstart_flash"
             app:title="@string/preference_item_instant_flash_extension"
             app:summary="@string/preference_item_instant_flash_extension_summary"
-            app:icon="@drawable/_ic_restart" />
+            app:icon="@drawable/ic_restart" />
 
         <SwitchPreferenceCompat
             app:key="quick_settings_link"
             app:defaultValue="false"
             app:title="@string/preference_item_quick_settings_link"
             app:summary="@string/preference_item_quick_settings_link_summary"
-            app:icon="@drawable/_ic_link" />
+            app:icon="@drawable/ic_link" />
 
         <SwitchPreferenceCompat
             app:key="volume_buttons_link"
             app:defaultValue="false"
             app:title="@string/preference_item_volume_buttons_link"
             app:summary="@string/preference_item_volume_buttons_link_summary"
-            app:icon="@drawable/_ic_link" />
+            app:icon="@drawable/ic_link" />
 
         <Preference
             app:key="initial_level"
             app:title="@string/preference_item_initial_level"
             app:summary="@string/preference_item_initial_level_summary"
-            app:icon="@drawable/_ic_level_scaled" />
+            app:icon="@drawable/ic_level_scaled" />
 
         <Preference
             app:key="volume_buttons"
             app:title="@string/preference_item_volume_buttons"
             app:summary="@string/preference_item_volume_buttons_summary"
-            app:icon="@drawable/_ic_volume" />
+            app:icon="@drawable/ic_button_service" />
 
     </PreferenceCategory>
 
@@ -63,7 +63,7 @@
             app:defaultValue="true"
             app:title="@string/preference_item_tactile_morse"
             app:summary="@string/preference_item_tactile_morse_summary"
-            app:icon="@drawable/_ic_morse_scaled" />
+            app:icon="@drawable/ic_chat" />
 
     </PreferenceCategory>
 
