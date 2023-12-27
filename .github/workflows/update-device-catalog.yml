@@ -2,6 +2,8 @@ name: Device Catalog Updater
 on:
   workflow_dispatch:
   push:
+    branches:
+      - '**'
     paths:
       - 'app/src/main/res/raw/excluded_devices.csv'
 
