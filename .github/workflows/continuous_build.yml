@@ -8,6 +8,7 @@ on:
       - '**.md'
       - '**.csv'
       - '**.py'
+      - 'app/src/main/baseline-prof.txt'
       - 'LICENSE'
       - '.github/workflows/release-builder.yml'
       - '.github/workflows/fossa.yml'

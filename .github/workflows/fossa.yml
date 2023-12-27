@@ -8,6 +8,7 @@ on:
       - '**.md'
       - '**.csv'
       - '**.py'
+      - 'app/src/main/baseline-prof.txt'
       - '.github/workflows/**'
       - '.github/FUNDING.yml'
   

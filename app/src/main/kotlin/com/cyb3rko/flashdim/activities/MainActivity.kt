@@ -105,7 +105,13 @@ class MainActivity : AppCompatActivity() {
             switchToSimpleMode()
             Safe.writeBoolean(Safe.MULTILEVEL, false)
         }
+    }
 
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        if (!Camera.doesDeviceHaveFlash(packageManager)) return
+        initButtonClickListeners()
+        checkDeviceSupport()
         if (!Safe.getBoolean(Safe.FLASH_ACTIVE, false)) {
             executeAppStartFlash()
         }
@@ -115,13 +121,6 @@ class MainActivity : AppCompatActivity() {
         val systemVibrator = (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager)
             .defaultVibrator
         Vibrator.initialize(systemVibrator)
-    }
-
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
-        if (!Camera.doesDeviceHaveFlash(packageManager)) return
-        initButtonClickListeners()
-        checkDeviceSupport()
         AppReviewManager.initiateReviewDialog(this)
     }
 
