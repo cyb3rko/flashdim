@@ -122,9 +122,9 @@ Certificate Digests:
 ```
 
 ## Screenshots
-|<img src="https://i.imgur.com/v0sPQYL.png" width="250">|<img src="https://i.imgur.com/iCfW7qm.png" width="250">|<img src="https://i.imgur.com/SoUi95t.png" width="250">|<img src="https://i.imgur.com/mQONbW5.png" width="250">|
+|<img src="metadata/en-US/images/phoneScreenshots/1.png" width="250">|<img src="metadata/en-US/images/phoneScreenshots/2.png" width="250">|<img src="metadata/en-US/images/phoneScreenshots/3.png" width="250">|<img src="metadata/en-US/images/phoneScreenshots/4.png" width="250">|
 |:---:|:---:|:---:|:---:|
-|<img src="https://i.imgur.com/lAkL2Cn.png" width="250">|<img src="https://i.imgur.com/R9LiPry.png" width="250">|
+|<img src="metadata/en-US/images/phoneScreenshots/5.png" width="250">|<img src="metadata/en-US/images/phoneScreenshots/6.png" width="250">|
 
 ## Supported Devices
 The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
@@ -214,17 +214,10 @@ Using a unified code format makes it much easier for me and for everyone else.
 ## Used Icons
 
 | 💛 |
-| --- |  
-| <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Laisa Islam Ani - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Freepik - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/link" title="link icons">Link icons created by Creaticca Creative Agency - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/morse-code" title="morse code icons">Morse code icons created by Freepik - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/restart" title="restart icons">Restart icons created by AlternativeStd - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/start-button" title="start button icons">Start button icons created by Freepik - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by flashicon - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/vibrate" title="vibrate icons">Vibrate icons created by Bombasticon Studio - Flaticon</a> |
-| <a href="https://www.flaticon.com/free-icons/volume" title="volume icons">Volume icons created by Freepik - Flaticon</a> |
+| --- |
+| <a href="https://pictogrammers.com/library/mdi/icon/information-slab-circle-outline">information-slab-circle-outline created by Jeff Anders - Pictogrammers</a> |
+| <a href="https://pictogrammers.com/library/mdi/icon/vibrate">vibrate created by Google - Pictogrammers</a> |
+| <a href="https://pictogrammers.com/library/mdi/icon/rocket-launch-outline">rocket-launch-outline created by Michael Irigoyen - Pictogrammers</a> |
 
 ## License
 
