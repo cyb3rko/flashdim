@@ -62,6 +62,7 @@ internal object IntervalDialog {
             it.disable()
             binding.flashButton.enable()
         }
+        binding.seizureWarning.text = context.getText(R.string.dialog_interval_seizure_warning)
 
         val dialog = MaterialAlertDialogBuilder(
             context,

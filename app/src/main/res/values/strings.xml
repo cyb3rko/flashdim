@@ -11,6 +11,7 @@
     <string name="dialog_morse_error_characters">Use characters a–z, A–Z, 0–9 and space</string>
     <string name="dialog_morse_button">Flash</string>
     <string name="dialog_interval_title">Interval Flash</string>
+    <string name="dialog_interval_seizure_warning">⚠️ <b>Seizure Warning</b>: Flashing light</string>
     <string name="dialog_interval_input_hint1">Interval time (200–10000ms)</string>
     <string name="dialog_interval_input_hint2">Beats per minute (10–200)</string>
     <string name="dialog_interval_error">Value not allowed</string>

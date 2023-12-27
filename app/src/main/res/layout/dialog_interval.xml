@@ -25,12 +25,21 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingBottom="32dp"
-    android:paddingTop="8dp">
+    android:paddingTop="8dp"
+    tools:layout_width="300dp">
+
+    <TextView
+        android:id="@+id/seizure_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        tools:text="⚠️ Seizure Warning: Flashing light" />
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         app:checkedButton="@id/time_button"
         app:selectionRequired="true"
         app:singleSelection="true">
