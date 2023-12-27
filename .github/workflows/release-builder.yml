@@ -110,7 +110,7 @@ jobs:
         run: |
           export KEYSTORE_FILE=$(pwd)/keystore.jks
           echo $KEYSTORE | base64 -d > $KEYSTORE_FILE
-          ./gradlew -Psign build --stacktrace
+          ./gradlew -Psign assembleRelease --stacktrace
           cp app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/FlashDim-$RELEASE_VERSION.apk
         env:
           KEYSTORE: ${{ secrets.KEYSTORE }}
