@@ -21,6 +21,13 @@
             app:icon="@drawable/ic_restart" />
 
         <SwitchPreferenceCompat
+            app:key="pause_flash"
+            app:defaultValue="false"
+            app:title="@string/preference_item_pause_flash"
+            app:summary="@string/preference_item_pause_flash_summary"
+            app:icon="@drawable/ic_close" />
+
+        <SwitchPreferenceCompat
             app:key="quick_settings_link"
             app:defaultValue="false"
             app:title="@string/preference_item_quick_settings_link"

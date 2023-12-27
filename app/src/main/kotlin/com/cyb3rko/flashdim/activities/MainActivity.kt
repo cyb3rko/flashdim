@@ -131,6 +131,15 @@ class MainActivity : AppCompatActivity() {
         if (!restored) executeAppOpenFlash()
     }
 
+    override fun onPause() {
+        super.onPause()
+        if (!settingsOpened && Safe.getBoolean(Safe.PAUSE_FLASH, false)) {
+            updateLightLevelView(0)
+            binding.seekBar.setProgress(0)
+            camera.setTorchMode(false)
+        }
+    }
+
     private fun initSeekbar() {
         binding.seekBar.maxProgress = maxLevel
         binding.seekBar.onProgressChanged = object : SeekBarChangeListener {

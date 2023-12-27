@@ -57,12 +57,14 @@
     <string name="preference_item_instant_flash_summary">Activate flashlight on app startup</string>
     <string name="preference_item_instant_flash_extension">Instant Flash Extension</string>
     <string name="preference_item_instant_flash_extension_summary">Activate flashlight every time you open the app</string>
+    <string name="preference_item_pause_flash">Context awareness</string>
+    <string name="preference_item_pause_flash_summary">Turn off the flashlight when leaving the app</string>
     <string name="preference_item_quick_settings_link">Quick Settings Link</string>
     <string name="preference_item_quick_settings_link_summary">Link the initial level to the quick settings tile</string>
     <string name="preference_item_volume_buttons_link">Volume Buttons Link</string>
     <string name="preference_item_volume_buttons_link_summary">Link the initial level to the action when pressing both volume buttons.</string>
     <string name="preference_item_initial_level">Initial level</string>
-    <string name="preference_item_initial_level_summary">Dim level for Initial Flash, optionally for quick settings tile and volume button press.</string>
+    <string name="preference_item_initial_level_summary">Dim level for Initial Flash, optionally for quick settings tile and volume button press</string>
     <string name="preference_item_volume_buttons">Volume Buttons Service</string>
     <string name="preference_item_volume_buttons_summary">Activate the service for toggling the flashlight when pressing both volume buttons.</string>
     <string name="preference_item_initial_level_dialog_title">Set Initial Level</string>
