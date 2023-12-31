@@ -20,19 +20,35 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
     if row_count < 1:
         raise Exception("Empty CSV file")
     next(reader)
-    name = None
+    device_count = 0
+    manufacturer = None
+    manufacturer_count = 0
+    prev_name = None
     models = []
     for row in reader:
         print("Entry:", row)
-        if name == row[0]:  # multiple technical names
+        if manufacturer is None:
+            output += f"<details>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
+        if prev_name == row[0]:  # multiple technical names
             if not models.__contains__(row[1]):
                 models.append(row[1])
         else:  # new model entry
-            if name is not None:
-                output += "- " + name + " (" + ", ".join(models) + ")\n"
-            name = row[0]
+            if manufacturer is not None and manufacturer != row[2].lower():
+                output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
+                device_count += 1
+                output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
+                output += f"  </ul>\n</details>\n<details>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
+                manufacturer_count = 0
+            elif prev_name is not None:
+                manufacturer_count += 1
+                device_count += 1
+                output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
+            prev_name = row[0]
             models = [row[1]]
-    output += "- " + name + " (" + ", ".join(models) + ")\n"
+            manufacturer = row[2].lower()
+    output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n  </ul>\n</details>\n"
+    output = f"<em>Total: {device_count + 1}</em>\n" + output
+    output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
 
 print("Calculated output:")
 print(output)

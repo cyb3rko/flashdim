@@ -1,7 +1,8 @@
 # FlashDim
 [![API](https://img.shields.io/badge/API-33%2B-brightgreen.svg?style=flat)](https://apilevels.com)
-[![release](https://img.shields.io/github/release/cyb3rko/flashdim.svg)](https://github.com/cyb3rko/flashdim/releases/latest)
+[![gplay](https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.cyb3rko.flashdim%26l%3Dgplay%26m%3Dv%24version&color=blue)](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
 [![fdroid](https://img.shields.io/f-droid/v/com.cyb3rko.flashdim.svg)](https://f-droid.org/packages/com.cyb3rko.flashdim)
+[![github](https://img.shields.io/github/release/cyb3rko/flashdim.svg)](https://github.com/cyb3rko/flashdim/releases/latest)
 [![license](https://img.shields.io/github/license/cyb3rko/logviewer-for-openhab-app)](https://www.apache.org/licenses/LICENSE-2.0)
 [![last commit](https://img.shields.io/github/last-commit/cyb3rko/flashdim?color=F34C9F)](https://github.com/cyb3rko/flashdim/commits/main)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e7fd3ea03da4a32aae48ff39693ee91)](https://www.codacy.com/gh/cyb3rko/flashdim/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cyb3rko/flashdim&amp;utm_campaign=Badge_Grade)
@@ -9,7 +10,7 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/custom%2B35689%2Fgithub.com%2Fcyb3rko%2Fflashdim.svg?type=small)](https://fossa.com/)
 
 <p align="center">
-  <img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/>
+  <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a>
 </p>
 
 ---
@@ -43,7 +44,13 @@
 Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.  
 To be able to use this new feature I've developed this app.
 
-📱 The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited). 📱
+> [!IMPORTANT]  
+> The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).
+> See [Supported devices](#supported-devices)
+
+If you think it's worth to support this project, feel free to give a small donation :heart:.
+
+---
 
 Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashlight-Tiramisu) 💛  
 Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar) 💛
@@ -68,7 +75,7 @@ src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
 [<img height="80" alt="Get it on F-Droid"
 src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
 />](https://f-droid.org/app/com.cyb3rko.flashdim)
-[<img height="80" src="https://raw.githubusercontent.com/gotify/android/master/download-badge.png"/>](https://github.com/cyb3rko/flashdim/releases/latest)
+[<img height="80" src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"/>](https://github.com/cyb3rko/flashdim/releases/latest)
 
 ### Verification
 
