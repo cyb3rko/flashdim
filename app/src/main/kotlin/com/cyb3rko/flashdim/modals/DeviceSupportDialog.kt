@@ -17,10 +17,14 @@
 package com.cyb3rko.flashdim.modals
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.annotation.StringRes
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.utils.Safe
+import com.cyb3rko.flashdim.utils.openIntent
 import com.cyb3rko.flashdim.utils.openUrl
+import com.cyb3rko.flashdim.utils.showToast
 import com.cyb3rko.flashdim.utils.storeToClipboard
 import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -37,6 +41,7 @@ internal object DeviceSupportDialog {
     }
 
     private fun showDialog(context: Context, maxLevel: Int, @StringRes message: Int) {
+        val deviceInfo = AboutDialog.getDeviceInfo(context, maxLevel)
         MaterialAlertDialogBuilder(
             context,
             MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
@@ -45,16 +50,25 @@ internal object DeviceSupportDialog {
             .setMessage(message)
             .setIcon(R.drawable._ic_information)
             .setPositiveButton(R.string.dialog_device_support_button1_2) { _, _ ->
-                val deviceInfo = AboutDialog.getDeviceInfo(maxLevel)
                 context.storeToClipboard("System Info FlashDim", deviceInfo)
+                context.showToast(context.getString(R.string.dialog_device_support_toast))
                 context.openUrl(
-                    "https://github.com/cyb3rko/flashdim/issues",
+                    "https://github.com/cyb3rko/flashdim/issues/2",
                     "GitHub Issues"
                 )
             }
-            .setNeutralButton(R.string.dialog_device_support_button1_1) { _, _ ->
-                val deviceInfo = AboutDialog.getDeviceInfo(maxLevel)
+            .setNeutralButton(R.string.dialog_device_support_button1_3) { _, _ ->
+                Intent(Intent.ACTION_SENDTO).apply {
+                    data = Uri.parse("mailto:")
+                    putExtra(Intent.EXTRA_EMAIL, arrayOf("niko@cyb3rko.de"))
+                    putExtra(Intent.EXTRA_SUBJECT, "FlashDim Device Support")
+                    putExtra(Intent.EXTRA_TEXT, "\n\n$deviceInfo")
+                    context.openIntent(this)
+                }
+            }
+            .setNegativeButton(R.string.dialog_device_support_button1_1) { _, _ ->
                 context.storeToClipboard("System Info FlashDim", deviceInfo)
+                context.showToast(context.getString(R.string.dialog_device_support_toast))
             }
             .show()
     }

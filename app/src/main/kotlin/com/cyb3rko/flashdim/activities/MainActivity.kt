@@ -221,13 +221,18 @@ class MainActivity : AppCompatActivity() {
             if (BuildConfig.DEBUG) {
                 offButton.setOnLongClickListener {
                     switchToSimpleMode()
+                    checkDeviceSupport(true)
                     true
                 }
             }
         }
     }
 
-    private fun checkDeviceSupport() {
+    private fun checkDeviceSupport(forceShow: Boolean = false) {
+        if (forceShow) {
+            showDeviceChipAndDialog(true)
+            return
+        }
         lifecycleScope.launch(Dispatchers.IO) {
             val excluded = DeviceSupportManager.isExcluded(resources)
             withContext(Dispatchers.Main) {

@@ -22,6 +22,7 @@ import com.cyb3rko.flashdim.R
 
 internal object DeviceSupportManager {
     fun isExcluded(resources: Resources): Boolean {
+        val brand = Build.BRAND.lowercase()
         val manufacturer = Build.MANUFACTURER.lowercase()
         val device = Build.DEVICE.lowercase()
         var content: Array<String>
@@ -30,7 +31,8 @@ internal object DeviceSupportManager {
             .bufferedReader()
             .lines().skip(1).anyMatch {
                 content = it.split(",").toTypedArray()
-                content[2].lowercase() == manufacturer && content[3].lowercase() == device
+                (content[2].lowercase() == manufacturer || content[2].lowercase() == brand) &&
+                        content[3].lowercase() == device
             }
     }
 }

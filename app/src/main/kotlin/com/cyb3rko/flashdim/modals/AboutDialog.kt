@@ -22,15 +22,23 @@ import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.utils.openUrl
 import com.cyb3rko.flashdim.utils.showDialog
+import com.cyb3rko.flashdim.utils.storeToClipboard
 
 internal object AboutDialog {
     fun show(context: Context, maxLevel: Int) {
         context.showDialog(
             title = context.getString(R.string.dialog_about_title),
-            message = getDeviceInfo(maxLevel),
+            message = getDeviceInfo(context, maxLevel),
             icon = R.drawable._ic_information,
             action = { showIconCreditsDialog(context) },
-            actionMessage = context.getString(R.string.dialog_about_button)
+            actionMessage = context.getString(R.string.dialog_about_button1),
+            action2 = {
+                context.storeToClipboard(
+                    "System Info FlashDim",
+                    getDeviceInfo(context, maxLevel)
+                )
+            },
+            actionMessage2 = context.getString(R.string.dialog_about_button2)
         )
     }
 
@@ -46,17 +54,24 @@ internal object AboutDialog {
         )
     }
 
-    fun getDeviceInfo(maxLevel: Int) = StringBuilder()
+    fun getDeviceInfo(context: Context, maxLevel: Int) = StringBuilder()
         .appendLine(
             "App Version: ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
         )
-        .appendLine("Build Type: ${BuildConfig.BUILD_TYPE}")
-        .appendLine("Manufacturer: ${Build.MANUFACTURER}")
-        .appendLine("Model: ${Build.MODEL}")
-        .appendLine("Device: ${Build.DEVICE}")
-        .appendLine("Light Levels: $maxLevel")
+        .appendLine("App Build Type: ${BuildConfig.BUILD_TYPE}")
+        .appendLine("App Installer: ${getInstaller(context)}")
         .appendLine(
             "Software: Android ${Build.VERSION.RELEASE} (${Build.VERSION.SDK_INT})"
         )
+        .appendLine("Light Levels: $maxLevel")
+        .appendLine("Manufacturer: ${Build.MANUFACTURER}")
+        .appendLine("Brand: ${Build.BRAND}")
+        .appendLine("Model: ${Build.MODEL}")
+        .appendLine("Device: ${Build.DEVICE}")
+        .appendLine("Board: ${Build.BRAND}")
+        .appendLine("Supported ABIs: ${Build.SUPPORTED_ABIS.joinToString(",")}")
         .toString()
+
+    private fun getInstaller(context: Context) =
+        context.packageManager.getInstallSourceInfo(context.packageName).installingPackageName
 }

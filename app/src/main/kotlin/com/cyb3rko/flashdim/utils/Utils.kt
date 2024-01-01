@@ -97,6 +97,8 @@ internal fun Context.showDialog(
     icon: Int?,
     action: () -> Unit = {},
     actionMessage: String = "",
+    action2: () -> Unit = {},
+    actionMessage2: String = "",
     cancelable: Boolean = true
 ) {
     val builder = MaterialAlertDialogBuilder(
@@ -118,6 +120,11 @@ internal fun Context.showDialog(
             action()
         }
     }
+    if (actionMessage2.isNotBlank()) {
+        builder.setNeutralButton(actionMessage2) { _, _ ->
+            action2()
+        }
+    }
     builder.show()
 }
 
@@ -134,6 +141,15 @@ internal fun Context.openUrl(url: String, label: String) {
     } catch (e: Exception) {
         e.printStackTrace()
         this.storeToClipboard(label, url)
+        this.showToast(getString(R.string.toast_url_failed), Toast.LENGTH_LONG)
+    }
+}
+
+internal fun Context.openIntent(intent: Intent) {
+    try {
+        this.startActivity(intent)
+    } catch (e: Exception) {
+        e.printStackTrace()
         this.showToast(getString(R.string.toast_url_failed), Toast.LENGTH_LONG)
     }
 }
