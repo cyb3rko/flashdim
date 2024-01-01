@@ -147,70 +147,154 @@ The following list shows phones, which were manually excluded by myself in the G
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-- Asus ROG Phone 5 (asus ASUS_I005_1)
-- Asus ROG Phone 6 (asus ASUS_AI2201)
-- Blu G33 (BLU G0890, BLU G0892)
-- Google Pixel 4 (google flame)
-- Google Pixel 4 XL (google coral)
-- Google Pixel 4a (google sunfish)
-- Google Pixel 4a 5G (google bramble)
-- Google Pixel 5 (google redfin)
-- Google Pixel 5a 5G (google barbet)
-- Lava Blaze 5G (LAVA LXX503)
-- Motorola motorola edge 20 (motorola berlin)
-- Motorola motorola edge 30 (motorola dubai)
-- Motorola motorola edge 30 ultra (motorola eqs)
-- Motorola motorola edge 40 (motorola lyriq)
-- Nothing Phone 1 (Nothing Spacewar)
-- Nothing Phone 2 (Nothing Pong)
-- OnePlus 8T (OnePlus OnePlus8T)
-- OnePlus 9 5G (OnePlus OnePlus9, OnePlus OnePlus9TMO)
-- OnePlus 9 Pro 5G (OnePlus OnePlus9Pro, OnePlus OnePlus9ProTMO)
-- OnePlus 9RT 5G (OnePlus OP5154L1, OnePlus OP5155L1)
-- OnePlus 10T 5G (OnePlus OP5552L1)
-- OnePlus 11 5G (OnePlus OP594DL1)
-- OnePlus 11R 5G (OnePlus OP5961L1)
-- OnePlus Nord CE 2 (OnePlus OP555BL1)
-- OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)
-- OnePlus Nord CE 5G (OnePlus OnePlusNordCE)
-- OnePlus Nord2 5G (OnePlus OP515BL1)
-- Oppo CPH2145 (OPPO OP4F1BL1)
-- Oppo CPH2249 (OPPO OP4F81L1)
-- Oppo CPH2251 (OPPO OP4F83L1)
-- Oppo CPH2293 (OPPO OP52E1L1)
-- Oppo OPPO Reno6 Z 5G (OPPO OP4FA7L1)
-- Oppo OPPO Reno7 (OPPO OP533FL1)
-- POCO F4 (POCO munch)
-- POCO M5 (POCO stone)
-- POCO X2 (POCO phoenixin)
-- Redmi 10C (Redmi rain)
-- Redmi 12 5G (Redmi XIG03, Redmi river)
-- Redmi Note 10 Pro (POCO chopin, Redmi sweet, Redmi sweetin)
-- Redmi Note 10S (Redmi secret)
-- Redmi Note 12 (Redmi tapas, Redmi topaz)
-- Redmi Note 12 Pro 5G (Redmi ruby)
-- Redmi Note 12 Pro+ 5G (Redmi rubypro)
-- Redmi POCO F5 (POCO marblein)
-- realme 9 (realme RE54E2L1)
-- realme 10 Pro 5G (realme RE588BL1, realme RE58B8L1)
-- realme 10 Pro+ 5G (realme RE58A5L1)
-- realme 11 Pro+ 5G (realme RE58B6L1)
-- realme narzo 30 5G (realme RE513CL1)
-- Realme realme GT Master Edition (realme RE54ABL1)
-- Realme realme GT Neo2 5G (realme RE879AL1)
-- realme 真我GT 2 (realme RE58B2L1)
-- Vivo I2011 (iQOO 2011)
-- Vivo I2012 (iQOO 2012)
-- Vivo I2017 (iQOO 2017)
-- Vivo iQOO 9 SE (iQOO 2019)
-- Vivo T2x 5G (vivo V2225)
-- Vivo V2053 (vivo 2041)
-- Vivo V2130 (vivo 2130)
-- Vivo V2141 (vivo 2141)
-- Vivo V27 (vivo V2231)
-- Vivo vivo 2018 (vivo 2018)
-- Xiaomi 12T Pro (Xiaomi diting)
-- Xiaomi 13T (Xiaomi aristotle)
+<em>Total: 77</em>
+<details>
+  <summary>Asus (2)</summary>
+  <ul>
+    <li>Asus ROG Phone 5 (asus ASUS_I005_1)</li>
+    <li>Asus ROG Phone 6 (asus ASUS_AI2201)</li>
+  </ul>
+</details>
+<details>
+  <summary>Blu (1)</summary>
+  <ul>
+    <li>Blu G33 (BLU G0890, BLU G0892)</li>
+  </ul>
+</details>
+<details>
+  <summary>Google (6)</summary>
+  <ul>
+    <li>Google Pixel 4 (google flame)</li>
+    <li>Google Pixel 4 XL (google coral)</li>
+    <li>Google Pixel 4a (google sunfish)</li>
+    <li>Google Pixel 4a 5G (google bramble)</li>
+    <li>Google Pixel 5 (google redfin)</li>
+    <li>Google Pixel 5a 5G (google barbet)</li>
+  </ul>
+</details>
+<details>
+  <summary>Infinix (1)</summary>
+  <ul>
+    <li>Infinix NOTE 30 Pro (Infinix Infinix-X678B)</li>
+  </ul>
+</details>
+<details>
+  <summary>Lava (1)</summary>
+  <ul>
+    <li>Lava Blaze 5G (LAVA LXX503)</li>
+  </ul>
+</details>
+<details>
+  <summary>Motorola (5)</summary>
+  <ul>
+    <li>Motorola moto g32 (motorola devon)</li>
+    <li>Motorola motorola edge 20 (motorola berlin)</li>
+    <li>Motorola motorola edge 30 (motorola dubai)</li>
+    <li>Motorola motorola edge 30 ultra (motorola eqs)</li>
+    <li>Motorola motorola edge 40 (motorola lyriq)</li>
+  </ul>
+</details>
+<details>
+  <summary>Nothing (2)</summary>
+  <ul>
+    <li>Nothing Phone 1 (Nothing Spacewar)</li>
+    <li>Nothing Phone 2 (Nothing Pong)</li>
+  </ul>
+</details>
+<details>
+  <summary>OnePlus (12)</summary>
+  <ul>
+    <li>OnePlus 8T (OnePlus OnePlus8T)</li>
+    <li>OnePlus 9 5G (OnePlus OnePlus9, OnePlus OnePlus9TMO)</li>
+    <li>OnePlus 9 Pro 5G (OnePlus OnePlus9Pro, OnePlus OnePlus9ProTMO)</li>
+    <li>OnePlus 9RT 5G (OnePlus OP5154L1, OnePlus OP5155L1)</li>
+    <li>OnePlus 10 Pro 5G (OnePlus OP516FL1)</li>
+    <li>OnePlus 10T 5G (OnePlus OP5552L1)</li>
+    <li>OnePlus 11 5G (OnePlus OP594DL1)</li>
+    <li>OnePlus 11R 5G (OnePlus OP5961L1)</li>
+    <li>OnePlus Nord CE 2 (OnePlus OP555BL1)</li>
+    <li>OnePlus Nord CE 2 Lite 5G (OnePlus OP535DL1)</li>
+    <li>OnePlus Nord CE 5G (OnePlus OnePlusNordCE)</li>
+    <li>OnePlus Nord2 5G (OnePlus OP515BL1)</li>
+  </ul>
+</details>
+<details>
+  <summary>Oppo (8)</summary>
+  <ul>
+    <li>Oppo CPH2145 (OPPO OP4F1BL1)</li>
+    <li>Oppo CPH2249 (OPPO OP4F81L1)</li>
+    <li>Oppo CPH2251 (OPPO OP4F83L1)</li>
+    <li>Oppo CPH2293 (OPPO OP52E1L1)</li>
+    <li>Oppo CPH2527 (OPPO OP56E7L1)</li>
+    <li>Oppo Find X5 (OPPO OP52D5L1)</li>
+    <li>Oppo OPPO Reno6 Z 5G (OPPO OP4FA7L1)</li>
+    <li>Oppo OPPO Reno7 (OPPO OP533FL1)</li>
+  </ul>
+</details>
+<details>
+  <summary>POCO (3)</summary>
+  <ul>
+    <li>POCO F4 (POCO munch)</li>
+    <li>POCO M5 (POCO stone)</li>
+    <li>POCO X2 (POCO phoenixin)</li>
+  </ul>
+</details>
+<details>
+  <summary>Redmi (9)</summary>
+  <ul>
+    <li>Redmi 10C (Redmi rain)</li>
+    <li>Redmi 12 5G (Redmi XIG03, Redmi river)</li>
+    <li>Redmi Note 10 Pro (POCO chopin, Redmi sweet, Redmi sweetin)</li>
+    <li>Redmi Note 10S (Redmi secret, Redmi rosemary, Redmi maltose)</li>
+    <li>Redmi Note 12 (Redmi tapas, Redmi topaz)</li>
+    <li>Redmi Note 12 Pro 5G (Redmi ruby)</li>
+    <li>Redmi Note 12 Pro+ 5G (Redmi rubypro)</li>
+    <li>Redmi Note 13 Pro 5G (Redmi garnet)</li>
+    <li>Redmi POCO F5 (POCO marblein)</li>
+  </ul>
+</details>
+<details>
+  <summary>realme (8)</summary>
+  <ul>
+    <li>realme 9 (realme RE54E2L1)</li>
+    <li>realme 10 Pro 5G (realme RE588BL1, realme RE58B8L1)</li>
+    <li>realme 10 Pro+ 5G (realme RE58A5L1)</li>
+    <li>realme 11 Pro+ 5G (realme RE58B6L1)</li>
+    <li>realme narzo 30 5G (realme RE513CL1)</li>
+    <li>Realme realme GT Master Edition (realme RE54ABL1)</li>
+    <li>Realme realme GT Neo2 5G (realme RE879AL1)</li>
+    <li>realme 真我GT 2 (realme RE58B2L1)</li>
+  </ul>
+</details>
+<details>
+  <summary>Vivo (15)</summary>
+  <ul>
+    <li>Vivo I2011 (iQOO 2011)</li>
+    <li>Vivo I2012 (iQOO 2012)</li>
+    <li>Vivo I2017 (iQOO 2017)</li>
+    <li>Vivo iQOO 9 SE (iQOO 2019)</li>
+    <li>Vivo T2 Pro 5G (vivo V2321)</li>
+    <li>Vivo T2x 5G (vivo V2225)</li>
+    <li>Vivo V2050 (vivo 2050)</li>
+    <li>Vivo V2053 (vivo 2041)</li>
+    <li>Vivo V2109 (vivo 2109)</li>
+    <li>Vivo V2115 (vivo 2116)</li>
+    <li>Vivo V2124 (vivo 2124)</li>
+    <li>Vivo V2130 (vivo 2130)</li>
+    <li>Vivo V2141 (vivo 2141)</li>
+    <li>Vivo V27 (vivo V2231)</li>
+    <li>Vivo vivo 2018 (vivo 2018)</li>
+  </ul>
+</details>
+<details>
+  <summary>Xiaomi (4)</summary>
+  <ul>
+    <li>Xiaomi 11i (Xiaomi pissarroin)</li>
+    <li>Xiaomi 12T Pro (Xiaomi diting)</li>
+    <li>Xiaomi 13 (Xiaomi fuxi)</li>
+    <li>Xiaomi 13T (Xiaomi aristotle)</li>
+  </ul>
+</details>
 <!--- marker2 -->
 
 ## Contribute
