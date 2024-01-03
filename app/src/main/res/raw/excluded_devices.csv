@@ -10,9 +10,15 @@ Google Pixel 4a,google sunfish,Google,sunfish
 Google Pixel 4a 5G,google bramble,Google,bramble
 Google Pixel 5,google redfin,Google,redfin
 Google Pixel 5a 5G,google barbet,Google,barbet
+Infinix NOTE 30 5G,Infinix Infinix-X6711,Infinix,Infinix-X6711
 Infinix NOTE 30 Pro,Infinix Infinix-X678B,Infinix,Infinix-X678B
 Lava Blaze 5G,LAVA LXX503,Lava,LXX503
+LGE LG V60 ThinQ,lge timelm,LGE,timelm
+LGE LG WING,lge winglm,LGE,winglm
+LGE VELVET,lge caymanlm,LGE,caymanlm
+LGE VELVET,lge caymanlm,LGE,mcaymanlm
 Motorola moto g32,motorola devon,Motorola,devon
+Motorola moto g82 5G,motorola rhodep,Motorola,rhodep
 Motorola motorola edge 20,motorola berlin,Motorola,berlin
 Motorola motorola edge 30,motorola dubai,Motorola,dubai
 Motorola motorola edge 30 ultra,motorola eqs,Motorola,eqs
@@ -43,9 +49,13 @@ Oppo Find X5,OPPO OP52D5L1,Oppo,OP52D5L1
 Oppo OPPO Reno6 Z 5G,OPPO OP4FA7L1,Oppo,OP4FA7L1
 Oppo OPPO Reno7,OPPO OP533FL1,Oppo,OP533FL1
 POCO F4,POCO munch,POCO,munch
+POCO F5,POCO marble,POCO,marble
 POCO M5,POCO stone,POCO,stone
+POCO M5,POCO rock,POCO,rock
 POCO X2,POCO phoenixin,POCO,phoenixin
 Redmi 10C,Redmi rain,Redmi,rain
+Redmi 10C,Redmi wind,Redmi,wind
+Redmi 10C,Redmi fog,Redmi,fog
 Redmi 12 5G,Redmi XIG03,Redmi,XIG03
 Redmi 12 5G,Redmi river,Redmi,river
 Redmi Note 10 Pro,POCO chopin,Redmi,chopin
@@ -54,6 +64,7 @@ Redmi Note 10 Pro,Redmi sweetin,Redmi,sweetin
 Redmi Note 10S,Redmi secret,Redmi,secret
 Redmi Note 10S,Redmi rosemary,Redmi,rosemary
 Redmi Note 10S,Redmi maltose,Redmi,maltose
+Redmi Note 11 SE,Redmi secret,Redmi,secret
 Redmi Note 12,Redmi tapas,Redmi,tapas
 Redmi Note 12,Redmi topaz,Redmi,topaz
 Redmi Note 12 Pro 5G,Redmi ruby,Redmi,ruby
@@ -61,30 +72,58 @@ Redmi Note 12 Pro+ 5G,Redmi rubypro,Redmi,rubypro
 Redmi Note 13 Pro 5G,Redmi garnet,Redmi,garnet
 Redmi POCO F5,POCO marblein,Redmi,marblein
 realme 9,realme RE54E2L1,realme,RE54E2L1
+realme 10 Pro,realme RE5849,realme,RE5849
 realme 10 Pro 5G,realme RE588BL1,realme,RE588BL1
 realme 10 Pro 5G,realme RE58B8L1,realme,RE58B8L1
+realme 10 Pro+,realme RE5854,realme,RE5854
 realme 10 Pro+ 5G,realme RE58A5L1,realme,RE58A5L1
+realme 10 Pro+ 5G,realme RE58A6L1,realme,RE58A6L1
+realme 11,realme RE5852,realme,RE5852
+realme 11,realme RE5C7CL1,realme,RE5C7CL1
+realme 11 Pro+,realme RE5865,realme,RE5865
 realme 11 Pro+ 5G,realme RE58B6L1,realme,RE58B6L1
+realme 真我11 Pro,realme RE5869,realme,RE5869
+realme C55,realme REE2ADL1,realme,REE2ADL1
 realme narzo 30 5G,realme RE513CL1,realme,RE513CL1
+realme realme 9 5G Speed Edition,realme RE54BFL1,realme,RE54BFL1
 Realme realme GT Master Edition,realme RE54ABL1,Realme,RE54ABL1
 Realme realme GT Neo2 5G,realme RE879AL1,Realme,RE879AL1
+realme RMX3710,realme REE2ADL1,realme,REE2ADL1
 realme 真我GT 2,realme RE58B2L1,realme,RE58B2L1
+realme 真我GT 2,realme RE5471,realme,RE5471
 Vivo I2011,iQOO 2011,Vivo,2011
 Vivo I2012,iQOO 2012,Vivo,2012
 Vivo I2017,iQOO 2017,Vivo,2017
+Vivo I2202,iQOO I2202,Vivo,I2202
 Vivo iQOO 9 SE,iQOO 2019,Vivo,2019
+Vivo T2,vivo V2237,Vivo,V2237
 Vivo T2 Pro 5G,vivo V2321,Vivo,V2321
 Vivo T2x 5G,vivo V2225,Vivo,V2225
 Vivo V2050,vivo 2050,Vivo,2050
+Vivo V2041,vivo 2041,Vivo,2041
 Vivo V2053,vivo 2041,Vivo,2041
+Vivo V2066,vivo 2050,Vivo,2050
 Vivo V2109,vivo 2109,Vivo,2109
 Vivo V2115,vivo 2116,Vivo,2116
+Vivo V2116,vivo 2116,Vivo,2116
+Vivo V2117,vivo 2116,Vivo,2116
 Vivo V2124,vivo 2124,Vivo,2124
 Vivo V2130,vivo 2130,Vivo,2130
+Vivo V2130A,vivo PD2130,Vivo,PD2130
 Vivo V2141,vivo 2141,Vivo,2141
+Vivo V2141A,vivo PD2141,Vivo,PD2141
+Vivo V25e,vivo V2201,Vivo,V2201
+Vivo V25e,vivo V2237,Vivo,V2237
 Vivo V27,vivo V2231,Vivo,V2231
+Vivo V27e,vivo V2237,Vivo,V2237
 Vivo vivo 2018,vivo 2018,Vivo,2018
 Xiaomi 11i,Xiaomi pissarroin,Xiaomi,pissarroin
+Xiaomi 11i HyperCharge,Xiaomi pissarroinpro,Xiaomi,pissarroinpro
 Xiaomi 12T Pro,Xiaomi diting,Xiaomi,diting
+Xiaomi 12T Pro,Redmi diting,Xiaomi,diting
+Xiaomi 12X,Xiaomi psyche,Xiaomi,psyche
 Xiaomi 13,Xiaomi fuxi,Xiaomi,fuxi
 Xiaomi 13T,Xiaomi aristotle,Xiaomi,aristotle
+Xiaomi 13T,Xiaomi XIG04,Xiaomi,XIG04
+Xiaomi Mi 11 Lite,Xiaomi courbet,Xiaomi,courbet
+Xiaomi Mi 11 Lite,Xiaomi courbetin,Xiaomi,courbetin
