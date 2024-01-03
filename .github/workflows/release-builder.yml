@@ -127,5 +127,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           name: "Version ${{ env.RELEASE_VERSION }}"
-          body: ${{steps.github_release.outputs.changelog}}
+          body: ${{steps.github_release2.outputs.changelog}}
           files: app/build/outputs/apk/release/FlashDim-${{env.RELEASE_VERSION}}.apk
