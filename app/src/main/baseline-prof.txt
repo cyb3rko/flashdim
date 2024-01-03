@@ -1221,8 +1221,8 @@ HSPLandroidx/appcompat/widget/ResourceManagerInternal;->setHooks(Landroidx/appco
 PLandroidx/appcompat/widget/ResourceManagerInternal;->setHooks(Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;)V
 HSPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 PLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+HPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
 HSPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
-PLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
 HSPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
 PLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
 Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
@@ -2281,8 +2281,8 @@ HPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(Landr
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 HPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveLayoutDirection(I)V
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveLayoutDirection(I)V
+HPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->validate()V
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->validate()V
-PLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->validate()V
 Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;-><clinit>()V
 PLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;-><clinit>()V
@@ -2384,8 +2384,8 @@ HSPLandroidx/core/content/res/ResourcesCompat;-><clinit>()V
 PLandroidx/core/content/res/ResourcesCompat;-><clinit>()V
 HSPLandroidx/core/content/res/ResourcesCompat;->addColorStateListToCache(Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;ILandroid/content/res/ColorStateList;Landroid/content/res/Resources$Theme;)V
 PLandroidx/core/content/res/ResourcesCompat;->addColorStateListToCache(Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;ILandroid/content/res/ColorStateList;Landroid/content/res/Resources$Theme;)V
+HPLandroidx/core/content/res/ResourcesCompat;->getCachedColorStateList(Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;I)Landroid/content/res/ColorStateList;
 HSPLandroidx/core/content/res/ResourcesCompat;->getCachedColorStateList(Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;I)Landroid/content/res/ColorStateList;
-PLandroidx/core/content/res/ResourcesCompat;->getCachedColorStateList(Landroidx/core/content/res/ResourcesCompat$ColorStateListCacheKey;I)Landroid/content/res/ColorStateList;
 HSPLandroidx/core/content/res/ResourcesCompat;->getCachedFont(Landroid/content/Context;I)Landroid/graphics/Typeface;
 PLandroidx/core/content/res/ResourcesCompat;->getCachedFont(Landroid/content/Context;I)Landroid/graphics/Typeface;
 HSPLandroidx/core/content/res/ResourcesCompat;->getColorStateList(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
@@ -2438,8 +2438,8 @@ HSPLandroidx/core/graphics/ColorUtils;-><clinit>()V
 PLandroidx/core/graphics/ColorUtils;-><clinit>()V
 HSPLandroidx/core/graphics/ColorUtils;->compositeAlpha(II)I
 PLandroidx/core/graphics/ColorUtils;->compositeAlpha(II)I
+HPLandroidx/core/graphics/ColorUtils;->compositeColors(II)I
 HSPLandroidx/core/graphics/ColorUtils;->compositeColors(II)I
-PLandroidx/core/graphics/ColorUtils;->compositeColors(II)I
 HSPLandroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 PLandroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 HSPLandroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
@@ -3949,8 +3949,10 @@ HSPLcom/cyb3rko/flashdim/activities/MainActivity;-><init>()V
 PLcom/cyb3rko/flashdim/activities/MainActivity;-><init>()V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->access$getMaxLevel$p(Lcom/cyb3rko/flashdim/activities/MainActivity;)I
 PLcom/cyb3rko/flashdim/activities/MainActivity;->access$getMaxLevel$p(Lcom/cyb3rko/flashdim/activities/MainActivity;)I
-HSPLcom/cyb3rko/flashdim/activities/MainActivity;->checkDeviceSupport()V
-PLcom/cyb3rko/flashdim/activities/MainActivity;->checkDeviceSupport()V
+HSPLcom/cyb3rko/flashdim/activities/MainActivity;->checkDeviceSupport$default(Lcom/cyb3rko/flashdim/activities/MainActivity;ZILjava/lang/Object;)V
+PLcom/cyb3rko/flashdim/activities/MainActivity;->checkDeviceSupport$default(Lcom/cyb3rko/flashdim/activities/MainActivity;ZILjava/lang/Object;)V
+HSPLcom/cyb3rko/flashdim/activities/MainActivity;->checkDeviceSupport(Z)V
+PLcom/cyb3rko/flashdim/activities/MainActivity;->checkDeviceSupport(Z)V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->executeAppOpenFlash()V
 PLcom/cyb3rko/flashdim/activities/MainActivity;->executeAppOpenFlash()V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->executeAppStartFlash()V
@@ -3965,6 +3967,7 @@ HSPLcom/cyb3rko/flashdim/activities/MainActivity;->onCreate(Landroid/os/Bundle;)
 PLcom/cyb3rko/flashdim/activities/MainActivity;->onCreate(Landroid/os/Bundle;)V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 PLcom/cyb3rko/flashdim/activities/MainActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+PLcom/cyb3rko/flashdim/activities/MainActivity;->onDestroy()V
 PLcom/cyb3rko/flashdim/activities/MainActivity;->onPause()V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->onPostCreate(Landroid/os/Bundle;)V
 PLcom/cyb3rko/flashdim/activities/MainActivity;->onPostCreate(Landroid/os/Bundle;)V
@@ -4032,6 +4035,9 @@ HSPLcom/cyb3rko/flashdim/databinding/ActivityMainBinding;->inflate(Landroid/view
 PLcom/cyb3rko/flashdim/databinding/ActivityMainBinding;->inflate(Landroid/view/LayoutInflater;)Lcom/cyb3rko/flashdim/databinding/ActivityMainBinding;
 HSPLcom/cyb3rko/flashdim/databinding/ActivityMainBinding;->inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/cyb3rko/flashdim/databinding/ActivityMainBinding;
 PLcom/cyb3rko/flashdim/databinding/ActivityMainBinding;->inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/cyb3rko/flashdim/databinding/ActivityMainBinding;
+PLcom/cyb3rko/flashdim/modals/IntervalDialog;-><clinit>()V
+PLcom/cyb3rko/flashdim/modals/IntervalDialog;-><init>()V
+PLcom/cyb3rko/flashdim/modals/IntervalDialog;->stop()V
 Lcom/cyb3rko/flashdim/seekbar/LightLevelSeekBar;
 HSPLcom/cyb3rko/flashdim/seekbar/LightLevelSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 PLcom/cyb3rko/flashdim/seekbar/LightLevelSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -4073,8 +4079,8 @@ PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda0;-><i
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda0;->test(Ljava/lang/Object;)Z
 PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda0;->test(Ljava/lang/Object;)Z
 Lcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;
-HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;)V
-PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;)V
+HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/String;)Ljava/lang/Boolean;
@@ -4094,9 +4100,11 @@ HSPLcom/cyb3rko/flashdim/utils/Safe;->writeBoolean(Ljava/lang/String;Z)V
 PLcom/cyb3rko/flashdim/utils/Safe;->writeBoolean(Ljava/lang/String;Z)V
 HSPLcom/cyb3rko/flashdim/utils/Safe;->writeInt(Ljava/lang/String;I)V
 PLcom/cyb3rko/flashdim/utils/Safe;->writeInt(Ljava/lang/String;I)V
-PLcom/cyb3rko/flashdim/utils/UtilsKt;->showDialog$default(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/Integer;Lkotlin/jvm/functions/Function0;Ljava/lang/String;ZILjava/lang/Object;)V
-PLcom/cyb3rko/flashdim/utils/UtilsKt;->showDialog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/Integer;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Z)V
+PLcom/cyb3rko/flashdim/utils/UtilsKt;->showDialog$default(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/Integer;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Ljava/lang/String;ZILjava/lang/Object;)V
+PLcom/cyb3rko/flashdim/utils/UtilsKt;->showDialog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/Integer;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Z)V
 PLcom/cyb3rko/flashdim/utils/UtilsKt$$ExternalSyntheticLambda0;-><init>(Lkotlin/jvm/functions/Function0;)V
+PLcom/cyb3rko/flashdim/utils/UtilsKt$showDialog$2;-><clinit>()V
+PLcom/cyb3rko/flashdim/utils/UtilsKt$showDialog$2;-><init>()V
 Lcom/cyb3rko/flashdim/utils/Vibrator;
 HSPLcom/cyb3rko/flashdim/utils/Vibrator;-><clinit>()V
 PLcom/cyb3rko/flashdim/utils/Vibrator;-><clinit>()V
@@ -4634,8 +4642,8 @@ HSPLcom/google/android/material/elevation/ElevationOverlayProvider;->calculateOv
 PLcom/google/android/material/elevation/ElevationOverlayProvider;->calculateOverlayAlphaFraction(F)F
 HSPLcom/google/android/material/elevation/ElevationOverlayProvider;->compositeOverlay(IF)I
 PLcom/google/android/material/elevation/ElevationOverlayProvider;->compositeOverlay(IF)I
-HPLcom/google/android/material/elevation/ElevationOverlayProvider;->compositeOverlayIfNeeded(IF)I
 HSPLcom/google/android/material/elevation/ElevationOverlayProvider;->compositeOverlayIfNeeded(IF)I
+PLcom/google/android/material/elevation/ElevationOverlayProvider;->compositeOverlayIfNeeded(IF)I
 HSPLcom/google/android/material/elevation/ElevationOverlayProvider;->isThemeElevationOverlayEnabled()Z
 PLcom/google/android/material/elevation/ElevationOverlayProvider;->isThemeElevationOverlayEnabled()Z
 HSPLcom/google/android/material/elevation/ElevationOverlayProvider;->isThemeSurfaceColor(I)Z
@@ -4792,8 +4800,8 @@ HSPLcom/google/android/material/shadow/ShadowRenderer;-><init>()V
 PLcom/google/android/material/shadow/ShadowRenderer;-><init>()V
 HPLcom/google/android/material/shadow/ShadowRenderer;-><init>(I)V
 HSPLcom/google/android/material/shadow/ShadowRenderer;-><init>(I)V
+HPLcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
 HSPLcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
-PLcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
 Lcom/google/android/material/shape/AbsoluteCornerSize;
 HSPLcom/google/android/material/shape/AbsoluteCornerSize;-><init>(F)V
 PLcom/google/android/material/shape/AbsoluteCornerSize;-><init>(F)V
@@ -4844,8 +4852,8 @@ HSPLcom/google/android/material/shape/MaterialShapeDrawable;->calculatePathForSi
 PLcom/google/android/material/shape/MaterialShapeDrawable;->calculatePathForSize(Landroid/graphics/RectF;Landroid/graphics/Path;)V
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateStrokePath()V
 PLcom/google/android/material/shape/MaterialShapeDrawable;->calculateStrokePath()V
-HPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintColorTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintColorTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
+PLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintColorTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
 PLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
 HPLcom/google/android/material/shape/MaterialShapeDrawable;->compositeElevationOverlayIfNeeded(I)I
@@ -4880,8 +4888,8 @@ HSPLcom/google/android/material/shape/MaterialShapeDrawable;->getStrokeInsetLeng
 PLcom/google/android/material/shape/MaterialShapeDrawable;->getStrokeInsetLength()F
 HPLcom/google/android/material/shape/MaterialShapeDrawable;->getTopLeftCornerResolvedSize()F
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->getTopLeftCornerResolvedSize()F
-HPLcom/google/android/material/shape/MaterialShapeDrawable;->getTranslationZ()F
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->getTranslationZ()F
+PLcom/google/android/material/shape/MaterialShapeDrawable;->getTranslationZ()F
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->getZ()F
 PLcom/google/android/material/shape/MaterialShapeDrawable;->getZ()F
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->hasCompatShadow()Z
@@ -5137,8 +5145,8 @@ HPLcom/google/android/material/shape/ShapePath;->addArc(FFFFFF)V
 HSPLcom/google/android/material/shape/ShapePath;->addArc(FFFFFF)V
 HPLcom/google/android/material/shape/ShapePath;->addConnectingShadowIfNecessary(F)V
 HSPLcom/google/android/material/shape/ShapePath;->addConnectingShadowIfNecessary(F)V
+HPLcom/google/android/material/shape/ShapePath;->addShadowCompatOperation(Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;FF)V
 HSPLcom/google/android/material/shape/ShapePath;->addShadowCompatOperation(Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;FF)V
-PLcom/google/android/material/shape/ShapePath;->addShadowCompatOperation(Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;FF)V
 HPLcom/google/android/material/shape/ShapePath;->applyToPath(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
 HSPLcom/google/android/material/shape/ShapePath;->applyToPath(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
 HSPLcom/google/android/material/shape/ShapePath;->containsIncompatibleShadowOp()Z
