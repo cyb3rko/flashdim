@@ -147,7 +147,7 @@ The following list shows phones, which were manually excluded by myself in the G
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<em>Total: 77</em>
+<em>Total: 105</em>
 <details>
   <summary>Asus (2)</summary>
   <ul>
@@ -173,8 +173,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Infinix (1)</summary>
+  <summary>Infinix (2)</summary>
   <ul>
+    <li>Infinix NOTE 30 5G (Infinix Infinix-X6711)</li>
     <li>Infinix NOTE 30 Pro (Infinix Infinix-X678B)</li>
   </ul>
 </details>
@@ -185,9 +186,18 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Motorola (5)</summary>
+  <summary>LGE (3)</summary>
+  <ul>
+    <li>LGE LG V60 ThinQ (lge timelm)</li>
+    <li>LGE LG WING (lge winglm)</li>
+    <li>LGE VELVET (lge caymanlm)</li>
+  </ul>
+</details>
+<details>
+  <summary>Motorola (6)</summary>
   <ul>
     <li>Motorola moto g32 (motorola devon)</li>
+    <li>Motorola moto g82 5G (motorola rhodep)</li>
     <li>Motorola motorola edge 20 (motorola berlin)</li>
     <li>Motorola motorola edge 30 (motorola dubai)</li>
     <li>Motorola motorola edge 30 ultra (motorola eqs)</li>
@@ -232,20 +242,22 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>POCO (3)</summary>
+  <summary>POCO (4)</summary>
   <ul>
     <li>POCO F4 (POCO munch)</li>
-    <li>POCO M5 (POCO stone)</li>
+    <li>POCO F5 (POCO marble)</li>
+    <li>POCO M5 (POCO stone, POCO rock)</li>
     <li>POCO X2 (POCO phoenixin)</li>
   </ul>
 </details>
 <details>
-  <summary>Redmi (9)</summary>
+  <summary>Redmi (10)</summary>
   <ul>
-    <li>Redmi 10C (Redmi rain)</li>
+    <li>Redmi 10C (Redmi rain, Redmi wind, Redmi fog)</li>
     <li>Redmi 12 5G (Redmi XIG03, Redmi river)</li>
     <li>Redmi Note 10 Pro (POCO chopin, Redmi sweet, Redmi sweetin)</li>
     <li>Redmi Note 10S (Redmi secret, Redmi rosemary, Redmi maltose)</li>
+    <li>Redmi Note 11 SE (Redmi secret)</li>
     <li>Redmi Note 12 (Redmi tapas, Redmi topaz)</li>
     <li>Redmi Note 12 Pro 5G (Redmi ruby)</li>
     <li>Redmi Note 12 Pro+ 5G (Redmi rubypro)</li>
@@ -254,45 +266,66 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>realme (8)</summary>
+  <summary>realme (16)</summary>
   <ul>
     <li>realme 9 (realme RE54E2L1)</li>
+    <li>realme 10 Pro (realme RE5849)</li>
     <li>realme 10 Pro 5G (realme RE588BL1, realme RE58B8L1)</li>
-    <li>realme 10 Pro+ 5G (realme RE58A5L1)</li>
+    <li>realme 10 Pro+ (realme RE5854)</li>
+    <li>realme 10 Pro+ 5G (realme RE58A5L1, realme RE58A6L1)</li>
+    <li>realme 11 (realme RE5852, realme RE5C7CL1)</li>
+    <li>realme 11 Pro+ (realme RE5865)</li>
     <li>realme 11 Pro+ 5G (realme RE58B6L1)</li>
+    <li>realme 真我11 Pro (realme RE5869)</li>
+    <li>realme C55 (realme REE2ADL1)</li>
     <li>realme narzo 30 5G (realme RE513CL1)</li>
+    <li>realme realme 9 5G Speed Edition (realme RE54BFL1)</li>
     <li>Realme realme GT Master Edition (realme RE54ABL1)</li>
     <li>Realme realme GT Neo2 5G (realme RE879AL1)</li>
-    <li>realme 真我GT 2 (realme RE58B2L1)</li>
+    <li>realme RMX3710 (realme REE2ADL1)</li>
+    <li>realme 真我GT 2 (realme RE58B2L1, realme RE5471)</li>
   </ul>
 </details>
 <details>
-  <summary>Vivo (15)</summary>
+  <summary>Vivo (25)</summary>
   <ul>
     <li>Vivo I2011 (iQOO 2011)</li>
     <li>Vivo I2012 (iQOO 2012)</li>
     <li>Vivo I2017 (iQOO 2017)</li>
+    <li>Vivo I2202 (iQOO I2202)</li>
     <li>Vivo iQOO 9 SE (iQOO 2019)</li>
+    <li>Vivo T2 (vivo V2237)</li>
     <li>Vivo T2 Pro 5G (vivo V2321)</li>
     <li>Vivo T2x 5G (vivo V2225)</li>
     <li>Vivo V2050 (vivo 2050)</li>
+    <li>Vivo V2041 (vivo 2041)</li>
     <li>Vivo V2053 (vivo 2041)</li>
+    <li>Vivo V2066 (vivo 2050)</li>
     <li>Vivo V2109 (vivo 2109)</li>
     <li>Vivo V2115 (vivo 2116)</li>
+    <li>Vivo V2116 (vivo 2116)</li>
+    <li>Vivo V2117 (vivo 2116)</li>
     <li>Vivo V2124 (vivo 2124)</li>
     <li>Vivo V2130 (vivo 2130)</li>
+    <li>Vivo V2130A (vivo PD2130)</li>
     <li>Vivo V2141 (vivo 2141)</li>
+    <li>Vivo V2141A (vivo PD2141)</li>
+    <li>Vivo V25e (vivo V2201, vivo V2237)</li>
     <li>Vivo V27 (vivo V2231)</li>
+    <li>Vivo V27e (vivo V2237)</li>
     <li>Vivo vivo 2018 (vivo 2018)</li>
   </ul>
 </details>
 <details>
-  <summary>Xiaomi (4)</summary>
+  <summary>Xiaomi (7)</summary>
   <ul>
     <li>Xiaomi 11i (Xiaomi pissarroin)</li>
-    <li>Xiaomi 12T Pro (Xiaomi diting)</li>
+    <li>Xiaomi 11i HyperCharge (Xiaomi pissarroinpro)</li>
+    <li>Xiaomi 12T Pro (Xiaomi diting, Redmi diting)</li>
+    <li>Xiaomi 12X (Xiaomi psyche)</li>
     <li>Xiaomi 13 (Xiaomi fuxi)</li>
-    <li>Xiaomi 13T (Xiaomi aristotle)</li>
+    <li>Xiaomi 13T (Xiaomi aristotle, Xiaomi XIG04)</li>
+    <li>Xiaomi Mi 11 Lite (Xiaomi courbet, Xiaomi courbetin)</li>
   </ul>
 </details>
 <!--- marker2 -->
