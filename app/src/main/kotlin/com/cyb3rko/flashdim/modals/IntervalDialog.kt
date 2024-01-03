@@ -17,6 +17,7 @@
 package com.cyb3rko.flashdim.modals
 
 import android.content.Context
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.FragmentActivity
 import com.cyb3rko.flashdim.IntervalHandler
 import com.cyb3rko.flashdim.R
@@ -27,14 +28,19 @@ import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 internal object IntervalDialog {
-    private lateinit var binding: DialogIntervalBinding
+    private var _binding: DialogIntervalBinding? = null
+
+    // This property is only valid between onCreateView and onDestroyView.
+    private val binding get() = _binding!!
+    private var dialog: AlertDialog? = null
+    private var intervalHandler: IntervalHandler? = null
     private var mode = 0
     private var time = "500"
     private var bpm = "100"
 
     fun show(context: Context, onBlink: (on: Boolean) -> Unit) {
-        val intervalHandler = IntervalHandler(onBlink)
-        binding = DialogIntervalBinding.inflate((context as FragmentActivity).layoutInflater)
+        intervalHandler = IntervalHandler(onBlink)
+        _binding = DialogIntervalBinding.inflate((context as FragmentActivity).layoutInflater)
         binding.timeButton.setOnClickListener {
             switchToTime()
         }
@@ -53,26 +59,36 @@ internal object IntervalDialog {
             binding.stopButton.enable()
 
             when (mode) {
-                0 -> intervalHandler.blinkInterval(input)
-                1 -> intervalHandler.blinkBpm(input)
+                0 -> intervalHandler?.blinkInterval(input)
+                1 -> intervalHandler?.blinkBpm(input)
             }
         }
         binding.stopButton.setOnClickListener {
-            intervalHandler.stop()
+            intervalHandler?.stop()
             it.disable()
             binding.flashButton.enable()
         }
         binding.seizureWarning.text = context.getText(R.string.dialog_interval_seizure_warning)
 
-        val dialog = MaterialAlertDialogBuilder(
+        dialog = MaterialAlertDialogBuilder(
             context,
             MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
         )
             .setIcon(android.R.drawable.stat_notify_sync)
             .setTitle(R.string.dialog_interval_title)
             .setView(binding.root)
+            .setOnCancelListener {
+                intervalHandler?.stop()
+                intervalHandler = null
+                _binding = null
+            }
             .create()
-        dialog.show()
+        dialog?.show()
+    }
+
+    fun stop() {
+        dialog?.dismiss()
+        dialog = null
     }
 
     private fun switchToTime() {

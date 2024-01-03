@@ -32,7 +32,7 @@ internal object DeviceSupportManager {
             .lines().skip(1).anyMatch {
                 content = it.split(",").toTypedArray()
                 (content[2].lowercase() == manufacturer || content[2].lowercase() == brand) &&
-                        content[3].lowercase() == device
+                    content[3].lowercase() == device
             }
     }
 }

@@ -139,6 +139,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        IntervalDialog.stop()
+    }
+
     private fun initSeekbar() {
         binding.seekBar.maxProgress = maxLevel
         binding.seekBar.onProgressChanged = object : SeekBarChangeListener {
