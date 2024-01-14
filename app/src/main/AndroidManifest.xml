@@ -11,6 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
+        android:enableOnBackInvokedCallback="true"
         tools:ignore="LockedOrientationActivity">
         <profileable android:shell="true" />
         <activity
