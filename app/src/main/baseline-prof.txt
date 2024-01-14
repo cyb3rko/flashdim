@@ -1221,8 +1221,8 @@ HSPLandroidx/appcompat/widget/ResourceManagerInternal;->setHooks(Landroidx/appco
 PLandroidx/appcompat/widget/ResourceManagerInternal;->setHooks(Landroidx/appcompat/widget/ResourceManagerInternal$ResourceManagerHooks;)V
 HSPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 PLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-HPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
 HSPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
+PLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawable(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/TintInfo;[I)V
 HSPLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
 PLandroidx/appcompat/widget/ResourceManagerInternal;->tintDrawableUsingColorFilter(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
 Landroidx/appcompat/widget/ResourceManagerInternal$ColorFilterLruCache;
@@ -2281,8 +2281,8 @@ HPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(Landr
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 HPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveLayoutDirection(I)V
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveLayoutDirection(I)V
-HPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->validate()V
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->validate()V
+PLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->validate()V
 Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;
 HSPLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;-><clinit>()V
 PLandroidx/constraintlayout/widget/ConstraintLayout$LayoutParams$Table;-><clinit>()V
@@ -2438,8 +2438,8 @@ HSPLandroidx/core/graphics/ColorUtils;-><clinit>()V
 PLandroidx/core/graphics/ColorUtils;-><clinit>()V
 HSPLandroidx/core/graphics/ColorUtils;->compositeAlpha(II)I
 PLandroidx/core/graphics/ColorUtils;->compositeAlpha(II)I
-HPLandroidx/core/graphics/ColorUtils;->compositeColors(II)I
 HSPLandroidx/core/graphics/ColorUtils;->compositeColors(II)I
+PLandroidx/core/graphics/ColorUtils;->compositeColors(II)I
 HSPLandroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 PLandroidx/core/graphics/ColorUtils;->compositeComponent(IIIII)I
 HSPLandroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
@@ -3959,6 +3959,8 @@ HSPLcom/cyb3rko/flashdim/activities/MainActivity;->executeAppStartFlash()V
 PLcom/cyb3rko/flashdim/activities/MainActivity;->executeAppStartFlash()V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->getCamera()Lcom/cyb3rko/flashdim/Camera;
 PLcom/cyb3rko/flashdim/activities/MainActivity;->getCamera()Lcom/cyb3rko/flashdim/Camera;
+HSPLcom/cyb3rko/flashdim/activities/MainActivity;->handleShortCutIntent()V
+PLcom/cyb3rko/flashdim/activities/MainActivity;->handleShortCutIntent()V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->initButtonClickListeners()V
 PLcom/cyb3rko/flashdim/activities/MainActivity;->initButtonClickListeners()V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity;->initSeekbar()V
@@ -4063,8 +4065,8 @@ HSPLcom/cyb3rko/flashdim/seekbar/LightLevelSeekBar;->setProgress(I)V
 PLcom/cyb3rko/flashdim/seekbar/LightLevelSeekBar;->setProgress(I)V
 Lcom/cyb3rko/flashdim/seekbar/SeekBarChangeListener;
 Lcom/cyb3rko/flashdim/utils/DeviceSupportManager;
+HPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->$r8$lambda$FFxW52g4gKpItXma72BVK3xsE8I(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Z
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->$r8$lambda$FFxW52g4gKpItXma72BVK3xsE8I(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Z
-PLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->$r8$lambda$FFxW52g4gKpItXma72BVK3xsE8I(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Z
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;-><clinit>()V
 PLcom/cyb3rko/flashdim/utils/DeviceSupportManager;-><clinit>()V
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;-><init>()V
@@ -4083,8 +4085,8 @@ HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;-><init>(Lkotli
 PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+HPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/String;)Ljava/lang/Boolean;
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/String;)Ljava/lang/Boolean;
-PLcom/cyb3rko/flashdim/utils/DeviceSupportManager$isExcluded$1;->invoke(Ljava/lang/String;)Ljava/lang/Boolean;
 Lcom/cyb3rko/flashdim/utils/Safe;
 HSPLcom/cyb3rko/flashdim/utils/Safe;-><clinit>()V
 PLcom/cyb3rko/flashdim/utils/Safe;-><clinit>()V
@@ -4800,8 +4802,8 @@ HSPLcom/google/android/material/shadow/ShadowRenderer;-><init>()V
 PLcom/google/android/material/shadow/ShadowRenderer;-><init>()V
 HPLcom/google/android/material/shadow/ShadowRenderer;-><init>(I)V
 HSPLcom/google/android/material/shadow/ShadowRenderer;-><init>(I)V
-HPLcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
 HSPLcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
+PLcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
 Lcom/google/android/material/shape/AbsoluteCornerSize;
 HSPLcom/google/android/material/shape/AbsoluteCornerSize;-><init>(F)V
 PLcom/google/android/material/shape/AbsoluteCornerSize;-><init>(F)V
@@ -4854,8 +4856,8 @@ HSPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateStrokePat
 PLcom/google/android/material/shape/MaterialShapeDrawable;->calculateStrokePath()V
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintColorTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
 PLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintColorTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Z)Landroid/graphics/PorterDuffColorFilter;
+HPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
-PLcom/google/android/material/shape/MaterialShapeDrawable;->calculateTintFilter(Landroid/content/res/ColorStateList;Landroid/graphics/PorterDuff$Mode;Landroid/graphics/Paint;Z)Landroid/graphics/PorterDuffColorFilter;
 HPLcom/google/android/material/shape/MaterialShapeDrawable;->compositeElevationOverlayIfNeeded(I)I
 HSPLcom/google/android/material/shape/MaterialShapeDrawable;->compositeElevationOverlayIfNeeded(I)I
 HPLcom/google/android/material/shape/MaterialShapeDrawable;->draw(Landroid/graphics/Canvas;)V
@@ -5546,7 +5548,6 @@ HSPLkotlin/coroutines/jvm/internal/DebugProbesKt;->probeCoroutineCreated(Lkotlin
 PLkotlin/coroutines/jvm/internal/DebugProbesKt;->probeCoroutineCreated(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 HSPLkotlin/coroutines/jvm/internal/DebugProbesKt;->probeCoroutineResumed(Lkotlin/coroutines/Continuation;)V
 PLkotlin/coroutines/jvm/internal/DebugProbesKt;->probeCoroutineResumed(Lkotlin/coroutines/Continuation;)V
-HSPLkotlin/coroutines/jvm/internal/DebugProbesKt;->probeCoroutineSuspended(Lkotlin/coroutines/Continuation;)V
 PLkotlin/coroutines/jvm/internal/DebugProbesKt;->probeCoroutineSuspended(Lkotlin/coroutines/Continuation;)V
 Lkotlin/coroutines/jvm/internal/SuspendFunction;
 Lkotlin/coroutines/jvm/internal/SuspendLambda;
@@ -5757,8 +5758,8 @@ HPLkotlin/text/StringsKt__StringsKt;->split$StringsKt__StringsKt(Ljava/lang/Char
 HSPLkotlin/text/StringsKt__StringsKt;->split$StringsKt__StringsKt(Ljava/lang/CharSequence;Ljava/lang/String;ZI)Ljava/util/List;
 HSPLkotlin/text/StringsKt__StringsKt;->split$default(Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Ljava/util/List;
 PLkotlin/text/StringsKt__StringsKt;->split$default(Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Ljava/util/List;
+HPLkotlin/text/StringsKt__StringsKt;->split(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Ljava/util/List;
 HSPLkotlin/text/StringsKt__StringsKt;->split(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Ljava/util/List;
-PLkotlin/text/StringsKt__StringsKt;->split(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Ljava/util/List;
 HSPLkotlin/text/StringsKt__StringsKt;->substringAfterLast$default(Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
 PLkotlin/text/StringsKt__StringsKt;->substringAfterLast$default(Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
 HSPLkotlin/text/StringsKt__StringsKt;->substringAfterLast(Ljava/lang/String;CLjava/lang/String;)Ljava/lang/String;
@@ -5821,7 +5822,6 @@ Lkotlinx/coroutines/CompletionHandlerBase;
 HSPLkotlinx/coroutines/CompletionHandlerBase;-><init>()V
 PLkotlinx/coroutines/CompletionHandlerBase;-><init>()V
 Lkotlinx/coroutines/CompletionStateKt;
-HSPLkotlinx/coroutines/CompletionStateKt;->recoverResult(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 PLkotlinx/coroutines/CompletionStateKt;->recoverResult(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 HSPLkotlinx/coroutines/CompletionStateKt;->toState$default(Ljava/lang/Object;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/Object;
 PLkotlinx/coroutines/CompletionStateKt;->toState$default(Ljava/lang/Object;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/Object;
@@ -5999,6 +5999,7 @@ PLkotlinx/coroutines/ExecutorCoroutineDispatcher$Key$1;-><clinit>()V
 HSPLkotlinx/coroutines/ExecutorCoroutineDispatcher$Key$1;-><init>()V
 PLkotlinx/coroutines/ExecutorCoroutineDispatcher$Key$1;-><init>()V
 Lkotlinx/coroutines/Incomplete;
+Lkotlinx/coroutines/IncompleteStateBox;
 Lkotlinx/coroutines/Job;
 HSPLkotlinx/coroutines/Job;-><clinit>()V
 PLkotlinx/coroutines/Job;-><clinit>()V
@@ -6147,6 +6148,8 @@ PLkotlinx/coroutines/JobSupportKt;->access$getSEALED$p()Lkotlinx/coroutines/inte
 PLkotlinx/coroutines/JobSupportKt;->access$getTOO_LATE_TO_CANCEL$p()Lkotlinx/coroutines/internal/Symbol;
 HSPLkotlinx/coroutines/JobSupportKt;->boxIncomplete(Ljava/lang/Object;)Ljava/lang/Object;
 PLkotlinx/coroutines/JobSupportKt;->boxIncomplete(Ljava/lang/Object;)Ljava/lang/Object;
+HSPLkotlinx/coroutines/JobSupportKt;->unboxState(Ljava/lang/Object;)Ljava/lang/Object;
+PLkotlinx/coroutines/JobSupportKt;->unboxState(Ljava/lang/Object;)Ljava/lang/Object;
 Lkotlinx/coroutines/MainCoroutineDispatcher;
 HSPLkotlinx/coroutines/MainCoroutineDispatcher;-><init>()V
 PLkotlinx/coroutines/MainCoroutineDispatcher;-><init>()V
@@ -6237,7 +6240,6 @@ HSPLkotlinx/coroutines/internal/DispatchedContinuationKt;-><clinit>()V
 PLkotlinx/coroutines/internal/DispatchedContinuationKt;-><clinit>()V
 HSPLkotlinx/coroutines/internal/DispatchedContinuationKt;->access$getUNDEFINED$p()Lkotlinx/coroutines/internal/Symbol;
 PLkotlinx/coroutines/internal/DispatchedContinuationKt;->access$getUNDEFINED$p()Lkotlinx/coroutines/internal/Symbol;
-HSPLkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 PLkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 HSPLkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;)V
 PLkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;)V
@@ -6418,7 +6420,6 @@ HSPLkotlinx/coroutines/scheduling/CoroutineScheduler;->dispatch(Ljava/lang/Runna
 PLkotlinx/coroutines/scheduling/CoroutineScheduler;->dispatch(Ljava/lang/Runnable;Lkotlinx/coroutines/scheduling/TaskContext;Z)V
 HSPLkotlinx/coroutines/scheduling/CoroutineScheduler;->isTerminated()Z
 PLkotlinx/coroutines/scheduling/CoroutineScheduler;->isTerminated()Z
-HSPLkotlinx/coroutines/scheduling/CoroutineScheduler;->parkedWorkersStackNextIndex(Lkotlinx/coroutines/scheduling/CoroutineScheduler$Worker;)I
 PLkotlinx/coroutines/scheduling/CoroutineScheduler;->parkedWorkersStackNextIndex(Lkotlinx/coroutines/scheduling/CoroutineScheduler$Worker;)I
 HSPLkotlinx/coroutines/scheduling/CoroutineScheduler;->parkedWorkersStackPop()Lkotlinx/coroutines/scheduling/CoroutineScheduler$Worker;
 PLkotlinx/coroutines/scheduling/CoroutineScheduler;->parkedWorkersStackPop()Lkotlinx/coroutines/scheduling/CoroutineScheduler$Worker;
