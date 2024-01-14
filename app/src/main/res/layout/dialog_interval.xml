@@ -80,6 +80,7 @@
             android:inputType="number"
             android:singleLine="true"
             android:text="500"
+            android:maxLength="5"
             tools:ignore="HardcodedText" />
 
     </com.google.android.material.textfield.TextInputLayout>

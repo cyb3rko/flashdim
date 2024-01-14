@@ -29,6 +29,7 @@
         android:id="@+id/text_input_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLength="200"
         android:hint="@string/dialog_morse_input_hint"
         android:inputType="textShortMessage"
         android:singleLine="true" />

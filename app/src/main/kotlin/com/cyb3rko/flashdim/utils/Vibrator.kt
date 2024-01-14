@@ -26,20 +26,24 @@ internal object Vibrator {
     }
 
     fun vibrate(duration: Long) {
+        if (!this::vibrator.isInitialized) return
         vibrator.vibrate(
             VibrationEffect.createOneShot(duration, 80)
         )
     }
 
     fun vibrateClick() {
+        if (!this::vibrator.isInitialized) return
         vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
     }
 
     fun vibrateDoubleClick() {
+        if (!this::vibrator.isInitialized) return
         vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_DOUBLE_CLICK))
     }
 
     fun vibrateTick() {
+        if (!this::vibrator.isInitialized) return
         vibrator.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK))
     }
 }

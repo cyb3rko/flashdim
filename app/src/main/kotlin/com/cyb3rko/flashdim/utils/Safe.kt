@@ -51,7 +51,15 @@ internal object Safe {
 
     fun getInt(label: String, default: Int) = sharedPreferences.getInt(label, default)
 
-    fun writeInt(label: String, value: Int) = editor.putInt(label, value).apply()
+    fun writeInt(label: String, value: Int) {
+        try {
+            editor.putInt(label, value).apply()
+        } catch (_: Exception) {}
+    }
 
-    fun writeBoolean(label: String, value: Boolean) = editor.putBoolean(label, value).apply()
+    fun writeBoolean(label: String, value: Boolean) {
+        try {
+            editor.putBoolean(label, value).apply()
+        } catch (_: Exception) {}
+    }
 }
