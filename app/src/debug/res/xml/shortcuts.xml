@@ -10,7 +10,7 @@
         <intent
             android:action="DIMMER_MIN"
             android:targetClass="com.cyb3rko.flashdim.activities.MainActivity"
-            android:targetPackage="com.cyb3rko.flashdim" />
+            android:targetPackage="com.cyb3rko.flashdim.dev" />
     </shortcut>
     <shortcut
         android:enabled="true"
@@ -21,7 +21,7 @@
         <intent
             android:action="DIMMER_HALF"
             android:targetClass="com.cyb3rko.flashdim.activities.MainActivity"
-            android:targetPackage="com.cyb3rko.flashdim" />
+            android:targetPackage="com.cyb3rko.flashdim.dev" />
     </shortcut>
     <shortcut
         android:enabled="true"
@@ -32,6 +32,6 @@
         <intent
             android:action="DIMMER_MAX"
             android:targetClass="com.cyb3rko.flashdim.activities.MainActivity"
-            android:targetPackage="com.cyb3rko.flashdim" />
+            android:targetPackage="com.cyb3rko.flashdim.dev" />
     </shortcut>
 </shortcuts>
