@@ -81,4 +81,10 @@
     <string name="preference_item_tactile_morse_summary">Vibrate morse code when flashing</string>
     <string name="accessibility_service_summary">When enabled, pressing both volume buttons toggles the flashlight.</string>
     <string name="accessibility_service_description">This accessibility setting allows to toggle the flashlight by pressing both volume buttons together.\n\nDo not activate a shortcut for this service on this page, that could override the key event.</string>
+    <string name="shortcut_min_short">Minimum</string>
+    <string name="shortcut_min_long">Minimum Brightness</string>
+    <string name="shortcut_half_short">Half</string>
+    <string name="shortcut_half_long">Half Brightness</string>
+    <string name="shortcut_max_short">Maximum</string>
+    <string name="shortcut_max_long">Maximum Brightness</string>
 </resources>

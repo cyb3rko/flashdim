@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
     private var morseActivated = false
     private var vibrateButtons = false
     private var vibrateMorse = false
+    private var intentFlash = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -101,6 +102,7 @@ class MainActivity : AppCompatActivity() {
         if (maxLevel > 1 || couldBeRunningOnEmulator()) {
             initSeekbar()
             Safe.writeBoolean(Safe.MULTILEVEL, true)
+            handleShortCutIntent()
         } else {
             switchToSimpleMode()
             Safe.writeBoolean(Safe.MULTILEVEL, false)
@@ -112,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         if (!Camera.doesDeviceHaveFlash(packageManager)) return
         initButtonClickListeners()
         checkDeviceSupport()
-        if (!Safe.getBoolean(Safe.FLASH_ACTIVE, false)) {
+        if (!Safe.getBoolean(Safe.FLASH_ACTIVE, false) && !intentFlash) {
             executeAppStartFlash()
         }
 
@@ -128,6 +130,22 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         val restored = restoreLightLevelUi()
         if (!restored) executeAppOpenFlash()
+        intentFlash = false
+    }
+
+    private fun handleShortCutIntent() {
+        if (intent.action == Intent.ACTION_MAIN || intent.action == Intent.ACTION_VIEW) return
+        intentFlash = true
+        val newLevel = when (intent.action) {
+            "DIMMER_MIN" -> 1
+            "DIMMER_HALF" -> maxLevel / 2
+            "DIMMER_MAX" -> maxLevel
+            else -> 0
+        }
+        camera.sendLightLevel(this, currentLevel, newLevel)
+        updateLightLevelView(newLevel)
+        binding.seekBar.setProgress(newLevel)
+        currentLevel = newLevel
     }
 
     override fun onPause() {
@@ -272,7 +290,7 @@ class MainActivity : AppCompatActivity() {
     private fun executeAppStartFlash() {
         if (Safe.getBoolean(Safe.APPSTART_FLASH, false)) {
             activateInitialFlash()
-        } else {
+        } else if (!intentFlash) {
             updateLightLevelView(0)
         }
     }

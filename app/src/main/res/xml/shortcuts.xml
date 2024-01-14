@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_min"
+        android:shortcutId="dim_min"
+        android:shortcutLongLabel="@string/shortcut_min_short"
+        android:shortcutShortLabel="@string/shortcut_min_long">
+        <intent
+            android:action="DIMMER_MIN"
+            android:targetClass="com.cyb3rko.flashdim.activities.MainActivity"
+            android:targetPackage="com.cyb3rko.flashdim.dev" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_half"
+        android:shortcutId="dim_half"
+        android:shortcutLongLabel="@string/shortcut_half_long"
+        android:shortcutShortLabel="@string/shortcut_half_short">
+        <intent
+            android:action="DIMMER_HALF"
+            android:targetClass="com.cyb3rko.flashdim.activities.MainActivity"
+            android:targetPackage="com.cyb3rko.flashdim.dev" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_max"
+        android:shortcutId="dim_max"
+        android:shortcutLongLabel="@string/shortcut_max_long"
+        android:shortcutShortLabel="@string/shortcut_max_short">
+        <intent
+            android:action="DIMMER_MAX"
+            android:targetClass="com.cyb3rko.flashdim.activities.MainActivity"
+            android:targetPackage="com.cyb3rko.flashdim.dev" />
+    </shortcut>
+</shortcuts>
