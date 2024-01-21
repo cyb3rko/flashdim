@@ -69,7 +69,7 @@
         android:paddingStart="24dp"
         android:paddingTop="6dp"
         app:counterEnabled="true"
-        app:counterMaxLength="4"
+        app:counterMaxLength="5"
         app:suffixText="ms">
 
         <com.google.android.material.textfield.TextInputEditText
