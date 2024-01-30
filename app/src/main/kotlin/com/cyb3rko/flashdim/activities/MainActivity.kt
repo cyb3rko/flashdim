@@ -140,11 +140,11 @@ class MainActivity : AppCompatActivity() {
             "DIMMER_MIN" -> 1
             "DIMMER_HALF" -> maxLevel / 2
             "DIMMER_MAX" -> maxLevel
-            else -> 0
+            else -> -1
         }
         camera.sendLightLevel(this, currentLevel, newLevel)
-        updateLightLevelView(newLevel)
-        binding.seekBar.setProgress(newLevel)
+        updateLightLevelView(if (newLevel > 0) newLevel else 0)
+        binding.seekBar.setProgress(if (newLevel > 0) newLevel else 0)
         currentLevel = newLevel
     }
 
