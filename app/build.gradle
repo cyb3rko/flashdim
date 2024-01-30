@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'org.jmailen.kotlinter' version '4.1.0' // lintKotlin, formatKotlin
+    id 'org.jmailen.kotlinter' version '4.2.0' // lintKotlin, formatKotlin
     id 'com.getkeepsafe.dexcount' version '4.0.0' // :app:countReleaseDexMethods
 }
 

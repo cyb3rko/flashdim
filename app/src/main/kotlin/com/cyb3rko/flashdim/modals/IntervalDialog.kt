@@ -28,10 +28,10 @@ import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 internal object IntervalDialog {
-    private var _binding: DialogIntervalBinding? = null
+    private var nakedBinding: DialogIntervalBinding? = null
 
     // This property is only valid between onCreateView and onDestroyView.
-    private val binding get() = _binding!!
+    private val binding get() = nakedBinding!!
     private var dialog: AlertDialog? = null
     private var intervalHandler: IntervalHandler? = null
     private var mode = 0
@@ -40,7 +40,7 @@ internal object IntervalDialog {
 
     fun show(context: Context, onBlink: (on: Boolean) -> Unit) {
         intervalHandler = IntervalHandler(onBlink)
-        _binding = DialogIntervalBinding.inflate((context as FragmentActivity).layoutInflater)
+        nakedBinding = DialogIntervalBinding.inflate((context as FragmentActivity).layoutInflater)
         binding.timeButton.setOnClickListener {
             switchToTime()
         }
@@ -80,7 +80,7 @@ internal object IntervalDialog {
             .setOnCancelListener {
                 intervalHandler?.stop()
                 intervalHandler = null
-                _binding = null
+                nakedBinding = null
             }
             .create()
         dialog?.show()
