@@ -18,6 +18,8 @@ package com.cyb3rko.flashdim.tiles
 
 import android.content.Context
 import android.hardware.camera2.CameraManager
+import android.os.Handler
+import android.os.Looper
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import android.util.Log
@@ -60,6 +62,17 @@ class DimmerSettingsTile : TileService() {
         } else {
             qsTile.state = Tile.STATE_INACTIVE
             qsTile.updateTile()
+            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            cameraManager.registerTorchCallback(
+                object : CameraManager.TorchCallback() {
+                    override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
+                        if (qsTile == null) return
+                        qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
+                        qsTile.updateTile()
+                    }
+                },
+                Handler(Looper.getMainLooper())
+            )
         }
     }
 
