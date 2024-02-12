@@ -49,6 +49,7 @@ class ToggleSettingsTile : TileService() {
     }
 
     override fun onStartListening() {
+        if (qsTile == null) return
         val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
         cameraManager.registerTorchCallback(
             object : TorchCallback() {
