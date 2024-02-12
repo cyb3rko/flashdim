@@ -128,6 +128,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        Safe.initialize(applicationContext)
         val restored = restoreLightLevelUi()
         if (!restored) executeAppOpenFlash()
         intentFlash = false

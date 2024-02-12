@@ -93,6 +93,7 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
             setPreferencesFromResource(R.xml.preferences, rootKey)
 
             findPreference<Preference>(Safe.INITIAL_LEVEL)?.apply {
+                Safe.initialize(myContext)
                 if (!Safe.getBoolean(Safe.MULTILEVEL, false)) {
                     isEnabled = false
                     return@apply
