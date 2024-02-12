@@ -21,6 +21,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
@@ -67,22 +68,27 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
     }
 
     private fun showRestartDialog() {
-        MaterialAlertDialogBuilder(
-            this,
-            MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
-        )
-            .setIcon(android.R.drawable.stat_notify_sync)
-            .setTitle(getString(R.string.dialog_restart_title))
-            .setMessage(getString(R.string.dialog_restart_message))
-            .setPositiveButton(getString(R.string.dialog_restart_positive_button)) { _, _ ->
-                val intent = packageManager.getLaunchIntentForPackage(packageName)
-                val componentName = intent!!.component
-                val mainIntent = Intent.makeRestartActivityTask(componentName)
-                startActivity(mainIntent)
-                Runtime.getRuntime().exit(0)
-            }
-            .setNegativeButton(getString(R.string.dialog_restart_negative_button), null)
-            .show()
+        try {
+            MaterialAlertDialogBuilder(
+                this,
+                MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+            )
+                .setIcon(android.R.drawable.stat_notify_sync)
+                .setTitle(getString(R.string.dialog_restart_title))
+                .setMessage(getString(R.string.dialog_restart_message))
+                .setPositiveButton(getString(R.string.dialog_restart_positive_button)) { _, _ ->
+                    val intent = packageManager.getLaunchIntentForPackage(packageName)
+                    val componentName = intent!!.component
+                    val mainIntent = Intent.makeRestartActivityTask(componentName)
+                    startActivity(mainIntent)
+                    Runtime.getRuntime().exit(0)
+                }
+                .setNegativeButton(getString(R.string.dialog_restart_negative_button), null)
+                .show()
+        } catch (e: Exception) {
+            Log.e("FlashDim", "Settings restart dialog failed to be shown")
+            e.printStackTrace()
+        }
     }
 
     internal class SettingsFragment : PreferenceFragmentCompat() {
