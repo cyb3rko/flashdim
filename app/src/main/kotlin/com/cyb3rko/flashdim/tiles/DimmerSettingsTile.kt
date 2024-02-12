@@ -27,10 +27,13 @@ import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
 
 class DimmerSettingsTile : TileService() {
+    private var description = ""
+
     override fun onClick() {
         if (qsTile.state == Tile.STATE_UNAVAILABLE) return
         Safe.initialize(applicationContext)
         val mode = Safe.getInt(Safe.QUICKTILE_DIM_MODE, DIMMER_MIN)
+        description = mode.description()
 
         val maxLevel = Safe.getInt(Safe.MAX_LEVEL, -1)
         val newLevel = when (mode) {
@@ -67,6 +70,7 @@ class DimmerSettingsTile : TileService() {
                 object : CameraManager.TorchCallback() {
                     override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
                         if (qsTile == null) return
+                        if (description.isNotEmpty()) qsTile.subtitle = "State: $description"
                         qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
                         qsTile.updateTile()
                     }
