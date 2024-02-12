@@ -13,8 +13,8 @@ android {
         applicationId 'com.cyb3rko.flashdim'
         minSdk 33
         targetSdk 34
-        versionCode 23
-        versionName '2.3.1'
+        versionCode 24
+        versionName '2.3.2'
         resValue 'string', 'app_name', 'FlashDim Dev'
         resourceConfigurations += ['en']
         signingConfig signingConfigs.debug
