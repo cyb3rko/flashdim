@@ -147,7 +147,7 @@ The following list shows phones, which were manually excluded by myself in the G
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<em>Total: 450</em>
+<em>Total: 460</em>
 <details>
   <summary>8849 (2)</summary>
   <ul>
@@ -290,13 +290,15 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Motorola (31)</summary>
+  <summary>Motorola (33)</summary>
   <ul>
     <li>Motorola moto e13 (motorola sabahl)</li>
     <li>Motorola moto edge X30 (motorola hiphic)</li>
     <li>Motorola moto g 5G (2022) (motorola austin)</li>
     <li>Motorola moto g 5G - 2023 (motorola pnangn)</li>
     <li>Motorola moto g stylus 5G (2022) (motorola milanf)</li>
+    <li>Motorola moto g stylus 5G - 2023 (motorola genevn)</li>
+    <li>Motorola moto g stylus (2023) (motorola gnevan)</li>
     <li>Motorola moto g13 (motorola penangf)</li>
     <li>Motorola moto g14 (motorola cancun)</li>
     <li>Motorola moto g32 (motorola devon)</li>
@@ -372,13 +374,14 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Oppo (56)</summary>
+  <summary>Oppo (57)</summary>
   <ul>
     <li>Oppo A18 (OPPO OP575DL1)</li>
     <li>Oppo A38 (OPPO OP5759L1)</li>
     <li>Oppo A54 5G (OPPO OP4F39L1)</li>
     <li>Oppo A57 (OPPO OP5355)</li>
     <li>Oppo A58 (OPPO OP574FL1)</li>
+    <li>Oppo A59 5G (OPPO OP5AD5L1)</li>
     <li>Oppo A76 (OPPO OP5312L1)</li>
     <li>Oppo A78 (OPPO OP5745L1)</li>
     <li>Oppo A78 5G (OPPO OP52F3L1)</li>
@@ -657,7 +660,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Vivo (74)</summary>
+  <summary>Vivo (77)</summary>
   <ul>
     <li>Vivo I2009 (iQOO 2009)</li>
     <li>Vivo I2011 (iQOO 2011)</li>
@@ -726,12 +729,15 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Vivo V29 (vivo V2250)</li>
     <li>Vivo V29e (vivo V2303)</li>
     <li>Vivo V29 Pro (vivo V2251)</li>
+    <li>Vivo V30 Lite (vivo V2317)</li>
+    <li>Vivo V30 Lite 5G (vivo V2327)</li>
     <li>Vivo vivo 2018 (vivo 2018)</li>
     <li>Vivo vivo Y22 (vivo V2207)</li>
     <li>Vivo X80 (vivo V2144)</li>
     <li>Vivo X80 Pro (vivo V2145)</li>
     <li>Vivo Y100 (vivo V2239)</li>
     <li>Vivo Y27 (vivo V2249)</li>
+    <li>Vivo Y33t (vivo PD2317)</li>
     <li>Vivo Y35 (vivo V2205)</li>
   </ul>
 </details>
@@ -743,7 +749,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Xiaomi (25)</summary>
+  <summary>Xiaomi (29)</summary>
   <ul>
     <li>Xiaomi 11 Lite 5G NE (Xiaomi lisa)</li>
     <li>Xiaomi 11 Lite NE (Xiaomi lisa)</li>
@@ -770,6 +776,10 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Xiaomi Mi 11i (Xiaomi haydn)</li>
     <li>Xiaomi Mi 11X Pro (Xiaomi haydnin)</li>
     <li>Xiaomi Pad 5 (Xiaomi nabu)</li>
+    <li>Xiaomi Pad 5 Pro (Xiaomi dagu, Xiaomi elish)</li>
+    <li>Xiaomi Pad 6 (Xiaomi pipa)</li>
+    <li>Xiaomi Pad 6 Max 14 (Xiaomi yudi)</li>
+    <li>Xiaomi pad 6 Pro (Xiaomi liuqin)</li>
   </ul>
 </details>
 <details>
