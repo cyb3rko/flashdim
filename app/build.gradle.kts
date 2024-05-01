@@ -1,10 +1,10 @@
 import java.util.Properties
 
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("org.jmailen.kotlinter") version "4.2.0" // lintKotlin, formatKotlin
-    id("com.getkeepsafe.dexcount") version "4.0.0" // :app:countReleaseDexMethods
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlinter) // lintKotlin, formatKotlin
+    alias(libs.plugins.dexcount) // :app:countReleaseDexMethods
 }
 
 android {
@@ -96,12 +96,12 @@ if (project.hasProperty("gplay_upload")) {
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("androidx.profileinstaller:profileinstaller:1.3.1")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.preference.ktx)
+    implementation(libs.androidx.profileinstaller)
+    implementation(libs.material)
 }
 
 configurations {
