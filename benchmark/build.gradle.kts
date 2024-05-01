@@ -1,13 +1,13 @@
-import com.android.build.api.dsl.ManagedVirtualDevice
+@file:Suppress("UnstableApiUsage")
 
 plugins {
-    id 'com.android.test'
-    id 'org.jetbrains.kotlin.android'
+    id("com.android.test")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace 'com.cyb3rko.flashdim.benchmark'
-    compileSdk 34
+    namespace = "com.cyb3rko.flashdim.benchmark"
+    compileSdk = 34
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -19,28 +19,28 @@ android {
     }
 
     defaultConfig {
-        minSdk 33
-        targetSdk 34
+        minSdk = 33
+        targetSdk = 34
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments["androidx.benchmark.suppressErrors"] = "LOW-BATTERY"
     }
 
     buildTypes {
         create("benchmark") {
-            resValue 'string', 'app_name', 'FlashDim'
+            resValue("string", "app_name", "FlashDim")
             //minifyEnabled true
             //shrinkResources true
-            proguardFiles 'benchmark-rules.pro'
-            signingConfig signingConfigs.debug
-            matchingFallbacks = ['release']
+            proguardFiles("benchmark-rules.pro")
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks.add("release")
         }
     }
 
     testOptions {
         managedDevices {
-            devices {
-                pixel3Api34(ManagedVirtualDevice) {
+            localDevices {
+                create("pixel3Api34") {
                     device = "Pixel 3"
                     apiLevel = 34
                     systemImageSource = "aosp"
@@ -54,14 +54,14 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.test.ext:junit:1.1.5'
-    implementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'androidx.test.uiautomator:uiautomator:2.2.0'
-    implementation 'androidx.benchmark:benchmark-macro-junit4:1.2.3'
+    implementation("androidx.test.ext:junit:1.1.5")
+    implementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("androidx.test.uiautomator:uiautomator:2.2.0")
+    implementation("androidx.benchmark:benchmark-macro-junit4:1.2.3")
 }
 
 androidComponents {
     beforeVariants(selector().all()) {
-        enable = buildType == "benchmark"
+        it.enable = it.buildType == "benchmark"
     }
 }

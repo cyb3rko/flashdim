@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -12,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "FlashDim"
-include ':app'
-include ':benchmark'
+include(":app")
+include(":benchmark")
