@@ -11,6 +11,7 @@ def get_file_line_count():
         raise Exception("Who are you?")
 
 
+manufacturers = []
 output = ""
 print(f"Reading CSV file in {os.getcwd()}")
 with open("excluded_devices.csv", "r", encoding="utf-8") as file:
@@ -27,13 +28,22 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
     models = []
     for row in reader:
         print("Entry:", row)
+        if row[0].startswith("XMobile"):
+            output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
+            device_count += 1
+            output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
+            output += f"  </ul>\n</details>\n<details>\n  <summary>XMobile (<<tempMarker>>)</summary>\n  <ul>\n"
+            manufacturer_count = 0
+            prev_name = row[0]
+            models = [row[1]]
+            manufacturer = row[2].lower()
         if manufacturer is None:
             output += f"<details>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
         if prev_name == row[0]:  # multiple technical names
             if not models.__contains__(row[1]):
                 models.append(row[1])
         else:  # new model entry
-            if manufacturer is not None and manufacturer != row[2].lower():
+            if manufacturer is not None and manufacturer != row[2].lower() and row[2].lower() not in manufacturers:
                 output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
                 device_count += 1
                 output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
@@ -46,6 +56,8 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
             prev_name = row[0]
             models = [row[1]]
             manufacturer = row[2].lower()
+            if manufacturer not in manufacturers:
+                manufacturers.append(manufacturer)
     output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n  </ul>\n</details>\n"
     output = f"<em>Total: {device_count + 1}</em>\n" + output
     output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))

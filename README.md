@@ -861,9 +861,13 @@ Using a unified code format makes it much easier for me and for everyone else.
 | <a href="https://pictogrammers.com/library/mdi/icon/vibrate">vibrate created by Google - Pictogrammers</a> |
 | <a href="https://pictogrammers.com/library/mdi/icon/rocket-launch-outline">rocket-launch-outline created by Michael Irigoyen - Pictogrammers</a> |
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date)](https://star-history.com/#cyb3rko/flashdim&Date)
+
 ## License
 
-    Copyright 2023, Cyb3rKo
+    Copyright 2024, Cyb3rKo
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
