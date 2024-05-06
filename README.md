@@ -28,13 +28,14 @@
 
 ---
 
-[<img alt="Detailed App Review by 'Explaining Android'" src="https://i.imgur.com/2QU91tl.png" />](https://www.youtube.com/watch?v=mVX444ksdg0)
-[<img alt="Featured on Android Authority: The best apps for Google Pixel 8" src="https://i.imgur.com/wJhiuyA.png" />](https://androidauthority.com/google-pixel-8-best-apps-3372729/)
-[<img alt="Featured on Sam Beckman: Top 20 Android Apps 2023" src="https://i.imgur.com/IQbl2CU.png" />](https://youtu.be/TOxEvJ_YM5g?t=279)
-[<img alt="Featured on Sam Beckman: The Best Free and Open Source Apps in 2023" src="https://i.imgur.com/sunDB4F.png" />](https://youtu.be/4gbSnaASTt0?t=140)
-[<img alt="Featured on Sam Beckman: Top 20 Android Apps I Can't live without in 2023!" src="https://i.imgur.com/1Tiyk5L.png" />](https://youtu.be/s6KNdNlNXho?t=257)
-[<img alt="Featured on HowToMen: 20 Best Android Apps 2023!" src="https://i.imgur.com/CUTXWGL.png" />](https://youtu.be/jFnLA5KV0L8?t=484)
-[<img alt="Featured on HowToMen: Best Android Apps - December 2022" src="https://i.imgur.com/U57jXpn.png" />](https://youtu.be/C-qvkT2dawI?t=120)
+[<img alt="Detailed App Review by 'Explaining Android'" src="https://i.imgur.com/Klsp6eM.png" />](https://www.youtube.com/watch?v=mVX444ksdg0)
+[<img alt="Featured on Android Authority: The best apps for Google Pixel 8" src="https://i.imgur.com/l3lLcNW.png" />](https://androidauthority.com/google-pixel-8-best-apps-3372729/)
+[<img alt="Featured on Android Authority: Pixel 8's flashlight is half intensity by default" src="https://i.imgur.com/p11NSTC.png"/>](https://www.androidauthority.com/pixel-8-flashlight-half-intensity-3438214)
+[<img alt="Featured on Sam Beckman: Top 20 Android Apps 2023!" src="https://i.imgur.com/mupG3gn.png" />](https://youtu.be/TOxEvJ_YM5g?t=279)
+[<img alt="Featured on Sam Beckman: The Best Free and Open Source Apps in 2023!" src="https://i.imgur.com/s3m6Cc0.png" />](https://youtu.be/4gbSnaASTt0?t=140)
+[<img alt="Featured on Sam Beckman: Top 20 Android Apps I CAN'T live without in 2023!" src="https://i.imgur.com/aAv9yyN.png" />](https://youtu.be/s6KNdNlNXho?t=257)
+[<img alt="Featured on HowToMen: 20 Best Android Apps 2023!" src="https://i.imgur.com/DG2lLT1.png" />](https://youtu.be/jFnLA5KV0L8?t=484)
+[<img alt="Featured on HowToMen: Best Android Apps - December 2022!" src="https://i.imgur.com/xudgEuH.png" />](https://youtu.be/C-qvkT2dawI?t=120)
 ---
 [<img alt="Read Medium article" src="https://i.imgur.com/p6PHIK7.png" />](https://medium.com/p/835cdf2d6f3e)
 
