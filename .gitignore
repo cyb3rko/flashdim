@@ -8,6 +8,7 @@ local.properties
 # Log/OS Files
 *.log
 *.lnk
+*.linux.csv
 
 # Android Studio generated files and folders
 captures/

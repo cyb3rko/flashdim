@@ -6,7 +6,9 @@ Asus ROG Phone 6,asus ASUS_AI2201,Asus,ASUS_AI2201
 Asus Zenfone 8,asus ASUS_I006D,Asus,ASUS_I006D
 Asus Zenfone 8 Flip,asus ASUS_I004D,Asus,ASUS_I004D
 Asus Zenfone 9,asus ASUS_AI2202,Asus,ASUS_AI2202
+AT&T Calypso® 4,ATT U380AA,AT&T,U380AA
 benco AE9240,benco AE9240,benco,AE9240
+Blackview BL9000,Blackview BL9000,Blackview,BL9000
 Blackview Shark 8,Blackview Shark8,Blackview,Shark8
 Blu G33,BLU G0890,Blu,G0890
 Blu G33,BLU G0892,Blu,G0892
@@ -14,6 +16,7 @@ Blu G33,BLU G0892,Blu,G0892_SP
 Blu G53,BLU G0850,Blu,G0850
 Blu G53,BLU G0850_IW,Blu,G0850_IW
 Blu G53,BLU G0851,Blu,G0851
+Blu G63,BLU G0870,Blu,G0870
 Cubot P80,CUBOT P80,Cubot,P80
 Daria DM-B50104,Daria zahedan,Daria,zahedan
 Deutsche Telekom T Phone Pro,DeutscheTelekom Lion,Deutsche Telekom,Lion
@@ -41,7 +44,9 @@ Honor HONOR X8,HONOR HNTFY-Q,Honor,HNTFY-Q
 Honor HONOR X8b,HONOR HNLLY-Q,Honor,HNLLY-Q
 Honor HONOR X9,HONOR HNANY-Q1,Honor,HNANY-Q1
 Honor HONOR X9a 5G,HONOR HNRMO-Q,Honor,HNRMO-Q
+IIIF150 Raptor LTD,IIIF150 Raptor,IIIF150,Raptor
 Infinix GT 10 Pro,Infinix Infinix-X6739,Infinix,Infinix-X6739
+Infinix GT 20 Pro,Infinix Infinix-X6871,Infinix,Infinix-X6871
 Infinix HOT 30,Infinix Infinix-X6831,Infinix,Infinix-X6831
 Infinix HOT 30 5G,Infinix Infinix-X6832,Infinix,Infinix-X6832
 Infinix HOT 30 PLAY,Infinix Infinix-X6835,Infinix,Infinix-X6835
@@ -58,6 +63,9 @@ Infinix NOTE 30,Infinix Infinix-X6833B,Infinix,Infinix-X6833B
 Infinix NOTE 30 5G,Infinix Infinix-X6711,Infinix,Infinix-X6711
 Infinix NOTE 30 Pro,Infinix Infinix-X678B,Infinix,Infinix-X678B
 Infinix NOTE 30 VIP,Infinix Infinix-X6710,Infinix,Infinix-X6710
+Infinix NOTE 40,Infinix Infinix-X6853,Infinix,Infinix-X6853
+Infinix NOTE 40 Pro 5G,Infinix Infinix-X6851,Infinix,Infinix-X6851
+Infinix NOTE 40 Pro+ 5G,Infinix Infinix-X6851B,Infinix,Infinix-X6851B
 Infinix SMART 8 HD,Infinix Infinix-X6525,Infinix,Infinix-X6525
 Infinix SMART 8 PRO,Infinix Infinix-X6525B,Infinix,Infinix-X6525B
 Infinix ZERO 30,Infinix Infinix-X6731B,Infinix,Infinix-X6731B
@@ -76,6 +84,7 @@ Itel itel P55+,Itel itel-P663LN,Itel,itel-P663LN
 Itel itel RS4,Itel itel-S666LN,Itel,itel-S666LN
 Itel itel S23+,Itel itel-S681LN,Itel,itel-S681LN
 Lava Agni 2,LAVA LXX504,Lava,LXX504
+Lava Blaze 2 5G,LAVA LXX507,Lava,LXX507
 Lava Blaze 5G,LAVA LXX503,Lava,LXX503
 Lava Blaze Pro 5G,LAVA LXX506,Lava,LXX506
 Lava Storm 5G,LAVA LXX508,Lava,LXX508
@@ -89,11 +98,16 @@ Motorola moto e13,motorola sabahl,Motorola,sabahl
 Motorola moto edge X30,motorola hiphic,Motorola,hiphic
 Motorola moto g 5G (2022),motorola austin,Motorola,austin
 Motorola moto g 5G - 2023,motorola pnangn,Motorola,pnangn
+Motorola moto g 5G - 2024,motorola fogo,Motorola,fogo
+Motorola moto g play - 2023,motorola maui,Motorola,maui
+Motorola moto g play - 2024,motorola fogona,Motorola,fogona
 Motorola moto g stylus 5G (2022),motorola milanf,Motorola,milanf
 Motorola moto g stylus 5G - 2023,motorola genevn,Motorola,genevn
 Motorola moto g stylus (2023),motorola gnevan,Motorola,gnevan
+Motorola moto g04s,motorola lion,Motorola,lion
 Motorola moto g13,motorola penangf,Motorola,penangf
 Motorola moto g14,motorola cancun,Motorola,cancun
+Motorola moto g24,motorola fogorow,Motorola,fogorow
 Motorola moto g32,motorola devon,Motorola,devon
 Motorola moto g34,motorola fogos,Motorola,fogos
 Motorola moto g42,motorola hawao,Motorola,hawao
@@ -155,9 +169,11 @@ OnePlus Nord CE 2 Lite 5G,OnePlus OP535DL1,OnePlus,OP535DL1
 OnePlus Nord CE 3 5G,OnePlus OP5953L1,OnePlus,OP5953L1
 OnePlus Nord CE 3 Lite 5G,OnePlus OP5958L1,OnePlus,OP5958L1
 OnePlus Nord CE 5G,OnePlus OnePlusNordCE,OnePlus,OnePlusNordCE
+OnePlus Nord CE4,OnePlus OP5D3FL1,OnePlus,OP5D3FL1
 OnePlus Nord N30 5G,OnePlus OP5958L1,OnePlus,OP5958L1
 OnePlus Nord N300 5G,OnePlus OP5547L1,OnePlus,OP5547L1
 OnePlus Nord2 5G,OnePlus OP515BL1,OnePlus,OP515BL1
+OnePlus Open,OnePlus OP5973L1,OnePlus,OP5973L1
 Oppo A18,OPPO OP575DL1,Oppo,OP575DL1
 Oppo A38,OPPO OP5759L1,Oppo,OP5759L1
 Oppo A54 5G,OPPO OP4F39L1,Oppo,OP4F39L1
@@ -193,6 +209,7 @@ Oppo Find X3 中国版,OPPO OP4E5D,Oppo,OP4E5D
 Oppo Find X5,OPPO OP52D5L1,Oppo,OP52D5L1
 Oppo Find X5 Pro,OPPO OP52D1L1,Oppo,OP52D1L1
 Oppo OPPO A1 5G,OPPO OP561D,Oppo,OP561D
+Oppo OPPO A57s,OPPO OP5353L1,Oppo,OP5353L1
 Oppo OPPO Reno5 pro,OPPO OP4F1FL1,Oppo,OP4F1FL1
 Oppo OPPO Reno5 Pro+ 5G,OPPO OP4EA7,Oppo,OP4EA7
 Oppo OPPO Reno6 Z 5G,OPPO OP4FA7L1,Oppo,OP4FA7L1
@@ -216,6 +233,7 @@ Oppo Reno9 A,OPPO OP5701L1,Oppo,OP5701L1
 Oppo Reno10 5G,OPPO OP5705L1,Oppo,OP5ABFL1
 Oppo Reno10 Pro 5G,OPPO OP56DBL1,Oppo,OP56DBL1
 Oppo Reno10 Pro+ 5G,OPPO OP56D3L1,Oppo,OP56D3L1
+Oppo Reno11 F 5G,OPPO OP5A0BL1,Oppo,OP5A0BL1
 Oukitel P07_EEA,OUKITEL P07,Oukitel,P07
 PCD Argentina P63L,PCD P63L,PCD,P63L
 PCD Argentina P63L,PCD P63L_PR,PCD,P63L_PR
@@ -251,6 +269,7 @@ POCO X5 5G,POCO moonstone,POCO,moonstone
 POCO X5 Pro,POCO redwood,POCO,redwood
 POCO X5 Pro 5G,POCO redwoodin,POCO,redwoodin
 POCO X6 5G,POCO garnet,POCO,garnet
+Quantum Q03,Quantum Q03,Quantum,Q03
 realme 8,realme RMX3085L1,realme,RMX3085L1
 realme 8 Pro,realme RMX3081L1,realme,RMX3081L1
 realme 8i,realme RE54B4L1,realme,RE54B4L1
@@ -276,6 +295,7 @@ realme 11 Pro+ 5G,realme RE58B6L1,realme,RE58B6L1
 realme 11x 5G,realme RE5C6CL1,realme,RE5C6CL1
 realme 12 Pro 5G,realme RE5C84L1,realme,RE5C84L1
 realme 12 Pro+ 5G,realme RE5C82L1,realme,RE5C82L1
+realme 12x 5G,realme RE5C9AL1,realme,RE5C9AL1
 realme 12+ 5G,realme RE5C86L1,realme,RE5C86L1
 realme C25,realme RMX3191,realme,RMX3191
 realme C25,realme RMX3193,realme,RMX3193
@@ -314,6 +334,7 @@ realme realmeGT Neo5,realme RE5860,realme,RE5860
 realme realmeGT Neo5 240W,realme RE5860,realme,RE5860
 realme RMX3710,realme REE2ADL1,realme,REE2ADL1
 realme RMX3834,realme RE5C9F,realme,RE5C9F
+realme RMX3998,realme RE5C94L1,realme,RE5C94L1
 realme X7 Max,realme RMX3031L1,realme,RMX3031L1
 realme 真我11 Pro,realme RE5869,realme,RE5869
 Realme 真我GT,realme RMX2202CN,realme,RMX2202CN
@@ -396,6 +417,9 @@ Redmi Note 13 Pro,Redmi emerald,Redmi,emerald
 Redmi Note 13 Pro 5G,Redmi garnet,Redmi,garnet
 Redmi POCO F5,POCO marblein,POCO,marblein
 Redmi POCO F5,POCO marblein,Redmi,marblein
+Reeder S19 Max 32GB,Reeder S19_Max_32GB,Reeder,S19_Max_32GB
+Reeder S19 Max 64GB,Reeder S19_Max_64GB,Reeder,S19_Max_64GB
+Reeder S19 MaxL 128GB,reeder S19_MaxL_128GB,Reeder,S19_MaxL_128GB
 Samsung Galaxy A03 Core,samsung a3core,Samsung,a3core
 Sharp AQUOS R6,SHARP Judau,Sharp,Judau
 Sky Devices SKY PAD8PRO,SKY_Devices SKY_PAD8PROUSON,Sky Devices,SKY_PAD8PROUSON
@@ -406,6 +430,7 @@ Sony Xperia 1 III,Sony XQ-BC72,Sony,XQ-BC72
 Sony Xperia 1 IV,Sony XQ-CT54,Sony,XQ-CT54
 Sony Xperia 1 IV,Sony XQ-CT72,Sony,XQ-CT72
 Sony Xperia 1 V,Sony XQ-DQ54,Sony,XQ-DQ54
+Sony Xperia 1 V,Sony XQ-DQ62,Sony,XQ-DQ62
 Sony Xperia 1 V,Sony XQ-DQ72,Sony,XQ-DQ72
 Sony Xperia 10 III,Sony XQ-BT52,Sony,XQ-BT52
 Sony Xperia 10 V,Sony XQ-DC54,Sony,XQ-DC54
@@ -415,6 +440,8 @@ Sony Xperia 5 IV,Sony XQ-CQ62,Sony,XQ-CQ62
 Sony Xperia 5 V,Sony XQ-DE54,Sony,XQ-DE54
 T-Mobile REVVL 6,T-Mobile Bethpage,T-Mobile,Bethpage
 T-Mobile REVVL 6 Pro,T-Mobile Augusta,T-Mobile,Augusta
+Tecno CAMON 19,TECNO TECNO-CI6,Tecno,TECNO-CI6
+Tecno CAMON 19,TECNO TECNO-CI6n,Tecno,TECNO-CI6n
 Tecno CAMON 19 Neo,TECNO TECNO-CH6i,Tecno,TECNO-CH6i
 Tecno CAMON 20 Pro,TECNO TECNO-CK7n,Tecno,TECNO-CK7n
 Tecno CAMON 20 Pro 5G,TECNO TECNO-CK8n,Tecno,TECNO-CK8n
@@ -442,6 +469,7 @@ Tecno Mobile POVA 5 Pro 5G,TECNO-Mobile TECNO-Mobile-LH8n,Tecno Mobile,TECNO-Mob
 Tecno Mobile SPARK Go 2024,TECNO-Mobile TECNO-Mobile-BG6,Tecno Mobile,TECNO-Mobile-BG6
 Tecno Mobile TECNO Mobile SPARK 20C,TECNO-Mobile TECNO-Mobile-BG7n,Tecno Mobile,TECNO-Mobile-BG7n
 Tecno Mobile TECNO SPARK 10,TECNO-Mobile TECNO-Mobile-KI5q,Tecno Mobile,TECNO-Mobile-KI5q
+Tecno POP 8,TECNO TECNO-BG6h,Tecno,TECNO-BG6h
 Ulefone Armor X12,Ulefone Armor_X12,Ulefone,Armor_X12
 Ulefone Armor X12 Pro,Ulefone Armor_X12_Pro,Ulefone,Armor_X12_Pro
 Ulefone Armor_X13,Ulefone Armor_X13,Ulefone,Armor_X13
@@ -494,6 +522,7 @@ Vivo V2045,vivo 2045,Vivo,2045
 Vivo V2046,vivo 2046,Vivo,2046
 Vivo V2050,vivo 2050,Vivo,2050
 Vivo V2053,vivo 2041,Vivo,2041
+Vivo V2055,vivo 2055,Vivo,2055
 Vivo V2058,vivo 2058,Vivo,2058
 Vivo V2059,vivo 2059,Vivo,2059
 Vivo V2060,vivo 2060,Vivo,2060
@@ -574,5 +603,6 @@ Xiaomi Pad 6 Max 14,Xiaomi yudi,Xiaomi,yudi
 Xiaomi pad 6 Pro,Xiaomi liuqin,Xiaomi,liuqin
 Xiaomi POCO F1,Xiaomi beryllium,Xiaomi,beryllium
 XMobile X55,Xmobile X55,Sky Devices,X55
+ZTE 8050,ZTE P606F08,ZTE,P606F08
 ZTE NX729J,nubia NX729J-EEA,ZTE,NX729J-EEA
 ZTE NX729J,nubia NX729J-UN,ZTE,NX729J-UN
