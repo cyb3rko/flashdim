@@ -36,6 +36,8 @@ internal object Safe {
     const val REPORT_DIALOG_SHOWN = "${BuildConfig.VERSION_CODE}-report_dialog"
     const val STARTUP_COUNTER = "startup_counter"
     const val VOLUME_BUTTONS_LINK = "volume_buttons_link"
+    const val TIMEOUT_DURATION = "timeout_duration" //  default 2 seconds, 2000 ms // Make it so that the user can customize this later
+
 
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
@@ -51,9 +53,18 @@ internal object Safe {
 
     fun getInt(label: String, default: Int) = sharedPreferences.getInt(label, default)
 
+    fun getFloat(label: String, default: Float) = sharedPreferences.getFloat(label, default)
+
+
     fun writeInt(label: String, value: Int) {
         try {
             editor.putInt(label, value).apply()
+        } catch (_: Exception) {}
+    }
+
+    fun writeFloat(label: String, value: Float) {
+        try {
+            editor.putFloat(label, value).apply()
         } catch (_: Exception) {}
     }
 

@@ -152,6 +152,63 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                     true
                 }
             }
+
+            findPreference<Preference>(Safe.TIMEOUT_DURATION)?.apply {
+                Safe.initialize(myContext)
+                if (!Safe.getBoolean(Safe.MULTILEVEL, false)) {
+                    isEnabled = false
+                    return@apply
+                }
+
+                val timeoutDuration = Safe.getFloat(Safe.TIMEOUT_DURATION, 2.toFloat())
+                val summaryString = getString(R.string.preference_item_timeout_duration_summary)
+                summary = "$summaryString: $timeoutDuration"
+
+                setOnPreferenceClickListener { preference ->
+                    val currentTimeoutDuration = Safe.getFloat(Safe.TIMEOUT_DURATION, 2.toFloat())
+                    val withVibration = Safe.getBoolean(Safe.BUTTON_VIBRATION, true)
+                    val content = LinearLayout(myContext).apply {
+                        orientation = LinearLayout.VERTICAL
+                        setPadding(75, 0, 75, 0)
+                    }
+                    val levelView = TextView(myContext).apply {
+                        textSize = 18f
+                        setPadding(24, 24, 24, 50)
+                        gravity = Gravity.CENTER_HORIZONTAL
+                        text = String.format(
+                            getString(R.string.preference_item_timeout_duration_dialog_message),
+                            currentTimeoutDuration,
+                            currentTimeoutDuration
+                        )
+                    }
+                    content.addView(levelView)
+                    val slider = Slider(myContext).apply {
+                        valueFrom = 1F // 1 second min
+                        valueTo = 5F // 10 seconds max
+                        value = currentTimeoutDuration.toFloat()
+                        stepSize = .5F
+                        addOnChangeListener { _, value, _ ->
+                            if (withVibration) Vibrator.vibrateTick()
+                            levelView.text = String.format(
+                                getString(R.string.preference_item_timeout_duration_dialog_message),
+                                value,
+                                currentTimeoutDuration
+                            )
+                        }
+                    }
+                    content.addView(slider)
+                    showTimeoutDurationDialog(content) {
+                        val value = slider.value
+                        Safe.writeFloat(Safe.TIMEOUT_DURATION, value) // make a Safe.writeFloat() function/
+
+                        val summary = getString(R.string.preference_item_timeout_duration_summary)
+                        preference.summary = "$summary: $value"
+                    }
+                    true
+                }
+            }
+
+
             findPreference<Preference>("volume_buttons")?.setOnPreferenceClickListener {
                 AccessibilityInfoDialog.show(myContext)
                 true
@@ -175,5 +232,25 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                 )
                 .show()
         }
+
+        private fun showTimeoutDurationDialog(content: View, onSave: () -> Unit) {
+            MaterialAlertDialogBuilder(
+                requireContext(),
+                MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+            )
+                .setIcon(R.drawable.ic_level)
+                .setTitle(getString(R.string.preference_item_timeout_duration_dialog_title))
+                .setView(content)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    onSave()
+                }
+                .setNegativeButton(
+                    getString(R.string.preference_item_initial_level_dialog_negative_button),
+                    null
+                )
+                .show()
+        }
+        // make my own function for the volume dimmer duration view
+
     }
 }
