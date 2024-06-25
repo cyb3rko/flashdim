@@ -53,6 +53,12 @@
             app:summary="@string/preference_item_volume_buttons_summary"
             app:icon="@drawable/ic_button_service" />
 
+        <Preference
+            app:key="timeout_duration"
+            app:title="@string/preference_item_timeout_duration"
+            app:summary="@string/preference_item_timeout_duration_summary"
+            app:icon="@drawable/ic_level_scaled" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

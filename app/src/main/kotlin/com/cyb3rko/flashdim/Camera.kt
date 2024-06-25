@@ -94,5 +94,12 @@ internal class Camera(activity: AppCompatActivity) {
                 handleFlashlightException(e)
             }
         }
+
+        fun getLightLevel(context: Context): Int {
+            val cameraManager = context.getSystemService(Context.CAMERA_SERVICE)
+                    as CameraManager
+            val cameraId = cameraManager.cameraIdList[0]
+            return cameraManager.getTorchStrengthLevel(cameraId)
+        }
     }
 }
