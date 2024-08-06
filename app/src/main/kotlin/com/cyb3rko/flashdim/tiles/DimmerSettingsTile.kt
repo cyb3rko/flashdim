@@ -74,7 +74,9 @@ class DimmerSettingsTile : TileService() {
                 object : CameraManager.TorchCallback() {
                     override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
                         if (qsTile == null) return
-                        if (description.isNotEmpty()) qsTile.subtitle = "State: $description"
+                        qsTile.subtitle =
+                            if (description.isNotEmpty() && enabled) "State: $description"
+                            else "State: ${DIMMER_OFF.description()}"
                         qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
                         qsTile.updateTile()
                         this@DimmerSettingsTile.enabled = enabled
