@@ -28,11 +28,15 @@ import com.cyb3rko.flashdim.utils.Safe
 
 class DimmerSettingsTile : TileService() {
     private var description = ""
+    private var enabled = false
 
     override fun onClick() {
         if (qsTile.state == Tile.STATE_UNAVAILABLE) return
         Safe.initialize(applicationContext)
-        val mode = Safe.getInt(Safe.QUICKTILE_DIM_MODE, DIMMER_MIN)
+        var mode = Safe.getInt(Safe.QUICKTILE_DIM_MODE, DIMMER_MIN)
+        if (!enabled)
+            // torch was disabled externally, continue again from initial state
+            mode = DIMMER_MIN
         description = mode.description()
 
         val maxLevel = Safe.getInt(Safe.MAX_LEVEL, -1)
@@ -73,6 +77,7 @@ class DimmerSettingsTile : TileService() {
                         if (description.isNotEmpty()) qsTile.subtitle = "State: $description"
                         qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
                         qsTile.updateTile()
+                        this@DimmerSettingsTile.enabled = enabled
                     }
                 },
                 Handler(Looper.getMainLooper())
