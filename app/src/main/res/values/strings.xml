@@ -71,9 +71,13 @@
     <string name="preference_item_initial_level_summary">Dim level for Initial Flash, optionally for quick settings tile and volume button press</string>
     <string name="preference_item_volume_buttons">Volume Buttons Service</string>
     <string name="preference_item_volume_buttons_summary">Activate the service for toggling the flashlight when pressing both volume buttons.</string>
+    <string name="preference_item_timeout_duration">Volume Button Dimming</string>
+    <string name="preference_item_timeout_duration_summary">After pressing both volume buttons, quickly adjust the flashlight\'s dim level within a customizable amount of time</string>
     <string name="preference_item_initial_level_dialog_title">Set Initial Level</string>
     <string name="preference_item_initial_level_dialog_message">New: %1$s\nCurrent: %2$s</string>
     <string name="preference_item_initial_level_dialog_negative_button">Cancel</string>
+    <string name="preference_item_timeout_duration_dialog_title">Set Timeout Duration</string>
+    <string name="preference_item_timeout_duration_dialog_message">New: %1$s seconds\nCurrent: %2$s seconds</string>
     <string name="preference_category_vibration">Vibration</string>
     <string name="preference_item_tactile_buttons">Tactile buttons</string>
     <string name="preference_item_tactile_buttons_summary">Vibrate on button clicks and seekbar swipes</string>
