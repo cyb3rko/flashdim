@@ -20,6 +20,7 @@ Blu G63,BLU G0870,Blu,G0870
 Cubot P80,CUBOT P80,Cubot,P80
 Daria DM-B50104,Daria zahedan,Daria,zahedan
 Deutsche Telekom T Phone Pro,DeutscheTelekom Lion,Deutsche Telekom,Lion
+Deutsche Telekom T Phone 2 Pro,DeutscheTelekom CHEETAH,Deutsche Telekom,CHEETAH
 Doogee N50,DOOGEE 1918Y,Doogee,1918Y
 Doogee S110,DOOGEE M22P,Doogee,M22P
 Doogee Smini,DOOGEE ZN137,Doogee,ZN137
@@ -37,6 +38,7 @@ Honor HONOR 50 Lite,HONOR HNNTN,Honor,HNNTN
 Honor HONOR 70,HONOR HNFNE,Honor,HNFNE
 Honor HONOR 90,HONOR HNREA,Honor,HNREA
 Honor HONOR 90 Lite,HONOR HNCRT-M2,Honor,HNCRT-M2
+Honor HONOR Magic6 Lite 5G,HONOR HNALI-Q,Honor,HNALI-Q
 Honor HONOR X6a,HONOR HNWDY-M,Honor,HNWDY-M
 Honor HONOR X7,HONOR HNCMA-Q,Honor,HNCMA-Q
 Honor HONOR X7b,HONOR HNCLK-Q,Honor,HNCLK-Q
@@ -133,6 +135,7 @@ Motorola motorola edge (2021),motorola berlna,Motorola,berlna
 Motorola motorola edge (2022),motorola tesla,Motorola,tesla
 Motorola motorola razr 40,motorola lynkco,Motorola,lynkco
 Motorola motorola razr plus 2023,motorola zeekr,Motorola,zeekr
+Nokia C22,Nokia HKEA,Nokia,HKEA
 Nokia C32,Nokia MKDA,Nokia,MKDA
 Nokia G10,Nokia ROGA_sprout,Nokia,Nokia ROGA_sprout
 Nokia G21,Nokia SCPA_sprout,Nokia,SCPA_sprout
@@ -257,6 +260,7 @@ POCO M4 Pro 5G,POCO evergreen,POCO,evergreen
 POCO M5,POCO rock,POCO,rock
 POCO M5,POCO stone,POCO,stone
 POCO M5s,POCO rosemary,POCO,rosemary
+POCO M6 Plus 5G,POCO breeze,POCO,breeze
 POCO M6 Pro,POCO emerald,POCO,emerald
 POCO M6 Pro 5G,POCO sky,POCO,sky
 POCO X2,POCO phoenixin,POCO,phoenixin
@@ -277,10 +281,10 @@ realme 8s 5G,realme RE58A0L1,realme,RE58A0L1
 realme 9,realme RE54E2L1,realme,RE54E2L1
 realme 9 5G,realme RE54CBL1,realme,RE54CBL1
 realme 9 5G,realme RE54F3L1,realme,RE54F3L1
+realme 9 Pro+,realme RE879EL1,realme,RE879EL1
 realme 9i,realme RED8C1L1,realme,RED8C1L1
 realme 9i 5G,realme RE588DL1,realme,RE588DL1
 realme 9Pro 5G,realme RE54CBL1,realme,RE54CBL1
-realme 9 Pro+,realme RE879EL1,realme,RE879EL1
 realme 10,realme RE8DDCL1,realme,RE8DDCL1
 realme 10 Pro,realme RE5849,realme,RE5849
 realme 10 Pro 5G,realme RE588BL1,realme,RE588BL1
@@ -309,6 +313,7 @@ realme C51,realme RE58BC,realme,RE58BC
 realme C53,realme RE58C2,realme,RE58C2
 realme C53,realme RE58C2,realme,RE58CE
 realme C55,realme REE2ADL1,realme,REE2ADL1
+realme C67,realme RE5C91L1,realme,RE5C91L1
 realme GT 2 Pro,realme RED8ACL1,realme,RED8ACL1
 realme GT Master Edition,realme RE507C,realme,RE507C
 realme GT Master Edition,realme RE54ABL1,realme,RE54ABL1
@@ -316,6 +321,7 @@ realme GT NEO 3 150W,realme RED8BEL1,realme,RED8BEL1
 realme GT NEO 3T,realme RE54E4L1,realme,RE54E4L1
 realme GT Neo 5 SE,realme RE585F,realme,RE585F
 realme GT Neo 5 SE,realme RE58D1L1,realme,RE58D1L1
+realme GT3 240W,realme REE2B2L1,realme,REE2B2L1
 realme narzo 30 5G,realme RE513CL1,realme,RE513CL1
 realme narzo 50,realme RE54B4L1,realme,RE54B4L1
 realme narzo 50 5G,realme RED8CDL1,realme,RED8CDL1
@@ -374,6 +380,9 @@ Redmi K50i,Redmi xagain,Redmi,xagain
 Redmi K60,Redmi mondrian,Redmi,mondrian
 Redmi K60E,Redmi rembrandt,Redmi,rembrandt
 Redmi Note 8,xiaomi ginkgo,Redmi,ginkgo
+Redmi Note 9,Redmi merlin,Redmi,merlin
+Redmi Note 9,Redmi merlinnfc,Redmi,merlinnfc
+Redmi Note 9 Pro,Redmi joyeuse,Redmi,joyeuse
 Redmi Note 10 5G,Redmi camellian,Redmi,camellian
 Redmi Note 10 JE,Redmi XIG02,Redmi,XIG02
 Redmi Note 10 Lite,Redmi curtana,Redmi,curtana
@@ -415,6 +424,7 @@ Redmi Note 13 5G,Redmi gold,Redmi,gold
 Redmi Note 13 5G,Redmi iron,Redmi,iron
 Redmi Note 13 Pro,Redmi emerald,Redmi,emerald
 Redmi Note 13 Pro 5G,Redmi garnet,Redmi,garnet
+Redmi Note 13R,Redmi breeze,Redmi,breeze
 Redmi POCO F5,POCO marblein,POCO,marblein
 Redmi POCO F5,POCO marblein,Redmi,marblein
 Reeder S19 Max 32GB,Reeder S19_Max_32GB,Reeder,S19_Max_32GB
@@ -432,6 +442,7 @@ Sony Xperia 1 IV,Sony XQ-CT72,Sony,XQ-CT72
 Sony Xperia 1 V,Sony XQ-DQ54,Sony,XQ-DQ54
 Sony Xperia 1 V,Sony XQ-DQ62,Sony,XQ-DQ62
 Sony Xperia 1 V,Sony XQ-DQ72,Sony,XQ-DQ72
+Sony Xperia 1 VI,Sony XQ-EC44,Sony,XQ-EC44
 Sony Xperia 10 III,Sony XQ-BT52,Sony,XQ-BT52
 Sony Xperia 10 V,Sony XQ-DC54,Sony,XQ-DC54
 Sony Xperia 10 V,Sony XQ-DC72,Sony,XQ-DC72
@@ -448,21 +459,23 @@ Tecno CAMON 20 Pro 5G,TECNO TECNO-CK8n,Tecno,TECNO-CK8n
 Tecno POVA 5,TECNO TECNO-LH7n,Tecno,TECNO-LH7n
 Tecno POVA 5 Pro 5G,TECNO TECNO-LH8n,Tecno,TECNO-LH8n
 Tecno SPARK Go 2024,TECNO TECNO-BG6,Tecno,TECNO-BG6
+Tecno TECNO CAMON 20,TECNO TECNO-CK6,Tecno,TECNO-CK6
+Tecno TECNO CAMON 20,TECNO TECNO-CK6n,Tecno,TECNO-CK6n
+Tecno TECNO CAMON 20,TECNO TECNO-CK6ns,Tecno,TECNO-CK6ns
+Tecno TECNO CAMON 20 Pro,TECNO TECNO-CK6n,Tecno,TECNO-CK6n
 Tecno TECNO CAMON 20s Pro 5G,TECNO TECNO-CK8nB,Tecno,TECNO-CK8nB
+Tecno TECNO CAMON 30,TECNO TECNO-CL6,Tecno,TECNO-CL6
+Tecno TECNO CAMON 30 Pro 5G,TECNO TECNO-CL8,Tecno,TECNO-CL8
 Tecno TECNO POVA Neo 3,TECNO TECNO-LH6n,Tecno,TECNO-LH6n
 Tecno TECNO SPARK 10,TECNO TECNO-KI5n,Tecno,TECNO-KI5n
 Tecno TECNO SPARK 10,TECNO TECNO-KI5q,Tecno,TECNO-KI5q
 Tecno TECNO SPARK 10,TECNO TECNO-KI5qs,Tecno,TECNO-KI5qs
 Tecno TECNO SPARK 10 Pro,TECNO TECNO-KI7,Tecno,TECNO-KI7
 Tecno TECNO SPARK 10 Pro,TECNO TECNO-KI7s,Tecno,TECNO-KI7s
-Tecno TECNO CAMON 20,TECNO TECNO-CK6,Tecno,TECNO-CK6
-Tecno TECNO CAMON 20,TECNO TECNO-CK6n,Tecno,TECNO-CK6n
-Tecno TECNO CAMON 20,TECNO TECNO-CK6ns,Tecno,TECNO-CK6ns
-Tecno TECNO CAMON 20 Pro,TECNO TECNO-CK6n,Tecno,TECNO-CK6n
-Tecno TECNO SPARK 20 Pro,TECNO TECNO-KJ6,Tecno,TECNO-KJ6
-Tecno TECNO SPARK 20 Pro+,TECNO TECNO-KJ7,Tecno,TECNO-KJ7
 Tecno TECNO SPARK 20,TECNO TECNO-KJ5,Tecno,TECNO-KJ5
 Tecno TECNO SPARK 20,TECNO TECNO-KJ5n,Tecno,TECNO-KJ5n
+Tecno TECNO SPARK 20 Pro,TECNO TECNO-KJ6,Tecno,TECNO-KJ6
+Tecno TECNO SPARK 20 Pro+,TECNO TECNO-KJ7,Tecno,TECNO-KJ7
 Tecno TECNO SPARK 20C,TECNO TECNO-BG7,Tecno,TECNO-BG7
 Tecno TECNO SPARK 20C,TECNO TECNO-BG7n,Tecno,TECNO-BG7n
 Tecno Mobile POVA 5 Pro 5G,TECNO-Mobile TECNO-Mobile-LH8n,Tecno Mobile,TECNO-Mobile-LH8n
@@ -470,9 +483,12 @@ Tecno Mobile SPARK Go 2024,TECNO-Mobile TECNO-Mobile-BG6,Tecno Mobile,TECNO-Mobi
 Tecno Mobile TECNO Mobile SPARK 20C,TECNO-Mobile TECNO-Mobile-BG7n,Tecno Mobile,TECNO-Mobile-BG7n
 Tecno Mobile TECNO SPARK 10,TECNO-Mobile TECNO-Mobile-KI5q,Tecno Mobile,TECNO-Mobile-KI5q
 Tecno POP 8,TECNO TECNO-BG6h,Tecno,TECNO-BG6h
+Ulefone Armor 25T Pro,Ulefone GQ5007AF2,Ulefone,GQ5007AF2
 Ulefone Armor X12,Ulefone Armor_X12,Ulefone,Armor_X12
 Ulefone Armor X12 Pro,Ulefone Armor_X12_Pro,Ulefone,Armor_X12_Pro
 Ulefone Armor_X13,Ulefone Armor_X13,Ulefone,Armor_X13
+Ulefone Note 16 Pro,Ulefone GQ3106,Ulefone,GQ3106
+Ulefone Note 16 Pro,Ulefone Note_16_Pro,Ulefone,Note_16_Pro
 Ulefone Power Armor X11,Ulefone Power_Armor_X11,Ulefone,Power_Armor_X11
 Umidigi G1 Plus EEA,UMIDIGI G1_Plus,Umidigi,G1_Plus
 Umidigi G2 EEA,UMIDIGI UMIDIGI_G2,Umidigi,UMIDIGI_G2
@@ -497,6 +513,8 @@ Vivo iQOO Neo7,vivo PD2231,Vivo,PD2231
 Vivo iQOO Neo7 Pro,iQOO I2217,Vivo,I2217
 Vivo iQOO Neo7 SE,vivo PD2238,Vivo,PD2238
 Vivo iQOO Neo7 竞速版,vivo PD2232,Vivo,PD2232
+Vivo iQOO Neo8,vivo PD2301,Vivo,PD2301
+Vivo iQOO Neo9,vivo PD2338,Vivo,PD2338
 Vivo iQOO Z5,iQOO 2018,Vivo,2018
 Vivo iQOO Z5 6000mAh,vivo PD2188,Vivo,PD2188
 Vivo iQOO Z6,iQOO I2203,Vivo,I2203
@@ -560,6 +578,7 @@ Vivo vivo Y22,vivo V2207,Vivo,V2207
 Vivo X80,vivo V2144,Vivo,PD2183
 Vivo X80 Pro,vivo V2145,Vivo,V2145
 Vivo Y100,vivo V2239,Vivo,V2239
+Vivo Y17s,vivo V2310,Vivo,V2310
 Vivo Y200 5G,vivo V2307,Vivo,V2307
 Vivo Y27,vivo V2249,Vivo,V2249
 Vivo Y27s,vivo V2247,Vivo,V2247
@@ -567,6 +586,8 @@ Vivo Y33t,vivo PD2317,Vivo,PD2317
 Vivo Y35,vivo V2205,Vivo,V2205
 Vortex CG65,Vortex CG65,Vortex,CG65
 Vortex HD62,Vortex HD62,Vortex,HD62
+Vortex ZG55,Vortex ZG55,Vortex,ZG55
+Vortex ZG65 Pro,Vortex ZG65_Pro,Vortex,ZG65_Pro
 Xiaomi 11 Lite 5G NE,Xiaomi lisa,Xiaomi,lisa
 Xiaomi 11 Lite NE,Xiaomi lisa,Xiaomi,lisa
 Xiaomi 11i,Xiaomi pissarroin,Xiaomi,pissarroin
@@ -578,8 +599,8 @@ Xiaomi 12 Lite,Xiaomi taoyao,Xiaomi,taoyao
 Xiaomi 12 Pro,Xiaomi zeus,Xiaomi,zeus
 Xiaomi 12 Pro Dimensity,Xiaomi daumier,Xiaomi,daumier
 Xiaomi 12T,Xiaomi plato,Xiaomi,plato
-Xiaomi 12T Pro,Xiaomi diting,Xiaomi,diting
 Xiaomi 12T Pro,Redmi diting,Xiaomi,diting
+Xiaomi 12T Pro,Xiaomi diting,Xiaomi,diting
 Xiaomi 12X,Xiaomi psyche,Xiaomi,psyche
 Xiaomi 13T,Xiaomi aristotle,Xiaomi,aristotle
 Xiaomi 13T,Xiaomi XIG04,Xiaomi,XIG04
