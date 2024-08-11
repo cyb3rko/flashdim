@@ -25,44 +25,34 @@ import android.service.quicksettings.TileService
 import android.util.Log
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
+import kotlin.math.abs
 
 class DimmerSettingsTile : TileService() {
-    private var description = ""
-    private var enabled = false
+    private var strength = 0
 
     override fun onClick() {
         if (qsTile.state == Tile.STATE_UNAVAILABLE) return
         Safe.initialize(applicationContext)
-        var mode = Safe.getInt(Safe.QUICKTILE_DIM_MODE, DIMMER_MIN)
-        if (!enabled)
-            // torch was disabled externally, continue again from initial state
-            mode = DIMMER_MIN
-        description = mode.description()
 
         val maxLevel = Safe.getInt(Safe.MAX_LEVEL, -1)
-        val newLevel = when (mode) {
-            DIMMER_MAX -> maxLevel
-            DIMMER_HALF -> maxLevel / 2
-            DIMMER_MIN -> 1
-            DIMMER_OFF -> 0
-            else -> DIMMER_MAX
-        }
+        val nextStrength = findStrengthLevel(strength, maxLevel, nextLevel = true)
 
         try {
             val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-            sendFlashlightSignal(cameraManager, newLevel, newLevel != DIMMER_OFF)
+            sendFlashlightSignal(cameraManager, nextStrength, nextStrength != 0)
         } catch (e: Exception) {
             Log.e("FlashDim", "Camera access failed in DimmerSettingsTile")
             handleFlashlightException(e)
             e.printStackTrace()
         }
-        qsTile.subtitle = "State: ${mode.description()}"
+        this.strength = nextStrength
+        qsTile.subtitle = getModeDesc(strength, maxLevel)
         qsTile.updateTile()
-        Safe.writeInt(Safe.QUICKTILE_DIM_MODE, mode.next())
     }
 
     override fun onStartListening() {
         Safe.initialize(this)
+        val maxLevel = Safe.getInt(Safe.MAX_LEVEL, -1)
         if (Safe.getInt(Safe.MAX_LEVEL, -1) < 2) {
             qsTile.state = Tile.STATE_UNAVAILABLE
             qsTile.updateTile()
@@ -74,12 +64,13 @@ class DimmerSettingsTile : TileService() {
                 object : CameraManager.TorchCallback() {
                     override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
                         if (qsTile == null) return
-                        qsTile.subtitle =
-                            if (description.isNotEmpty() && enabled) "State: $description"
-                            else "State: ${DIMMER_OFF.description()}"
+                        val strength =
+                            if (enabled) cameraManager.getTorchStrengthLevel(cameraId) else 0
+                        this@DimmerSettingsTile.strength = strength
+
+                        qsTile.subtitle = getModeDesc(strength, maxLevel)
                         qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
                         qsTile.updateTile()
-                        this@DimmerSettingsTile.enabled = enabled
                     }
                 },
                 Handler(Looper.getMainLooper())
@@ -99,26 +90,27 @@ class DimmerSettingsTile : TileService() {
         }
     }
 
-    private fun Int.next() = when (this) {
-        DIMMER_OFF -> DIMMER_MIN
-        DIMMER_MIN -> DIMMER_HALF
-        DIMMER_HALF -> DIMMER_MAX
-        DIMMER_MAX -> DIMMER_OFF
-        else -> DIMMER_MAX
+    private fun findStrengthLevel(value: Int, maxLevel: Int, nextLevel: Boolean = false): Int {
+        val levels = listOf(0, 1, maxLevel / 2, maxLevel)
+        // find nearest strength level
+        // this avoids cases where a strength level of 2 is mapped to a half (since it is higher than min)
+        val nearestValue = levels.minByOrNull { abs(it - value) } ?: 0
+        // find the next higher strength or 0
+        val comparisonOp: (Int, Int) -> Boolean = if (nextLevel) {
+            { a, b -> a > b }
+        } else {
+            { a, b -> a >= b }
+        }
+        return levels.iterator().asSequence().firstOrNull { comparisonOp(it, nearestValue) } ?: 0
     }
 
-    private fun Int.description() = when (this) {
-        DIMMER_OFF -> "Off"
-        DIMMER_MIN -> "Min"
-        DIMMER_HALF -> "Half"
-        DIMMER_MAX -> "Max"
-        else -> "Unknown"
-    }
-
-    companion object {
-        const val DIMMER_MAX = 3
-        const val DIMMER_HALF = 2
-        const val DIMMER_MIN = 1
-        const val DIMMER_OFF = 0
+    private fun getModeDesc(value: Int, maxLevel: Int): String {
+        return "State: ${when (findStrengthLevel(value, maxLevel)) {
+            0 -> "Off"
+            1 -> "Min"
+            maxLevel / 2 -> "Half"
+            maxLevel -> "Max"
+            else -> "Unknown"
+        }}"
     }
 }
