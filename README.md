@@ -675,7 +675,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Samsung (1)</summary>
+  <summary>Samsung (2)</summary>
   <ul>
     <li>Samsung Galaxy A03 Core (samsung a3core)</li>
     <li>Samsung Galaxy S21</li>
