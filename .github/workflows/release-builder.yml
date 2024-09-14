@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Build Changelog
         id: github_release
-        uses: mikepenz/release-changelog-builder-action@v4
+        uses: mikepenz/release-changelog-builder-action@v5
         with:
           failOnError: true
           commitMode: true
@@ -121,7 +121,7 @@ jobs:
           ls
         
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           name: "Version ${{ env.RELEASE_VERSION }}"
           body: ${{steps.github_release.outputs.changelog}}
