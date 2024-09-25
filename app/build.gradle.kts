@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId = "com.cyb3rko.flashdim"
         minSdk = 33
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 25
         versionName = "2.3.3"
         resValue("string", "app_name", "FlashDim Dev")
