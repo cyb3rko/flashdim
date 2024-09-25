@@ -72,7 +72,7 @@
     <string name="preference_item_volume_buttons">Volume Buttons Service</string>
     <string name="preference_item_volume_buttons_summary">Activate the service for toggling the flashlight when pressing both volume buttons.</string>
     <string name="preference_item_initial_level_dialog_title">Set Initial Level</string>
-    <string name="preference_item_initial_level_dialog_message">New: %1$s\nCurrent: %2$s</string>
+    <string name="preference_item_initial_level_dialog_message">New: %1$d\nCurrent: %2$d</string>
     <string name="preference_item_initial_level_dialog_negative_button">Cancel</string>
     <string name="preference_category_vibration">Vibration</string>
     <string name="preference_item_tactile_buttons">Tactile buttons</string>
