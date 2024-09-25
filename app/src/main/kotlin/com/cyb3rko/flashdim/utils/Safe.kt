@@ -54,12 +54,14 @@ internal object Safe {
     fun writeInt(label: String, value: Int) {
         try {
             editor.putInt(label, value).apply()
-        } catch (_: Exception) {}
+        } catch (_: Exception) {
+        }
     }
 
     fun writeBoolean(label: String, value: Boolean) {
         try {
             editor.putBoolean(label, value).apply()
-        } catch (_: Exception) {}
+        } catch (_: Exception) {
+        }
     }
 }

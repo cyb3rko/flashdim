@@ -42,7 +42,8 @@ internal object AppReviewManager {
                                 Uri.parse(context.getString(R.string.playstore_link))
                             )
                         )
-                    } catch (_: Exception) {}
+                    } catch (_: Exception) {
+                    }
                 },
                 actionMessage = "Rate"
             )
