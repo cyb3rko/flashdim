@@ -16,8 +16,8 @@ android {
         applicationId = "com.cyb3rko.flashdim"
         minSdk = 33
         targetSdk = 35
-        versionCode = 25
-        versionName = "2.3.3"
+        versionCode = 26
+        versionName = "2.3.4"
         resValue("string", "app_name", "FlashDim Dev")
         resourceConfigurations.add("en")
         signingConfig = signingConfigs.getByName("debug")
@@ -71,7 +71,7 @@ android {
 if (project.hasProperty("sign")) {
     android {
         signingConfigs {
-            getByName("release") {
+            create("release") {
                 storeFile = file(System.getenv("KEYSTORE_FILE"))
                 storePassword = System.getenv("KEYSTORE_PASSWD")
                 keyAlias = System.getenv("KEYSTORE_KEY_ALIAS")
@@ -99,7 +99,7 @@ if (project.hasProperty("manual_upload")) {
     properties.load(project.rootProject.file("local.properties").inputStream())
     android {
         signingConfigs {
-            getByName("upload") {
+            create("upload") {
                 storeFile = file(properties.getProperty("uploadsigning.file"))
                 storePassword = properties.getProperty("uploadsigning.password")
                 keyAlias = properties.getProperty("uploadsigning.key.alias")
