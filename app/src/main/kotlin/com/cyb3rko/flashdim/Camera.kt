@@ -72,9 +72,8 @@ internal class Camera(activity: AppCompatActivity) {
     }
 
     companion object {
-        fun doesDeviceHaveFlash(packageManager: PackageManager): Boolean {
-            return packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
-        }
+        fun doesDeviceHaveFlash(packageManager: PackageManager): Boolean =
+            packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
 
         fun sendLightLevel(context: Context, level: Int, activate: Boolean) {
             try {

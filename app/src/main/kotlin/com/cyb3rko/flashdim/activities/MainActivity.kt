@@ -297,7 +297,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun executeAppOpenFlash() {
-        if (!settingsOpened && Safe.getBoolean(Safe.APPSTART_FLASH, false) &&
+        if (!settingsOpened &&
+            Safe.getBoolean(Safe.APPSTART_FLASH, false) &&
             Safe.getBoolean(Safe.APPOPEN_FLASH, false)
         ) {
             activateInitialFlash()

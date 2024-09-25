@@ -73,9 +73,7 @@ internal object DeviceSupportDialog {
             .show()
     }
 
-    private fun wasAlreadyShown(): Boolean {
-        return Safe.getBoolean(Safe.REPORT_DIALOG_SHOWN, false)
-    }
+    private fun wasAlreadyShown(): Boolean = Safe.getBoolean(Safe.REPORT_DIALOG_SHOWN, false)
 
     private fun saveAlreadyShown() {
         Safe.writeBoolean(Safe.REPORT_DIALOG_SHOWN, true)

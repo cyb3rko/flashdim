@@ -32,36 +32,35 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 // Thanks to AndroidDeveloperLB/CommonUtils; adapted to FlashDim
 // https://github.com/AndroidDeveloperLB/CommonUtils/blob/44e135cc15247c94148225aa930a93e008316072/library/src/main/java/com/lb/common_utils/SystemUtils.kt#L179-L212
-internal fun couldBeRunningOnEmulator(): Boolean {
-    return (
-        Build.MANUFACTURER == "Google" && Build.BRAND == "google" &&
+internal fun couldBeRunningOnEmulator(): Boolean = (
+    Build.MANUFACTURER == "Google" &&
+        Build.BRAND == "google" &&
+        (
             (
+                Build.FINGERPRINT.startsWith("google/sdk_gphone_") &&
+                    Build.FINGERPRINT.endsWith(":user/release-keys") &&
+                    Build.PRODUCT.startsWith("sdk_gphone_") &&
+                    Build.MODEL.startsWith("sdk_gphone_")
+                ) ||
+                // alternative
                 (
-                    Build.FINGERPRINT.startsWith("google/sdk_gphone_") &&
-                        Build.FINGERPRINT.endsWith(":user/release-keys") &&
-                        Build.PRODUCT.startsWith("sdk_gphone_") &&
-                        Build.MODEL.startsWith("sdk_gphone_")
-                    ) ||
-                    // alternative
-                    (
-                        Build.FINGERPRINT.startsWith("google/sdk_gphone64_") &&
-                            (
-                                Build.FINGERPRINT.endsWith(":userdebug/dev-keys") ||
-                                    Build.FINGERPRINT.endsWith(
-                                        ":user/release-keys"
-                                    )
-                                ) &&
-                            Build.PRODUCT.startsWith("sdk_gphone64_") &&
-                            Build.MODEL.startsWith("sdk_gphone64_")
-                        )
-                )
-        ) ||
-        Build.FINGERPRINT.startsWith("generic") ||
-        Build.FINGERPRINT.startsWith("unknown") ||
-        Build.MODEL.contains("google_sdk") ||
-        Build.MODEL.contains("Emulator") ||
-        Build.MODEL.contains("Android SDK built for x86")
-}
+                    Build.FINGERPRINT.startsWith("google/sdk_gphone64_") &&
+                        (
+                            Build.FINGERPRINT.endsWith(":userdebug/dev-keys") ||
+                                Build.FINGERPRINT.endsWith(
+                                    ":user/release-keys"
+                                )
+                            ) &&
+                        Build.PRODUCT.startsWith("sdk_gphone64_") &&
+                        Build.MODEL.startsWith("sdk_gphone64_")
+                    )
+            )
+    ) ||
+    Build.FINGERPRINT.startsWith("generic") ||
+    Build.FINGERPRINT.startsWith("unknown") ||
+    Build.MODEL.contains("google_sdk") ||
+    Build.MODEL.contains("Emulator") ||
+    Build.MODEL.contains("Android SDK built for x86")
 
 // For View class
 

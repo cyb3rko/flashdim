@@ -109,14 +109,12 @@ internal object IntervalDialog {
         binding.numberInputText.setText(bpm)
     }
 
-    private fun validateInput(input: String): Boolean {
-        return if (input.isEmpty()) {
-            false
-        } else if (mode == 0) {
-            validateTime(input)
-        } else {
-            validateBpm(input)
-        }
+    private fun validateInput(input: String): Boolean = if (input.isEmpty()) {
+        false
+    } else if (mode == 0) {
+        validateTime(input)
+    } else {
+        validateBpm(input)
     }
 
     private fun validateTime(time: String) = time.toInt() in 200..10000

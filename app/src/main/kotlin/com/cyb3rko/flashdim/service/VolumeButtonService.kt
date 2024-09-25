@@ -68,12 +68,10 @@ class VolumeButtonService : AccessibilityService() {
         return false
     }
 
-    private fun getFlashLevel(): Int {
-        return if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
-            Safe.getInt(Safe.INITIAL_LEVEL, -1)
-        } else {
-            -1
-        }
+    private fun getFlashLevel(): Int = if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
+        Safe.getInt(Safe.INITIAL_LEVEL, -1)
+    } else {
+        -1
     }
 
     override fun onInterrupt() {

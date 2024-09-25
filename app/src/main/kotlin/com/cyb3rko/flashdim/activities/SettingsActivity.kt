@@ -39,7 +39,9 @@ import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.slider.Slider
 
-internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
+internal class SettingsActivity :
+    AppCompatActivity(),
+    OnSharedPreferenceChangeListener {
     private lateinit var binding: ActivitySettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
