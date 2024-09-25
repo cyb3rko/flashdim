@@ -3,6 +3,7 @@ agp = "8.6.0"
 kotlin = "2.0.20"
 kotlinter = "4.4.1"
 dexcount = "4.0.0"
+bundletool = "0.2.4"
 
 appcompat = "1.7.0"
 constraintlayout = "2.1.4"
@@ -35,3 +36,4 @@ androidTest = { id = "com.android.test", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
 dexcount = { id = "com.getkeepsafe.dexcount", version.ref = "dexcount" }
+bundletool = { id = "app.accrescent.tools.bundletool", version.ref = "bundletool" }

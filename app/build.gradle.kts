@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.kotlinter) // lintKotlin, formatKotlin
     alias(libs.plugins.dexcount) // :app:countReleaseDexMethods
+    alias(libs.plugins.bundletool)
 }
 
 android {
@@ -80,14 +81,25 @@ if (project.hasProperty("sign")) {
     }
     android.buildTypes.getByName("release").signingConfig =
         android.signingConfigs.getByName("release")
+
+    bundletool {
+        signingConfig {
+            storeFile = file(System.getenv("KEYSTORE_FILE"))
+            storePassword = System.getenv("KEYSTORE_PASSWD")
+            keyAlias = System.getenv("KEYSTORE_KEY_ALIAS")
+            keyPassword = System.getenv("KEYSTORE_KEY_PASSWD")
+        }
+    }
+
 }
 
-if (project.hasProperty("gplay_upload")) {
+// Manual Google Play Store and Accrescent builds
+if (project.hasProperty("manual_upload")) {
+    val properties = Properties()
+    properties.load(project.rootProject.file("local.properties").inputStream())
     android {
         signingConfigs {
             getByName("upload") {
-                val properties = Properties()
-                properties.load(project.rootProject.file("local.properties").inputStream())
                 storeFile = file(properties.getProperty("uploadsigning.file"))
                 storePassword = properties.getProperty("uploadsigning.password")
                 keyAlias = properties.getProperty("uploadsigning.key.alias")
@@ -96,6 +108,15 @@ if (project.hasProperty("gplay_upload")) {
         }
     }
     android.buildTypes.getByName("release").signingConfig = android.signingConfigs.getByName("upload")
+
+    bundletool {
+        signingConfig {
+            storeFile = file(properties.getProperty("uploadsigning.file"))
+            storePassword = properties.getProperty("uploadsigning.password")
+            keyAlias = properties.getProperty("uploadsigning.key.alias")
+            keyPassword = properties.getProperty("uploadsigning.key.password")
+        }
+    }
 }
 
 dependencies {
