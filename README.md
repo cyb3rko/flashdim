@@ -138,7 +138,7 @@ Certificate Digests:
 The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
 Here's a list of devices I know of which do support flashlight dimming.
 
-- Google Pixel 6/7/8 series
+- Google Pixel 6/7/8/9 series
 - nearly every Samsung phone with Android 13
 - many other devices from different manufacturers
 
