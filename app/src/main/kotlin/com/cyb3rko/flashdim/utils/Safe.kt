@@ -31,7 +31,6 @@ internal object Safe {
     const val MORSE_VIBRATION = "morse_vibration"
     const val MULTILEVEL = "multilevel"
     const val PAUSE_FLASH = "pause_flash"
-    const val QUICKTILE_DIM_MODE = "dim_mode"
     const val QUICK_SETTINGS_LINK = "quick_settings_link"
     const val REPORT_DIALOG_SHOWN = "${BuildConfig.VERSION_CODE}-report_dialog"
     const val STARTUP_COUNTER = "startup_counter"
