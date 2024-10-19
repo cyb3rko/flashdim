@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "FlashDim"
 include(":app")
-include(":benchmark")
+include(":baseline")

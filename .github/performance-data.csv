@@ -1,4 +1,3 @@
-startupmode,naked,baseline
-Cold,295,275
-Warm,85,34
-Hot,35,35
+startupmode,startuptime
+none,275
+baseline,246

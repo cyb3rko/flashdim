@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.kotlinter) // lintKotlin, formatKotlin
     alias(libs.plugins.dexcount) // :app:countReleaseDexMethods
     alias(libs.plugins.bundletool)
+    alias(libs.plugins.baselineprofile)
 }
 
 android {
@@ -35,11 +36,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        }
-        create("benchmark") {
-            initWith(getByName("release"))
-            matchingFallbacks.add("release")
-            applicationIdSuffix = ".benchmark"
         }
     }
     compileOptions {
@@ -126,6 +122,7 @@ dependencies {
     implementation(libs.androidx.preference.ktx)
     implementation(libs.androidx.profileinstaller)
     implementation(libs.material)
+    "baselineProfile"(project(":baseline"))
 }
 
 configurations {
