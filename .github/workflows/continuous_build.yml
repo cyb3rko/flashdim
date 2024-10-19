@@ -25,17 +25,17 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-          
+
       - name: Setup JDK
         uses: actions/setup-java@v4
-        with: 
+        with:
           distribution: 'zulu'
           java-version: '17'
-        
+
       - name: Build APK
         run: |
-          ./gradlew build --stacktrace
-          
+          ./gradlew assembleRelease --stacktrace
+
       - name: List build output
         run: |
           cd app/build/outputs/apk/release/
