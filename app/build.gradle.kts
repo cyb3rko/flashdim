@@ -17,8 +17,8 @@ android {
         applicationId = "com.cyb3rko.flashdim"
         minSdk = 33
         targetSdk = 35
-        versionCode = 26
-        versionName = "2.3.4"
+        versionCode = 27
+        versionName = "2.3.5"
         resValue("string", "app_name", "FlashDim Dev")
         resourceConfigurations.add("en")
         signingConfig = signingConfigs.getByName("debug")
