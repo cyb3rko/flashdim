@@ -89,7 +89,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Calculate and insert performance calculation
+        id: github_release2
         shell: sh
+        env:
+          CHANGELOG: ${{ steps.github_release.outputs.changelog }}
         run: |
           cd .github
           python perf-impr-calc.py
@@ -122,7 +125,9 @@ jobs:
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
+        env:
+          CHANGELOG: ${{ steps.github_release2.outputs.changelog }}
         with:
           name: "Version ${{ env.RELEASE_VERSION }}"
-          body: ${{steps.github_release.outputs.changelog}}
+          body: ${{env.CHANGELOG}}
           files: app/build/outputs/apk/release/FlashDim-${{env.RELEASE_VERSION}}.apk
