@@ -28,18 +28,32 @@ import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
 
 class ToggleSettingsTile : TileService() {
+    private var cameraManager: CameraManager? = null
+
     override fun onClick() {
+        if (qsTile.state == Tile.STATE_UNAVAILABLE) return
+
         var level = -1
-        Safe.initialize(applicationContext)
-        if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
-            level = Safe.getInt(Safe.INITIAL_LEVEL, 1)
+        try {
+            Safe.initialize(applicationContext)
+            if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
+                level = Safe.getInt(Safe.INITIAL_LEVEL, 1)
+            }
+        } catch (e: Exception) {
+            Log.e("FlashDim", "Safe operations failed in ToggleSettingsTile")
         }
 
         try {
-            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-            when (qsTile.state) {
-                Tile.STATE_INACTIVE -> sendFlashlightSignal(cameraManager, level, true)
-                Tile.STATE_ACTIVE -> sendFlashlightSignal(cameraManager, level, false)
+            if (cameraManager == null) {
+                Log.d("FlashDim", "Initializing CameraManager from ToggleSettingsTile")
+                cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            }
+            cameraManager?.let {
+                Log.d("FlashDim", "Toggling flashlight from ToggleSettingsTile")
+                when (qsTile.state) {
+                    Tile.STATE_INACTIVE -> sendFlashlightSignal(it, level, true)
+                    Tile.STATE_ACTIVE -> sendFlashlightSignal(it, level, false)
+                }
             }
         } catch (e: Exception) {
             Log.e("FlashDim", "Camera access failed in ToggleSettingsTile")
@@ -49,20 +63,34 @@ class ToggleSettingsTile : TileService() {
     }
 
     override fun onStartListening() {
-        if (qsTile == null) return
-        val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        cameraManager.registerTorchCallback(
-            object : TorchCallback() {
-                override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
-                    if (qsTile == null) return
-                    Safe.initialize(applicationContext)
-                    Safe.writeBoolean(Safe.FLASH_ACTIVE, enabled)
-                    qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
-                    qsTile.updateTile()
-                }
-            },
-            Handler(Looper.getMainLooper())
-        )
+        super.onStartListening()
+        if (qsTile == null) {
+            Log.e("FlashDim", "ToggleSettingsTile null, exiting now")
+        }
+        Log.d("FlashDim", "Initializing ToggleSettingsTile")
+        try {
+            cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            cameraManager?.registerTorchCallback(
+                object : TorchCallback() {
+                    override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
+                        if (qsTile == null) return
+                        Safe.initialize(applicationContext)
+                        Safe.writeBoolean(Safe.FLASH_ACTIVE, enabled)
+                        qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
+                        qsTile.updateTile()
+                    }
+                },
+                Handler(Looper.getMainLooper())
+            )
+        } catch (e: Exception) {
+            Log.e("FlashDim", "Initializing ToggleSettingsTile failed")
+            e.printStackTrace()
+        }
+    }
+
+    override fun onStopListening() {
+        super.onStopListening()
+        cameraManager = null
     }
 
     private fun sendFlashlightSignal(cameraManager: CameraManager, level: Int, activate: Boolean) {

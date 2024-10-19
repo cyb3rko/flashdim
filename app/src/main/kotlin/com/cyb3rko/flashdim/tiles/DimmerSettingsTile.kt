@@ -27,13 +27,20 @@ import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
 
 class DimmerSettingsTile : TileService() {
+    private var cameraManager: CameraManager? = null
     private var description = ""
 
     override fun onClick() {
         if (qsTile.state == Tile.STATE_UNAVAILABLE) return
-        Safe.initialize(applicationContext)
-        val mode = Safe.getInt(Safe.QUICKTILE_DIM_MODE, DIMMER_MIN)
-        description = mode.description()
+
+        var mode = 0
+        try {
+            Safe.initialize(applicationContext)
+            mode = Safe.getInt(Safe.QUICKTILE_DIM_MODE, DIMMER_MIN)
+            description = mode.description()
+        } catch (e: Exception) {
+            Log.e("FlashDim", "Safe operations failed in DimmerSettingsTile")
+        }
 
         val maxLevel = Safe.getInt(Safe.MAX_LEVEL, -1)
         val newLevel = when (mode) {
@@ -45,8 +52,14 @@ class DimmerSettingsTile : TileService() {
         }
 
         try {
-            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-            sendFlashlightSignal(cameraManager, newLevel, newLevel != DIMMER_OFF)
+            if (cameraManager == null) {
+                Log.d("FlashDim", "Initializing CameraManager from ToggleSettingsTile")
+                cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+            }
+            cameraManager?.let {
+                Log.d("FlashDim", "Dimming flashlight from DimmerSettingsTile")
+                sendFlashlightSignal(it, newLevel, newLevel != DIMMER_OFF)
+            }
         } catch (e: Exception) {
             Log.e("FlashDim", "Camera access failed in DimmerSettingsTile")
             handleFlashlightException(e)
@@ -58,26 +71,41 @@ class DimmerSettingsTile : TileService() {
     }
 
     override fun onStartListening() {
-        Safe.initialize(this)
-        if (Safe.getInt(Safe.MAX_LEVEL, -1) < 2) {
-            qsTile.state = Tile.STATE_UNAVAILABLE
-            qsTile.updateTile()
-        } else {
-            qsTile.state = Tile.STATE_INACTIVE
-            qsTile.updateTile()
-            val cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
-            cameraManager.registerTorchCallback(
-                object : CameraManager.TorchCallback() {
-                    override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
-                        if (qsTile == null) return
-                        if (description.isNotEmpty()) qsTile.subtitle = "State: $description"
-                        qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
-                        qsTile.updateTile()
-                    }
-                },
-                Handler(Looper.getMainLooper())
-            )
+        super.onStartListening()
+        if (qsTile == null) {
+            Log.e("FlashDim", "DimmerSettingsTile null, exiting now")
         }
+        Log.d("FlashDim", "Initializing DimmerSettingsTile")
+        Safe.initialize(this)
+        try {
+            if (Safe.getInt(Safe.MAX_LEVEL, -1) < 2) {
+                qsTile.state = Tile.STATE_UNAVAILABLE
+                qsTile.updateTile()
+            } else {
+                qsTile.state = Tile.STATE_INACTIVE
+                qsTile.updateTile()
+                cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
+                cameraManager?.registerTorchCallback(
+                    object : CameraManager.TorchCallback() {
+                        override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
+                            if (qsTile == null) return
+                            if (description.isNotEmpty()) qsTile.subtitle = "State: $description"
+                            qsTile.state = if (enabled) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
+                            qsTile.updateTile()
+                        }
+                    },
+                    Handler(Looper.getMainLooper())
+                )
+            }
+        } catch (e: Exception) {
+            Log.e("FlashDim", "Initializing DimmerSettingsTile failed")
+            e.printStackTrace()
+        }
+    }
+
+    override fun onStopListening() {
+        super.onStopListening()
+        cameraManager = null
     }
 
     private fun sendFlashlightSignal(cameraManager: CameraManager, level: Int, activate: Boolean) {
