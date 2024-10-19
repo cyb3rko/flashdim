@@ -10,6 +10,9 @@ indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[*.xml]
+indent_size = 4
+
 [*.{kt,kts}]
 indent_size = 4
 ij_visual_guides = 100
