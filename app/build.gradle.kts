@@ -39,7 +39,7 @@ android {
         create("benchmark") {
             initWith(getByName("release"))
             matchingFallbacks.add("release")
-            isDebuggable = false
+            applicationIdSuffix = ".benchmark"
         }
     }
     compileOptions {
