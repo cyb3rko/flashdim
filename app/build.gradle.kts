@@ -64,6 +64,11 @@ android {
     }
 }
 
+// Automatic pipeline build
+// build with '-Psign assembleRelease'
+// output at 'app/build/outputs/apk/release/app-release.apk'
+// build with '-Psign bundleRelease'
+// output at 'app/build/outputs/bundle/release/app-release.aab'
 if (project.hasProperty("sign")) {
     android {
         signingConfigs {
@@ -77,19 +82,27 @@ if (project.hasProperty("sign")) {
     }
     android.buildTypes.getByName("release").signingConfig =
         android.signingConfigs.getByName("release")
-
-    bundletool {
-        signingConfig {
-            storeFile = file(System.getenv("KEYSTORE_FILE"))
-            storePassword = System.getenv("KEYSTORE_PASSWD")
-            keyAlias = System.getenv("KEYSTORE_KEY_ALIAS")
-            keyPassword = System.getenv("KEYSTORE_KEY_PASSWD")
-        }
-    }
-
 }
 
-// Manual Google Play Store and Accrescent builds
+// Manual Accrescent build
+// build with '-Pmanual_upload_oss buildApksRelease'
+// output at 'app/build/outputs/apkset/release/app-release.apks'
+if (project.hasProperty("manual_upload_oss")) {
+    bundletool {
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
+        signingConfig {
+            storeFile = file(properties.getProperty("uploadsigning_oss.file"))
+            storePassword = properties.getProperty("uploadsigning_oss.password")
+            keyAlias = properties.getProperty("uploadsigning_oss.key.alias")
+            keyPassword = properties.getProperty("uploadsigning_oss.key.password")
+        }
+    }
+}
+
+// Manual Google Play Store build
+// build with '-Pmanual_upload bundleRelease'
+// output at 'app/build/outputs/bundle/release/app-release.aab'
 if (project.hasProperty("manual_upload")) {
     val properties = Properties()
     properties.load(project.rootProject.file("local.properties").inputStream())
@@ -104,15 +117,6 @@ if (project.hasProperty("manual_upload")) {
         }
     }
     android.buildTypes.getByName("release").signingConfig = android.signingConfigs.getByName("upload")
-
-    bundletool {
-        signingConfig {
-            storeFile = file(properties.getProperty("uploadsigning.file"))
-            storePassword = properties.getProperty("uploadsigning.password")
-            keyAlias = properties.getProperty("uploadsigning.key.alias")
-            keyPassword = properties.getProperty("uploadsigning.key.password")
-        }
-    }
 }
 
 dependencies {
