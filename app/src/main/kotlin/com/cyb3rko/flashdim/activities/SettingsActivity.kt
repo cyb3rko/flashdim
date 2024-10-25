@@ -30,6 +30,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
+import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
 import com.cyb3rko.flashdim.modals.AccessibilityInfoDialog
@@ -154,9 +155,15 @@ internal class SettingsActivity :
                     true
                 }
             }
-            findPreference<Preference>("volume_buttons")?.setOnPreferenceClickListener {
-                AccessibilityInfoDialog.show(myContext)
-                true
+            @Suppress("KotlinConstantConditions")
+            if (BuildConfig.BUILD_TYPE != "libre") {
+                findPreference<Preference>("volume_buttons")?.apply {
+                    isEnabled = true
+                    setOnPreferenceClickListener {
+                        AccessibilityInfoDialog.show(myContext)
+                        true
+                    }
+                }
             }
         }
 

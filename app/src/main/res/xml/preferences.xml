@@ -50,6 +50,7 @@
         <Preference
             app:key="volume_buttons"
             app:title="@string/preference_item_volume_buttons"
+            app:enabled="false"
             app:summary="@string/preference_item_volume_buttons_summary"
             app:icon="@drawable/ic_button_service" />
 

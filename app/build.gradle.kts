@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.Properties
 
@@ -35,6 +37,16 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
+            )
+        }
+        // buildType without accessibility services
+        register("libre") {
+            resValue("string", "app_name", "FlashDim")
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules-libre.pro"
             )
         }
     }
@@ -85,8 +97,8 @@ if (project.hasProperty("sign")) {
 }
 
 // Manual Accrescent build
-// build with '-Pmanual_upload_oss buildApksRelease'
-// output at 'app/build/outputs/apkset/release/app-release.apks'
+// build with '-Pmanual_upload_oss buildApksLibre'
+// output at 'app/build/outputs/apkset/libre/app-libre.apks'
 if (project.hasProperty("manual_upload_oss")) {
     bundletool {
         val properties = Properties()

@@ -23,6 +23,8 @@ import com.cyb3rko.flashdim.R
 import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
+// included in buildType "debug", "release"
+// excluded in buildType "libre"
 internal object AccessibilityInfoDialog {
     fun show(context: Context) {
         MaterialAlertDialogBuilder(

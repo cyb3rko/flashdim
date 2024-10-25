@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <!-- This feature is required for a flashlight app -->
     <uses-feature
         android:name="android.hardware.camera.flash"
@@ -68,6 +69,8 @@
                 android:value="false" />
         </service>
 
+        <!-- included in buildType "debug", "release" -->
+        <!-- excluded in buildType "libre" -->
         <service
             android:name=".service.VolumeButtonService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
