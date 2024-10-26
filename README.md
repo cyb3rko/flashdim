@@ -148,7 +148,7 @@ The following list shows phones, which were manually excluded by myself in the G
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<em>Total: 635</em>
+<em>Total: 641</em>
 <details>
   <summary>8849 (2)</summary>
   <ul>
@@ -451,7 +451,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>OnePlus (33)</summary>
+  <summary>OnePlus (34)</summary>
   <ul>
     <li>OnePlus 8 (OnePlus OnePlus8)</li>
     <li>OnePlus 8 5G (OnePlus OnePlus8TMO)</li>
@@ -482,6 +482,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>OnePlus Nord CE 5G (OnePlus OnePlusNordCE)</li>
     <li>OnePlus Nord CE4 (OnePlus OP5D3FL1)</li>
     <li>OnePlus Nord N30 5G (OnePlus OP5958L1)</li>
+    <li>OnePlus Nord N30 SE 5G (OnePlus OP5955L1)</li>
     <li>OnePlus Nord N300 5G (OnePlus OP5547L1)</li>
     <li>OnePlus Nord2 5G (OnePlus OP515BL1)</li>
     <li>OnePlus Oneplus Nord CE4 Lite 5G (OnePlus OP5D49L1)</li>
@@ -799,12 +800,13 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Tecno (26)</summary>
+  <summary>Tecno (28)</summary>
   <ul>
     <li>Tecno CAMON 19 (TECNO TECNO-CI6, TECNO TECNO-CI6n)</li>
     <li>Tecno CAMON 19 Neo (TECNO TECNO-CH6i)</li>
     <li>Tecno CAMON 20 Pro (TECNO TECNO-CK7n)</li>
     <li>Tecno CAMON 20 Pro 5G (TECNO TECNO-CK8n)</li>
+    <li>Tecno PHANTOM V Flip 5G (TECNO TECNO-AD11)</li>
     <li>Tecno POVA 5 (TECNO TECNO-LH7n)</li>
     <li>Tecno POVA 5 Pro 5G (TECNO TECNO-LH8n)</li>
     <li>Tecno SPARK 10 5G (TECNO TECNO-KI8)</li>
@@ -816,6 +818,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Tecno TECNO CAMON 30 5G (TECNO TECNO-CL7, TECNO TECNO-CL7k, TECNO TECNO-CL7s)</li>
     <li>Tecno TECNO CAMON 30 Pro 5G (TECNO TECNO-CL8)</li>
     <li>Tecno TECNO PHANTOM V Fold (TECNO TECNO-AD10)</li>
+    <li>Tecno TECNO POP 8 (TECNO TECNO-BG6i)</li>
     <li>Tecno TECNO POVA 6 (TECNO TECNO-LI7)</li>
     <li>Tecno TECNO POVA 6 Pro 5G (TECNO TECNO-LI9)</li>
     <li>Tecno TECNO POVA Neo 3 (TECNO TECNO-LH6n)</li>
@@ -871,7 +874,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Vivo (97)</summary>
+  <summary>Vivo (98)</summary>
   <ul>
     <li>Vivo I2009 (iQOO 2009)</li>
     <li>Vivo I2011 (iQOO 2011)</li>
@@ -970,6 +973,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Vivo Y28s 5G (vivo V2346)</li>
     <li>Vivo Y33t (vivo PD2317)</li>
     <li>Vivo Y35 (vivo V2205)</li>
+    <li>Vivo Y58 5G (vivo V2355)</li>
   </ul>
 </details>
 <details>
@@ -1040,10 +1044,12 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>ZTE (5)</summary>
+  <summary>ZTE (7)</summary>
   <ul>
+    <li>ZTE 5G UG Phone U25 (nubia P720F09_U)</li>
     <li>ZTE 8050 (ZTE P606F08)</li>
     <li>ZTE Blade A54 (ZTE P963F64)</li>
+    <li>ZTE Blade A75 5G (ZTE P720F09)</li>
     <li>ZTE Blade V50 Vita (ZTE P606F09)</li>
     <li>ZTE NX711J (nubia PQ82A01)</li>
     <li>ZTE NX729J (nubia NX729J-EEA, nubia NX729J-UN)</li>
