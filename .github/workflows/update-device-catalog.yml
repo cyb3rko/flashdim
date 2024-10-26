@@ -46,5 +46,5 @@ jobs:
           git config user.email github-actions@github.com
           git checkout main
           git add README.md
-          git commit -m "repo: Fill README with excluded devices"
+          git commit -m "docs: fill README with excluded devices"
           git push

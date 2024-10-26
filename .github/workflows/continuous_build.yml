@@ -10,12 +10,15 @@ on:
       - '**.md'
       - '**.csv'
       - '**.py'
-      - 'app/src/main/baseline-prof.txt'
+      - 'app/src/release/generated/baselineProfiles/**-prof.txt'
+      - 'app/**.pro'
       - 'LICENSE'
       - '.github/workflows/release-builder.yml'
       - '.github/workflows/fossa.yml'
       - '.github/workflows/update-device-catalog.yml'
       - '.github/FUNDING.yml'
+      - '.editorconfig'
+      - '.idea/**'
   pull_request:
 
 jobs:

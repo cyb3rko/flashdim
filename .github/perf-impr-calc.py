@@ -22,4 +22,7 @@ print(f"Marker index at {first_index}")
 
 print("Writing changelog output")
 changelog = changelog.replace(marker, str(rounded_percent))
-print(f"::set-output name=changelog::{changelog}")
+with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+    f.write("changelog<<EOF\n")
+    f.write(changelog)
+    f.write("\nEOF\n")
