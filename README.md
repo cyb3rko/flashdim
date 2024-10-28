@@ -70,13 +70,12 @@ Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.c
 
 ## Download
 
-[<img height=80 alt="Get it on Google Play"
-src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
-/>](http://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
-[<img height="80" alt="Get it on F-Droid"
-src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-/>](https://f-droid.org/app/com.cyb3rko.flashdim)
+[<img height=80 alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"/>](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
+[<img height="80" alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"/>](https://f-droid.org/app/com.cyb3rko.flashdim)
+[<img height="80" src="https://accrescent.app/badges/get-it-on.png"/>](https://accrescent.app/app/com.cyb3rko.flashdim)
 [<img height="80" src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"/>](https://github.com/cyb3rko/flashdim/releases/latest)
+
+Google Play and the Google Play logo are trademarks of Google LLC.
 
 ### Verification
 
