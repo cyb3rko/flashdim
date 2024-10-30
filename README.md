@@ -146,7 +146,7 @@ The following list contains phones, which were manually excluded in the Google P
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<b>Total: 641</b>
+<b>Total: 643</b>
 
 [8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [F](#f) [G](#g) [H](#h) [I](#i) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
@@ -429,13 +429,14 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="N">
-  <summary>Nokia (7)</summary>
+  <summary>Nokia (8)</summary>
   <ul>
     <li>Nokia C22 (Nokia HKEA)</li>
     <li>Nokia C32 (Nokia MKDA)</li>
     <li>Nokia G10 (Nokia ROGA_sprout)</li>
     <li>Nokia G11 Plus (Nokia MGKA_sprout)</li>
     <li>Nokia G21 (Nokia SCPA_sprout, Nokia SCP_sprout)</li>
+    <li>Nokia G22 (Nokia SFI, Nokia SFIA)</li>
     <li>Nokia G42 5G (Nokia SDW)</li>
     <li>Nokia G50 (Nokia PHR_sprout)</li>
   </ul>
@@ -487,7 +488,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Oppo (62)</summary>
+  <summary>Oppo (63)</summary>
   <ul>
     <li>Oppo A18 (OPPO OP575DL1)</li>
     <li>Oppo A38 (OPPO OP5759L1)</li>
@@ -541,6 +542,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Oppo OPPO Reno10 5G (OPPO OP5655)</li>
     <li>Oppo OPPO Reno10 Pro 5G (OPPO OP561F)</li>
     <li>Oppo OPPO Reno10 Pro+ 5G (OPPO OP564B)</li>
+    <li>Oppo PEGT00 (OPPO OP4E8F)</li>
     <li>Oppo PFZM10 (OPPO OP5281)</li>
     <li>Oppo Reno5 Lite (OPPO OP4F43L1)</li>
     <li>Oppo Reno6 Pro+ 5G (OPPO OP4EC1)</li>
