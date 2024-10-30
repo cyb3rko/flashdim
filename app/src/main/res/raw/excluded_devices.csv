@@ -11,7 +11,7 @@ benco AE9240,benco AE9240,benco,AE9240
 benco V91,benco AE9310,benco,AE9310
 Blackview BL9000,Blackview BL9000,Blackview,BL9000
 Blackview Shark 8,Blackview Shark8,Blackview,Shark8
-Blu B160V,BLU B160V,Blue,B160V
+Blu B160V,BLU B160V,Blu,B160V
 Blu BOLD N3,BLU N0070,Blu,N0070
 Blu G33,BLU G0890,Blu,G0890
 Blu G33,BLU G0892,Blu,G0892
@@ -178,6 +178,8 @@ Nokia G10,Nokia ROGA_sprout,Nokia,Nokia ROGA_sprout
 Nokia G11 Plus,Nokia MGKA_sprout,Nokia,Nokia MGKA_sprout
 Nokia G21,Nokia SCPA_sprout,Nokia,SCPA_sprout
 Nokia G21,Nokia SCP_sprout,Nokia,SCP_sprout
+Nokia G22,Nokia SFI,Nokia,SFI
+Nokia G22,Nokia SFIA,Nokia,SFIA
 Nokia G42 5G,Nokia SDW,Nokia,SDW
 Nokia G50,Nokia PHR_sprout,Nokia,PHR_sprout
 Nothing Phone 1,Nothing Spacewar,Nothing,Spacewar
@@ -272,6 +274,7 @@ Oppo OPPO Reno9 Pro 5G,OPPO OP5601,Oppo,OP5601
 Oppo OPPO Reno10 5G,OPPO OP5655,Oppo,OP5655
 Oppo OPPO Reno10 Pro 5G,OPPO OP561F,Oppo,OP561F
 Oppo OPPO Reno10 Pro+ 5G,OPPO OP564B,Oppo,OP564B
+Oppo PEGT00,OPPO OP4E8F,Oppo,OP4E8F
 Oppo PFZM10,OPPO OP5281,Oppo,OP5281
 Oppo Reno5 Lite,OPPO OP4F43L1,Oppo,OP4F43L1
 Oppo Reno6 Pro+ 5G,OPPO OP4EC1,Oppo,OP4EC1
