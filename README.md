@@ -1,4 +1,4 @@
-# FlashDim
+# FlashDim - Dim your flashlight
 [![API](https://img.shields.io/badge/API-33%2B-brightgreen.svg?style=flat)](https://apilevels.com)
 [![gplay](https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.cyb3rko.flashdim%26l%3Dgplay%26m%3Dv%24version&color=blue)](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
 [![fdroid](https://img.shields.io/f-droid/v/com.cyb3rko.flashdim.svg)](https://f-droid.org/packages/com.cyb3rko.flashdim)
@@ -1073,7 +1073,11 @@ Using a unified code format makes it much easier for me and for everyone else.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date)](https://star-history.com/#cyb3rko/flashdim&Date)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date" />
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date" />
+</picture>
 
 ## License
 
