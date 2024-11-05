@@ -1,12 +1,13 @@
 # FlashDim - Dim your flashlight
-[![API](https://img.shields.io/badge/API-33%2B-brightgreen.svg?style=flat)](https://apilevels.com)
-[![gplay](https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.cyb3rko.flashdim%26l%3Dgplay%26m%3Dv%24version&color=blue)](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
-[![fdroid](https://img.shields.io/f-droid/v/com.cyb3rko.flashdim.svg)](https://f-droid.org/packages/com.cyb3rko.flashdim)
-[![github](https://img.shields.io/github/release/cyb3rko/flashdim.svg)](https://github.com/cyb3rko/flashdim/releases/latest)
-[![license](https://img.shields.io/github/license/cyb3rko/logviewer-for-openhab-app)](https://www.apache.org/licenses/LICENSE-2.0)
-[![last commit](https://img.shields.io/github/last-commit/cyb3rko/flashdim?color=F34C9F)](https://github.com/cyb3rko/flashdim/commits/main)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e7fd3ea03da4a32aae48ff39693ee91)](https://www.codacy.com/gh/cyb3rko/flashdim/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cyb3rko/flashdim&amp;utm_campaign=Badge_Grade)
+[![Matrix](https://img.shields.io/matrix/flashdim%3Amatrix.org?logo=matrix&label=Matrix%20Chat&color=black)](https://matrix.to/#/#flashdim:matrix.org)
+[![API](https://img.shields.io/badge/API-33%2B-coral?logo=android&logoColor=white)](https://apilevels.com)
+[![gplay](https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.cyb3rko.flashdim%26l%3Dgplay%26m%3Dv%24version&color=blue&logo=googleplay)](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
+[![fdroid](https://img.shields.io/f-droid/v/com.cyb3rko.flashdim.svg?logo=fdroid)](https://f-droid.org/packages/com.cyb3rko.flashdim)
+[![github](https://img.shields.io/github/release/cyb3rko/flashdim.svg?logo=github)](https://github.com/cyb3rko/flashdim/releases/latest)
+[![last commit](https://img.shields.io/github/last-commit/cyb3rko/flashdim?color=FE5196&logo=git&logoColor=white)](https://github.com/cyb3rko/flashdim/commits/main)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![license](https://img.shields.io/github/license/cyb3rko/flashdim?color=1BCC1B&logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e7fd3ea03da4a32aae48ff39693ee91)](https://www.codacy.com/gh/cyb3rko/flashdim/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cyb3rko/flashdim&amp;utm_campaign=Badge_Grade)
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a>
@@ -49,6 +50,9 @@ To be able to use this new feature I've developed this app.
 > See [Supported devices](#supported-devices)
 
 If you think it's worth to support this project, feel free to give a small donation :heart:.
+
+Join the FlashDim Matrix room to talk with the community about the app or to ask me (the dev) anything:  
+https://matrix.to/#/#flashdim:matrix.org
 
 ---
 
