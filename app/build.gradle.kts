@@ -101,13 +101,11 @@ if (project.hasProperty("sign")) {
 // output at 'app/build/outputs/apkset/libre/app-libre.apks'
 if (project.hasProperty("manual_upload_oss")) {
     bundletool {
-        val properties = Properties()
-        properties.load(project.rootProject.file("local.properties").inputStream())
         signingConfig {
-            storeFile = file(properties.getProperty("uploadsigning_oss.file"))
-            storePassword = properties.getProperty("uploadsigning_oss.password")
-            keyAlias = properties.getProperty("uploadsigning_oss.key.alias")
-            keyPassword = properties.getProperty("uploadsigning_oss.key.password")
+            storeFile = file(System.getenv("KEYSTORE_FILE"))
+            storePassword = System.getenv("KEYSTORE_PASSWD")
+            keyAlias = System.getenv("KEYSTORE_KEY_ALIAS")
+            keyPassword = System.getenv("KEYSTORE_KEY_PASSWD")
         }
     }
 }

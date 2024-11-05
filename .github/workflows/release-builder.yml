@@ -111,7 +111,9 @@ jobs:
           export KEYSTORE_FILE=$(pwd)/keystore.jks
           echo $KEYSTORE | base64 -d > $KEYSTORE_FILE
           ./gradlew -Psign assembleRelease --stacktrace
-          cp app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/FlashDim-$RELEASE_VERSION.apk
+          cp app/build/outputs/apk/release/app-release.apk app/build/outputs/FlashDim-$RELEASE_VERSION.apk
+          ./gradlew -Pmanual_upload_oss buildApksLibre --stacktrace
+          cp app/build/outputs/apkset/libre/app-libre.apks app/build/outputs/FlashDim-libre-$RELEASE_VERSION.apks
         env:
           KEYSTORE: ${{ secrets.KEYSTORE }}
           KEYSTORE_PASSWD: ${{ secrets.KEYSTORE_PASSWD }}
@@ -119,9 +121,7 @@ jobs:
           KEYSTORE_KEY_PASSWD: ${{ secrets.KEYSTORE_KEY_PASSWD }}
 
       - name: List build output
-        run: |
-          cd app/build/outputs/apk/release/
-          ls
+        run: ls app/build/outputs
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
@@ -130,4 +130,6 @@ jobs:
         with:
           name: "Version ${{ env.RELEASE_VERSION }}"
           body: ${{env.CHANGELOG}}
-          files: app/build/outputs/apk/release/FlashDim-${{env.RELEASE_VERSION}}.apk
+          files: |
+            app/build/outputs/FlashDim-${{env.RELEASE_VERSION}}.apk
+            app/build/outputs/FlashDim-libre-${{env.RELEASE_VERSION}}.apks
