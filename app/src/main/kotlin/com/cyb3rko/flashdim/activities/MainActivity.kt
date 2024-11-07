@@ -421,7 +421,15 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch(morseExceptionHandler) {
             var lastLetter = Char.MIN_VALUE
             val handler = MorseHandler { letter, code, delay, on ->
-                camera.setTorchMode(on)
+                if (on) {
+                    if (maxLevel > 1) {
+                        camera.sendLightLevel(this@MainActivity, -1, maxLevel)
+                    } else {
+                        camera.setTorchMode(true)
+                    }
+                } else {
+                    camera.setTorchMode(false)
+                }
                 if (vibrateMorse && on) Vibrator.vibrate(delay)
 
                 if (lastLetter != letter) {
