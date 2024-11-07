@@ -22,6 +22,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.VibratorManager
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -254,16 +255,28 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkDeviceSupport(forceShow: Boolean = false) {
         if (forceShow) {
-            showDeviceChipAndDialog(true)
+            showDeviceChipAndDialog(newReport = true)
             return
         }
         lifecycleScope.launch(Dispatchers.IO) {
             val excluded = DeviceSupportManager.isExcluded(resources)
             withContext(Dispatchers.Main) {
-                if (excluded && maxLevel > 1) {
-                    showDeviceChipAndDialog(false)
-                } else if (!excluded && maxLevel <= 1) {
-                    showDeviceChipAndDialog(true)
+                // if device report locked, skip device support logic
+                if (excluded.second) {
+                    Log.d("FlashDim", "Device report locked, it's not supported")
+                    return@withContext
+                }
+                if (excluded.first && maxLevel > 1) {
+                    // report wrongly excluded device
+                    Log.d("FlashDim", "Device report may be faulty, showing chip and dialog")
+                    showDeviceChipAndDialog(newReport = false)
+                } else if (!excluded.first && maxLevel <= 1) {
+                    // report unsupported device
+                    Log.d("FlashDim", "Device not supported, showing chip and dialog")
+                    showDeviceChipAndDialog(newReport = true)
+                } else {
+                    // device is supported or was already reported as "unsupported"
+                    Log.d("FlashDim", "No report required, device is supported or already reported")
                 }
             }
         }
