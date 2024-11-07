@@ -150,7 +150,7 @@ The following list contains phones, which were manually excluded in the Google P
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<b>Total: 643</b>
+<b>Total: 649</b>
 
 [8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [F](#f) [G](#g) [H](#h) [I](#i) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
@@ -186,9 +186,11 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Blackview (2)</summary>
+  <summary>Blackview (4)</summary>
   <ul>
     <li>Blackview BL9000 (Blackview BL9000)</li>
+    <li>Blackview BV8900 (Blackview BV8900)</li>
+    <li>Blackview BV8900 Pro (Blackview BV8900_Pro)</li>
     <li>Blackview Shark 8 (Blackview Shark8)</li>
   </ul>
 </details>
@@ -453,7 +455,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="O">
-  <summary>OnePlus (34)</summary>
+  <summary>OnePlus (35)</summary>
   <ul>
     <li>OnePlus 8 (OnePlus OnePlus8)</li>
     <li>OnePlus 8 5G (OnePlus OnePlus8TMO)</li>
@@ -488,6 +490,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>OnePlus Nord N300 5G (OnePlus OP5547L1)</li>
     <li>OnePlus Nord2 5G (OnePlus OP515BL1)</li>
     <li>OnePlus Oneplus Nord CE4 Lite 5G (OnePlus OP5D49L1)</li>
+    <li>OnePlus OnePlus6T (OnePlus OnePlus6T)</li>
     <li>OnePlus Open (OnePlus OP5973L1)</li>
   </ul>
 </details>
@@ -572,7 +575,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>POCO (27)</summary>
+  <summary>POCO (28)</summary>
   <ul>
     <li>POCO C51 (POCO water)</li>
     <li>POCO C55 (POCO earth)</li>
@@ -590,6 +593,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>POCO M4 Pro 5G (POCO evergo, POCO evergreen)</li>
     <li>POCO M5 (POCO rock, POCO stone)</li>
     <li>POCO M5s (POCO rosemary)</li>
+    <li>POCO M6 (POCO moon)</li>
     <li>POCO M6 Plus 5G (POCO breeze)</li>
     <li>POCO M6 Pro (POCO emerald)</li>
     <li>POCO M6 Pro 5G (POCO sky)</li>
@@ -681,8 +685,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Redmi (60)</summary>
+  <summary>Redmi (62)</summary>
   <ul>
+    <li>Redmi 9 (Redmi lancelot)</li>
     <li>Redmi 9T (Redmi lime)</li>
     <li>Redmi 10 2022 (Redmi eos, Redmi selene)</li>
     <li>Redmi 10 5G (Redmi thunder)</li>
@@ -692,8 +697,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Redmi 12 (Redmi fire, Redmi heat)</li>
     <li>Redmi 12 5G (Redmi river, Redmi sky, Redmi XIG03)</li>
     <li>Redmi 12C (Redmi aether, Redmi earth)</li>
+    <li>Redmi 13 (Redmi moon)</li>
     <li>Redmi 13C (Redmi gale, Redmi gust)</li>
-    <li>Redmi 13C 5G (Redmi air)</li>
+    <li>Redmi 13C 5G (Redmi air, Redmi atmos)</li>
     <li>Redmi 14C (Redmi lake, Redmi pond)</li>
     <li>Redmi A2 (Redmi cloud)</li>
     <li>Redmi A2+ (Redmi water)</li>
@@ -780,7 +786,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Sony Xperia 1 IV (Sony XQ-CT54, Sony XQ-CT72)</li>
     <li>Sony Xperia 1 V (Sony XQ-DQ54, Sony XQ-DQ62, Sony XQ-DQ72)</li>
     <li>Sony Xperia 1 VI (Sony XQ-EC44)</li>
-    <li>Sony Xperia 10 III (Sony XQ-BT52)</li>
+    <li>Sony Xperia 10 III (KDDI SOG04, Sony XQ-BT52)</li>
     <li>Sony Xperia 10 IV (Sony XQ-CC54)</li>
     <li>Sony Xperia 10 V (Sony XQ-DC54, Sony XQ-DC72)</li>
     <li>Sony Xperia 10 VI (Sony XQ-ES54)</li>
