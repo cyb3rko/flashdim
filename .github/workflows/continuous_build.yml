@@ -35,12 +35,12 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - uses: burrunan/gradle-cache-action@v1
+      - uses: burrunan/gradle-cache-action@latest
         name: Build APK with cached .gradle
         with:
           job-id: assembleRelease
           # Makes all non-main branch builds to use read-only caching
-          #read-only: ${{ github.ref != 'refs/heads/main' }}
+          read-only: ${{ github.ref != 'refs/heads/main' }}
           # Arguments for Gradle execution
           arguments: assembleRelease --stacktrace
 
