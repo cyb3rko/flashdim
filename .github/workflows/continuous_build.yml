@@ -43,11 +43,6 @@ jobs:
           #read-only: ${{ github.ref != 'refs/heads/main' }}
           # Arguments for Gradle execution
           arguments: assembleRelease --stacktrace
-          # Disable caching of ~/.gradle/caches/build-cache-*
-          save-local-build-cache: false
-          # Extra files to take into account for ~/.gradle/caches dependencies
-          gradle-dependencies-cache-key: |
-            gradle/libs.versions.toml
 
       - name: List build output
         run: |
