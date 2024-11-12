@@ -35,7 +35,7 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - uses: burrunan/gradle-cache-action@latest
+      - uses: burrunan/gradle-cache-action@v2
         name: Build APK with cached .gradle
         with:
           job-id: assembleRelease
