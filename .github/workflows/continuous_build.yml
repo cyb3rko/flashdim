@@ -40,7 +40,7 @@ jobs:
         with:
           job-id: assembleRelease
           # Makes all non-main branch builds to use read-only caching
-          read-only: ${{ github.ref != 'refs/heads/main' }}
+          #read-only: ${{ github.ref != 'refs/heads/main' }}
           # Arguments for Gradle execution
           arguments: assembleRelease --stacktrace
           # Extra files to take into account for ~/.gradle/caches dependencies
