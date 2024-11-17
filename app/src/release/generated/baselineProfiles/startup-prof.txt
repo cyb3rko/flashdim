@@ -2315,7 +2315,7 @@ HSPLcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1;-><init>(L
 HSPLcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 HSPLcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
 Lcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1$1;
-HSPLcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1$1;-><init>(ZLcom/cyb3rko/flashdim/activities/MainActivity;Lkotlin/coroutines/Continuation;)V
+HSPLcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1$1;-><init>(Lkotlin/Pair;Lcom/cyb3rko/flashdim/activities/MainActivity;Lkotlin/coroutines/Continuation;)V
 HSPLcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1$1;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 HSPLcom/cyb3rko/flashdim/activities/MainActivity$checkDeviceSupport$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
 Lcom/cyb3rko/flashdim/activities/MainActivity$initSeekbar$1;
@@ -2340,15 +2340,15 @@ HSPLcom/cyb3rko/flashdim/seekbar/LightLevelSeekBar;->setOnProgressChanged(Lcom/c
 HSPLcom/cyb3rko/flashdim/seekbar/LightLevelSeekBar;->setProgress(I)V
 Lcom/cyb3rko/flashdim/seekbar/SeekBarChangeListener;
 Lcom/cyb3rko/flashdim/utils/DeviceSupportManager;
-HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->$r8$lambda$8AfvX2hy8xcyNiNlYicaYBb22ow(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->$r8$lambda$FJi3eNY1Is0iLPZ128cwJsB82Tw(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Z
+HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->$r8$lambda$ayIL2GxaNdqiXQhqAL98ZOJbQRY(Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlin/jvm/internal/Ref$BooleanRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;-><clinit>()V
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;-><init>()V
-HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->isExcluded$lambda$0(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->isExcluded$lambda$0(Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlin/jvm/internal/Ref$BooleanRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->isExcluded$lambda$1(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;)Z
-HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->isExcluded(Landroid/content/res/Resources;)Z
+HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager;->isExcluded(Landroid/content/res/Resources;)Lkotlin/Pair;
 Lcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda0;
-HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda0;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda0;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lkotlin/jvm/internal/Ref$BooleanRef;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 Lcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda1;
 HSPLcom/cyb3rko/flashdim/utils/DeviceSupportManager$$ExternalSyntheticLambda1;-><init>(Lkotlin/jvm/functions/Function1;)V
@@ -3129,6 +3129,8 @@ HSPLkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsKt;->getCOROUTINE_SUSPE
 Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;
 HSPLkotlin/coroutines/jvm/internal/BaseContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;)V
 HSPLkotlin/coroutines/jvm/internal/BaseContinuationImpl;->resumeWith(Ljava/lang/Object;)V
+Lkotlin/coroutines/jvm/internal/Boxing;
+HSPLkotlin/coroutines/jvm/internal/Boxing;->boxInt(I)Ljava/lang/Integer;
 Lkotlin/coroutines/jvm/internal/CompletedContinuation;
 HSPLkotlin/coroutines/jvm/internal/CompletedContinuation;-><clinit>()V
 HSPLkotlin/coroutines/jvm/internal/CompletedContinuation;-><init>()V
@@ -3217,6 +3219,8 @@ HSPLkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Obje
 HSPLkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 Lkotlin/jvm/internal/Lambda;
 HSPLkotlin/jvm/internal/Lambda;-><init>(I)V
+Lkotlin/jvm/internal/Ref$BooleanRef;
+HSPLkotlin/jvm/internal/Ref$BooleanRef;-><init>()V
 Lkotlin/jvm/internal/Ref$ObjectRef;
 HSPLkotlin/jvm/internal/Ref$ObjectRef;-><init>()V
 Lkotlin/jvm/internal/Reflection;
