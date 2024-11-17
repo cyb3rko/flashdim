@@ -23,6 +23,7 @@ Blu G53,BLU G0850_IW,Blu,G0850_IW,false
 Blu G53,BLU G0850_TIGO,Blu,G0850_TIGO,false
 Blu G53,BLU G0851,Blu,G0851,false
 Blu G63,BLU G0870,Blu,G0870,false
+Blu G73,BLU G0771,Blu,G0771,false
 Cricket Debut S2™,Cricket U380AC,Cricket,U380AC,false
 Cubot P80,CUBOT P80,Cubot,P80,false
 Cubot X70,CUBOT X70,Cubot,X70,false
@@ -90,6 +91,7 @@ Infinix NOTE 40,Infinix Infinix-X6853,Infinix,Infinix-X6853,false
 Infinix NOTE 40 Pro 5G,Infinix Infinix-X6851,Infinix,Infinix-X6851,false
 Infinix NOTE 40 Pro+ 5G,Infinix Infinix-X6851B,Infinix,Infinix-X6851B,false
 Infinix SMART 8 HD,Infinix Infinix-X6525,Infinix,Infinix-X6525,false
+Infinix SMART 8 Plus,Infinix Infinix-X6526,Infinix,Infinix-X6526,false
 Infinix SMART 8 PRO,Infinix Infinix-X6525B,Infinix,Infinix-X6525B,false
 Infinix ZERO 30,Infinix Infinix-X6731B,Infinix,Infinix-X6731B,false
 Infinix ZERO 30 5G,Infinix Infinix-X6731,Infinix,Infinix-X6731,false
@@ -405,6 +407,7 @@ realme 真我GT 2,realme RE58B2L1,realme,RE58B2L1,false
 realme 真我GT Neo,realme RMX3031CN,realme,RMX3031CN,false
 Realme 真我GT Neo2T,realme RE5469,realme,RE5469,false
 realme 真我 GT NEO 3 150W,realme RE5489,realme,RE5489,false
+Redmi 7,xiaomi onc,Redmi,onc,false
 Redmi 9,Redmi lancelot,Redmi,lancelot,false
 Redmi 9T,Redmi lime,Redmi,lime,false
 Redmi 10 2022,Redmi eos,Redmi,eos,false
@@ -440,6 +443,7 @@ Redmi K50G,Redmi ingres,Redmi,ingres,false
 Redmi K50i,Redmi xagain,Redmi,xagain,false
 Redmi K60,Redmi mondrian,Redmi,mondrian,false
 Redmi K60E,Redmi rembrandt,Redmi,rembrandt,false
+Redmi Mi 9T Pro,Xiaomi raphaelin,Redmi,raphaelin,false
 Redmi Note 8,Redmi biloba,Redmi,biloba,false
 Redmi Note 8,xiaomi ginkgo,Redmi,ginkgo,false
 Redmi Note 9,Redmi merlin,Redmi,merlin,false
@@ -526,6 +530,7 @@ Sony Xperia 5 IV,Sony XQ-CQ54,Sony,XQ-CQ54,false
 Sony Xperia 5 IV,Sony XQ-CQ62,Sony,XQ-CQ62,false
 Sony Xperia 5 V,Sony XQ-DE54,Sony,XQ-DE54,false
 TCL 50 XL 5G,TCL Goldfinch_TMO,TCL,Goldfinch_TMO,false
+TCL T607DL,TCL Bora_TF,TCL,Bora_TF,false
 T-Mobile REVVL 6,T-Mobile Bethpage,T-Mobile,Bethpage,false
 T-Mobile REVVL 6 Pro,T-Mobile Augusta,T-Mobile,Augusta,false
 Tecno CAMON 19,TECNO TECNO-CI6,Tecno,TECNO-CI6,false
@@ -701,6 +706,7 @@ Vortex J24,Vortex J24,Vortex,J24,false
 Vortex ZG55,Vortex ZG55,Vortex,ZG55,false
 Vortex ZG65 Pro,Vortex ZG65_Pro,Vortex,ZG65_Pro,false
 Walton XANON X20,WALTON XANON_X20,Walton,XANON_X20,false
+Xiaomi 7,xiaomi onc,Xiaomi,onc,false
 Xiaomi 11 Lite 5G NE,Xiaomi lisa,Xiaomi,lisa,false
 Xiaomi 11 Lite NE,Xiaomi lisa,Xiaomi,lisa,false
 Xiaomi 11i,Xiaomi pissarroin,Xiaomi,pissarroin,false
@@ -718,7 +724,7 @@ Xiaomi 12X,Xiaomi psyche,Xiaomi,psyche,false
 Xiaomi 13T,Xiaomi aristotle,Xiaomi,aristotle,false
 Xiaomi 13T,Xiaomi XIG04,Xiaomi,XIG04,false
 Xiaomi 14,Xiaomi houji,Xiaomi,houji,true
-Xiaomi 14 Ultra,Xiaomi aurora,Xiaomi,aurora,false
+Xiaomi 14 Ultra,Xiaomi aurora,Xiaomi,aurora,true
 Xiaomi Mi 8,Xiaomi dipper,Xiaomi,dipper,false
 Xiaomi Mi 10,Xiaomi umi,Xiaomi,umi,false
 Xiaomi Mi 10 Pro,Xiaomi cmi,Xiaomi,cmi,false
