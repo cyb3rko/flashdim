@@ -150,7 +150,7 @@ The following list contains phones, which were manually excluded in the Google P
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<b>Total: 649</b>
+<b>Total: 655</b>
 
 [8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [F](#f) [G](#g) [H](#h) [I](#i) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
@@ -195,13 +195,14 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Blu (5)</summary>
+  <summary>Blu (6)</summary>
   <ul>
     <li>Blu B160V (BLU B160V)</li>
     <li>Blu BOLD N3 (BLU N0070)</li>
     <li>Blu G33 (BLU G0890, BLU G0892)</li>
     <li>Blu G53 (BLU G0850, BLU G0850_IW, BLU G0850_TIGO, BLU G0851)</li>
     <li>Blu G63 (BLU G0870)</li>
+    <li>Blu G73 (BLU G0771)</li>
   </ul>
 </details>
 <details name="C">
@@ -305,7 +306,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Infinix (22)</summary>
+  <summary>Infinix (23)</summary>
   <ul>
     <li>Infinix GT 10 Pro (Infinix Infinix-X6739)</li>
     <li>Infinix GT 20 Pro (Infinix Infinix-X6871)</li>
@@ -325,6 +326,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Infinix NOTE 40 Pro 5G (Infinix Infinix-X6851)</li>
     <li>Infinix NOTE 40 Pro+ 5G (Infinix Infinix-X6851B)</li>
     <li>Infinix SMART 8 HD (Infinix Infinix-X6525)</li>
+    <li>Infinix SMART 8 Plus (Infinix Infinix-X6526)</li>
     <li>Infinix SMART 8 PRO (Infinix Infinix-X6525B)</li>
     <li>Infinix ZERO 30 (Infinix Infinix-X6731B)</li>
     <li>Infinix ZERO 30 5G (Infinix Infinix-X6731)</li>
@@ -685,8 +687,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Redmi (62)</summary>
+  <summary>Redmi (64)</summary>
   <ul>
+    <li>Redmi 7 (xiaomi onc)</li>
     <li>Redmi 9 (Redmi lancelot)</li>
     <li>Redmi 9T (Redmi lime)</li>
     <li>Redmi 10 2022 (Redmi eos, Redmi selene)</li>
@@ -712,6 +715,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Redmi K50i (Redmi xagain)</li>
     <li>Redmi K60 (Redmi mondrian)</li>
     <li>Redmi K60E (Redmi rembrandt)</li>
+    <li>Redmi Mi 9T Pro (Xiaomi raphaelin)</li>
     <li>Redmi Note 8 (Redmi biloba, xiaomi ginkgo)</li>
     <li>Redmi Note 9 (Redmi merlin, Redmi merlinnfc)</li>
     <li>Redmi Note 9 Pro (Redmi joyeuse)</li>
@@ -796,9 +800,10 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="T">
-  <summary>TCL (1)</summary>
+  <summary>TCL (2)</summary>
   <ul>
     <li>TCL 50 XL 5G (TCL Goldfinch_TMO)</li>
+    <li>TCL T607DL (TCL Bora_TF)</li>
   </ul>
 </details>
 <details>
@@ -1002,8 +1007,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="X">
-  <summary>Xiaomi (40)</summary>
+  <summary>Xiaomi (41)</summary>
   <ul>
+    <li>Xiaomi 7 (xiaomi onc)</li>
     <li>Xiaomi 11 Lite 5G NE (Xiaomi lisa)</li>
     <li>Xiaomi 11 Lite NE (Xiaomi lisa)</li>
     <li>Xiaomi 11i (Xiaomi pissarroin)</li>
