@@ -85,6 +85,8 @@ if (project.hasProperty("sign")) {
     android {
         signingConfigs {
             create("release") {
+                enableV3Signing = true
+                enableV4Signing = true
                 storeFile = file(System.getenv("KEYSTORE_FILE"))
                 storePassword = System.getenv("KEYSTORE_PASSWD")
                 keyAlias = System.getenv("KEYSTORE_KEY_ALIAS")
@@ -119,6 +121,8 @@ if (project.hasProperty("manual_upload")) {
     android {
         signingConfigs {
             create("upload") {
+                enableV3Signing = true
+                enableV4Signing = true
                 storeFile = file(properties.getProperty("uploadsigning.file"))
                 storePassword = properties.getProperty("uploadsigning.password")
                 keyAlias = properties.getProperty("uploadsigning.key.alias")
