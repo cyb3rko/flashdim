@@ -121,7 +121,13 @@ jobs:
           KEYSTORE_KEY_PASSWD: ${{ secrets.KEYSTORE_KEY_PASSWD }}
 
       - name: List build output
-        run: ls app/build/outputs
+        run: ls app/build/outputs/
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: app/build/outputs/
+          if-no-files-found: error
 
       - name: Create Release
         uses: softprops/action-gh-release@v2

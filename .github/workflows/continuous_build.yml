@@ -40,6 +40,10 @@ jobs:
           ./gradlew assembleRelease --stacktrace
 
       - name: List build output
-        run: |
-          cd app/build/outputs/apk/release/
-          ls
+        run: ls app/build/outputs/apk/release/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: app/build/outputs/apk/release/
+          if-no-files-found: error
