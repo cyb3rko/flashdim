@@ -126,7 +126,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          path: app/build/outputs/
+          path: app/build/outputs/*.apk
           if-no-files-found: error
 
       - name: Create Release
