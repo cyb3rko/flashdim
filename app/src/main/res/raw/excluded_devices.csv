@@ -9,7 +9,9 @@ Asus Zenfone 8,asus ASUS_I006D,Asus,ASUS_I006D,false
 Asus Zenfone 8 Flip,asus ASUS_I004D,Asus,ASUS_I004D,false
 Asus Zenfone 9,asus ASUS_AI2202,Asus,ASUS_AI2202,false
 AT&T Calypso® 4,ATT U380AA,AT&T,U380AA,false
+AT&T Motivate® Pro 5G,ATT SN509A,AT&T,SN509A,false
 Atozee CP20_GOLD,ATOZEE CP20_GOLD,Atozee,CP20_GOLD,false
+Attila WTATTRW2,ATT WTATTRW2,Attila,WTATTRW2,false
 benco AE9240,benco AE9240,benco,AE9240,false
 benco V91,benco AE9310,benco,AE9310,false
 Blackview BL9000,Blackview BL9000,Blackview,BL9000,false
@@ -39,6 +41,7 @@ Deutsche Telekom T Phone 2,DeutscheTelekom PUMA,Deutsche Telekom,PUMA,false
 Deutsche Telekom T Phone 2 Pro,DeutscheTelekom CHEETAH,Deutsche Telekom,CHEETAH,false
 Doogee N50,DOOGEE 1918Y,Doogee,1918Y,false
 Doogee N50S,DOOGEE 1918D,Doogee,1918D,false
+Doogee N55,DOOGEE 1928,Doogee,1928,false
 Doogee S110,DOOGEE M22P,Doogee,M22P,false
 Doogee S200,DOOGEE M24P,Doogee,M24P,false
 Doogee Smini,DOOGEE ZN137,Doogee,ZN137,false
@@ -57,6 +60,7 @@ Google Pixel 5a 5G,google barbet,Google,barbet,false
 Hisense E33,Hisense HLTE243E_01,Hisense,HLTE243E_01,false
 HMD Fusion,HMD NHK,HMD,NHK,false
 HMD Pulse+,HMD LGP,HMD,LGP,false
+HMD Vibe,HMD SHK,HMD,SHK,false
 Honor 200 Lite,HONOR HNLLY-M1,Honor,HNLLY-M1,false
 Honor HONOR 200,HONOR HNELIX,Honor,HNELIX,false
 Honor HONOR 50,HONOR HNNTH,Honor,HNNTH,false
@@ -80,6 +84,7 @@ Honor HONOR X8b,HONOR HNLLY-Q,Honor,HNLLY-Q,false
 Honor HONOR X9,HONOR HNANY-Q1,Honor,HNANY-Q1,false
 Honor HONOR X9 5G,HONOR HNANY-Q,Honor,HNANY-Q,false
 Honor HONOR X9a 5G,HONOR HNRMO-Q,Honor,HNRMO-Q,false
+HTC U23 Pro,HTC htc_soodugls,HTC,htc_soodugls,false
 IIIF150 B2,IIIF150 B2,IIIF150,B2,false
 IIIF150 B2 Pro,IIIF150 B2_Pro,IIIF150,B2_Pro,false
 IIIF150 B2 Ultra,IIIF150 B2_Ultra,IIIF150,B2_Ultra,false
@@ -295,6 +300,7 @@ Oppo Find X5,OPPO OP52D5L1,Oppo,OP52D5L1,false
 Oppo Find X5 Pro,OPPO OP52D1L1,Oppo,OP52D1L1,false
 Oppo OPPO A1 5G,OPPO OP561D,Oppo,OP561D,false
 Oppo OPPO A57s,OPPO OP5353L1,Oppo,OP5353L1,false
+Oppo OPPO A60 5G/ A3 5G,OPPO OP5EA7L1,Oppo,OP5EA7L1,false
 Oppo OPPO F27 Pro+ 5G,OPPO OP5B19L1,Oppo,OP5B19L1,false
 Oppo OPPO Reno5 pro,OPPO OP4F1FL1,Oppo,OP4F1FL1,false
 Oppo OPPO Reno5 Pro+ 5G,OPPO OP4EA7,Oppo,OP4EA7,false
@@ -322,8 +328,11 @@ Oppo Reno10 Pro 5G,OPPO OP56DBL1,Oppo,OP56DBL1,false
 Oppo Reno10 Pro+ 5G,OPPO OP56D3L1,Oppo,OP56D3L1,false
 Oppo Reno11 F 5G,OPPO OP5A0BL1,Oppo,OP5A0BL1,false
 Oppo Reno12 F 5G,OPPO OP5AF2L1,Oppo,OP5AF2L1,false
+Oukitel C37_EEA,OUKITEL C37,Oukitel,C37,false
 Oukitel G1_EEA,OUKITEL G1,Oukitel,G1,false
 Oukitel P07_EEA,OUKITEL P07,Oukitel,P07,false
+Oukitel WP36_EEA,OUKITEL WP36,Oukitel,WP36,false
+Oukitel WP36_Pro_EEA,OUKITEL WP36_Pro,Oukitel,WP36_Pro,false
 PCD Argentina P63L,PCD P63L,PCD,P63L,false
 PCD Argentina P63L,PCD P63L_PR,PCD,P63L_PR,false
 POCO C51,POCO water,POCO,water,false
@@ -541,6 +550,7 @@ Reeder S19 MaxL 128GB,reeder S19_MaxL_128GB,Reeder,S19_MaxL_128GB,false
 Samsung Galaxy A03 Core,samsung a3core,Samsung,a3core,false
 Samsung Galaxy M04,samsung m04,Samsung,m04,false
 Samsung Galaxy M15 5G,samsung m15x,Samsung,m15x,false
+Samsung Galaxy Note9,samsung crownlte,Samsung,crownlte,false
 Sharp AQUOS R6,DOCOMO SH-51B,Sharp,SH-51B,false
 Sharp AQUOS R6,SG Judau,Sharp,Judau,false
 Sharp AQUOS R6,SHARP Judau,Sharp,Judau,false
@@ -621,6 +631,8 @@ Tecno TECNO SPARK 20 Pro+,TECNO TECNO-KJ7,Tecno,TECNO-KJ7,false
 Tecno TECNO SPARK 20 Pro+,TECNO TECNO-KJ7s,Tecno,TECNO-KJ7s,false
 Tecno TECNO SPARK 20C,TECNO TECNO-BG7,Tecno,TECNO-BG7,false
 Tecno TECNO SPARK 20C,TECNO TECNO-BG7n,Tecno,TECNO-BG7n,false
+Tecno TECNO SPARK 30,TECNO TECNO-KL6,Tecno,TECNO-KL6,false
+Tecno TECNO SPARK 30 Pro,TECNO TECNO-KL7,Tecno,TECNO-KL7,false
 Tecno TECNO SPARK Go 1,TECNO TECNO-KL4,Tecno,TECNO-KL4,false
 Tecno TECNO SPARK Go 2024,TECNO TECNO-BG6m,Tecno,TECNO-BG6m,false
 Tecno TECNO SPARK Go 2024,TECNO TECNO-BG6s,Tecno,TECNO-BG6s,false
@@ -734,6 +746,7 @@ Vivo V30 Lite 5G,vivo V2327,Vivo,V2327,false
 Vivo V30 Pro,vivo V2319,Vivo,V2319,false
 Vivo vivo 2018,vivo 2018,Vivo,2018,false
 Vivo vivo Y22,vivo V2207,Vivo,V2207,false
+Vivo vivo Y29 5G,vivo V2420,Vivo,V2420,false
 Vivo X80,vivo V2144,Vivo,PD2183,false
 Vivo X80 Pro,vivo V2145,Vivo,V2145,false
 Vivo Y02t,vivo V2254,Vivo,V2254,false
@@ -809,7 +822,9 @@ ZTE 8050,ZTE P606F08,ZTE,P606F08,false
 ZTE Blade A54,ZTE P963F64,ZTE,P963F64,false
 ZTE Blade A75 5G,ZTE P720F09,ZTE,P720F09,false
 ZTE Blade V50 Vita,ZTE P606F09,ZTE,P606F09,false
+ZTE Blade V60 Design,ZTE P606F10,ZTE,P606F10,false
 ZTE nubia Neo 2 5G,nubia P820F03,ZTE,P820F03,false
+ZTE nubia V60 Design,nubia P606F10,ZTE,P606F10,false
 ZTE NX711J,nubia PQ82A01,ZTE,PQ82A01,false
 ZTE NX729J,nubia NX729J-EEA,ZTE,NX729J-EEA,false
 ZTE NX729J,nubia NX729J-UN,ZTE,NX729J-UN,false
