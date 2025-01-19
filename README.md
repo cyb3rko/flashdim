@@ -150,7 +150,7 @@ The following list contains phones, which were manually excluded in the Google P
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<b>Total: 701</b>
+<b>Total: 716</b>
 
 [8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [F](#f) [G](#g) [H](#h) [I](#i) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
@@ -180,15 +180,22 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>AT&T (1)</summary>
+  <summary>AT&T (2)</summary>
   <ul>
     <li>AT&T Calypso® 4 (ATT U380AA)</li>
+    <li>AT&T Motivate® Pro 5G (ATT SN509A)</li>
   </ul>
 </details>
 <details>
   <summary>Atozee (1)</summary>
   <ul>
     <li>Atozee CP20_GOLD (ATOZEE CP20_GOLD)</li>
+  </ul>
+</details>
+<details>
+  <summary>Attila (1)</summary>
+  <ul>
+    <li>Attila WTATTRW2 (ATT WTATTRW2)</li>
   </ul>
 </details>
 <details name="B">
@@ -259,10 +266,11 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Doogee (5)</summary>
+  <summary>Doogee (6)</summary>
   <ul>
     <li>Doogee N50 (DOOGEE 1918Y)</li>
     <li>Doogee N50S (DOOGEE 1918D)</li>
+    <li>Doogee N55 (DOOGEE 1928)</li>
     <li>Doogee S110 (DOOGEE M22P)</li>
     <li>Doogee S200 (DOOGEE M24P)</li>
     <li>Doogee Smini (DOOGEE ZN137)</li>
@@ -307,10 +315,11 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>HMD (2)</summary>
+  <summary>HMD (3)</summary>
   <ul>
     <li>HMD Fusion (HMD NHK)</li>
     <li>HMD Pulse+ (HMD LGP)</li>
+    <li>HMD Vibe (HMD SHK)</li>
   </ul>
 </details>
 <details>
@@ -339,6 +348,12 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Honor HONOR X9 (HONOR HNANY-Q1)</li>
     <li>Honor HONOR X9 5G (HONOR HNANY-Q)</li>
     <li>Honor HONOR X9a 5G (HONOR HNRMO-Q)</li>
+  </ul>
+</details>
+<details>
+  <summary>HTC (1)</summary>
+  <ul>
+    <li>HTC U23 Pro (HTC htc_soodugls)</li>
   </ul>
 </details>
 <details name="I">
@@ -558,7 +573,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Oppo (65)</summary>
+  <summary>Oppo (66)</summary>
   <ul>
     <li>Oppo A18 (OPPO OP575DL1)</li>
     <li>Oppo A38 (OPPO OP5759L1)</li>
@@ -598,6 +613,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Oppo Find X5 Pro (OPPO OP52D1L1)</li>
     <li>Oppo OPPO A1 5G (OPPO OP561D)</li>
     <li>Oppo OPPO A57s (OPPO OP5353L1)</li>
+    <li>Oppo OPPO A60 5G/ A3 5G (OPPO OP5EA7L1)</li>
     <li>Oppo OPPO F27 Pro+ 5G (OPPO OP5B19L1)</li>
     <li>Oppo OPPO Reno5 pro (OPPO OP4F1FL1)</li>
     <li>Oppo OPPO Reno5 Pro+ 5G (OPPO OP4EA7)</li>
@@ -628,10 +644,13 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Oukitel (2)</summary>
+  <summary>Oukitel (5)</summary>
   <ul>
+    <li>Oukitel C37_EEA (OUKITEL C37)</li>
     <li>Oukitel G1_EEA (OUKITEL G1)</li>
     <li>Oukitel P07_EEA (OUKITEL P07)</li>
+    <li>Oukitel WP36_EEA (OUKITEL WP36)</li>
+    <li>Oukitel WP36_Pro_EEA (OUKITEL WP36_Pro)</li>
   </ul>
 </details>
 <details name="P">
@@ -832,11 +851,12 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="S">
-  <summary>Samsung (3)</summary>
+  <summary>Samsung (4)</summary>
   <ul>
     <li>Samsung Galaxy A03 Core (samsung a3core)</li>
     <li>Samsung Galaxy M04 (samsung m04)</li>
     <li>Samsung Galaxy M15 5G (samsung m15x)</li>
+    <li>Samsung Galaxy Note9 (samsung crownlte)</li>
   </ul>
 </details>
 <details>
@@ -892,7 +912,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Tecno (31)</summary>
+  <summary>Tecno (33)</summary>
   <ul>
     <li>Tecno CAMON 19 (TECNO TECNO-CI6, TECNO TECNO-CI6n)</li>
     <li>Tecno CAMON 19 Neo (TECNO TECNO-CH6i)</li>
@@ -923,6 +943,8 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Tecno TECNO SPARK 20 Pro (TECNO TECNO-KJ6)</li>
     <li>Tecno TECNO SPARK 20 Pro+ (TECNO TECNO-KJ7, TECNO TECNO-KJ7s)</li>
     <li>Tecno TECNO SPARK 20C (TECNO TECNO-BG7, TECNO TECNO-BG7n)</li>
+    <li>Tecno TECNO SPARK 30 (TECNO TECNO-KL6)</li>
+    <li>Tecno TECNO SPARK 30 Pro (TECNO TECNO-KL7)</li>
     <li>Tecno TECNO SPARK Go 1 (TECNO TECNO-KL4)</li>
     <li>Tecno TECNO SPARK Go 2024 (TECNO TECNO-BG6m, TECNO TECNO-BG6s)</li>
   </ul>
@@ -972,7 +994,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="V">
-  <summary>Vivo (98)</summary>
+  <summary>Vivo (99)</summary>
   <ul>
     <li>Vivo I2009 (iQOO 2009)</li>
     <li>Vivo I2011 (iQOO 2011)</li>
@@ -1055,6 +1077,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Vivo V30 Pro (vivo V2319)</li>
     <li>Vivo vivo 2018 (vivo 2018)</li>
     <li>Vivo vivo Y22 (vivo V2207)</li>
+    <li>Vivo vivo Y29 5G (vivo V2420)</li>
     <li>Vivo X80 (vivo V2144)</li>
     <li>Vivo X80 Pro (vivo V2145)</li>
     <li>Vivo Y02t (vivo V2254)</li>
@@ -1144,14 +1167,16 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="Z">
-  <summary>ZTE (8)</summary>
+  <summary>ZTE (10)</summary>
   <ul>
     <li>ZTE 5G UG Phone U25 (nubia P720F09_U)</li>
     <li>ZTE 8050 (ZTE P606F08)</li>
     <li>ZTE Blade A54 (ZTE P963F64)</li>
     <li>ZTE Blade A75 5G (ZTE P720F09)</li>
     <li>ZTE Blade V50 Vita (ZTE P606F09)</li>
+    <li>ZTE Blade V60 Design (ZTE P606F10)</li>
     <li>ZTE nubia Neo 2 5G (nubia P820F03)</li>
+    <li>ZTE nubia V60 Design (nubia P606F10)</li>
     <li>ZTE NX711J (nubia PQ82A01)</li>
     <li>ZTE NX729J (nubia NX729J-EEA, nubia NX729J-UN)</li>
   </ul>
