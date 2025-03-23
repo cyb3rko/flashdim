@@ -1,13 +1,13 @@
 [versions]
-agp = "8.7.1"
-kotlin = "2.0.20"
+agp = "8.9.0"
+kotlin = "2.0.21"
 kotlinter = "4.4.1"
 dexcount = "4.0.0"
 bundletool = "0.2.4"
 
 appcompat = "1.7.0"
-constraintlayout = "2.1.4"
-coreKtx = "1.13.1"
+constraintlayout = "2.2.1"
+coreKtx = "1.15.0"
 preferenceKtx = "1.2.1"
 material = "1.12.0"
 profileinstaller = "1.4.1"
