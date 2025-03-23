@@ -53,11 +53,11 @@
     <string name="dialog_credits_message">information-slab-circle-outline created by Jeff Anders - Pictogrammers\n\nvibrate created by Google - Pictogrammers\n\nrocket-launch-outline created by Michael Irigoyen - Pictogrammers</string>
     <string name="dialog_credits_button">Open Pictogrammers</string>
     <string name="dialog_device_support_title">Device Support</string>
-    <string name="dialog_device_support_message1">It seems that your device does support flashlight dimming, even though it was reported otherwise.\n\nPlease consider contacting me to let me know via GitHub Issues or email (niko@cyb3rko.de).</string>
-    <string name="dialog_device_support_button1_1">Only copy device info</string>
-    <string name="dialog_device_support_button1_2">Open GitHub Repository</string>
+    <string name="dialog_device_support_message1">It seems that your device does support flashlight dimming, even though it was reported otherwise.\n\nPlease consider contacting me to let me know via Matrix, GitHub or email (niko@cyb3rko.de).</string>
+    <string name="dialog_device_support_button1_1">Open Matrix chat room</string>
+    <string name="dialog_device_support_button1_2">Open GitHub thread</string>
     <string name="dialog_device_support_button1_3">Send email</string>
-    <string name="dialog_device_support_message2">Unfortunately your device does not support dimming the flashlight.\n\nThis model has not been reported yet as \'not supported\'. Please consider contacting me to let me know via GitHub Issues or email (niko@cyb3rko.de).</string>
+    <string name="dialog_device_support_message2">Unfortunately your device does not support dimming the flashlight.\n\nThis model has not been reported yet as \'not supported\'. Please consider contacting me to let me know via Matrix, GitHub or email (niko@cyb3rko.de).</string>
     <string name="dialog_device_support_toast">Device information copied</string>
     <string name="toast_url_failed">Opening URL failed, copied URL instead</string>
     <string name="toast_intent_failed">Opening intent failed</string>
