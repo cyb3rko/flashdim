@@ -1,7 +1,7 @@
 [versions]
 agp = "8.9.0"
 kotlin = "2.0.21"
-kotlinter = "4.4.1"
+kotlinter = "5.0.1"
 dexcount = "4.0.0"
 bundletool = "0.2.4"
 
