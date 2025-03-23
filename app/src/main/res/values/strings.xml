@@ -41,6 +41,11 @@
     <string name="button_half_text">Half</string>
     <string name="button_minimum_text">Minimum</string>
     <string name="button_off_text">Off</string>
+    <string name="dialog_links_title">Links</string>
+    <string name="dialog_links_button">Visit</string>
+    <string name="dialog_links_github">Git repository on GitHub</string>
+    <string name="dialog_links_matrix">Matrix chat room (questions, feedback, discussions)</string>
+    <string name="dialog_links_donate">Feel free to support me with a small donation &lt;3</string>
     <string name="dialog_about_title">About</string>
     <string name="dialog_about_button1">Show Icon Credits</string>
     <string name="dialog_about_button2">Copy device info</string>

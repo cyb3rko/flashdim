@@ -32,7 +32,7 @@
             app:defaultValue="false"
             app:title="@string/preference_item_quick_settings_simple"
             app:summary="@string/preference_item_quick_settings_simple_summary"
-            app:icon="@drawable/ic_link" />
+            app:icon="@drawable/ic_link_scaled" />
 
         <SwitchPreferenceCompat
             app:key="quick_settings_link"
@@ -40,14 +40,14 @@
             app:dependency="quick_settings_toggle"
             app:title="@string/preference_item_quick_settings_link"
             app:summary="@string/preference_item_quick_settings_link_summary"
-            app:icon="@drawable/ic_link" />
+            app:icon="@drawable/ic_link_scaled" />
 
         <SwitchPreferenceCompat
             app:key="volume_buttons_link"
             app:defaultValue="false"
             app:title="@string/preference_item_volume_buttons_link"
             app:summary="@string/preference_item_volume_buttons_link_summary"
-            app:icon="@drawable/ic_link" />
+            app:icon="@drawable/ic_link_scaled" />
 
         <Preference
             app:key="initial_level"

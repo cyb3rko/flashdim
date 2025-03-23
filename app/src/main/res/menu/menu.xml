@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/github_action"
+        android:id="@+id/links_action"
         android:title="Visit on GitHub"
-        android:icon="@drawable/ic_git"
+        android:icon="@drawable/ic_link"
         app:showAsAction="ifRoom"
         tools:ignore="HardcodedText" />
 

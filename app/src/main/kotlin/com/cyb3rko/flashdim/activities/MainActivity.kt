@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,6 +38,7 @@ import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.modals.AboutDialog
 import com.cyb3rko.flashdim.modals.DeviceSupportDialog
 import com.cyb3rko.flashdim.modals.IntervalDialog
+import com.cyb3rko.flashdim.modals.LinksDialog
 import com.cyb3rko.flashdim.modals.MorseDialog
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.cyb3rko.flashdim.utils.DeviceSupportManager
@@ -48,7 +49,6 @@ import com.cyb3rko.flashdim.utils.disable
 import com.cyb3rko.flashdim.utils.enable
 import com.cyb3rko.flashdim.utils.hide
 import com.cyb3rko.flashdim.utils.makeInvisible
-import com.cyb3rko.flashdim.utils.openUrl
 import com.cyb3rko.flashdim.utils.show
 import com.cyb3rko.flashdim.utils.showDialog
 import kotlin.system.exitProcess
@@ -468,8 +468,8 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, SettingsActivity::class.java))
                 return true
             }
-            R.id.github_action -> {
-                openUrl("https://github.com/cyb3rko/flashdim", "GitHub Repo")
+            R.id.links_action -> {
+                LinksDialog.show(this)
                 return true
             }
         }

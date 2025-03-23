@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,11 +20,11 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.net.toUri
 import com.cyb3rko.flashdim.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -127,6 +127,28 @@ internal fun Context.showDialog(
     builder.show()
 }
 
+internal fun Context.showDialogView(
+    title: String,
+    view: View,
+    icon: Int?,
+    cancelable: Boolean = true
+) {
+    val builder = MaterialAlertDialogBuilder(
+        this,
+        com.google.android.material.R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+    )
+        .setTitle(title)
+        .setView(view)
+        .setCancelable(cancelable)
+
+    if (icon != null) {
+        builder.setIcon(
+            ResourcesCompat.getDrawable(resources, icon, theme)
+        )
+    }
+    builder.show()
+}
+
 internal fun Context.storeToClipboard(label: String, text: String) {
     val clip = ClipData.newPlainText(label, text)
     (this.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager)
@@ -135,7 +157,7 @@ internal fun Context.storeToClipboard(label: String, text: String) {
 
 internal fun Context.openUrl(url: String, label: String) {
     try {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        val intent = Intent(Intent.ACTION_VIEW, url.toUri())
         this.startActivity(intent)
     } catch (e: Exception) {
         e.printStackTrace()

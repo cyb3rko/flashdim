@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2025 Cyb3rKo
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:layout_width="300dp">
+
+        <ImageView
+            android:id="@+id/github_icon"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="@id/github_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/github_button"
+            android:src="@drawable/ic_git" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/github_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/github_icon"
+            android:text="@string/dialog_links_github" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/github_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/github_desc"
+            app:layout_constraintStart_toStartOf="@id/github_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/dialog_links_button"
+            app:icon="@android:drawable/ic_menu_set_as" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/github_button"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:id="@+id/matrix_icon"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="@id/matrix_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/matrix_button"
+            android:src="@drawable/ic_matrix" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/matrix_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/matrix_icon"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_links_matrix" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/matrix_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/matrix_desc"
+            app:layout_constraintStart_toStartOf="@id/matrix_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/dialog_links_button"
+            app:icon="@android:drawable/ic_menu_set_as" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/matrix_button"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:id="@+id/donate_icon"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="@id/donate_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/donate_button"
+            android:src="@drawable/ic_coins" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/donate_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/donate_icon"
+            android:layout_marginTop="8dp"
+            android:text="@string/dialog_links_donate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/donate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/donate_desc"
+            app:layout_constraintStart_toStartOf="@id/donate_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/dialog_links_button"
+            app:icon="@android:drawable/ic_menu_set_as" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
