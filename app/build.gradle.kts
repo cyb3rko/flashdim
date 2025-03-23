@@ -14,7 +14,7 @@ plugins {
 
 android {
     namespace = "com.cyb3rko.flashdim"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         applicationId = "com.cyb3rko.flashdim"
         minSdk = 33
@@ -22,7 +22,6 @@ android {
         versionCode = 28
         versionName = "2.3.6"
         resValue("string", "app_name", "FlashDim Dev")
-        resourceConfigurations.add("en")
         signingConfig = signingConfigs.getByName("debug")
     }
     buildTypes {
@@ -67,6 +66,9 @@ android {
         storeArchive {
             enable = false
         }
+    }
+    androidResources {
+        localeFilters += listOf("en")
     }
     packaging {
         resources {
