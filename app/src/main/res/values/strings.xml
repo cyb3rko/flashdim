@@ -63,8 +63,10 @@
     <string name="preference_item_instant_flash_extension_summary">Activate flashlight every time you open the app</string>
     <string name="preference_item_pause_flash">Context awareness</string>
     <string name="preference_item_pause_flash_summary">Turn off the flashlight when leaving the app</string>
-    <string name="preference_item_quick_settings_link">Quick Settings Link</string>
-    <string name="preference_item_quick_settings_link_summary">Link the initial level to the quick settings tile</string>
+    <string name="preference_item_quick_settings_simple">Simple Quick Settings (Toggle)</string>
+    <string name="preference_item_quick_settings_simple_summary">Allow the quick settings tile to only toggle the flash on and off</string>
+    <string name="preference_item_quick_settings_link">Quick Settings Toggle Link</string>
+    <string name="preference_item_quick_settings_link_summary">Link the initial level to the quick settings toggle</string>
     <string name="preference_item_volume_buttons_link">Volume Buttons Link</string>
     <string name="preference_item_volume_buttons_link_summary">Link the initial level to the action when pressing both volume buttons.</string>
     <string name="preference_item_initial_level">Initial level</string>

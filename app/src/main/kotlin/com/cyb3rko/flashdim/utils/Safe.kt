@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,8 @@ internal object Safe {
     const val MORSE_VIBRATION = "morse_vibration"
     const val MULTILEVEL = "multilevel"
     const val PAUSE_FLASH = "pause_flash"
-    const val QUICKTILE_DIM_MODE = "dim_mode"
+    const val QUICKTILE_DIM_STAGE = "dim_mode"
+    const val QUICKTILE_TOGGLE_MODE = "quick_settings_toggle"
     const val QUICK_SETTINGS_LINK = "quick_settings_link"
     const val REPORT_DIALOG_SHOWN = "${BuildConfig.VERSION_CODE}-report_dialog"
     const val STARTUP_COUNTER = "startup_counter"

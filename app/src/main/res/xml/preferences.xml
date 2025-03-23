@@ -28,8 +28,16 @@
             app:icon="@drawable/ic_close" />
 
         <SwitchPreferenceCompat
+            app:key="quick_settings_toggle"
+            app:defaultValue="false"
+            app:title="@string/preference_item_quick_settings_simple"
+            app:summary="@string/preference_item_quick_settings_simple_summary"
+            app:icon="@drawable/ic_link" />
+
+        <SwitchPreferenceCompat
             app:key="quick_settings_link"
             app:defaultValue="false"
+            app:dependency="quick_settings_toggle"
             app:title="@string/preference_item_quick_settings_link"
             app:summary="@string/preference_item_quick_settings_link_summary"
             app:icon="@drawable/ic_link" />
