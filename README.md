@@ -1,4 +1,5 @@
-# FlashDim - Dim your flashlight
+<h1 align="center">FlashDim - Dim your flashlight</h1>
+
 [![Matrix](https://proxy.cyb3rko.de/shields/matrix/flashdim%3Amatrix.org?logo=matrix&label=Matrix%20Chat&color=black)](https://matrix.to/#/#flashdim:matrix.org)
 [![API](https://img.shields.io/badge/API-33%2B-coral?logo=android&logoColor=white)](https://apilevels.com)
 [![gplay](https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.cyb3rko.flashdim%26l%3Dgplay%26m%3Dv%24version&color=blue&logo=googleplay)](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
@@ -9,7 +10,8 @@
 [![license](https://img.shields.io/github/license/cyb3rko/flashdim?color=1BCC1B&logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a>
+  <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a><br/>
+  <a href="https://trendshift.io/repositories/13351" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13351" alt="cyb3rko%2Fflashdim | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 ---
