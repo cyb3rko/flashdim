@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2024 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -128,9 +128,8 @@ open class LightLevelSeekBar @JvmOverloads constructor(
         }
     }
 
-    private fun getRawProgress(event: MotionEvent): Int {
-        return (maxProgress * event.y / getAvailableHeight()).roundToInt()
-    }
+    private fun getRawProgress(event: MotionEvent): Int =
+        (maxProgress * event.y / getAvailableHeight()).roundToInt()
 
     internal fun setProgress(progress: Int) {
         this.progress = maxProgress - progress
@@ -163,11 +162,9 @@ open class LightLevelSeekBar @JvmOverloads constructor(
         return true
     }
 
-    private fun calculateDp(dp: Int): Float {
-        return TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            dp.toFloat(),
-            resources.displayMetrics
-        )
-    }
+    private fun calculateDp(dp: Int): Float = TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_DIP,
+        dp.toFloat(),
+        resources.displayMetrics
+    )
 }

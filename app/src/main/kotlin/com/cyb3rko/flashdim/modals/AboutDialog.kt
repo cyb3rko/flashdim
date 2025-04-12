@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,21 +55,21 @@ internal object AboutDialog {
     }
 
     fun getDeviceInfo(context: Context, maxLevel: Int) = StringBuilder()
-        .appendLine(
-            "App Version: ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
-        )
-        .appendLine("App Build Type: ${BuildConfig.BUILD_TYPE}")
-        .appendLine("App Installer: ${getInstaller(context)}")
-        .appendLine(
-            "Software: Android ${Build.VERSION.RELEASE} (${Build.VERSION.SDK_INT})"
-        )
-        .appendLine("Light Levels: $maxLevel")
-        .appendLine("Manufacturer: ${Build.MANUFACTURER}")
-        .appendLine("Brand: ${Build.BRAND}")
-        .appendLine("Model: ${Build.MODEL}")
-        .appendLine("Device: ${Build.DEVICE}")
-        .appendLine("Board: ${Build.BRAND}")
-        .appendLine("Supported ABIs: ${Build.SUPPORTED_ABIS.joinToString(",")}")
+        .appendLine("FlashDim:")
+        .appendLine(" - Version:  ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})")
+        .appendLine(" - Installer:  ${getInstaller(context)}")
+        .appendLine(" - Build:  ${BuildConfig.BUILD_TYPE}")
+        .appendLine("Phone:")
+        .appendLine(" - Manufacturer:  ${Build.MANUFACTURER}")
+        .appendLine(" - Brand:  ${Build.BRAND}")
+        .appendLine(" - Model:  ${Build.MODEL}")
+        .appendLine(" - Product:  ${Build.PRODUCT}")
+        .appendLine(" - Device:  ${Build.DEVICE}")
+        .appendLine(" - Board:  ${Build.BOARD}")
+        .appendLine(" - ABIs:  ${Build.SUPPORTED_ABIS.joinToString(",")}")
+        .appendLine(" - Light levels:  $maxLevel")
+        .appendLine("OS:")
+        .appendLine(" - Version:  Android ${Build.VERSION.RELEASE} (${Build.VERSION.SDK_INT})")
         .toString()
 
     private fun getInstaller(context: Context) =

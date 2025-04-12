@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2024 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +30,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
+import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
 import com.cyb3rko.flashdim.modals.AccessibilityInfoDialog
@@ -39,7 +40,9 @@ import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.slider.Slider
 
-internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeListener {
+internal class SettingsActivity :
+    AppCompatActivity(),
+    OnSharedPreferenceChangeListener {
     private lateinit var binding: ActivitySettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -152,9 +155,15 @@ internal class SettingsActivity : AppCompatActivity(), OnSharedPreferenceChangeL
                     true
                 }
             }
-            findPreference<Preference>("volume_buttons")?.setOnPreferenceClickListener {
-                AccessibilityInfoDialog.show(myContext)
-                true
+            @Suppress("KotlinConstantConditions")
+            if (BuildConfig.BUILD_TYPE != "libre") {
+                findPreference<Preference>("volume_buttons")?.apply {
+                    isEnabled = true
+                    setOnPreferenceClickListener {
+                        AccessibilityInfoDialog.show(myContext)
+                        true
+                    }
+                }
             }
         }
 

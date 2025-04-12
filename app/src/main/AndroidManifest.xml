@@ -4,9 +4,12 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- This feature is required for a flashlight app -->
     <uses-feature
         android:name="android.hardware.camera.flash"
-        android:required="true" />
+        android:required="true"
+        tools:ignore="UnnecessaryRequiredFeature" />
 
     <application
         android:name=".App"
@@ -21,7 +24,6 @@
         <activity
             android:launchMode="singleTop"
             android:name="com.cyb3rko.flashdim.activities.MainActivity"
-            android:fitsSystemWindows="true"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
@@ -36,27 +38,12 @@
         <activity
             android:name="com.cyb3rko.flashdim.activities.SettingsActivity"
             android:parentActivityName=".activities.MainActivity"
-            android:fitsSystemWindows="true"
             android:screenOrientation="portrait"
             android:exported="false" />
 
         <service
-            android:name=".tiles.ToggleSettingsTile"
-            android:label="FlashDim Toggle"
-            android:icon="@drawable/logo"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-            <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
-                android:value="true" />
-        </service>
-
-        <service
-            android:name=".tiles.DimmerSettingsTile"
-            android:label="FlashDimmer"
+            android:name=".quicksettings.SettingsTile"
+            android:label="@string/app_name"
             android:icon="@drawable/logo"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:enabled="true"
@@ -68,6 +55,8 @@
                 android:value="false" />
         </service>
 
+        <!-- included in buildType "debug", "release" -->
+        <!-- excluded in buildType "libre" -->
         <service
             android:name=".service.VolumeButtonService"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"

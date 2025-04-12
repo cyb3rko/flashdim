@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,6 +22,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.VibratorManager
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -37,6 +38,7 @@ import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.modals.AboutDialog
 import com.cyb3rko.flashdim.modals.DeviceSupportDialog
 import com.cyb3rko.flashdim.modals.IntervalDialog
+import com.cyb3rko.flashdim.modals.LinksDialog
 import com.cyb3rko.flashdim.modals.MorseDialog
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
 import com.cyb3rko.flashdim.utils.DeviceSupportManager
@@ -47,7 +49,6 @@ import com.cyb3rko.flashdim.utils.disable
 import com.cyb3rko.flashdim.utils.enable
 import com.cyb3rko.flashdim.utils.hide
 import com.cyb3rko.flashdim.utils.makeInvisible
-import com.cyb3rko.flashdim.utils.openUrl
 import com.cyb3rko.flashdim.utils.show
 import com.cyb3rko.flashdim.utils.showDialog
 import kotlin.system.exitProcess
@@ -254,16 +255,28 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkDeviceSupport(forceShow: Boolean = false) {
         if (forceShow) {
-            showDeviceChipAndDialog(true)
+            showDeviceChipAndDialog(newReport = true)
             return
         }
         lifecycleScope.launch(Dispatchers.IO) {
             val excluded = DeviceSupportManager.isExcluded(resources)
             withContext(Dispatchers.Main) {
-                if (excluded && maxLevel > 1) {
-                    showDeviceChipAndDialog(false)
-                } else if (!excluded && maxLevel <= 1) {
-                    showDeviceChipAndDialog(true)
+                // if device report locked, skip device support logic
+                if (excluded.second) {
+                    Log.d("FlashDim", "Device report locked, it's not supported")
+                    return@withContext
+                }
+                if (excluded.first && maxLevel > 1) {
+                    // report wrongly excluded device
+                    Log.d("FlashDim", "Device report may be faulty, showing chip and dialog")
+                    showDeviceChipAndDialog(newReport = false)
+                } else if (!excluded.first && maxLevel <= 1) {
+                    // report unsupported device
+                    Log.d("FlashDim", "Device not supported, showing chip and dialog")
+                    showDeviceChipAndDialog(newReport = true)
+                } else {
+                    // device is supported or was already reported as "unsupported"
+                    Log.d("FlashDim", "No report required, device is supported or already reported")
                 }
             }
         }
@@ -297,7 +310,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun executeAppOpenFlash() {
-        if (!settingsOpened && Safe.getBoolean(Safe.APPSTART_FLASH, false) &&
+        if (!settingsOpened &&
+            Safe.getBoolean(Safe.APPSTART_FLASH, false) &&
             Safe.getBoolean(Safe.APPOPEN_FLASH, false)
         ) {
             activateInitialFlash()
@@ -407,7 +421,15 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch(morseExceptionHandler) {
             var lastLetter = Char.MIN_VALUE
             val handler = MorseHandler { letter, code, delay, on ->
-                camera.setTorchMode(on)
+                if (on) {
+                    if (maxLevel > 1) {
+                        camera.sendLightLevel(this@MainActivity, -1, maxLevel)
+                    } else {
+                        camera.setTorchMode(true)
+                    }
+                } else {
+                    camera.setTorchMode(false)
+                }
                 if (vibrateMorse && on) Vibrator.vibrate(delay)
 
                 if (lastLetter != letter) {
@@ -446,8 +468,8 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, SettingsActivity::class.java))
                 return true
             }
-            R.id.github_action -> {
-                openUrl("https://github.com/cyb3rko/flashdim", "GitHub Repo")
+            R.id.links_action -> {
+                LinksDialog.show(this)
                 return true
             }
         }

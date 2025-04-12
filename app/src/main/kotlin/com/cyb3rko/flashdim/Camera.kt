@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2024 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,9 +72,8 @@ internal class Camera(activity: AppCompatActivity) {
     }
 
     companion object {
-        fun doesDeviceHaveFlash(packageManager: PackageManager): Boolean {
-            return packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
-        }
+        fun doesDeviceHaveFlash(packageManager: PackageManager): Boolean =
+            packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
 
         fun sendLightLevel(context: Context, level: Int, activate: Boolean) {
             try {

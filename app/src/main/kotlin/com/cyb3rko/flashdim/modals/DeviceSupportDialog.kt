@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@ package com.cyb3rko.flashdim.modals
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import androidx.annotation.StringRes
+import androidx.core.net.toUri
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.utils.Safe
 import com.cyb3rko.flashdim.utils.openIntent
@@ -49,33 +49,37 @@ internal object DeviceSupportDialog {
             .setTitle(R.string.dialog_device_support_title)
             .setMessage(message)
             .setIcon(R.drawable._ic_information)
-            .setPositiveButton(R.string.dialog_device_support_button1_2) { _, _ ->
+            .setPositiveButton(R.string.dialog_device_support_button1_1) { _, _ ->
                 context.storeToClipboard("System Info FlashDim", deviceInfo)
                 context.showToast(context.getString(R.string.dialog_device_support_toast))
                 context.openUrl(
-                    "https://github.com/cyb3rko/flashdim/issues/2",
-                    "GitHub Issues"
+                    "https://matrix.to/#/#flashdim:matrix.org",
+                    "FlashDim Matrix Room"
                 )
             }
             .setNeutralButton(R.string.dialog_device_support_button1_3) { _, _ ->
+                context.storeToClipboard("System Info FlashDim", deviceInfo)
+                context.showToast(context.getString(R.string.dialog_device_support_toast))
                 Intent(Intent.ACTION_SENDTO).apply {
-                    data = Uri.parse("mailto:")
+                    data = "mailto:".toUri()
                     putExtra(Intent.EXTRA_EMAIL, arrayOf("niko@cyb3rko.de"))
                     putExtra(Intent.EXTRA_SUBJECT, "FlashDim Device Support")
                     putExtra(Intent.EXTRA_TEXT, "\n\n$deviceInfo")
                     context.openIntent(this)
                 }
             }
-            .setNegativeButton(R.string.dialog_device_support_button1_1) { _, _ ->
+            .setNegativeButton(R.string.dialog_device_support_button1_2) { _, _ ->
                 context.storeToClipboard("System Info FlashDim", deviceInfo)
                 context.showToast(context.getString(R.string.dialog_device_support_toast))
+                context.openUrl(
+                    "https://github.com/cyb3rko/flashdim/issues/2",
+                    "FlashDim GitHub Issue"
+                )
             }
             .show()
     }
 
-    private fun wasAlreadyShown(): Boolean {
-        return Safe.getBoolean(Safe.REPORT_DIALOG_SHOWN, false)
-    }
+    private fun wasAlreadyShown(): Boolean = Safe.getBoolean(Safe.REPORT_DIALOG_SHOWN, false)
 
     private fun saveAlreadyShown() {
         Safe.writeBoolean(Safe.REPORT_DIALOG_SHOWN, true)

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2024 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -109,14 +109,12 @@ internal object IntervalDialog {
         binding.numberInputText.setText(bpm)
     }
 
-    private fun validateInput(input: String): Boolean {
-        return if (input.isEmpty()) {
-            false
-        } else if (mode == 0) {
-            validateTime(input)
-        } else {
-            validateBpm(input)
-        }
+    private fun validateInput(input: String): Boolean = if (input.isEmpty()) {
+        false
+    } else if (mode == 0) {
+        validateTime(input)
+    } else {
+        validateBpm(input)
     }
 
     private fun validateTime(time: String) = time.toInt() in 200..10000

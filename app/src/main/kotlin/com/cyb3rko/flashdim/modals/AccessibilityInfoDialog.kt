@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2024 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,8 @@ import com.cyb3rko.flashdim.R
 import com.google.android.material.R as MaterialR
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
+// included in buildType "debug", "release"
+// excluded in buildType "libre"
 internal object AccessibilityInfoDialog {
     fun show(context: Context) {
         MaterialAlertDialogBuilder(

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2024 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,18 +21,26 @@ import android.os.Build
 import com.cyb3rko.flashdim.R
 
 internal object DeviceSupportManager {
-    fun isExcluded(resources: Resources): Boolean {
+    fun isExcluded(resources: Resources): Pair<Boolean, Boolean> {
         val brand = Build.BRAND.lowercase()
         val manufacturer = Build.MANUFACTURER.lowercase()
         val device = Build.DEVICE.lowercase()
         var content: Array<String>
-        return resources
+        var deviceReportLocked = false
+        val deviceExcluded = resources
             .openRawResource(R.raw.excluded_devices)
             .bufferedReader()
             .lines().skip(1).anyMatch {
+                // 0: gplay-name
+                // 1: gplay-technical-name
+                // 2: branding
+                // 3: device
+                // 4: locked (ignore device brightness levels)
                 content = it.split(",").toTypedArray()
+                deviceReportLocked = content[4].toBoolean()
                 (content[2].lowercase() == manufacturer || content[2].lowercase() == brand) &&
                     content[3].lowercase() == device
             }
+        return deviceExcluded to deviceReportLocked
     }
 }

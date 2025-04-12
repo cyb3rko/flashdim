@@ -10,12 +10,14 @@ on:
       - '**.md'
       - '**.csv'
       - '**.py'
-      - 'app/src/main/baseline-prof.txt'
+      - 'app/src/release/generated/baselineProfiles/**-prof.txt'
+      - 'app/**.pro'
       - 'LICENSE'
       - '.github/workflows/release-builder.yml'
-      - '.github/workflows/fossa.yml'
       - '.github/workflows/update-device-catalog.yml'
       - '.github/FUNDING.yml'
+      - '.editorconfig'
+      - '.idea/**'
   pull_request:
 
 jobs:
@@ -24,19 +26,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
-          
+        uses: actions/checkout@v4
+
       - name: Setup JDK
-        uses: actions/setup-java@v3
-        with: 
+        uses: actions/setup-java@v4
+        with:
           distribution: 'zulu'
           java-version: '17'
-        
+
       - name: Build APK
         run: |
-          ./gradlew build --stacktrace
-          
+          ./gradlew assembleRelease --stacktrace
+
       - name: List build output
-        run: |
-          cd app/build/outputs/apk/release/
-          ls
+        run: ls app/build/outputs/apk/release/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: error

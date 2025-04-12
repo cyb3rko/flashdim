@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Cyb3rKo
+ * Copyright (c) 2022-2024 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,8 @@ internal object AppReviewManager {
                                 Uri.parse(context.getString(R.string.playstore_link))
                             )
                         )
-                    } catch (_: Exception) {}
+                    } catch (_: Exception) {
+                    }
                 },
                 actionMessage = "Rate"
             )

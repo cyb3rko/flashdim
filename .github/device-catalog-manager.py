@@ -11,7 +11,25 @@ def get_file_line_count():
         raise Exception("Who are you?")
 
 
+def get_manufacturer_link(manu_letters: list[str], manu: str) -> (list[str], str):
+    manu = manu.capitalize()
+    if manu[0] in manu_letters:
+        return manu_letters, ""
+    else:
+        manu_letters.append(manu[0])
+        return manu_letters, f" name=\"{manu[0]}\""
+
+
+def get_quicklinks(manu_letters: list[str]) -> str:
+    quicklinks = ""
+    for letter in manu_letters:
+        quicklinks += f"[{letter}](#{letter.lower()}) "
+    quicklinks += " \n*Links may only work in common browsers*\n\n"
+    return quicklinks
+
+
 manufacturers = []
+manufacturers_letters = []
 output = ""
 print(f"Reading CSV file in {os.getcwd()}")
 with open("excluded_devices.csv", "r", encoding="utf-8") as file:
@@ -32,13 +50,15 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
             output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
             device_count += 1
             output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
-            output += f"  </ul>\n</details>\n<details>\n  <summary>XMobile (<<tempMarker>>)</summary>\n  <ul>\n"
+            (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, "XMobile")
+            output += f"  </ul>\n</details>\n<details{manufacturer_link}>\n  <summary>XMobile (<<tempMarker>>)</summary>\n  <ul>\n"
             manufacturer_count = 0
             prev_name = row[0]
             models = [row[1]]
             manufacturer = row[2].lower()
         if manufacturer is None:
-            output += f"<details>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
+            (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, row[2])
+            output += f"<details{manufacturer_link}>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
         if prev_name == row[0]:  # multiple technical names
             if not models.__contains__(row[1]):
                 models.append(row[1])
@@ -47,7 +67,8 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
                 output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
                 device_count += 1
                 output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
-                output += f"  </ul>\n</details>\n<details>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
+                (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, row[2])
+                output += f"  </ul>\n</details>\n<details{manufacturer_link}>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
                 manufacturer_count = 0
             elif prev_name is not None:
                 manufacturer_count += 1
@@ -59,7 +80,7 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
             if manufacturer not in manufacturers:
                 manufacturers.append(manufacturer)
     output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n  </ul>\n</details>\n"
-    output = f"<em>Total: {device_count + 1}</em>\n" + output
+    output = f"<b>Total: {device_count + 1}</b>\n\n" + get_quicklinks(manufacturers_letters) + output
     output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
 
 print("Calculated output:")
