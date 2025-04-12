@@ -21,14 +21,10 @@ captures/
 *.apk
 output.json
 
-# IntelliJ
-*.iml
+# JetBrains IDEs
 .idea/*
 !.idea/copyright/
 !.idea/scopes/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
 
 # Keystore files
 *.jks
@@ -36,6 +32,9 @@ render.experimental.xml
 
 # Android Profiling
 *.hprof
+
+# Workflow files
+.github/excluded_devices.csv
 
 # App logo
 /*.xcf
