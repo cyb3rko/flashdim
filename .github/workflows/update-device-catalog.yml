@@ -35,7 +35,9 @@ jobs:
           ls -la
 
       - name: Validate csv file
-        run: awk ' BEGIN{FS=","}!n{n=NF}n!=NF{failed=1;exit 1}' excluded_devices.csv
+        run: |
+          cd .github
+          awk ' BEGIN{FS=","}!n{n=NF}n!=NF{failed=1;exit 1}' excluded_devices.csv
 
       - name: Update excluded devices in README via Python
         shell: sh
