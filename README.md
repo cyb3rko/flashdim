@@ -1,13 +1,15 @@
 <h1 align="center">FlashDim - Dim your flashlight</h1>
 
-[![Matrix](https://proxy.cyb3rko.de/shields/matrix/flashdim%3Amatrix.org?logo=matrix&label=Matrix%20Chat&color=black)](https://matrix.to/#/#flashdim:matrix.org)
-[![API](https://img.shields.io/badge/API-33%2B-coral?logo=android&logoColor=white)](https://apilevels.com)
-[![gplay](https://img.shields.io/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.cyb3rko.flashdim%26l%3Dgplay%26m%3Dv%24version&color=blue&logo=googleplay)](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
-[![fdroid](https://img.shields.io/f-droid/v/com.cyb3rko.flashdim.svg?logo=fdroid)](https://f-droid.org/packages/com.cyb3rko.flashdim)
-[![github](https://img.shields.io/github/release/cyb3rko/flashdim.svg?logo=github)](https://github.com/cyb3rko/flashdim/releases/latest)
-[![last commit](https://img.shields.io/github/last-commit/cyb3rko/flashdim?color=FE5196&logo=git&logoColor=white)](https://github.com/cyb3rko/flashdim/commits/main)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-[![license](https://img.shields.io/github/license/cyb3rko/flashdim?color=1BCC1B&logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
+<p align="center">
+  <a href="https://matrix.to/#/#flashdim:matrix.org"><img alt="Matrix room" src="https://proxy.cyb3rko.de/shields/matrix/flashdim%3Amatrix.org?logo=matrix&label=Matrix%20Chat&color=black"/></a>
+  <a href="https://apilevels.com"><img alt="API Level" src="https://proxy.cyb3rko.de/shields/badge/API-33%2B-coral?logo=android&logoColor=white"/></a>
+  <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="Google Play Store" src="https://proxy.cyb3rko.de/shields/endpoint?url=https%3A%2F%2Fplay.cuzi.workers.dev%2Fplay%3Fi%3Dcom.cyb3rko.flashdim%26l%3Dgplay%26m%3Dv%24version&color=blue&logo=googleplay"/></a>
+  <a href="https://proxy.cyb3rko.de/shields/f-droid/v/com.cyb3rko.flashdim.svg?logo=fdroid"><img alt="F-Droid" src="https://proxy.cyb3rko.de/shields/f-droid/v/com.cyb3rko.flashdim.svg?logo=fdroid"/></a>
+  <a href="https://github.com/cyb3rko/flashdim/releases/latest"><img alt="GitHub Release" src="https://proxy.cyb3rko.de/shields/github/v/release/cyb3rko/flashdim.svg?logo=github"/></a>
+  <a href="https://github.com/cyb3rko/flashdim/commits/main"><img alt="Last commit" src="https://proxy.cyb3rko.de/shields/github/last-commit/cyb3rko/flashdim?color=FE5196&logo=git&logoColor=white"/></a>
+  <a href="https://conventionalcommits.org"><img alt="Conventional Commits" src="https://proxy.cyb3rko.de/shields/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white"/></a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0"><img alt="License" src="https://proxy.cyb3rko.de/shields/github/license/cyb3rko/flashdim?color=1BCC1B&logo=apache"/></a>
+</p>
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a><br/>

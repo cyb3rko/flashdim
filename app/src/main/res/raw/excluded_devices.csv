@@ -14,6 +14,7 @@ AT&T Motivate® Pro 5G,ATT SN509A,AT&T,SN509A,false
 Atozee CP20_GOLD,ATOZEE CP20_GOLD,Atozee,CP20_GOLD,false
 Attila WTATTRW2,ATT WTATTRW2,Attila,WTATTRW2,false
 benco AE9240,benco AE9240,benco,AE9240,false
+benco S1 Pro,benco AE9260,benco,AE9260,false
 benco V91,benco AE9310,benco,AE9310,false
 Blackview A52 Pro,Blackview A52Pro,Blackview,A52Pro,false
 Blackview BL9000,Blackview BL9000,Blackview,BL9000,false
@@ -67,8 +68,10 @@ Google Pixel 4a 5G,google bramble,Google,bramble,false
 Google Pixel 5,google redfin,Google,redfin,false
 Google Pixel 5a 5G,google barbet,Google,barbet,false
 Hisense E33,Hisense HLTE243E_01,Hisense,HLTE243E_01,false
+Hisense E70,Hisense HLTE262E_01,Hisense,HLTE262E_01,false
 HMD Fusion,HMD NHK,HMD,NHK,false
 HMD M-KOPA X20,HMD LGR,HMD,LGR,false
+HMD Pulse,HMD LGD,HMD,LGD,false
 HMD Pulse+,HMD LGP,HMD,LGP,false
 HMD Skyline Business Edition,HMD TCT,HMD,TCT,false
 HMD Vibe,HMD SHK,HMD,SHK,false
@@ -151,6 +154,7 @@ Itel A05s,Itel itel-A663LC,Itel,itel-A663LC,false
 Itel A70,Itel itel-A665L,Itel,itel-A665L,false
 Itel itel A50,Itel itel-A667L,Itel,itel-A667L,false
 Itel itel A50,Itel itel-A667LP,Itel,itel-A667LP,false
+Itel itel A50C,Itel itel-A669L,Itel,itel-A669L,false
 Itel itel P40+,Itel itel-P683L,Itel,itel-P683L,false
 Itel itel P55,Itel itel-A666LN,Itel,itel-A666LN,false
 Itel itel P55,itel-A666L,Itel,itel-A666L,false
@@ -160,6 +164,7 @@ Itel itel P55+,Itel itel-P663L,Itel,itel-P663L,false
 Itel itel P55+,Itel itel-P663LN,Itel,itel-P663LN,false
 Itel itel RS4,Itel itel-S666LN,Itel,itel-S666LN,false
 Itel itel S23+,Itel itel-S681LN,Itel,itel-S681LN,false
+Itel P65,Itel itel-P671LN,Itel,itel-P671LN,false
 Lava Blaze 2 5G,LAVA LXX507,Lava,LXX507,false
 Lava BLAZE 5G,LAVA LXX503,Lava,LXX503,false
 Lava Blaze Curve,LAVA LXX505,Lava,LXX505,false
@@ -197,6 +202,7 @@ Motorola moto g stylus 5G - 2023,motorola genevn,Motorola,genevn,false
 Motorola moto g stylus 5G - 2024,motorola boston,Motorola,boston,false
 Motorola moto g stylus (2023),motorola gnevan,Motorola,gnevan,false
 Motorola moto g04s,motorola lion,Motorola,lion,false
+Motorola moto g05,
 Motorola moto g13,motorola penangf,Motorola,penangf,false
 Motorola moto g14,motorola cancun,Motorola,cancun,false
 Motorola moto g24,motorola fogorow,Motorola,fogorow,false
@@ -238,6 +244,7 @@ Motorola motorola razr 2022,motorola oneli,Motorola,oneli,false
 Motorola motorola razr 40,motorola lynkco,Motorola,lynkco,false
 Motorola motorola razr plus 2023,motorola zeekr,Motorola,zeekr,false
 Motorola ThinkPhone by Motorola,motorola bronco,Motorola,bronco,false
+Moxee Technologies Moxee_T2310,Moxee T2310,Moxee Technologies,T2310,false
 Nokia C22,Nokia HKEA,Nokia,HKEA,false
 Nokia C32,Nokia MKDA,Nokia,MKDA,false
 Nokia G10,Nokia ROGA_sprout,Nokia,Nokia ROGA_sprout,false
@@ -400,6 +407,7 @@ POCO M6 5G,POCO air,POCO,air,false
 POCO M6 Plus 5G,POCO breeze,POCO,breeze,false
 POCO M6 Pro,POCO emerald,POCO,emerald,false
 POCO M6 Pro 5G,POCO sky,POCO,sky,false
+POCO M7 5G,POCO flame,POCO,flame,false
 POCO M7 Pro 5G,POCO beryl,POCO,beryl,false
 POCO X2,POCO phoenixin,POCO,phoenixin,false
 POCO X3 Pro,POCO bhima,POCO,bhima,false
@@ -520,6 +528,7 @@ Redmi 13C 5G,Redmi atmos,Redmi,atmos,false
 Redmi 13x,Redmi tides,Redmi,tides,false
 Redmi 14C,Redmi lake,Redmi,lake,false
 Redmi 14C,Redmi pond,Redmi,pond,false
+Redmi 14C 5G,Redmi flame,Redmi,flame,false
 Redmi A2,Redmi cloud,Redmi,cloud,false
 Redmi A2+,Redmi water,Redmi,water,false
 Redmi A3,Redmi blue,Redmi,blue,false
@@ -636,6 +645,8 @@ Sony Xperia 5 IV,Sony XQ-CQ54,Sony,XQ-CQ54,false
 Sony Xperia 5 IV,Sony XQ-CQ62,Sony,XQ-CQ62,false
 Sony Xperia 5 V,Sony XQ-DE54,Sony,XQ-DE54,false
 Stylo Comet,STYLO Comet,Stylo,Comet,false
+Symphony helio_80,Symphony helio_80,Symphony,helio_80,false
+Symphony innova30,Symphony innova30,Symphony,innova30,false
 TCT (Alcatel) TCL 40 XE 5G,TCL Encore_TF,TCL,Encore_TF,false
 TCL 40 SE,TCL Model_3,TCL,Model_3,false
 TCL 50 XE 5G,TCL Dragonfly_VZW,TCL,Dragonfly_VZW,false
@@ -714,6 +725,7 @@ Ulefone Armor 21,Ulefone Armor_21,Ulefone,Armor_21,false
 Ulefone Armor 25T 4G,Ulefone GQ5007TF1,Ulefone,GQ5007TF1,false
 Ulefone Armor 25T Pro,Ulefone GQ5007AF2,Ulefone,GQ5007AF2,false
 Ulefone Armor 26 Ultra,Ulefone Armor_26_Ultra,Ulefone,Armor_26_Ultra,false
+Ulefone Armor Mini 20T Pro,Ulefone GQ5010AH1,Ulefone,GQ5010AH1,false
 Ulefone Armor X12,Ulefone Armor_X12,Ulefone,Armor_X12,false
 Ulefone Armor X12 Pro,Ulefone Armor_X12_Pro,Ulefone,Armor_X12_Pro,false
 Ulefone Armor_X13,Ulefone Armor_X13,Ulefone,Armor_X13,false
