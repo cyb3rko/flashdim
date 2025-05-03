@@ -22,6 +22,7 @@ android {
         versionCode = 28
         versionName = "2.3.6"
         resValue("string", "app_name", "FlashDim Dev")
+        buildConfigField("String", "GIT_VERSION", "\"${getGitVersion()}\"")
         signingConfig = signingConfigs.getByName("debug")
     }
     buildTypes {
@@ -75,6 +76,22 @@ android {
             excludes.add("META-INF/*.version")
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.preference.ktx)
+    implementation(libs.androidx.profileinstaller)
+    implementation(libs.material)
+    "baselineProfile"(project(":baseline"))
+}
+
+configurations {
+    configureEach {
+        exclude("androidx.lifecycle", "lifecycle-viewmodel-ktx")
     }
 }
 
@@ -135,18 +152,12 @@ if (project.hasProperty("manual_upload")) {
     android.buildTypes.getByName("release").signingConfig = android.signingConfigs.getByName("upload")
 }
 
-dependencies {
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.preference.ktx)
-    implementation(libs.androidx.profileinstaller)
-    implementation(libs.material)
-    "baselineProfile"(project(":baseline"))
-}
-
-configurations {
-    configureEach {
-        exclude("androidx.lifecycle", "lifecycle-viewmodel-ktx")
-    }
+fun getGitVersion(): String {
+    val branch = providers.exec {
+        commandLine("git", "rev-parse", "--abbrev-ref", "HEAD")
+    }.standardOutput.asText.get().trim()
+    val hash = providers.exec {
+        commandLine("git", "rev-parse", "--short=7", "HEAD")
+    }.standardOutput.asText.get().trim()
+    return "$branch-$hash"
 }

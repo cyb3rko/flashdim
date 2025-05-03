@@ -58,7 +58,7 @@ internal object AboutDialog {
         .appendLine("FlashDim:")
         .appendLine(" - Version:  ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})")
         .appendLine(" - Installer:  ${getInstaller(context)}")
-        .appendLine(" - Build:  ${BuildConfig.BUILD_TYPE}")
+        .appendLine(" - Build:  ${BuildConfig.BUILD_TYPE} (${BuildConfig.GIT_VERSION})")
         .appendLine("Phone:")
         .appendLine(" - Manufacturer:  ${Build.MANUFACTURER}")
         .appendLine(" - Brand:  ${Build.BRAND}")

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,13 @@
 package com.cyb3rko.flashdim
 
 import android.app.Application
+import android.util.Log
 import com.google.android.material.color.DynamicColors
 
 class App : Application() {
     override fun onCreate() {
         DynamicColors.applyToActivitiesIfAvailable(this)
         super.onCreate()
+        Log.v("FlashDim", "Application version '${BuildConfig.GIT_VERSION}'")
     }
 }
