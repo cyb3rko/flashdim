@@ -51,12 +51,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     kotlin {
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_17)
+            jvmTarget.set(JvmTarget.JVM_21)
         }
     }
     buildFeatures {
@@ -74,8 +74,14 @@ android {
     packaging {
         resources {
             excludes.add("META-INF/*.version")
-            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+            excludes.add("META-INF/**/LICENSE.txt")
         }
+    }
+    dependenciesInfo {
+        // Exclude dependency metadata when building APKs by default
+        includeInApk = false
+        // Exclude dependency metadata when building AABs by default
+        includeInBundle = false
     }
 }
 
@@ -147,6 +153,12 @@ if (project.hasProperty("manual_upload")) {
                 keyAlias = properties.getProperty("uploadsigning.key.alias")
                 keyPassword = properties.getProperty("uploadsigning.key.password")
             }
+        }
+        dependenciesInfo {
+            // Include dependency metadata when building APKs for Google Play
+            includeInApk = true
+            // Include dependency metadata when building AABs for Google Play
+            includeInBundle = true
         }
     }
     android.buildTypes.getByName("release").signingConfig = android.signingConfigs.getByName("upload")
