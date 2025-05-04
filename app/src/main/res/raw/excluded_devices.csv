@@ -85,6 +85,7 @@ Honor HONOR 90,HONOR HNREA,Honor,HNREA,false
 Honor HONOR 90 Lite,HONOR HNCRT-M2,Honor,HNCRT-M2,false
 Honor HONOR Magic4 Lite,HONOR HNANY-Q1,Honor,HNANY-Q1,false
 Honor HONOR Magic6 Lite 5G,HONOR HNALI-Q,Honor,HNALI-Q,false
+Honor HONOR Magic7 Lite,HONOR HNBRP-Q1,Honor,HNBRP-Q1,false
 Honor HONOR X5b,HONOR HNGFY-M,Honor,HNGFY-M,false
 Honor HONOR X6,HONOR HNVNE-M,Honor,HNVNE-M,false
 Honor HONOR X6a,HONOR HNWDY-M,Honor,HNWDY-M,false
@@ -101,6 +102,7 @@ Honor HONOR X8b,HONOR HNLLY-Q,Honor,HNLLY-Q,false
 Honor HONOR X9,HONOR HNANY-Q1,Honor,HNANY-Q1,false
 Honor HONOR X9 5G,HONOR HNANY-Q,Honor,HNANY-Q,false
 Honor HONOR X9a 5G,HONOR HNRMO-Q,Honor,HNRMO-Q,false
+Honor 荣耀X60 PRO,HONOR HNBRP-Q,Honor,HNBRP-Q,false
 HTC U23 Pro,HTC htc_soodugls,HTC,htc_soodugls,false
 IIIF150 B2,IIIF150 B2,IIIF150,B2,false
 IIIF150 B2 Pro,IIIF150 B2_Pro,IIIF150,B2_Pro,false
@@ -641,6 +643,7 @@ Sony Xperia 5 III,docomo SO-53B,Sony,SO-53B,false
 Sony Xperia 5 III,KDDI SOG05,Sony,SOG05,false
 Sony Xperia 5 III,Sony XQ-BQ42,Sony,XQ-BQ42,false
 Sony Xperia 5 IV,docomo SO-54C,Sony,SO-54C,false
+Sony Xperia 5 IV,KDDI SOG09,Sony,SOG09,false
 Sony Xperia 5 IV,Sony XQ-CQ54,Sony,XQ-CQ54,false
 Sony Xperia 5 IV,Sony XQ-CQ62,Sony,XQ-CQ62,false
 Sony Xperia 5 V,Sony XQ-DE54,Sony,XQ-DE54,false
@@ -661,6 +664,8 @@ Teclast P30_EEA,Teclast P30_EEA,Teclast,P30_EEA,false
 Tecno CAMON 19,TECNO TECNO-CI6,Tecno,TECNO-CI6,false
 Tecno CAMON 19,TECNO TECNO-CI6n,Tecno,TECNO-CI6n,false
 Tecno CAMON 19 Neo,TECNO TECNO-CH6i,Tecno,TECNO-CH6i,false
+Tecno CAMON 19 Pro,TECNO TECNO-CI8,Tecno,TECNO-CI8,false
+Tecno CAMON 19 Pro,TECNO TECNO-CI8n,Tecno,TECNO-CI8n,false
 Tecno CAMON 20 Pro,TECNO TECNO-CK7n,Tecno,TECNO-CK7n,false
 Tecno CAMON 20 Pro 5G,TECNO TECNO-CK8n,Tecno,TECNO-CK8n,false
 Tecno PHANTOM V Flip 5G,TECNO TECNO-AD11,Tecno,TECNO-AD11,false
