@@ -43,9 +43,9 @@
     <string name="button_off_text">Off</string>
     <string name="dialog_links_title">Links</string>
     <string name="dialog_links_button">Visit</string>
-    <string name="dialog_links_github">Git repository on GitHub</string>
+re    <string name="dialog_links_github">Repository on GitHub</string>
     <string name="dialog_links_matrix">Matrix chat room (questions, feedback, discussions)</string>
-    <string name="dialog_links_donate">Feel free to support me with a small donation &lt;3</string>
+    <string name="dialog_links_donate">Feel free to support me with a small donation ❤️</string>
     <string name="dialog_about_title">About</string>
     <string name="dialog_about_button1">Show Icon Credits</string>
     <string name="dialog_about_button2">Copy device info</string>
@@ -61,6 +61,7 @@
     <string name="dialog_device_support_toast">Device information copied</string>
     <string name="toast_url_failed">Opening URL failed, copied URL instead</string>
     <string name="toast_intent_failed">Opening intent failed</string>
+    <string name="preference_about">by Cyb3rKo</string>
     <string name="preference_category_flashlight">Flashlight controls</string>
     <string name="preference_item_instant_flash">Instant Flash</string>
     <string name="preference_item_instant_flash_summary">Activate flashlight on app startup</string>

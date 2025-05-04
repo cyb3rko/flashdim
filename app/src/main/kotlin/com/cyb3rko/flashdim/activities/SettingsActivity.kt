@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,6 +34,7 @@ import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.R
 import com.cyb3rko.flashdim.databinding.ActivitySettingsBinding
 import com.cyb3rko.flashdim.modals.AccessibilityInfoDialog
+import com.cyb3rko.flashdim.modals.LinksDialog
 import com.cyb3rko.flashdim.utils.Safe
 import com.cyb3rko.flashdim.utils.Vibrator
 import com.google.android.material.R as MaterialR
@@ -100,6 +101,11 @@ internal class SettingsActivity :
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             myContext = requireContext()
             setPreferencesFromResource(R.xml.preferences, rootKey)
+
+            findPreference<Preference>("about")?.setOnPreferenceClickListener { preference ->
+                LinksDialog.show(myContext)
+                true
+            }
 
             findPreference<Preference>(Safe.INITIAL_LEVEL)?.apply {
                 Safe.initialize(myContext)

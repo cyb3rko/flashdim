@@ -36,9 +36,9 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:layout_marginTop="-19dp"
             app:layout_constraintTop_toTopOf="@id/github_desc"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/github_button"
             android:src="@drawable/ic_git" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -48,7 +48,6 @@
             android:layout_marginStart="10dp"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:gravity="center_horizontal"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/github_icon"
@@ -59,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/github_desc"
-            app:layout_constraintStart_toStartOf="@id/github_desc"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp"
             android:text="@string/dialog_links_button"
@@ -77,9 +76,9 @@
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:gravity="center_horizontal"
+            android:layout_marginTop="6dp"
             app:layout_constraintTop_toTopOf="@id/matrix_desc"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/matrix_button"
             android:src="@drawable/ic_matrix" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -89,7 +88,6 @@
             android:layout_marginStart="10dp"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:gravity="center_horizontal"
             app:layout_constraintTop_toBottomOf="@id/divider1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/matrix_icon"
@@ -101,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/matrix_desc"
-            app:layout_constraintStart_toStartOf="@id/matrix_desc"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp"
             android:text="@string/dialog_links_button"
@@ -119,9 +117,9 @@
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="@id/donate_desc"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/donate_button"
             android:src="@drawable/ic_coins" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -131,7 +129,6 @@
             android:layout_marginStart="10dp"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:gravity="center_horizontal"
             app:layout_constraintTop_toBottomOf="@id/divider2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/donate_icon"
@@ -143,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/donate_desc"
-            app:layout_constraintStart_toStartOf="@id/donate_desc"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp"
             android:text="@string/dialog_links_button"

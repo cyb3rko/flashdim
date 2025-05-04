@@ -2,6 +2,12 @@
 <PreferenceScreen
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <Preference
+        app:key="about"
+        app:title="@string/app_name"
+        app:summary="@string/preference_about"
+        app:icon="@drawable/avatar" />
+
     <PreferenceCategory
         app:title="@string/preference_category_flashlight">
 
