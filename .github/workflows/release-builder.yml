@@ -26,7 +26,7 @@ jobs:
               },
               "categories": [
                 {
-                    "title": "## 🚀 Features",
+                    "title": "## 🦾 Features",
                     "labels": ["feat"]
                 },
                 {
@@ -34,28 +34,40 @@ jobs:
                     "labels": ["fix"]
                 },
                 {
-                    "title": "## 🦾 Enhancements",
-                    "labels": ["enh"]
+                    "title": "## 🚀 Performance",
+                    "labels": ["perf"]
                 },
                 {
-                    "title": "## 🧹 Refactorings",
-                    "labels": ["rfct"]
+                    "title": "## 📘 Documentation",
+                    "labels": ["docs"]
                 },
                 {
-                    "title": "## ⚒️ Build / Dependencies",
-                    "labels": ["build"]
+                    "title": "## 🏗️ Refactorings",
+                    "labels": ["refactor"]
                 },
                 {
-                    "title": "## ⚙️ CI",
+                    "title": "## 🤖 CI",
                     "labels": ["ci"]
                 },
                 {
-                    "title": "## 📦 Repository",
-                    "labels": ["repo"]
+                    "title": "## ⚒️ Build",
+                    "labels": ["build"]
                 },
                 {
-                    "title": "## 💬 Other",
-                    "labels": ["other"]
+                    "title": "## ⏱️ Tests",
+                    "labels": ["test"]
+                },
+                {
+                    "title": "## 🎨 Style",
+                    "labels": ["style"]
+                },
+                {
+                    "title": "## 🧹 Chore",
+                    "labels": ["chore"]
+                },
+                {
+                    "title": "## ↩️ Reverted",
+                    "labels": ["revert"]
                 },
                 {
                     "title": "## ❔ Uncategorized",
