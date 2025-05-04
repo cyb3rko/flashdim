@@ -153,7 +153,7 @@ The following list contains phones, which were manually excluded in the Google P
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<b>Total: 802</b>
+<b>Total: 805</b>
 
 [8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [F](#f) [G](#g) [H](#h) [I](#i) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
@@ -350,7 +350,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Honor (25)</summary>
+  <summary>Honor (27)</summary>
   <ul>
     <li>Honor 200 Lite (HONOR HNLLY-M1)</li>
     <li>Honor HONOR 200 (HONOR HNELI, HONOR HNELIX)</li>
@@ -361,6 +361,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Honor HONOR 90 Lite (HONOR HNCRT-M2)</li>
     <li>Honor HONOR Magic4 Lite (HONOR HNANY-Q1)</li>
     <li>Honor HONOR Magic6 Lite 5G (HONOR HNALI-Q)</li>
+    <li>Honor HONOR Magic7 Lite (HONOR HNBRP-Q1)</li>
     <li>Honor HONOR X5b (HONOR HNGFY-M)</li>
     <li>Honor HONOR X6 (HONOR HNVNE-M)</li>
     <li>Honor HONOR X6a (HONOR HNWDY-M)</li>
@@ -377,6 +378,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Honor HONOR X9 (HONOR HNANY-Q1)</li>
     <li>Honor HONOR X9 5G (HONOR HNANY-Q)</li>
     <li>Honor HONOR X9a 5G (HONOR HNRMO-Q)</li>
+    <li>Honor 荣耀X60 PRO (HONOR HNBRP-Q)</li>
   </ul>
 </details>
 <details>
@@ -974,7 +976,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Sony Xperia 10 V (Sony XQ-DC54, Sony XQ-DC72)</li>
     <li>Sony Xperia 10 VI (Sony XQ-ES54)</li>
     <li>Sony Xperia 5 III (docomo SO-53B, KDDI SOG05, Sony XQ-BQ42)</li>
-    <li>Sony Xperia 5 IV (docomo SO-54C, Sony XQ-CQ54, Sony XQ-CQ62)</li>
+    <li>Sony Xperia 5 IV (docomo SO-54C, KDDI SOG09, Sony XQ-CQ54, Sony XQ-CQ62)</li>
     <li>Sony Xperia 5 V (Sony XQ-DE54)</li>
   </ul>
 </details>
@@ -1018,10 +1020,11 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Tecno (38)</summary>
+  <summary>Tecno (39)</summary>
   <ul>
     <li>Tecno CAMON 19 (TECNO TECNO-CI6, TECNO TECNO-CI6n)</li>
     <li>Tecno CAMON 19 Neo (TECNO TECNO-CH6i)</li>
+    <li>Tecno CAMON 19 Pro (TECNO TECNO-CI8, TECNO TECNO-CI8n)</li>
     <li>Tecno CAMON 20 Pro (TECNO TECNO-CK7n)</li>
     <li>Tecno CAMON 20 Pro 5G (TECNO TECNO-CK8n)</li>
     <li>Tecno PHANTOM V Flip 5G (TECNO TECNO-AD11)</li>
