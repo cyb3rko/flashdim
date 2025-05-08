@@ -118,7 +118,7 @@ class SettingsTile : TileService() {
         var level = -1
         try {
             if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
-                level = Safe.getInt(Safe.INITIAL_LEVEL, 1)
+                level = Safe.getInt(Safe.PREFERRED_LEVEL, 1)
             }
         } catch (_: Exception) {
             Log.e("FlashDim", "Safe operations failed in SettingsTile")

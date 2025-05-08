@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,7 +71,7 @@ class VolumeButtonService : AccessibilityService() {
     }
 
     private fun getFlashLevel(): Int = if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
-        Safe.getInt(Safe.INITIAL_LEVEL, -1)
+        Safe.getInt(Safe.PREFERRED_LEVEL, -1)
     } else {
         -1
     }

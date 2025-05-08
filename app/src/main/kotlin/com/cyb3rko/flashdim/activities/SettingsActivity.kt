@@ -107,19 +107,19 @@ internal class SettingsActivity :
                 true
             }
 
-            findPreference<Preference>(Safe.INITIAL_LEVEL)?.apply {
+            findPreference<Preference>(Safe.PREFERRED_LEVEL)?.apply {
                 Safe.initialize(myContext)
                 if (!Safe.getBoolean(Safe.MULTILEVEL, false)) {
                     isEnabled = false
                     return@apply
                 }
 
-                val initialLevel = Safe.getInt(Safe.INITIAL_LEVEL, 1)
-                val summaryString = getString(R.string.preference_item_initial_level_summary)
-                summary = "$summaryString: $initialLevel"
+                val preferredLevel = Safe.getInt(Safe.PREFERRED_LEVEL, 1)
+                val summaryString = getString(R.string.preference_item_preferred_level_summary)
+                summary = "$summaryString: $preferredLevel"
 
                 setOnPreferenceClickListener { preference ->
-                    val currentInitialLevel = Safe.getInt(Safe.INITIAL_LEVEL, 1)
+                    val currentPreferredLevel = Safe.getInt(Safe.PREFERRED_LEVEL, 1)
                     val withVibration = Safe.getBoolean(Safe.BUTTON_VIBRATION, true)
                     val content = LinearLayout(myContext).apply {
                         orientation = LinearLayout.VERTICAL
@@ -130,32 +130,32 @@ internal class SettingsActivity :
                         setPadding(24, 24, 24, 50)
                         gravity = Gravity.CENTER_HORIZONTAL
                         text = String.format(
-                            getString(R.string.preference_item_initial_level_dialog_message),
-                            currentInitialLevel,
-                            currentInitialLevel
+                            getString(R.string.preference_item_preferred_level_dialog_message),
+                            currentPreferredLevel,
+                            currentPreferredLevel
                         )
                     }
                     content.addView(levelView)
                     val slider = Slider(myContext).apply {
                         valueFrom = 1F
                         valueTo = Safe.getInt(Safe.MAX_LEVEL, 0).toFloat()
-                        value = currentInitialLevel.toFloat()
+                        value = currentPreferredLevel.toFloat()
                         stepSize = 1F
                         addOnChangeListener { _, value, _ ->
                             if (withVibration) Vibrator.vibrateTick()
                             levelView.text = String.format(
-                                getString(R.string.preference_item_initial_level_dialog_message),
+                                getString(R.string.preference_item_preferred_level_dialog_message),
                                 value.toInt(),
-                                currentInitialLevel
+                                currentPreferredLevel
                             )
                         }
                     }
                     content.addView(slider)
-                    showInitialLevelDialog(content) {
+                    showPreferredLevelDialog(content) {
                         val value = slider.value.toInt()
-                        Safe.writeInt(Safe.INITIAL_LEVEL, value)
+                        Safe.writeInt(Safe.PREFERRED_LEVEL, value)
 
-                        val summary = getString(R.string.preference_item_initial_level_summary)
+                        val summary = getString(R.string.preference_item_preferred_level_summary)
                         preference.summary = "$summary: $value"
                     }
                     true
@@ -170,22 +170,23 @@ internal class SettingsActivity :
                         true
                     }
                 }
+                findPreference<Preference>(Safe.VOLUME_BUTTONS_LINK)?.isEnabled = true
             }
         }
 
-        private fun showInitialLevelDialog(content: View, onSave: () -> Unit) {
+        private fun showPreferredLevelDialog(content: View, onSave: () -> Unit) {
             MaterialAlertDialogBuilder(
                 requireContext(),
                 MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
             )
                 .setIcon(R.drawable.ic_level)
-                .setTitle(getString(R.string.preference_item_initial_level_dialog_title))
+                .setTitle(getString(R.string.preference_item_preferred_level_dialog_title))
                 .setView(content)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     onSave()
                 }
                 .setNegativeButton(
-                    getString(R.string.preference_item_initial_level_dialog_negative_button),
+                    getString(R.string.preference_item_preferred_level_dialog_negative_button),
                     null
                 )
                 .show()

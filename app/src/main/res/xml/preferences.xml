@@ -26,12 +26,23 @@
             app:summary="@string/preference_item_instant_flash_extension_summary"
             app:icon="@drawable/ic_restart" />
 
+        <Preference
+            app:key="initial_level"
+            app:title="@string/preference_item_preferred_level"
+            app:summary="@string/preference_item_preferred_level_summary"
+            app:icon="@drawable/ic_level_scaled" />
+
         <SwitchPreferenceCompat
             app:key="pause_flash"
             app:defaultValue="false"
             app:title="@string/preference_item_pause_flash"
             app:summary="@string/preference_item_pause_flash_summary"
             app:icon="@drawable/ic_close" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/preference_category_quick_access">
 
         <SwitchPreferenceCompat
             app:key="quick_settings_toggle"
@@ -48,25 +59,20 @@
             app:summary="@string/preference_item_quick_settings_link_summary"
             app:icon="@drawable/ic_link_scaled" />
 
-        <SwitchPreferenceCompat
-            app:key="volume_buttons_link"
-            app:defaultValue="false"
-            app:title="@string/preference_item_volume_buttons_link"
-            app:summary="@string/preference_item_volume_buttons_link_summary"
-            app:icon="@drawable/ic_link_scaled" />
-
-        <Preference
-            app:key="initial_level"
-            app:title="@string/preference_item_initial_level"
-            app:summary="@string/preference_item_initial_level_summary"
-            app:icon="@drawable/ic_level_scaled" />
-
         <Preference
             app:key="volume_buttons"
             app:title="@string/preference_item_volume_buttons"
             app:enabled="false"
             app:summary="@string/preference_item_volume_buttons_summary"
             app:icon="@drawable/ic_button_service" />
+
+        <SwitchPreferenceCompat
+            app:key="volume_buttons_link"
+            app:defaultValue="false"
+            app:title="@string/preference_item_volume_buttons_link"
+            app:enabled="false"
+            app:summary="@string/preference_item_volume_buttons_link_summary"
+            app:icon="@drawable/ic_link_scaled" />
 
     </PreferenceCategory>
 

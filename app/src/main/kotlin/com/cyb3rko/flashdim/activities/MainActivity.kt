@@ -96,8 +96,8 @@ class MainActivity : AppCompatActivity() {
         maxLevel = camera.maxLevel
         Safe.initialize(this)
         Safe.writeInt(Safe.MAX_LEVEL, maxLevel)
-        if (Safe.getInt(Safe.INITIAL_LEVEL, -1) == -1) {
-            Safe.writeInt(Safe.INITIAL_LEVEL, maxLevel)
+        if (Safe.getInt(Safe.PREFERRED_LEVEL, -1) == -1) {
+            Safe.writeInt(Safe.PREFERRED_LEVEL, maxLevel)
         }
 
         if (maxLevel > 1 || couldBeRunningOnEmulator()) {
@@ -322,7 +322,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun activateInitialFlash() {
         if (maxLevel > 1) {
-            val level = Safe.getInt(Safe.INITIAL_LEVEL, -1)
+            val level = Safe.getInt(Safe.PREFERRED_LEVEL, -1)
             camera.sendLightLevel(this@MainActivity, currentLevel, level)
             updateLightLevelView(level)
             binding.seekBar.setProgress(level)
@@ -334,7 +334,7 @@ class MainActivity : AppCompatActivity() {
     private fun restoreLightLevelUi(): Boolean {
         val restored = if (maxLevel > 1 && Safe.getBoolean(Safe.FLASH_ACTIVE, false)) {
             val level = if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
-                Safe.getInt(Safe.INITIAL_LEVEL, 0)
+                Safe.getInt(Safe.PREFERRED_LEVEL, 0)
             } else {
                 maxLevel
             }
