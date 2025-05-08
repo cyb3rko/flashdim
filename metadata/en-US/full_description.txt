@@ -1,16 +1,17 @@
 <b>About</b>
-Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.
+Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.<br/>
 To be able to use this new feature I've developed this app.
 
-The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).
+The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).<br/>
 See <a href="https://github.com/cyb3rko/flashdim#supported-devices">Supported devices</a> on GitHub
 
-If you think it's worth to support this project, feel free to give a small donation ♥️.
+If you think it's worth to support this project, feel free to give a small donation ♥️ (<a href="https://github.com/cyb3rko/flashdim#donate">Donate</a>).
+
+Join the FlashDim Matrix room to talk with the community about the app or to ask me (the dev) anything:<br/>
+<a href="https://matrix.to/#/#flashdim:matrix.org">https://matrix.to/#/#flashdim:matrix.org</a>
 
 <b>Features</b>
 <ul><li>🔦 dimming your flashlight level by level</li><li>🎚 shortcut buttons for different brightness levels</li><li>🆘 SOS flash button</li><li>📫 morse code flash mode</li><li>⏲️ Interval / BPM mode</li><li>⚡ quick settings tile for fast access</li><li>🔊 press both volume buttons for easy flashlight toggle</li><li>🔒 private, no ads, no internet connection</li><li>💯 modern Material You (M3) design elements</li><li>🎨 app colors adapt to device's system colors</li></ul>
 
 <b>Used Icons</b>
-<a href="https://pictogrammers.com/library/mdi/icon/information-slab-circle-outline">information-slab-circle-outline created by Jeff Anders - Pictogrammers</a>
-<a href="https://pictogrammers.com/library/mdi/icon/vibrate">vibrate created by Google - Pictogrammers</a>
-<a href="https://pictogrammers.com/library/mdi/icon/rocket-launch-outline">rocket-launch-outline created by Michael Irigoyen - Pictogrammers</a>
+<ul><li><a href="https://pictogrammers.com/library/mdi/icon/information-slab-circle-outline">information-slab-circle-outline created by Jeff Anders - Pictogrammers</a></li><li><a href="https://pictogrammers.com/library/mdi/icon/vibrate">vibrate created by Google - Pictogrammers</a></li><li><a href="https://pictogrammers.com/library/mdi/icon/rocket-launch-outline">rocket-launch-outline created by Michael Irigoyen - Pictogrammers</a></li></ul>

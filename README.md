@@ -1342,11 +1342,9 @@ Find the links here or in the section 'Sponsor this project' of this repo:
 
 ## Used Icons
 
-| 💛 |
-| --- |
-| <a href="https://pictogrammers.com/library/mdi/icon/information-slab-circle-outline">information-slab-circle-outline created by Jeff Anders - Pictogrammers</a> |
-| <a href="https://pictogrammers.com/library/mdi/icon/vibrate">vibrate created by Google - Pictogrammers</a> |
-| <a href="https://pictogrammers.com/library/mdi/icon/rocket-launch-outline">rocket-launch-outline created by Michael Irigoyen - Pictogrammers</a> |
+- [information-slab-circle-outline created by Jeff Anders - Pictogrammers](https://pictogrammers.com/library/mdi/icon/information-slab-circle-outline)  
+- [vibrate created by Google - Pictogrammers](https://pictogrammers.com/library/mdi/icon/vibrate)  
+- [rocket-launch-outline created by Michael Irigoyen - Pictogrammers](https://pictogrammers.com/library/mdi/icon/rocket-launch-outline)
 
 ## Star History
 
