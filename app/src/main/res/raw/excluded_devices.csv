@@ -42,9 +42,9 @@ Cubot P80,CUBOT P80,Cubot,P80,false
 Cubot X70,CUBOT X70,Cubot,X70,false
 Daria DM-B50104,Daria zahedan,Daria,zahedan,false
 Dcode DS_BD3,DCODE DS_BD3,Dcode,DS_BD3,false
-Deutsche Telekom T Phone Pro,DeutscheTelekom Lion,Deutsche Telekom,Lion,false
 Deutsche Telekom T Phone 2,DeutscheTelekom PUMA,Deutsche Telekom,PUMA,false
 Deutsche Telekom T Phone 2 Pro,DeutscheTelekom CHEETAH,Deutsche Telekom,CHEETAH,false
+Deutsche Telekom T Phone Pro,DeutscheTelekom Lion,Deutsche Telekom,Lion,false
 Doogee N50,DOOGEE 1918Y,Doogee,1918Y,false
 Doogee N50Pro,DOOGEE 1918N,Doogee,1918N,false
 Doogee N50S,DOOGEE 1918D,Doogee,1918D,false
@@ -166,6 +166,7 @@ Itel itel P55+,Itel itel-P663L,Itel,itel-P663L,false
 Itel itel P55+,Itel itel-P663LN,Itel,itel-P663LN,false
 Itel itel RS4,Itel itel-S666LN,Itel,itel-S666LN,false
 Itel itel S23+,Itel itel-S681LN,Itel,itel-S681LN,false
+Itel itel S24,Itel itel-S667LN,Itel,itel-S667LN,false
 Itel P65,Itel itel-P671LN,Itel,itel-P671LN,false
 Lava Blaze 2 5G,LAVA LXX507,Lava,LXX507,false
 Lava BLAZE 5G,LAVA LXX503,Lava,LXX503,false
@@ -331,8 +332,8 @@ Oppo CPH2473,OPPO OP5637L1,Oppo,OP5637L1,false
 Oppo CPH2527,OPPO OP56E7L1,Oppo,OP56E7L1,false
 Oppo Find X2,OPPO OP4BA1L1,Oppo,OP4BA1L1,false
 Oppo Find X2 Pro,OPPO OP4BA2L1,Oppo,OP4BA2L1,false
-Oppo Find X2 中国版,OPPO OP4A77,Oppo,OP4A77,false
 Oppo Find X2 Pro 中国版,OPPO OP4A7A,Oppo,OP4A7A,false
+Oppo Find X2 中国版,OPPO OP4A77,Oppo,OP4A77,false
 Oppo Find X3 Pro,OPPO OP4F57L1,Oppo,OP4F57L1,false
 Oppo Find X3 Pro 中国版,OPPO OP4E3F,Oppo,OP4E3F,false
 Oppo Find X3 中国版,OPPO OP4E5D,Oppo,OP4E5D,false
@@ -496,13 +497,13 @@ realme RMX3834,realme RE5C9F,realme,RE5C9F,false
 realme RMX3940,realme RE606B,realme,RE606B,false
 realme RMX3998,realme RE5C94L1,realme,RE5C94L1,false
 realme X7 Max,realme RMX3031L1,realme,RMX3031L1,false
+realme 真我 GT NEO 3 150W,realme RE5489,realme,RE5489,false
 realme 真我11 Pro,realme RE5869,realme,RE5869,false
 Realme 真我GT,realme RMX2202CN,realme,RMX2202CN,false
 realme 真我GT 2,realme RE5471,realme,RE5471,false
 realme 真我GT 2,realme RE58B2L1,realme,RE58B2L1,false
 realme 真我GT Neo,realme RMX3031CN,realme,RMX3031CN,false
 Realme 真我GT Neo2T,realme RE5469,realme,RE5469,false
-realme 真我 GT NEO 3 150W,realme RE5489,realme,RE5489,false
 Redmi 7,xiaomi onc,Redmi,onc,false
 Redmi 9,Redmi lancelot,Redmi,lancelot,false
 Redmi 9T,Redmi lime,Redmi,lime,false
@@ -650,12 +651,12 @@ Sony Xperia 5 V,Sony XQ-DE54,Sony,XQ-DE54,false
 Stylo Comet,STYLO Comet,Stylo,Comet,false
 Symphony helio_80,Symphony helio_80,Symphony,helio_80,false
 Symphony innova30,Symphony innova30,Symphony,innova30,false
-TCT (Alcatel) TCL 40 XE 5G,TCL Encore_TF,TCL,Encore_TF,false
 TCL 40 SE,TCL Model_3,TCL,Model_3,false
 TCL 50 XE 5G,TCL Dragonfly_VZW,TCL,Dragonfly_VZW,false
 TCL 50 XL 5G,TCL Goldfinch_TMO,TCL,Goldfinch_TMO,false
 TCL 501,TCL Bee_One,TCL,Bee_One,false
 TCL T607DL,TCL Bora_TF,TCL,Bora_TF,false
+TCT (Alcatel) TCL 40 XE 5G,TCL Encore_TF,TCL,Encore_TF,false
 T-Mobile REVVL 6,T-Mobile Bethpage,T-Mobile,Bethpage,false
 T-Mobile REVVL 6 Pro,T-Mobile Augusta,T-Mobile,Augusta,false
 T-Mobile REVVL 7,T-Mobile CypressPoint,T-Mobile,CypressPoint,false
@@ -930,3 +931,5 @@ ZTE NX711J,nubia PQ82A01,ZTE,PQ82A01,false
 ZTE NX729J,nubia NX729J-EEA,ZTE,NX729J-EEA,false
 ZTE NX729J,nubia NX729J-UN,ZTE,NX729J-UN,false
 ZTE Z2359,ZTE P606F13,ZTE,P606F13,false
+ZTE Z2453,ZTE P963F95,ZTE,P963F95,false
+ZTE Z2453,ZTE P963F95_A,ZTE,P963F95_A,false

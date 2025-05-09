@@ -1349,9 +1349,9 @@ Find the links here or in the section 'Sponsor this project' of this repo:
 ## Star History
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=cyb3rko/flashdim&type=Date" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://proxy.cyb3rko.de/stars/svg?repos=cyb3rko/flashdim&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://proxy.cyb3rko.de/stars/svg?repos=cyb3rko/flashdim&type=Date&theme=light" />
+  <img alt="Star History Chart" src="https://proxy.cyb3rko.de/stars/svg?repos=cyb3rko/flashdim&type=Date&theme=light" />
 </picture>
 
 ## License

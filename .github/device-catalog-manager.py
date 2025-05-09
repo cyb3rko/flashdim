@@ -47,7 +47,7 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
     for row in reader:
         print("Entry:", row)
         if row[0].startswith("XMobile"):
-            output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
+            output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n"
             device_count += 1
             output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
             (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, "XMobile")
@@ -64,7 +64,7 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
                 models.append(row[1])
         else:  # new model entry
             if manufacturer is not None and manufacturer != row[2].lower() and row[2].lower() not in manufacturers:
-                output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
+                output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n"
                 device_count += 1
                 output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
                 (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, row[2])
@@ -73,13 +73,13 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
             elif prev_name is not None:
                 manufacturer_count += 1
                 device_count += 1
-                output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n"
+                output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n"
             prev_name = row[0]
             models = [row[1]]
             manufacturer = row[2].lower()
             if manufacturer not in manufacturers:
                 manufacturers.append(manufacturer)
-    output += "    <li>" + prev_name + " (" + ", ".join(models) + ")</li>\n  </ul>\n</details>\n"
+    output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n  </ul>\n</details>\n"
     output = f"<b>Total: {device_count + 1}</b>\n\n" + get_quicklinks(manufacturers_letters) + output
     output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
 
