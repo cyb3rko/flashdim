@@ -13,7 +13,8 @@
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a><br/>
-  <a href="https://trendshift.io/repositories/13351" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13351" alt="cyb3rko%2Fflashdim | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+  <a href="https://trendshift.io/repositories/13351" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13351" alt="cyb3rko%2Fflashdim | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a><br/>
+  <a href="https://github.com/cyb3rko/flashdim/releases/latest"><img alt="License" src="https://proxy.cyb3rko.de/shields/github/downloads/cyb3rko/flashdim/total?logo=github&label=direct%20downloads&color=blue"/></a>
 </p>
 
 ---
@@ -1338,6 +1339,8 @@ Using a unified code format makes it much easier for me and for everyone else.
 
 If you think it's worth to support this project, feel free to give a small donation :heart:.  
 Find the links here or in the section 'Sponsor this project' of this repo:
+
+<a href="https://www.buymeacoffee.com/cyb3rko"><img width="220" src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=cyb3rko&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"/></a>
 - [ko-fi.com/cyb3rko](https://ko-fi.com/cyb3rko) 🫶
 - [buymeacoffee.com/cyb3rko](https://buymeacoffee.com/cyb3rko) ☕
 - [paypal.me/cyb3rko](https://paypal.me/cyb3rko) 💳
