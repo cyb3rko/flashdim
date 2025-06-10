@@ -14,11 +14,11 @@ plugins {
 
 android {
     namespace = "com.cyb3rko.flashdim"
-    compileSdk = 35
+    compileSdk = 36
     defaultConfig {
         applicationId = "com.cyb3rko.flashdim"
         minSdk = 33
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 30
         versionName = "2.4.1"
         resValue("string", "app_name", "FlashDim Dev")
