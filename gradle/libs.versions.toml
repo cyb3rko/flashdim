@@ -1,5 +1,5 @@
 [versions]
-agp = "8.10.0"
+agp = "8.10.1"
 kotlin = "2.0.21"
 kotlinter = "5.0.1"
 dexcount = "4.0.0"
