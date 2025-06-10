@@ -1,4 +1,4 @@
-<h1 align="center">FlashDim - Dim your flashlight</h1>
+<h1 align="center">FlashDim - Dim your flashlight 🔦</h1>
 
 <p align="center">
   <a href="https://matrix.to/#/#flashdim:matrix.org"><img alt="Matrix room" src="https://proxy.cyb3rko.de/shields/matrix/flashdim%3Amatrix.org?logo=matrix&label=Matrix%20Chat&color=black"/></a>
@@ -1367,7 +1367,6 @@ Using a unified code format makes it much easier for me and for everyone else.
 If you think it's worth to support this project, feel free to give a small donation :heart:.  
 Find the links here or in the section 'Sponsor this project' of this repo:
 
-<a href="https://www.buymeacoffee.com/cyb3rko"><img width="220" src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=cyb3rko&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"/></a>
 - [ko-fi.com/cyb3rko](https://ko-fi.com/cyb3rko) 🫶
 - [buymeacoffee.com/cyb3rko](https://buymeacoffee.com/cyb3rko) ☕
 - [paypal.me/cyb3rko](https://paypal.me/cyb3rko) 💳
