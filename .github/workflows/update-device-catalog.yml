@@ -22,17 +22,12 @@ jobs:
             .github/device-catalog-manager.py
             app/src/main/res/raw/excluded_devices.csv
 
-      - name: List root folder
+      - name: Sort excluded devices via Python
+        shell: sh
         run: |
-          pwd
-          ls -la
-
-      - name: List .github folder
-        run: |
-          cp app/src/main/res/raw/excluded_devices.csv .github
           cd .github
-          pwd
-          ls -la
+          python device-catalog-sort.py
+          cp ../app/src/main/res/raw/excluded_devices.csv .github
 
       - name: Validate csv file
         run: |

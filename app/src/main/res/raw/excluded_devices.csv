@@ -10,11 +10,11 @@ Asus ROG Phone 6,asus ASUS_AI2201,Asus,ASUS_AI2201,false
 Asus Zenfone 8,asus ASUS_I006D,Asus,ASUS_I006D,false
 Asus Zenfone 8 Flip,asus ASUS_I004D,Asus,ASUS_I004D,false
 Asus Zenfone 9,asus ASUS_AI2202,Asus,ASUS_AI2202,false
+Atozee CP20_GOLD,ATOZEE CP20_GOLD,Atozee,CP20_GOLD,false
+Attila WTATTRW2,ATT WTATTRW2,Attila,WTATTRW2,false
 AT&T Calypso® 4,ATT U380AA,AT&T,U380AA,false
 AT&T Motivate® Pro 5G,ATT SN509A,AT&T,SN509A,false
 AT&T Verge™,ATT SL219A,AT&T,SL219A,false
-Atozee CP20_GOLD,ATOZEE CP20_GOLD,Atozee,CP20_GOLD,false
-Attila WTATTRW2,ATT WTATTRW2,Attila,WTATTRW2,false
 benco AE9240,benco AE9240,benco,AE9240,false
 benco S1 Pro,benco AE9260,benco,AE9260,false
 benco V91,benco AE9310,benco,AE9310,false
@@ -76,9 +76,9 @@ Google Pixel 4a,google sunfish,Google,sunfish,false
 Google Pixel 4a 5G,google bramble,Google,bramble,false
 Google Pixel 5,google redfin,Google,redfin,false
 Google Pixel 5a 5G,google barbet,Google,barbet,false
+HIFI WALKER,HIFI WALKER G7 Pro,alps,G7 Pro,false
 Hisense E33,Hisense HLTE243E_01,Hisense,HLTE243E_01,false
 Hisense E70,Hisense HLTE262E_01,Hisense,HLTE262E_01,false
-HIFI WALKER,HIFI WALKER G7 Pro,alps,G7 Pro,false
 HMD Fusion,HMD NHK,HMD,NHK,false
 HMD M-KOPA X20,HMD LGR,HMD,LGR,false
 HMD Pulse,HMD LGD,HMD,LGD,false
@@ -199,6 +199,7 @@ LGE VELVET,lge caymanlm,LGE,caymanlm,false
 LGE VELVET,lge caymanlm,LGE,mcaymanlm,false
 Logicom Elio,Logicom Elio,Logicom,Elio,false
 LT_Mobile LT_mobile_C26,LT_mobile LT_mobile_C26,LT_Mobile,LT_mobile_C26,false
+M-KOPA M10,HMD NYX,M-KOPA,NYX,false
 Memorex MTAB_PRO_2600,MEMOREX MTAB_PRO_2600,Memorex,MTAB_PRO_2600,false
 Mi 11 X,Mi aliothin,Mi,aliothin,false
 Mobicell IX,Mobicel IX,Mobicel,IX,false
@@ -208,20 +209,20 @@ Mobicell RX PRO,Mobicel RX_PRO,Mobicel,RX_PRO,false
 Motorola moto e13,motorola sabahl,Motorola,sabahl,false
 Motorola moto e14,motorola lionl,Motorola,lionl,false
 Motorola moto edge X30,motorola hiphic,Motorola,hiphic,false
-Motorola moto g 5G (2022),motorola austin,Motorola,austin,false
+Motorola moto g - 2025,motorola kansas,Motorola,kansas,false
 Motorola moto g 5G - 2023,motorola pnangn,Motorola,pnangn,false
 Motorola moto g 5G - 2024,motorola fogo,Motorola,fogo,false
+Motorola moto g 5G (2022),motorola austin,Motorola,austin,false
 Motorola moto g play - 2023,motorola maui,Motorola,maui,false
 Motorola moto g play - 2024,motorola fogona,Motorola,fogona,false
+Motorola moto g power - 2025,motorola vegas,Motorola,cancunn,false
 Motorola moto g power 5G - 2023,motorola devonn,Motorola,devonn,false
 Motorola moto g power 5G - 2024,motorola cancunn,Motorola,cancunn,false
-Motorola moto g power - 2025,motorola vegas,Motorola,cancunn,false
-Motorola moto g stylus 5G (2022),motorola milanf,Motorola,milanf,false
 Motorola moto g stylus 5G - 2023,motorola genevn,Motorola,genevn,false
 Motorola moto g stylus 5G - 2024,motorola boston,Motorola,boston,false
 Motorola moto g stylus 5G - 2025,motorola mona,Motorola,mona,false
+Motorola moto g stylus 5G (2022),motorola milanf,Motorola,milanf,false
 Motorola moto g stylus (2023),motorola gnevan,Motorola,gnevan,false
-Motorola moto g - 2025,motorola kansas,Motorola,kansas,false
 Motorola moto g04s,motorola lion,Motorola,lion,false
 Motorola moto g05,motorola lamul,Motorola,lamul,false
 Motorola moto g13,motorola penangf,Motorola,penangf,false
@@ -267,7 +268,6 @@ Motorola motorola razr 40,motorola lynkco,Motorola,lynkco,false
 Motorola motorola razr plus 2023,motorola zeekr,Motorola,zeekr,false
 Motorola ThinkPhone by Motorola,motorola bronco,Motorola,bronco,false
 Moxee Technologies Moxee_T2310,Moxee T2310,Moxee Technologies,T2310,false
-M-KOPA M10,HMD NYX,M-KOPA,NYX,false
 Nokia C22,Nokia HKEA,Nokia,HKEA,false
 Nokia C32,Nokia MKDA,Nokia,MKDA,false
 Nokia G10,Nokia ROGA_sprout,Nokia,Nokia ROGA_sprout,false
@@ -286,6 +286,14 @@ Nokia X20,Nokia QKS_sprout,Nokia,QKS_sprout,false
 Nokia X30 5G,Nokia FCN_sprout,Nokia,FCN_sprout,false
 Nothing Phone 1,Nothing Spacewar,Nothing,Spacewar,false
 Nothing Phone 2,Nothing Pong,Nothing,Pong,false
+OnePlus 10 Pro,OnePlus OP516EL1,OnePlus,OP516EL1,false
+OnePlus 10 Pro 5G,OnePlus OP516FL1,OnePlus,OP516FL1,false
+OnePlus 10R 5G,OnePlus OP5566L1,OnePlus,OP5566L1,false
+OnePlus 10R 5G,OnePlus OP5567L1,OnePlus,OP5567L1,false
+OnePlus 10T 5G,OnePlus OP5552L1,OnePlus,OP5552L1,false
+OnePlus 11 5G 中国版,OnePlus OP591BL1,OnePlus,OP591BL1,false
+OnePlus 11R 5G,OnePlus OP5961L1,OnePlus,OP5961L1,false
+OnePlus 12,OnePlus OP5929L1,OnePlus,OP5929L1,false
 OnePlus 7,OnePlus OnePlus7,OnePlus,OnePlus7,false
 OnePlus 8,OnePlus OnePlus8,OnePlus,OnePlus8,false
 OnePlus 8 5G,OnePlus OnePlus8TMO,OnePlus,OnePlus8TMO,false
@@ -299,14 +307,6 @@ OnePlus 9 Pro 5G,OnePlus OnePlus9ProTMO,OnePlus,OnePlus9ProTMO,false
 OnePlus 9R,OnePlus OnePlus9R,OnePlus,OnePlus9R,false
 OnePlus 9RT 5G,OnePlus OP5154L1,OnePlus,OP5154L1,false
 OnePlus 9RT 5G,OnePlus OP5155L1,OnePlus,OP5155L1,false
-OnePlus 10 Pro,OnePlus OP516EL1,OnePlus,OP516EL1,false
-OnePlus 10 Pro 5G,OnePlus OP516FL1,OnePlus,OP516FL1,false
-OnePlus 10R 5G,OnePlus OP5566L1,OnePlus,OP5566L1,false
-OnePlus 10R 5G,OnePlus OP5567L1,OnePlus,OP5567L1,false
-OnePlus 10T 5G,OnePlus OP5552L1,OnePlus,OP5552L1,false
-OnePlus 11 5G 中国版,OnePlus OP591BL1,OnePlus,OP591BL1,false
-OnePlus 11R 5G,OnePlus OP5961L1,OnePlus,OP5961L1,false
-OnePlus 12,OnePlus OP5929L1,OnePlus,OP5929L1,false
 OnePlus Ace,OnePlus OP5565,OnePlus,OP5565,false
 OnePlus Ace 3,OnePlus OP5CF9L1,OnePlus,OP5CF9L1,false
 OnePlus Ace 5,OnePlus OP5D2BL1,OnePlus,OP5D2BL1,false
@@ -370,6 +370,9 @@ Oppo OPPO A1 5G,OPPO OP561D,Oppo,OP561D,false
 Oppo OPPO A57s,OPPO OP5353L1,Oppo,OP5353L1,false
 Oppo OPPO A60 5G/ A3 5G,OPPO OP5EA7L1,Oppo,OP5EA7L1,false
 Oppo OPPO F27 Pro+ 5G,OPPO OP5B19L1,Oppo,OP5B19L1,false
+Oppo OPPO Reno10 5G,OPPO OP5655,Oppo,OP5655,false
+Oppo OPPO Reno10 Pro 5G,OPPO OP561F,Oppo,OP561F,false
+Oppo OPPO Reno10 Pro+ 5G,OPPO OP564B,Oppo,OP564B,false
 Oppo OPPO Reno5 pro,OPPO OP4F1FL1,Oppo,OP4F1FL1,false
 Oppo OPPO Reno5 Pro+ 5G,OPPO OP4EA7,Oppo,OP4EA7,false
 Oppo OPPO Reno6 Z 5G,OPPO OP4FA7L1,Oppo,OP4FA7L1,false
@@ -381,22 +384,19 @@ Oppo OPPO Reno8 5G,OPPO OP5339L1,Oppo,OP5339L1,false
 Oppo OPPO Reno8 Pro 5G,OPPO OP5335L1,Oppo,OP5335L1,false
 Oppo OPPO Reno8 T,OPPO OP5709L1,Oppo,OP5709L1,false
 Oppo OPPO Reno9 Pro 5G,OPPO OP5601,Oppo,OP5601,false
-Oppo OPPO Reno10 5G,OPPO OP5655,Oppo,OP5655,false
-Oppo OPPO Reno10 Pro 5G,OPPO OP561F,Oppo,OP561F,false
-Oppo OPPO Reno10 Pro+ 5G,OPPO OP564B,Oppo,OP564B,false
 Oppo PEGT00,OPPO OP4E8F,Oppo,OP4E8F,false
 Oppo PFZM10,OPPO OP5281,Oppo,OP5281,false
 Oppo Reno 11 Pro,OPPO OP5AD3L1,Oppo,OP5AD3L1,false
-Oppo Reno5 Lite,OPPO OP4F43L1,Oppo,OP4F43L1,false
-Oppo Reno6 Pro+ 5G,OPPO OP4EC1,Oppo,OP4EC1,false
-Oppo Reno7 中国版,OPPO OP5227,Oppo,OP5227,false
-Oppo Reno8 T 5G,OPPO OP56EDL1,Oppo,OP56EDL1,false
-Oppo Reno9 A,OPPO OP5701L1,Oppo,OP5701L1,false
 Oppo Reno10 5G,OPPO OP5705L1,Oppo,OP5ABFL1,false
 Oppo Reno10 Pro 5G,OPPO OP56DBL1,Oppo,OP56DBL1,false
 Oppo Reno10 Pro+ 5G,OPPO OP56D3L1,Oppo,OP56D3L1,false
 Oppo Reno11 F 5G,OPPO OP5A0BL1,Oppo,OP5A0BL1,false
 Oppo Reno12 F 5G,OPPO OP5AF2L1,Oppo,OP5AF2L1,false
+Oppo Reno5 Lite,OPPO OP4F43L1,Oppo,OP4F43L1,false
+Oppo Reno6 Pro+ 5G,OPPO OP4EC1,Oppo,OP4EC1,false
+Oppo Reno7 中国版,OPPO OP5227,Oppo,OP5227,false
+Oppo Reno8 T 5G,OPPO OP56EDL1,Oppo,OP56EDL1,false
+Oppo Reno9 A,OPPO OP5701L1,Oppo,OP5701L1,false
 OSCAL MODERN 8,OSCAL MODERN_8,OSCAL,MODERN_8,false
 OSCAL Tiger 12,OSCAL Tiger12,OSCAL,Tiger12,false
 Oukitel C37_EEA,OUKITEL C37,Oukitel,C37,false
@@ -409,8 +409,8 @@ PCD Argentina P63L,PCD P63L_PR,PCD,P63L_PR,false
 POCO C31,POCO angelicain,POCO,angelicain,false
 POCO C51,POCO water,POCO,water,false
 POCO C55,POCO earth,POCO,earth,false
-POCO C65,POCO gust,POCO,gust,false
 POCO C65,POCO gale,POCO,gale,false
+POCO C65,POCO gust,POCO,gust,false
 POCO C71,POCO serenity,POCO,serenity,false
 POCO C75,POCO lake,POCO,lake,false
 POCO C75 5G,POCO warm,POCO,warm,false
@@ -457,17 +457,6 @@ POCO X5 Pro 5G,POCO redwoodin,POCO,redwoodin,false
 POCO X6 5G,POCO garnet,POCO,garnet,false
 POCO X6 Neo,POCO gold,POCO,gold,false
 Quantum Q03,Quantum Q03,Quantum,Q03,false
-realme 8,realme RMX3085L1,realme,RMX3085L1,false
-realme 8 Pro,realme RMX3081L1,realme,RMX3081L1,false
-realme 8i,realme RE54B4L1,realme,RE54B4L1,false
-realme 8s 5G,realme RE58A0L1,realme,RE58A0L1,false
-realme 9,realme RE54E2L1,realme,RE54E2L1,false
-realme 9 5G,realme RE54CBL1,realme,RE54CBL1,false
-realme 9 5G,realme RE54F3L1,realme,RE54F3L1,false
-realme 9 Pro+,realme RE879EL1,realme,RE879EL1,false
-realme 9i,realme RED8C1L1,realme,RED8C1L1,false
-realme 9i 5G,realme RE588DL1,realme,RE588DL1,false
-realme 9Pro 5G,realme RE54CBL1,realme,RE54CBL1,false
 realme 10,realme RE8DDCL1,realme,RE8DDCL1,false
 realme 10 Pro,realme RE5849,realme,RE5849,false
 realme 10 Pro 5G,realme RE588BL1,realme,RE588BL1,false
@@ -487,6 +476,17 @@ realme 12+ 5G,realme RE5C86L1,realme,RE5C86L1,false
 realme 13 5G,realme RE6070L1,realme,RE6070L1,false
 realme 13 Pro 5G,realme RE5CA3L1,realme,RE5CA3L1,false
 realme 14T 5G,realme RE60AFL1,realme,RE60AFL1,false
+realme 8,realme RMX3085L1,realme,RMX3085L1,false
+realme 8 Pro,realme RMX3081L1,realme,RMX3081L1,false
+realme 8i,realme RE54B4L1,realme,RE54B4L1,false
+realme 8s 5G,realme RE58A0L1,realme,RE58A0L1,false
+realme 9,realme RE54E2L1,realme,RE54E2L1,false
+realme 9 5G,realme RE54CBL1,realme,RE54CBL1,false
+realme 9 5G,realme RE54F3L1,realme,RE54F3L1,false
+realme 9 Pro+,realme RE879EL1,realme,RE879EL1,false
+realme 9i,realme RED8C1L1,realme,RED8C1L1,false
+realme 9i 5G,realme RE588DL1,realme,RE588DL1,false
+realme 9Pro 5G,realme RE54CBL1,realme,RE54CBL1,false
 realme C25,realme RMX3191,realme,RMX3191,false
 realme C25,realme RMX3193,realme,RMX3193,false
 realme C25s,realme RMX3195,realme,RMX3195,false
@@ -542,9 +542,6 @@ realme 真我GT 2,realme RE5471,realme,RE5471,false
 realme 真我GT 2,realme RE58B2L1,realme,RE58B2L1,false
 realme 真我GT Neo,realme RMX3031CN,realme,RMX3031CN,false
 Realme 真我GT Neo2T,realme RE5469,realme,RE5469,false
-Redmi 7,xiaomi onc,Redmi,onc,false
-Redmi 9,Redmi lancelot,Redmi,lancelot,false
-Redmi 9T,Redmi lime,Redmi,lime,false
 Redmi 10 2022,Redmi eos,Redmi,eos,false
 Redmi 10 2022,Redmi selene,Redmi,selene,false
 Redmi 10 5G,Redmi thunder,Redmi,thunder,false
@@ -570,6 +567,9 @@ Redmi 13x,Redmi tides,Redmi,tides,false
 Redmi 14C,Redmi lake,Redmi,lake,false
 Redmi 14C,Redmi pond,Redmi,pond,false
 Redmi 14C 5G,Redmi flame,Redmi,flame,false
+Redmi 7,xiaomi onc,Redmi,onc,false
+Redmi 9,Redmi lancelot,Redmi,lancelot,false
+Redmi 9T,Redmi lime,Redmi,lime,false
 Redmi A2,Redmi cloud,Redmi,cloud,false
 Redmi A2+,Redmi water,Redmi,water,false
 Redmi A3,Redmi blue,Redmi,blue,false
@@ -588,11 +588,6 @@ Redmi K60,Redmi mondrian,Redmi,mondrian,false
 Redmi K60E,Redmi rembrandt,Redmi,rembrandt,false
 Redmi K70,Redmi vermeer,Redmi,vermeer,true
 Redmi Mi 9T Pro,Xiaomi raphaelin,Redmi,raphaelin,false
-Redmi Note 8,Redmi biloba,Redmi,biloba,false
-Redmi Note 8,xiaomi ginkgo,Redmi,ginkgo,false
-Redmi Note 9,Redmi merlin,Redmi,merlin,false
-Redmi Note 9,Redmi merlinnfc,Redmi,merlinnfc,false
-Redmi Note 9 Pro,Redmi joyeuse,Redmi,joyeuse,false
 Redmi Note 10,Redmi sunny,Redmi,sunny,false
 Redmi Note 10 5G,Redmi camellian,Redmi,camellian,false
 Redmi Note 10 JE,Redmi XIG02,Redmi,XIG02,false
@@ -641,6 +636,11 @@ Redmi Note 14,Redmi tanzanite,Redmi,tanzanite,false
 Redmi Note 14 5G,Redmi beryl,Redmi,beryl,false
 Redmi Note 14 5G,Redmi citrine,Redmi,citrine,false
 Redmi Note 14 Pro,Redmi obsidian,Redmi,obsidian,false
+Redmi Note 8,Redmi biloba,Redmi,biloba,false
+Redmi Note 8,xiaomi ginkgo,Redmi,ginkgo,false
+Redmi Note 9,Redmi merlin,Redmi,merlin,false
+Redmi Note 9,Redmi merlinnfc,Redmi,merlinnfc,false
+Redmi Note 9 Pro,Redmi joyeuse,Redmi,joyeuse,false
 Redmi Pad Pro,Redmi dizi,Redmi,dizi,false
 Redmi Pad Pro 5G,Redmi ruan,Redmi,ruan,false
 Redmi POCO F5,POCO marblein,Redmi,marblein,false
@@ -698,16 +698,16 @@ Stylo Comet,STYLO Comet,Stylo,Comet,false
 Stylo SWIFT_4G,STYLO SWIFT_4G,Stylo,SWIFT_4G,false
 Symphony helio_80,Symphony helio_80,Symphony,helio_80,false
 Symphony innova30,Symphony innova30,Symphony,innova30,false
+T-Mobile REVVL 6,T-Mobile Bethpage,T-Mobile,Bethpage,false
+T-Mobile REVVL 6 Pro,T-Mobile Augusta,T-Mobile,Augusta,false
+T-Mobile REVVL 7,T-Mobile CypressPoint,T-Mobile,CypressPoint,false
+T-Mobile REVVL 7 Pro,T-Mobile Pinehurst,T-Mobile,Pinehurst,false
 TCL 40 SE,TCL Model_3,TCL,Model_3,false
 TCL 50 XE 5G,TCL Dragonfly_VZW,TCL,Dragonfly_VZW,false
 TCL 50 XL 5G,TCL Goldfinch_TMO,TCL,Goldfinch_TMO,false
 TCL 501,TCL Bee_One,TCL,Bee_One,false
 TCL T607DL,TCL Bora_TF,TCL,Bora_TF,false
 TCT (Alcatel) TCL 40 XE 5G,TCL Encore_TF,TCL,Encore_TF,false
-T-Mobile REVVL 6,T-Mobile Bethpage,T-Mobile,Bethpage,false
-T-Mobile REVVL 6 Pro,T-Mobile Augusta,T-Mobile,Augusta,false
-T-Mobile REVVL 7,T-Mobile CypressPoint,T-Mobile,CypressPoint,false
-T-Mobile REVVL 7 Pro,T-Mobile Pinehurst,T-Mobile,Pinehurst,false
 Teclast P30_EEA,Teclast P30_EEA,Teclast,P30_EEA,false
 Tecno CAMON 19,TECNO TECNO-CI6,Tecno,TECNO-CI6,false
 Tecno CAMON 19,TECNO TECNO-CI6n,Tecno,TECNO-CI6n,false
@@ -716,9 +716,18 @@ Tecno CAMON 19 Pro,TECNO TECNO-CI8,Tecno,TECNO-CI8,false
 Tecno CAMON 19 Pro,TECNO TECNO-CI8n,Tecno,TECNO-CI8n,false
 Tecno CAMON 20 Pro,TECNO TECNO-CK7n,Tecno,TECNO-CK7n,false
 Tecno CAMON 20 Pro 5G,TECNO TECNO-CK8n,Tecno,TECNO-CK8n,false
+Tecno Mobile POVA 5 Pro 5G,TECNO-Mobile TECNO-Mobile-LH8n,Tecno Mobile,TECNO-Mobile-LH8n,false
+Tecno Mobile SPARK Go 2024,TECNO-Mobile TECNO-Mobile-BG6,Tecno Mobile,TECNO-Mobile-BG6,false
+Tecno Mobile TECNO Mobile POVA 6 Neo,TECNO-Mobile TECNO-Mobile-LI6,Tecno Mobile,TECNO-Mobile-BG6,false
+Tecno Mobile TECNO Mobile SPARK 20,TECNO-Mobile TECNO-Mobile-KJ5n,Tecno Mobile,TECNO-Mobile-KJ5n,false
+Tecno Mobile TECNO Mobile SPARK 20 Pro+,TECNO-Mobile TECNO-Mobile-KJ7,Tecno Mobile,TECNO-Mobile-KJ7,false
+Tecno Mobile TECNO Mobile SPARK 20C,TECNO-Mobile TECNO-Mobile-BG7n,Tecno Mobile,TECNO-Mobile-BG7n,false
+Tecno Mobile TECNO SPARK 10,TECNO-Mobile TECNO-Mobile-KI5q,Tecno Mobile,TECNO-Mobile-KI5q,false
+Tecno Mobile TECNO SPARK 30C,TECNO-Mobile TECNO-Mobile-KL5n,Tecno Mobile,TECNO-Mobile-KL5n,false
 Tecno PHANTOM V Flip 5G,TECNO TECNO-AD11,Tecno,TECNO-AD11,false
 Tecno PHANTOM X2 5G,TECNO TECNO-AD8,Tecno,TECNO-AD8,false
 Tecno PHANTOM X2 Pro 5G,TECNO TECNO-AD9,Tecno,TECNO-AD9,false
+Tecno POP 8,TECNO TECNO-BG6h,Tecno,TECNO-BG6h,false
 Tecno POVA 5,TECNO TECNO-LH7n,Tecno,TECNO-LH7n,false
 Tecno POVA 5 Pro 5G,TECNO TECNO-LH8n,Tecno,TECNO-LH8n,false
 Tecno SPARK 10 5G,TECNO TECNO-KI8,Tecno,TECNO-KI8,false
@@ -771,15 +780,6 @@ Tecno TECNO SPARK 30C 5G,TECNO TECNO-KL8hs,Tecno,TECNO-KL8hs,false
 Tecno TECNO SPARK Go 1,TECNO TECNO-KL4,Tecno,TECNO-KL4,false
 Tecno TECNO SPARK Go 2024,TECNO TECNO-BG6m,Tecno,TECNO-BG6m,false
 Tecno TECNO SPARK Go 2024,TECNO TECNO-BG6s,Tecno,TECNO-BG6s,false
-Tecno Mobile POVA 5 Pro 5G,TECNO-Mobile TECNO-Mobile-LH8n,Tecno Mobile,TECNO-Mobile-LH8n,false
-Tecno Mobile SPARK Go 2024,TECNO-Mobile TECNO-Mobile-BG6,Tecno Mobile,TECNO-Mobile-BG6,false
-Tecno Mobile TECNO Mobile POVA 6 Neo,TECNO-Mobile TECNO-Mobile-LI6,Tecno Mobile,TECNO-Mobile-BG6,false
-Tecno Mobile TECNO Mobile SPARK 20,TECNO-Mobile TECNO-Mobile-KJ5n,Tecno Mobile,TECNO-Mobile-KJ5n,false
-Tecno Mobile TECNO Mobile SPARK 20 Pro+,TECNO-Mobile TECNO-Mobile-KJ7,Tecno Mobile,TECNO-Mobile-KJ7,false
-Tecno Mobile TECNO Mobile SPARK 20C,TECNO-Mobile TECNO-Mobile-BG7n,Tecno Mobile,TECNO-Mobile-BG7n,false
-Tecno Mobile TECNO SPARK 10,TECNO-Mobile TECNO-Mobile-KI5q,Tecno Mobile,TECNO-Mobile-KI5q,false
-Tecno Mobile TECNO SPARK 30C,TECNO-Mobile TECNO-Mobile-KL5n,Tecno Mobile,TECNO-Mobile-KL5n,false
-Tecno POP 8,TECNO TECNO-BG6h,Tecno,TECNO-BG6h,false
 Ulefone Armor 21,Ulefone Armor_21,Ulefone,Armor_21,false
 Ulefone Armor 22,Ulefone Armor_22,Ulefone,Armor_22,false
 Ulefone Armor 25T 4G,Ulefone GQ5007TF1,Ulefone,GQ5007TF1,false
@@ -801,8 +801,8 @@ Umidigi G3 EEA,UMIDIGI UMIDIGI_G3,Umidigi,UMIDIGI_G3,false
 Umidigi G3 Plus EEA,UMIDIGI G3_Plus,Umidigi,G3_Plus,false
 Umidigi UMIDIGI G3 Max EEA,UMIDIGI G3_Max,Umidigi,G3_Max,false
 Unihertz Jelly Star,Unihertz Jelly_Star,Unihertz,Jelly_Star,false
-Vgo Tel NOTE_23_V02,VGO_TEL NOTE_23,Vgo Tel,NOTE_23,false
 Vgo Tel NOTE 24,VGOTEL NOTE_24,Vgo Tel,NOTE_24,false
+Vgo Tel NOTE_23_V02,VGO_TEL NOTE_23,Vgo Tel,NOTE_23,false
 VIKUSHA V-Z70,VIKUSHA V-Z70,VIKUSHA,V-Z70,false
 VILLAON V30,VILLAON VILLAON-V30,VILLAON,VILLAON-V30,false
 VILLAON V40,VILLAON VILLAON-V40,VILLAON,VILLAON-V40,false
@@ -926,7 +926,6 @@ Vortex J24,Vortex J24,Vortex,J24,false
 Vortex ZG55,Vortex ZG55,Vortex,ZG55,false
 Vortex ZG65 Pro,Vortex ZG65_Pro,Vortex,ZG65_Pro,false
 Walton XANON X20,WALTON XANON_X20,Walton,XANON_X20,false
-Xiaomi 7,xiaomi onc,Xiaomi,onc,false
 Xiaomi 11 Lite 5G NE,Xiaomi lisa,Xiaomi,lisa,false
 Xiaomi 11 Lite NE,Xiaomi lisa,Xiaomi,lisa,false
 Xiaomi 11i,Xiaomi pissarroin,Xiaomi,pissarroin,false
@@ -951,10 +950,9 @@ Xiaomi 13T,Xiaomi aristotle,Xiaomi,aristotle,false
 Xiaomi 13T,Xiaomi XIG04,Xiaomi,XIG04,false
 Xiaomi 14,Xiaomi houji,Xiaomi,houji,true
 Xiaomi 14 Ultra,Xiaomi aurora,Xiaomi,aurora,true
+Xiaomi 7,xiaomi onc,Xiaomi,onc,false
 Xiaomi A3,Xiaomi blue,Xiaomi,blue,false
 Xiaomi Civi,Xiaomi mona,Xiaomi,mona,false
-Xiaomi Mi 8,Xiaomi dipper,Xiaomi,dipper,false
-Xiaomi Mi 9T Pro,Xiaomi raphaelin,Xiaomi,raphaelin,false
 Xiaomi Mi 10,Xiaomi umi,Xiaomi,umi,false
 Xiaomi Mi 10 Pro,Xiaomi cmi,Xiaomi,cmi,false
 Xiaomi Mi 10 Ultra,Xiaomi cas,Xiaomi,cas,false
@@ -969,6 +967,8 @@ Xiaomi Mi 11 Ultra,Xiaomi star,Xiaomi,star,false
 Xiaomi Mi 11i,Xiaomi haydn,Xiaomi,haydn,false
 Xiaomi Mi 11X,Xiaomi aliothin,Xiaomi,aliothin,false
 Xiaomi Mi 11X Pro,Xiaomi haydnin,Xiaomi,haydnin,false
+Xiaomi Mi 8,Xiaomi dipper,Xiaomi,dipper,false
+Xiaomi Mi 9T Pro,Xiaomi raphaelin,Xiaomi,raphaelin,false
 Xiaomi Mi A1,xiaomi tissot_sprout,Xiaomi,tissot_sprout,false
 Xiaomi Mi A2,xiaomi jasmine_sprout,Xiaomi,jasmine_sprout,false
 Xiaomi Note 8,xiaomi ginkgo,Xiaomi,ginkgo,false
