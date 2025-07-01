@@ -14,7 +14,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a><br/>
   <a href="https://trendshift.io/repositories/13351" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13351" alt="cyb3rko%2Fflashdim | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a><br/>
-  <a href="https://github.com/cyb3rko/flashdim/releases/latest"><img alt="License" src="https://proxy.cyb3rko.de/shields/github/downloads/cyb3rko/flashdim/total?logo=github&label=direct%20downloads&color=blue"/></a>
+  <a href="https://github.com/cyb3rko/flashdim/releases"><img alt="Direct downloads count" src="https://proxy.cyb3rko.de/shields/github/downloads/cyb3rko/flashdim/total?logo=github&label=direct%20downloads&color=blue"/></a>
 </p>
 
 ---
@@ -46,6 +46,7 @@
 ---
 
 ## About this project
+
 Starting with Android 13, it's possible to control multiple brightness levels of the flashlight.  
 To be able to use this new feature I've developed this app.
 
@@ -60,10 +61,11 @@ https://matrix.to/#/#flashdim:matrix.org
 
 ---
 
-Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashlight-Tiramisu) 💛  
-Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar) 💛
+Inspired by [polodarb/Flashlight-Tiramisu](https://github.com/polodarb/Flashlight-Tiramisu)  
+Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.com/massoudss/waveformSeekBar)
 
 ## Features
+
 - 🔦 dimming your flashlight level by level
 - 🎚 shortcut buttons for different brightness levels
 - 🆘 SOS flash button
@@ -77,12 +79,13 @@ Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.c
 
 ## Download
 
-[<img height=80 alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"/>](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
-[<img height="80" alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"/>](https://f-droid.org/app/com.cyb3rko.flashdim)
-[<img height="80" src="https://accrescent.app/badges/get-it-on.png"/>](https://accrescent.app/app/com.cyb3rko.flashdim)
-[<img height="80" src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"/>](https://github.com/cyb3rko/flashdim/releases/latest)
+[<img height=80 alt="Get it on Google Play" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/gplay.png"/>](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
+[<img height="80" alt="Get it on F-Droid" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/fdroid.png"/>](https://f-droid.org/app/com.cyb3rko.flashdim)
+[<img height="80" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/accrescent.png"/>](https://accrescent.app/app/com.cyb3rko.flashdim)
+[<img height="80" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/github.png"/>](https://github.com/cyb3rko/flashdim/releases/latest)
 
-Google Play and the Google Play logo are trademarks of Google LLC.
+<small>*Google Play and the Google Play logo are trademarks of Google LLC.*</small>  
+<small>*GITHUB®, the GITHUB® logo design, the INVERTOCAT logo design, OCTOCAT®, and the OCTOCAT® logo design are trademarks of GitHub, Inc.*</small>
 
 ### Verification
 
@@ -1392,6 +1395,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 <!--- marker2 -->
 
 ## Contribute
+
 Of course, I'm happy about any kind of contribution.
 
 For creating [issues](https://github.com/cyb3rko/flashdim/issues) there's no real guideline you should follow.
@@ -1403,9 +1407,9 @@ Using a unified code format makes it much easier for me and for everyone else.
 If you think it's worth to support this project, feel free to give a small donation :heart:.  
 Find the links here or in the section 'Sponsor this project' of this repo:
 
-- [ko-fi.com/cyb3rko](https://ko-fi.com/cyb3rko) 🫶
-- [buymeacoffee.com/cyb3rko](https://buymeacoffee.com/cyb3rko) ☕
-- [paypal.me/cyb3rko](https://paypal.me/cyb3rko) 💳
+[<img height=60 alt="Support me on Ko-Fi" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/main/badges/kofi.png"/>](https://ko-fi.com/cyb3rko)
+[<img height=60 alt="Buy me a Coffee" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/main/badges/buymeacoffee.png"/>](https://buymeacoffee.com/cyb3rko)
+[<img height=60 alt="Donate with PayPal" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/main/badges/paypal.png"/>](https://paypal.me/cyb3rko)
 
 ## Used Icons
 
