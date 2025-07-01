@@ -15,6 +15,7 @@ on:
       - 'LICENSE'
       - '.github/workflows/release-builder.yml'
       - '.github/workflows/update-device-catalog.yml'
+      - '.github/popular_devices/**'
       - '.github/FUNDING.yml'
       - '.editorconfig'
       - '.idea/**'

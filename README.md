@@ -141,6 +141,10 @@ Certificate Digests:
 |<img src="metadata/en-US/images/phoneScreenshots/5.png" width="250">|<img src="metadata/en-US/images/phoneScreenshots/6.png" width="250">|
 
 ## Supported Devices
+
+Statistics of the 30 most used devices can be found here:  
+[Popular Devices 📱](.github/popular_devices/popular_devices.md)
+
 The full functionality of this app is ONLY AVAILABLE for devices which support the dim functionality of the flashlight (hardware limited).  
 Here's a list of devices I know of which do support flashlight dimming.
 
