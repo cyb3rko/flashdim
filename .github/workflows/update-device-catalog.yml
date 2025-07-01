@@ -27,7 +27,7 @@ jobs:
         run: |
           cd .github
           python device-catalog-sort.py
-          cp ../app/src/main/res/raw/excluded_devices.csv .github
+          cp ../app/src/main/res/raw/excluded_devices.csv .
 
       - name: Validate csv file
         run: |

@@ -50,13 +50,15 @@ def main():
   excluded_devices_list = "../app/src/main/res/raw/excluded_devices.csv"
 
   with open(excluded_devices_list, "r", encoding="utf-8") as f:
-    lines = f.readlines()
+      print("Loading current file content")
+      lines = f.readlines()
 
   header = lines[0]
   content = lines[1:]
   sorted_content = sorted(content, key=cmp_to_key(lambda x, y: custom_compare(x, y)))
 
   with open(excluded_devices_list, "w", encoding="utf-8") as f:
+      print("Writing sorted file content")
       f.writelines([header] + sorted_content)
 
 if __name__ == "__main__":
