@@ -7,6 +7,7 @@
 // ./gradlew :baseline:connectedBenchmarkRelease
 
 import com.android.build.api.dsl.ManagedVirtualDevice
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.androidTest)
@@ -23,8 +24,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    kotlinOptions {
-        jvmTarget = "21"
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
+        }
     }
 
     defaultConfig {
