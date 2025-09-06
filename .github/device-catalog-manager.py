@@ -1,5 +1,44 @@
 import csv
 import os
+from collections import OrderedDict
+from functools import cmp_to_key
+
+
+def custom_compare(a, b):
+    a = a.lower()
+    b = b.lower()
+
+    def get_char_rank(c):
+        if c in [" ", "-"]:
+            return 0
+        if c.isalnum():
+            return 1
+        if c == '(':
+            return 2
+        return 3
+
+    result = -999
+
+    for j in range(min(len(a), len(b))):
+        c1, c2 = a[j], b[j]
+        rank1 = get_char_rank(c1)
+        rank2 = get_char_rank(c2)
+
+        # different char rank
+        if rank1 != rank2:
+            result = rank1 - rank2
+            break
+
+        # same rank, but different char
+        if c1 != c2:
+            result = -1 if c1 < c2 else 1
+            break
+
+    if result == -999:
+      # one string contains the other, prioritize shorter one
+      result = -1 if len(a) < len(b) else 1
+
+    return result
 
 
 def get_file_line_count():
@@ -11,77 +50,91 @@ def get_file_line_count():
         raise Exception("Who are you?")
 
 
-def get_manufacturer_link(manu_letters: list[str], manu: str) -> (list[str], str):
-    manu = manu.capitalize()
-    if manu[0] in manu_letters:
-        return manu_letters, ""
+def get_dict_leaves_count(d) -> int:
+    count = 0
+    for key, value in d.items():
+        if isinstance(value, dict):
+            count += get_dict_leaves_count(value)
+        else:
+            count += 1
+    return count
+
+
+def get_dict_subitems_count(d) -> int:
+  return len([key for key in d])
+
+
+def get_quicklinks(d) -> str:
+  quicklinks = ""
+  for letter in d:
+    quicklinks += f"[{letter}](#{letter.lower()}) "
+  quicklinks += " \n*Links may only work in common browsers*\n\n"
+  return quicklinks
+
+
+def get_manufacturer_link(letter: str, index: int) -> str:
+    if index != 0:
+      return ""
     else:
-        manu_letters.append(manu[0])
-        return manu_letters, f" name=\"{manu[0]}\""
+      letter = letter.upper()
+      return f" name=\"{letter}\""
 
 
-def get_quicklinks(manu_letters: list[str]) -> str:
-    quicklinks = ""
-    for letter in manu_letters:
-        quicklinks += f"[{letter}](#{letter.lower()}) "
-    quicklinks += " \n*Links may only work in common browsers*\n\n"
-    return quicklinks
-
-
-manufacturers = []
-manufacturers_letters = []
+data = OrderedDict()
 output = ""
 print(f"Reading CSV file in {os.getcwd()}")
 with open("excluded_devices.csv", "r", encoding="utf-8") as file:
-    reader = csv.reader(file, delimiter=',')
+    reader = csv.reader(file, delimiter=",")
     row_count = get_file_line_count()
     print(f"Found {row_count} entries")
     if row_count < 1:
         raise Exception("Empty CSV file")
     next(reader)
     device_count = 0
-    manufacturer = None
-    manufacturer_count = 0
     prev_name = None
-    models = []
     for row in reader:
         print("Entry:", row)
-        if row[0].startswith("XMobile"):
-            output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n"
-            device_count += 1
-            output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
-            (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, "XMobile")
-            output += f"  </ul>\n</details>\n<details{manufacturer_link}>\n  <summary>XMobile (<<tempMarker>>)</summary>\n  <ul>\n"
-            manufacturer_count = 0
-            prev_name = row[0]
-            models = [row[1]]
-            manufacturer = row[2].lower()
-        if manufacturer is None:
-            (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, row[2])
-            output += f"<details{manufacturer_link}>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
-        if prev_name == row[0]:  # multiple technical names
-            if not models.__contains__(row[1]):
-                models.append(row[1])
-        else:  # new model entry
-            if manufacturer is not None and manufacturer != row[2].lower() and row[2].lower() not in manufacturers:
-                output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n"
-                device_count += 1
-                output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
-                (manufacturers_letters, manufacturer_link) = get_manufacturer_link(manufacturers_letters, row[2])
-                output += f"  </ul>\n</details>\n<details{manufacturer_link}>\n  <summary>{row[2]} (<<tempMarker>>)</summary>\n  <ul>\n"
-                manufacturer_count = 0
-            elif prev_name is not None:
-                manufacturer_count += 1
-                device_count += 1
-                output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n"
-            prev_name = row[0]
-            models = [row[1]]
-            manufacturer = row[2].lower()
-            if manufacturer not in manufacturers:
-                manufacturers.append(manufacturer)
-    output += "    <li>" + prev_name + " [" + ", ".join(models) + "]</li>\n  </ul>\n</details>\n"
-    output = f"<b>Total: {device_count + 1}</b>\n\n" + get_quicklinks(manufacturers_letters) + output
-    output = output.replace("<<tempMarker>>", str(manufacturer_count + 1))
+        manufacturer = row[2]
+        manufacturer_letter = manufacturer[0].upper()
+        model = row[0]
+        model_name = row[1]
+
+        # data cleanup
+        # special case: merge 'Realme' into 'realme'
+        if manufacturer == "Realme":
+          manufacturer = "realme"
+
+        # data[manufacturer_letter]
+        prev_manufacturer_letter = data.get(manufacturer_letter, OrderedDict())
+        # data[manufacturer_letter][manufacturer]
+        prev_manufacturer = prev_manufacturer_letter.get(manufacturer, OrderedDict())
+        # data[manufacturer_letter][manufacturer][model]
+        prev_model_names = prev_manufacturer.get(model, [])
+        if not prev_model_names.__contains__(model_name):
+          prev_model_names.append(model_name)
+
+        # data[manufacturer_letter][manufacturer][model] = [...]
+        prev_manufacturer[model] = prev_model_names
+        # data[manufacturer_letter][manufacturer] = {...}
+        prev_manufacturer_letter[manufacturer] = prev_manufacturer
+        # data[manufacturer_letter] = {...}
+        data[manufacturer_letter] = prev_manufacturer_letter
+
+output = f"<b>Total: {get_dict_leaves_count(data)}</b>\n\n" + get_quicklinks(data)
+
+# iterate through manufacturer letters
+for letter_key, letter_value in data.items():
+    # iterate through manufacturers
+    manufacturer_list = sorted([m for m, _ in letter_value.items()], key=cmp_to_key(lambda x, y: custom_compare(x, y)))
+    manufacturer_index = 0
+    for manufacturer_key in manufacturer_list:
+        manufacturer_value = letter_value[manufacturer_key]
+        model_count = get_dict_subitems_count(manufacturer_value)
+        output += f"<details{get_manufacturer_link(letter_key, manufacturer_index)}>\n  <summary>{manufacturer_key} ({model_count})</summary>\n  <ul>\n"
+        for model_key, model_names in manufacturer_value.items():
+          output += "    <li>" + model_key + " [" + ", ".join(model_names) + "]</li>\n"
+        output += "  </ul>\n</details>\n"
+        manufacturer_index += 1
 
 print("Calculated output:")
 print(output)
