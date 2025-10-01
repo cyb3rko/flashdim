@@ -14,8 +14,7 @@
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim"><img alt="FlashDim" src="https://playbadges.pavi2410.me/badge/full?id=com.cyb3rko.flashdim" height="120"/></a><br/>
   <a href="https://trendshift.io/repositories/13351" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13351" alt="cyb3rko%2Fflashdim | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a><br/>
-  <a href="https://github.com/cyb3rko/flashdim/releases"><img alt="F-Droid installs count (yearly average)" src="https://img.shields.io/badge/F--Droid%20installs%20(yearly%20average)-27k-blue?logo=f-droid
-  "/></a><br/>
+  <a href="https://github.com/cyb3rko/flashdim/releases"><img alt="F-Droid installs count (yearly average)" src="https://img.shields.io/badge/F--Droid%20installs%20(yearly%20average)-27k-blue?logo=f-droid"/></a><br/>
   <a href="https://github.com/cyb3rko/flashdim/releases"><img alt="F-Droid installs count (weekly)" src="https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fdivested.dev%2Fpages%2Ffdroid_stats&search=com%5C.cyb3rko%5C.flashdim%3Cbr%3EWeekly%20Average%3A%20(%3F%3Cdownloads%3E%5B0-9%5D%2B)&replace=%24%3Cdownloads%3E&logo=f-droid&label=F-Droid%20installs%20(weekly)&color=blue"/></a><br/>
   <a href="https://github.com/cyb3rko/flashdim/releases"><img alt="GitHub downloads count (total)" src="https://proxy.cyb3rko.de/shields/github/downloads/cyb3rko/flashdim/total?logo=github&label=GitHub%20downloads%20%28total%29&color=blue"/></a><br/>
 </p>
