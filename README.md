@@ -164,7 +164,7 @@ The following list contains phones, which were manually excluded in the Google P
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<b>Total: 918</b>
+<b>Total: 945</b>
 
 [8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
@@ -193,6 +193,12 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   <summary>Acer (1)</summary>
   <ul>
     <li>Acer One 8 T4-82L [Acer AcerOne8T4-82L]</li>
+  </ul>
+</details>
+<details>
+  <summary>AIPLUS (1)</summary>
+  <ul>
+    <li>AIPLUS AI+ Pulse 1 [AIPLUS Pulse_1]</li>
   </ul>
 </details>
 <details>
@@ -276,6 +282,12 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Blu G73 [BLU G0771]</li>
   </ul>
 </details>
+<details>
+  <summary>BraX (1)</summary>
+  <ul>
+    <li>BraX BraX3 [BraX BraX3]</li>
+  </ul>
+</details>
 <details name="C">
   <summary>Cloud_Mobile (1)</summary>
   <ul>
@@ -291,10 +303,11 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Cubot (4)</summary>
+  <summary>Cubot (5)</summary>
   <ul>
     <li>Cubot KINGKONG 9 [CUBOT KINGKONG_9]</li>
     <li>Cubot KINGKONG X [CUBOT KINGKONG_X]</li>
+    <li>Cubot MAX 5 [CUBOT MAX_5]</li>
     <li>Cubot P80 [CUBOT P80]</li>
     <li>Cubot X70 [CUBOT X70]</li>
   </ul>
@@ -348,6 +361,13 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Fairphone 5 5G [Fairphone FP5]</li>
     <li>Fairphone Fairphone3 [Fairphone FP3]</li>
     <li>Fairphone Fairphone4 [Fairphone FP4]</li>
+  </ul>
+</details>
+<details>
+  <summary>fezawio (2)</summary>
+  <ul>
+    <li>fezawio F11_EEA [fezawio F11_EEA]</li>
+    <li>fezawio F11_US [fezawio F11_US]</li>
   </ul>
 </details>
 <details>
@@ -456,7 +476,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Infinix (35)</summary>
+  <summary>Infinix (38)</summary>
   <ul>
     <li>Infinix GT 10 Pro [Infinix Infinix-X6739]</li>
     <li>Infinix GT 20 Pro [Infinix Infinix-X6871]</li>
@@ -471,6 +491,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Infinix HOT 50 Pro [Infinix Infinix-X6881]</li>
     <li>Infinix HOT 50 Pro+ [Infinix Infinix-X6880]</li>
     <li>Infinix HOT 50i [Infinix Infinix-X6531, Infinix Infinix-X6531B]</li>
+    <li>Infinix HOT 60 Pro+ [Infinix Infinix-X6886]</li>
     <li>Infinix NOTE 12 [Infinix Infinix-X670]</li>
     <li>Infinix NOTE 12 Pro 5G [Infinix Infinix-X671B]</li>
     <li>Infinix NOTE 30 [Infinix Infinix-X6716, Infinix Infinix-X6716B, Infinix Infinix-X6833B]</li>
@@ -483,6 +504,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Infinix NOTE 40X 5G [Infinix Infinix-X6838]</li>
     <li>Infinix NOTE 50 [Infinix Infinix-X6858]</li>
     <li>Infinix NOTE 50 Pro [Infinix Infinix-X6855]</li>
+    <li>Infinix SMART 10 PLUS [Infinix Infinix-X6725C]</li>
     <li>Infinix SMART 8 [Infinix Infinix-X6525D]</li>
     <li>Infinix SMART 8 HD [Infinix Infinix-X6525]</li>
     <li>Infinix SMART 8 Plus [Infinix Infinix-X6526]</li>
@@ -491,12 +513,13 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Infinix SMART 9 HD [Infinix Infinix-X6532C]</li>
     <li>Infinix ZERO 30 [Infinix Infinix-X6731B]</li>
     <li>Infinix ZERO 30 5G [Infinix Infinix-X6731]</li>
+    <li>Infinix ZERO 40 [Infinix Infinix-X6860]</li>
     <li>Infinix ZERO 40 5G [Infinix Infinix-X6861]</li>
     <li>Infinix ZERO 5G 2023 [Infinix Infinix-X6815C, Infinix Infinix-X6815D]</li>
   </ul>
 </details>
 <details>
-  <summary>Itel (18)</summary>
+  <summary>Itel (19)</summary>
   <ul>
     <li>Itel A05s [Itel itel-A663L, Itel itel-A663LC]</li>
     <li>Itel A06 [Itel itel-A669W]</li>
@@ -514,6 +537,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Itel itel RS4 [Itel itel-S666LN]</li>
     <li>Itel itel S23+ [Itel itel-S681LN]</li>
     <li>Itel itel S24 [Itel itel-S667LN]</li>
+    <li>Itel itel S25 [Itel itel-S685LN]</li>
     <li>Itel P65 [Itel itel-P671LN]</li>
     <li>Itel P673L-OP [Itel itel P673L]</li>
   </ul>
@@ -525,7 +549,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="L">
-  <summary>Lava (11)</summary>
+  <summary>Lava (12)</summary>
   <ul>
     <li>Lava Blaze 2 5G [LAVA LXX507]</li>
     <li>Lava BLAZE 5G [LAVA LXX503]</li>
@@ -534,6 +558,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Lava LAVA AGNI 2 5G [LAVA LXX504]</li>
     <li>Lava LAVA AGNI 5G [LAVA LXX501]</li>
     <li>Lava LAVA LXX513 [LAVA LXX513]</li>
+    <li>Lava LAVA LXX522 [LAVA LXX522]</li>
     <li>Lava LAVA LZX414 [LAVA LZX414]</li>
     <li>Lava Storm 5G [LAVA LXX508]</li>
     <li>Lava YUVA 2 PRO [LAVA LZX408]</li>
@@ -586,8 +611,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Mobicel (4)</summary>
+  <summary>Mobicel (5)</summary>
   <ul>
+    <li>Mobicel F41 [Mobicel F41]</li>
     <li>Mobicell IX [Mobicel IX]</li>
     <li>Mobicell IX PRO [Mobicel IX_PRO]</li>
     <li>Mobicell IX-1 [Mobicel IX-1]</li>
@@ -605,6 +631,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   <ul>
     <li>Motorola moto e13 [motorola sabahl]</li>
     <li>Motorola moto e14 [motorola lionl]</li>
+    <li>Motorola moto e15 [motorola lamulg]</li>
     <li>Motorola moto edge X30 [motorola hiphic]</li>
     <li>Motorola moto g - 2025 [motorola kansas]</li>
     <li>Motorola moto g 5G - 2023 [motorola pnangn]</li>
@@ -654,7 +681,6 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Motorola motorola edge 50 [motorola tank]</li>
     <li>Motorola motorola edge 50 fusion [motorola cusco, motorola cuscoi]</li>
     <li>Motorola motorola edge 60 stylus [motorola monai]</li>
-    <li>Motorola motorola edge plus 2023 [motorola rtwo]</li>
     <li>Motorola motorola edge plus 5G UW (2022) [motorola hiphi]</li>
     <li>Motorola motorola edge s pro [motorola pstar]</li>
     <li>Motorola motorola edge (2021) [motorola berlna]</li>
@@ -672,7 +698,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="N">
-  <summary>Nokia (12)</summary>
+  <summary>Nokia (14)</summary>
   <ul>
     <li>Nokia C22 [Nokia HKEA]</li>
     <li>Nokia C32 [Nokia MKDA]</li>
@@ -686,6 +712,8 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Nokia T10 [Nokia PGN]</li>
     <li>Nokia X20 [Nokia QKS_sprout]</li>
     <li>Nokia X30 5G [Nokia FCN_sprout]</li>
+    <li>Nokia XR20 [Nokia TTG_sprout]</li>
+    <li>Nokia XR21 [Nokia SNT_sprout]</li>
   </ul>
 </details>
 <details name="O">
@@ -738,7 +766,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Oppo (73)</summary>
+  <summary>Oppo (74)</summary>
   <ul>
     <li>Oppo A18 [OPPO OP575DL1]</li>
     <li>Oppo A3 5G [OPPO OP5B05L1]</li>
@@ -806,6 +834,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Oppo Reno10 Pro+ 5G [OPPO OP56D3L1]</li>
     <li>Oppo Reno11 F 5G [OPPO OP5A0BL1]</li>
     <li>Oppo Reno11 Pro [OPPO OP59EFL1]</li>
+    <li>Oppo Reno12 5G [OPPO OP5ADDL1]</li>
     <li>Oppo Reno12 F [OPPO OP5EB1L1]</li>
     <li>Oppo Reno12 F 5G [OPPO OP5AF1L1, OPPO OP5AF2L1]</li>
     <li>Oppo Reno5 Lite [OPPO OP4F43L1]</li>
@@ -833,13 +862,14 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="P">
-  <summary>PCD (1)</summary>
+  <summary>PCD (2)</summary>
   <ul>
     <li>PCD Argentina P63L [PCD P63L, PCD P63L_PR]</li>
+    <li>PCD LLC Bengal Max [PCD Bengal_Max_iW]</li>
   </ul>
 </details>
 <details>
-  <summary>POCO (42)</summary>
+  <summary>POCO (43)</summary>
   <ul>
     <li>POCO C31 [POCO angelicain]</li>
     <li>POCO C51 [POCO water]</li>
@@ -848,6 +878,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>POCO C71 [POCO serenity]</li>
     <li>POCO C75 [POCO lake]</li>
     <li>POCO C75 5G [POCO warm]</li>
+    <li>POCO C85 [POCO dew]</li>
     <li>POCO F2 Pro [POCO lmi]</li>
     <li>POCO F3 [POCO alioth]</li>
     <li>POCO F3 GT [POCO aresin]</li>
@@ -892,7 +923,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="R">
-  <summary>realme (76)</summary>
+  <summary>realme (77)</summary>
   <ul>
     <li>realme 10 [realme RE8DDCL1]</li>
     <li>realme 10 Pro [realme RE5849]</li>
@@ -932,6 +963,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>realme C65 [realme RE5C42]</li>
     <li>realme C67 [realme RE5C91L1]</li>
     <li>realme C75 [realme RE607CL1]</li>
+    <li>realme C75 5G [realme RE6092]</li>
     <li>realme C75x [realme RE6089]</li>
     <li>realme GT 2 Pro [realme RED8ACL1]</li>
     <li>realme GT Master Edition [realme RE507C, realme RE54ABL1]</li>
@@ -973,7 +1005,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Redmi (77)</summary>
+  <summary>Redmi (78)</summary>
   <ul>
     <li>Redmi 10 2022 [Redmi eos, Redmi selene]</li>
     <li>Redmi 10 5G [Redmi thunder]</li>
@@ -1051,6 +1083,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Redmi Pad Pro 5G [Redmi ruan]</li>
     <li>Redmi Pad SE 8.7 [Redmi flare]</li>
     <li>Redmi Pad SE 8.7 4G [Redmi spark]</li>
+    <li>Redmi REDMI 15C [Redmi dew]</li>
     <li>Redmi Turbo 3 [Redmi peridot]</li>
   </ul>
 </details>
@@ -1074,10 +1107,10 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   <summary>Samsung (5)</summary>
   <ul>
     <li>Samsung Galaxy A03 Core [samsung a3core]</li>
+    <li>Samsung Galaxy F54 5G [samsung m54x]</li>
     <li>Samsung Galaxy M04 [samsung m04]</li>
     <li>Samsung Galaxy M15 5G [samsung m15x]</li>
     <li>Samsung Galaxy Note9 [samsung crownlte]</li>
-    <li>Samsung Galaxy Tab S9+ [samsung gts9pwifi]</li>
   </ul>
 </details>
 <details>
@@ -1097,8 +1130,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Sony (12)</summary>
+  <summary>Sony (13)</summary>
   <ul>
+    <li>Sony Xperia 1 II [Sony XQ-AT52]</li>
     <li>Sony Xperia 1 III [KDDI SOG03, Sony XQ-BC52, Sony XQ-BC62, Sony XQ-BC72]</li>
     <li>Sony Xperia 1 IV [docomo SO-51C, Sony XQ-CT54, Sony XQ-CT72]</li>
     <li>Sony Xperia 1 V [Sony XQ-DQ54, Sony XQ-DQ62, Sony XQ-DQ72]</li>
@@ -1120,12 +1154,13 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Stylo (4)</summary>
+  <summary>Stylo (5)</summary>
   <ul>
     <li>Stylo Comet [STYLO Comet]</li>
     <li>Stylo MAVERICK [STYLO MAVERICK]</li>
     <li>Stylo SONIC [STYLO SONIC]</li>
     <li>Stylo SWIFT_4G [STYLO SWIFT_4G]</li>
+    <li>Stylo VERTIGO [STYLO VERTIGO]</li>
   </ul>
 </details>
 <details>
@@ -1162,7 +1197,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Tecno (43)</summary>
+  <summary>Tecno (45)</summary>
   <ul>
     <li>Tecno CAMON 19 [TECNO TECNO-CI6, TECNO TECNO-CI6n]</li>
     <li>Tecno CAMON 19 Neo [TECNO TECNO-CH6i]</li>
@@ -1205,7 +1240,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Tecno TECNO SPARK 30 Pro [TECNO TECNO-KL7]</li>
     <li>Tecno TECNO SPARK 30C [TECNO TECNO-KL5, TECNO TECNO-KL5n, TECNO TECNO-KL5s]</li>
     <li>Tecno TECNO SPARK 30C 5G [TECNO TECNO-KL8h, TECNO TECNO-KL8hs]</li>
-    <li>Tecno TECNO SPARK Go 1 [TECNO TECNO-KL4]</li>
+    <li>Tecno TECNO SPARK 40C [TECNO TECNO-KM4k]</li>
+    <li>Tecno TECNO SPARK Go 1 [TECNO TECNO-KL4, TECNO TECNO-KL4s]</li>
+    <li>Tecno TECNO SPARK Go 2 [TECNO TECNO-KM4]</li>
     <li>Tecno TECNO SPARK Go 2024 [TECNO TECNO-BG6m, TECNO TECNO-BG6s]</li>
   </ul>
 </details>
@@ -1417,8 +1454,10 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="W">
-  <summary>Walton (1)</summary>
+  <summary>Walton (3)</summary>
   <ul>
+    <li>Walton NEXG N73 [WALTON NEXG_N73]</li>
+    <li>Walton NEXG_N25 [WALTON NEXG_N25]</li>
     <li>Walton XANON X20 [WALTON XANON_X20]</li>
   </ul>
 </details>
@@ -1486,7 +1525,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="Z">
-  <summary>ZTE (22)</summary>
+  <summary>ZTE (25)</summary>
   <ul>
     <li>ZTE 5G UG Phone U25 [nubia P720F09_U]</li>
     <li>ZTE 7160N [ZTE P720F02]</li>
@@ -1497,11 +1536,14 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>ZTE Blade A75 5G [ZTE P720F09]</li>
     <li>ZTE Blade V50 Vita [ZTE P606F09]</li>
     <li>ZTE Blade V60 Design [ZTE P606F10]</li>
+    <li>ZTE Blade V70 Design [ZTE P606F17]</li>
     <li>ZTE Blade V70 Max [nubia P606F19]</li>
     <li>ZTE nubia Music [nubia P963F11]</li>
     <li>ZTE nubia Neo 2 5G [nubia P820F03]</li>
+    <li>ZTE nubia Neo 5G [ZTE P720F03_A]</li>
     <li>ZTE nubia V60 [nubia P616F02]</li>
     <li>ZTE nubia V60 Design [nubia P606F10]</li>
+    <li>ZTE nubia V70 Design [nubia P606F17]</li>
     <li>ZTE nubia Z60S Pro [nubia PQ82A04]</li>
     <li>ZTE NX679J [nubia NX679J, nubia NX679J-EEA, nubia NX679J-UN]</li>
     <li>ZTE NX702J [nubia P898A21]</li>
