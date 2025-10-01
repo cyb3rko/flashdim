@@ -1,7 +1,12 @@
 # FlashDim - Popular Devices 📱
 
-01.07.2025 (Top: Google Pixel 8 Pro)
-<img src="popular_devices_20250701.jpg"/>
+07.09.2025 (Top: Google Pixel 8 Pro)
+<img src="popular_devices_20250907.jpg"/>
+
+<details>
+  <summary>01.07.2025 (Top: Google Pixel 8 Pro)</summary>
+  <img src="popular_devices_20250701.jpg"/>
+</details>
 
 <details>
   <summary>03.05.2025 (Top: Google Pixel 8 Pro)</summary>
