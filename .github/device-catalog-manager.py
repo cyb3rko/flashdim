@@ -103,6 +103,9 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
         # special case: merge 'Realme' into 'realme'
         if manufacturer == "Realme":
           manufacturer = "realme"
+        # special case: merge 'vivo' into 'Vivo'
+        if manufacturer == "vivo":
+          manufacturer = "Vivo"
 
         # data[manufacturer_letter]
         prev_manufacturer_letter = data.get(manufacturer_letter, OrderedDict())

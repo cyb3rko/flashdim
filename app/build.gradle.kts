@@ -101,7 +101,7 @@ configurations {
     }
 }
 
-// Automatic pipeline build
+// Automatic GitHub / F-Droid build
 // build with '-Psign assembleRelease'
 // output at 'app/build/outputs/apk/release/app-release.apk'
 // build with '-Psign bundleRelease'
@@ -123,7 +123,7 @@ if (project.hasProperty("sign")) {
         android.signingConfigs.getByName("release")
 }
 
-// Manual Accrescent build
+// Automatic Accrescent build
 // build with '-Pmanual_upload_oss buildApksLibre'
 // output at 'app/build/outputs/apkset/libre/app-libre.apks'
 if (project.hasProperty("manual_upload_oss")) {

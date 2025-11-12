@@ -8,6 +8,9 @@ from matplotlib.patches import Patch
 
 
 def get_color_from_brand(brand, salt="FlashDim"):
+    # override color for brands with similar colors
+    if brand == "Motorola":
+        brand += 3 * salt
     hex_hash = hashlib.md5((brand + salt).encode()).hexdigest()
     return "#" + hex_hash[:6]
 
