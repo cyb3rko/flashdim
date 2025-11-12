@@ -82,6 +82,7 @@ FOSSiBOT F106 Pro ROW,FOSSiBOT F106_Pro,FOSSiBOT,F106_Pro,false
 FOXXD A55,FOXXD A55,FOXXD,A55,false
 FOXXD A56,FOXXD A56,FOXXD,A56,false
 FOXXD A67L,FOXXD A67L,FOXXD,A67L,false
+G-Tab T11_1,G-Tab T11_1,G-Tab,T11_1,false
 General Mobile GM 23 Dual,GM G316,General Mobile,G316,false
 Google Pixel 3a,google sargo,Google,sargo,false
 Google Pixel 4,google flame,Google,flame,false
@@ -90,7 +91,6 @@ Google Pixel 4a,google sunfish,Google,sunfish,false
 Google Pixel 4a 5G,google bramble,Google,bramble,false
 Google Pixel 5,google redfin,Google,redfin,false
 Google Pixel 5a 5G,google barbet,Google,barbet,false
-G-Tab T11_1,G-Tab T11_1,G-Tab,T11_1,false
 HIFI WALKER,HIFI WALKER G7 Pro,alps,G7 Pro,false
 Hisense E33,Hisense HLTE243E_01,Hisense,HLTE243E_01,false
 Hisense E70,Hisense HLTE262E_01,Hisense,HLTE262E_01,false
@@ -777,11 +777,11 @@ Stylo SWIFT_4G,STYLO SWIFT_4G,Stylo,SWIFT_4G,false
 Stylo VERTIGO,STYLO VERTIGO,Stylo,VERTIGO,false
 Symphony helio_80,Symphony helio_80,Symphony,helio_80,false
 Symphony innova30,Symphony innova30,Symphony,innova30,false
-TABWEE T90_NEU,TABWEE T90,TABWEE,T90,false
 T-Mobile REVVL 6,T-Mobile Bethpage,T-Mobile,Bethpage,false
 T-Mobile REVVL 6 Pro,T-Mobile Augusta,T-Mobile,Augusta,false
 T-Mobile REVVL 7,T-Mobile CypressPoint,T-Mobile,CypressPoint,false
 T-Mobile REVVL 7 Pro,T-Mobile Pinehurst,T-Mobile,Pinehurst,false
+TABWEE T90_NEU,TABWEE T90,TABWEE,T90,false
 TCL 40 SE,TCL Model_3,TCL,Model_3,false
 TCL 50 XE 5G,TCL Dragonfly_TF,TCL,Dragonfly_TF,false
 TCL 50 XE 5G,TCL Dragonfly_VZW,TCL,Dragonfly_VZW,false
