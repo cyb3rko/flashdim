@@ -445,7 +445,7 @@ class MainActivity : AppCompatActivity() {
                 morseActivated
             }
             while (morseActivated) {
-                handler.flashMessage(message)
+                handler.flashMessage(message, message == "SOS")
                 if (morseActivated) handler.waitForRepeat()
             }
             switchMorseMode(false)

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2024 Cyb3rKo
+ * Copyright (c) 2022-2025 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -74,14 +74,14 @@ internal class MorseHandler(
         )
     }
 
-    internal suspend fun flashMessage(message: String) {
+    internal suspend fun flashMessage(message: String, skipCharSeparation: Boolean) {
         var code: String
         var delay: Long
         var firstLetter = true
         var firstCodePart = true
         message.uppercase().forEach { char ->
             if (char != ' ') {
-                if (!firstLetter) delay(DELAY_INTER_CHARACTER)
+                if (!skipCharSeparation && !firstLetter) delay(DELAY_INTER_CHARACTER)
                 code = CHARACTERS[char]!!
                 code.forEach { symbol ->
                     if (!firstCodePart) delay(DELAY_INTRA_CHARACTER)
