@@ -39,6 +39,13 @@
             app:summary="@string/preference_item_pause_flash_summary"
             app:icon="@drawable/ic_close" />
 
+        <SwitchPreferenceCompat
+            app:key="torch_preactivation"
+            app:defaultValue="false"
+            app:title="@string/preference_item_torch_preactivation"
+            app:summary="@string/preference_item_torch_preactivation_summary"
+            app:icon="@drawable/ic_level_scaled" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
