@@ -21,6 +21,13 @@
 
 ---
 
+<p align="center">
+  <a href="https://plexus.techlore.tech/apps?q=com.cyb3rko.flashdim"><img alt="Plexus rating" src="https://proxy.cyb3rko.de/shields/badge/dynamic/json?url=https%3A%2F%2Fplexus.techlore.tech%2Fapi%2Fv1%2Fapps%2Fcom.cyb3rko.flashdim%3Fscores%3Dtrue&query=%24.data.scores.native.numerator&suffix=%20%2F%204&logo=android&label=de-Googled%20Compatibility"/></a>
+  <a href="https://plexus.techlore.tech/apps?q=com.cyb3rko.flashdim"><img alt="Plexus rating" src="https://proxy.cyb3rko.de/shields/badge/dynamic/json?url=https%3A%2F%2Fplexus.techlore.tech%2Fapi%2Fv1%2Fapps%2Fcom.cyb3rko.flashdim%3Fscores%3Dtrue&query=%24.data.scores.micro_g.numerator&suffix=%20%2F%204&logo=android&label=microG%20Compatibility"/></a>
+</p>
+
+---
+
 - [About this project](#about-this-project)   
 - [Features](#features)  
 - [Download](#download)

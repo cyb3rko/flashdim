@@ -3,6 +3,6 @@ name = "flashdim-popular-devices"
 version = "1.0.0"
 requires-python = ">=3.13"
 dependencies = [
-    "matplotlib>=3.10.3",
-    "pandas>=2.3.0",
+    "matplotlib>=3.10.8",
+    "pandas>=2.3.3",
 ]
