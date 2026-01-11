@@ -171,7 +171,7 @@ The following list contains phones, which were manually excluded in the Google P
 If the list contains any phone which does has a dimmable flashlight, please let me know.
 
 <!--- marker1 -->
-<b>Total: 1026</b>
+<b>Total: 1034</b>
 
 [8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
@@ -294,12 +294,6 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Blu G53 [BLU G0850, BLU G0850_IW, BLU G0850_TIGO, BLU G0851]</li>
     <li>Blu G63 [BLU G0860, BLU G0870]</li>
     <li>Blu G73 [BLU G0771]</li>
-  </ul>
-</details>
-<details>
-  <summary>BL_9UEEP_104 (1)</summary>
-  <ul>
-    <li>Packard Bell DAYTONA_G8 [packard_bell BL_9UEEP_104]</li>
   </ul>
 </details>
 <details>
@@ -568,13 +562,19 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
+  <summary>INOI (1)</summary>
+  <ul>
+    <li>INOI INOI_A14 [INOI INOI_A14]</li>
+  </ul>
+</details>
+<details>
   <summary>iQOO (1)</summary>
   <ul>
     <li>iQOO Z10 Lite 5G [iQOO I2409]</li>
   </ul>
 </details>
 <details>
-  <summary>Itel (19)</summary>
+  <summary>Itel (20)</summary>
   <ul>
     <li>Itel A05s [Itel itel-A663L, Itel itel-A663LC]</li>
     <li>Itel A06 [Itel itel-A669W]</li>
@@ -593,6 +593,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Itel itel S23+ [Itel itel-S681LN]</li>
     <li>Itel itel S24 [Itel itel-S667LN]</li>
     <li>Itel itel S25 [Itel itel-S685LN]</li>
+    <li>Itel itel S25 Ultra [Itel itel-S686LN]</li>
     <li>Itel P65 [Itel itel-P671LN]</li>
     <li>Itel P673L-OP [Itel itel P673L]</li>
   </ul>
@@ -842,7 +843,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Oppo (77)</summary>
+  <summary>Oppo (78)</summary>
   <ul>
     <li>Oppo A18 [OPPO OP575DL1]</li>
     <li>Oppo A3 5G [OPPO OP5B05L1]</li>
@@ -853,6 +854,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Oppo A57 [OPPO OP5355]</li>
     <li>Oppo A58 [OPPO OP574FL1]</li>
     <li>Oppo A59 5G [OPPO OP5AD5L1]</li>
+    <li>Oppo A6 Pro [OPPO OP6285L1]</li>
     <li>Oppo A76 [OPPO OP5312L1]</li>
     <li>Oppo A78 [OPPO OP5745L1]</li>
     <li>Oppo A78 5G [OPPO OP52F3L1]</li>
@@ -947,6 +949,12 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="P">
+  <summary>Packard Bell (1)</summary>
+  <ul>
+    <li>Packard Bell DAYTONA_G8 [packard_bell BL_9UEEP_104]</li>
+  </ul>
+</details>
+<details>
   <summary>PCD (2)</summary>
   <ul>
     <li>PCD Argentina P63L [PCD P63L, PCD P63L_PR]</li>
@@ -1192,11 +1200,13 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Reeder (3)</summary>
+  <summary>Reeder (5)</summary>
   <ul>
     <li>Reeder S19 Max 32GB [Reeder S19_Max_32GB]</li>
     <li>Reeder S19 Max 64GB [Reeder S19_Max_64GB]</li>
     <li>Reeder S19 MaxL 128GB [reeder S19_MaxL_128GB]</li>
+    <li>Reeder S23 Pro Max [reeder S23_Pro_Max]</li>
+    <li>Reeder S23 Pro Max 256GB [reeder S23_Pro_Max_256GB]</li>
   </ul>
 </details>
 <details name="S">
@@ -1233,8 +1243,9 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>SHIFT (1)</summary>
+  <summary>SHIFT (2)</summary>
   <ul>
+    <li>SHIFT SHIFT6mq [SHIFT axolotl]</li>
     <li>SHIFT SHIFTphone 8 [SHIFT otter]</li>
   </ul>
 </details>
@@ -1419,7 +1430,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details>
-  <summary>Umidigi (6)</summary>
+  <summary>Umidigi (7)</summary>
   <ul>
     <li>Umidigi G1 Plus EEA [UMIDIGI G1_Plus]</li>
     <li>Umidigi G2 EEA [UMIDIGI UMIDIGI_G2]</li>
@@ -1427,6 +1438,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Umidigi G3 Plus EEA [UMIDIGI G3_Plus]</li>
     <li>Umidigi UMIDIGI G3 Max EEA [UMIDIGI G3_Max]</li>
     <li>Umidigi UMIDIGI G9T [UMIDIGI G9T]</li>
+    <li>Umidigi UMIDIGI Note 100A [UMIDIGI Note_100A]</li>
   </ul>
 </details>
 <details>
@@ -1598,9 +1610,10 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   </ul>
 </details>
 <details name="W">
-  <summary>Walton (4)</summary>
+  <summary>Walton (5)</summary>
   <ul>
     <li>Walton NEXG N73 [WALTON NEXG_N73]</li>
+    <li>Walton NEXG_N10 [WALTON NEXG_N10]</li>
     <li>Walton NEXG_N25 [WALTON NEXG_N25]</li>
     <li>Walton ORBIT Y12 [WALTON ORBIT_Y12]</li>
     <li>Walton XANON X20 [WALTON XANON_X20]</li>
