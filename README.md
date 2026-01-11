@@ -91,6 +91,7 @@ Custom SeekBar built with code from [massoudss/waveformSeekBar](https://github.c
 [<img height=80 alt="Get it on Google Play" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/gplay.png"/>](https://play.google.com/store/apps/details?id=com.cyb3rko.flashdim)
 [<img height="80" alt="Get it on F-Droid" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/fdroid.png"/>](https://f-droid.org/app/com.cyb3rko.flashdim)
 [<img height="80" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/accrescent.png"/>](https://accrescent.app/app/com.cyb3rko.flashdim)
+[<img height="80" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/obtainium.png"/>](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.cyb3rko.flashdim%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fcyb3rko%2Fflashdim%22%2C%22author%22%3A%22cyb3rko%22%2C%22name%22%3A%22FlashDim%22%2C%22preferredApkIndex%22%3A0%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Afalse%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Afalse%2C%5C%22sortMethodChoice%5C%22%3A%5C%22date%5C%22%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22releaseTitleAsVersion%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22invertAPKFilter%5C%22%3Afalse%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22appName%5C%22%3A%5C%22FlashDim%5C%22%2C%5C%22appAuthor%5C%22%3A%5C%22Cyb3rKo%5C%22%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22allowInsecure%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%2C%5C%22about%5C%22%3A%5C%22%5C%22%2C%5C%22refreshBeforeDownload%5C%22%3Afalse%2C%5C%22includeZips%5C%22%3Afalse%2C%5C%22zippedApkFilterRegEx%5C%22%3A%5C%22%5C%22%7D%22%2C%22overrideSource%22%3Anull%7D%0A%0A)
 [<img height="80" src="https://raw.githubusercontent.com/cyb3rko/readme-badges/refs/heads/main/badges/github.png"/>](https://github.com/cyb3rko/flashdim/releases/latest)
 
 <small>*Google Play and the Google Play logo are trademarks of Google LLC.*</small>  
@@ -1741,7 +1742,7 @@ Find the links here or in the section 'Sponsor this project' of this repo:
 
 ## License
 
-    Copyright 2022-2025, Cyb3rKo
+    Copyright 2022-2026, Cyb3rKo
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

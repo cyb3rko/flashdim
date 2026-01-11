@@ -207,6 +207,7 @@ Infinix ZERO 40,Infinix Infinix-X6860,Infinix,Infinix-X6860,false
 Infinix ZERO 40 5G,Infinix Infinix-X6861,Infinix,Infinix-X6861,false
 Infinix ZERO 5G 2023,Infinix Infinix-X6815C,Infinix,Infinix-X6815C,false
 Infinix ZERO 5G 2023,Infinix Infinix-X6815D,Infinix,Infinix-X6815D,false
+INOI INOI_A14,INOI INOI_A14,INOI,INOI_A14,false
 iQOO Z10 Lite 5G,iQOO I2409,iQOO,I2409,false
 Itel A05s,Itel itel-A663L,Itel,itel-A663L,false
 Itel A05s,Itel itel-A663LC,Itel,itel-A663LC,false
@@ -229,6 +230,7 @@ Itel itel RS4,Itel itel-S666LN,Itel,itel-S666LN,false
 Itel itel S23+,Itel itel-S681LN,Itel,itel-S681LN,false
 Itel itel S24,Itel itel-S667LN,Itel,itel-S667LN,false
 Itel itel S25,Itel itel-S685LN,Itel,itel-S667LN,false
+Itel itel S25 Ultra,Itel itel-S686LN,Itel,itel-S686LN,false
 Itel P65,Itel itel-P671LN,Itel,itel-P671LN,false
 Itel P673L-OP,Itel itel P673L,Itel,itel-P673L,false
 JOVI Y29,JOVI V2434B,JOVI,V2434B,false
@@ -405,6 +407,7 @@ Oppo A54 5G,OPPO OP4F39L1,Oppo,OP4F39L1,false
 Oppo A57,OPPO OP5355,Oppo,OP5355,false
 Oppo A58,OPPO OP574FL1,Oppo,OP574FL1,false
 Oppo A59 5G,OPPO OP5AD5L1,Oppo,OP5AD5L1,false
+Oppo A6 Pro,OPPO OP6285L1,Oppo,OP6285L1,false
 Oppo A76,OPPO OP5312L1,Oppo,OP5312L1,false
 Oppo A78,OPPO OP5745L1,Oppo,OP5745L1,false
 Oppo A78 5G,OPPO OP52F3L1,Oppo,OP52F3L1,false
@@ -482,7 +485,7 @@ Oukitel G1_EEA,OUKITEL G1,Oukitel,G1,false
 Oukitel P07_EEA,OUKITEL P07,Oukitel,P07,false
 Oukitel WP36_EEA,OUKITEL WP36,Oukitel,WP36,false
 Oukitel WP36_Pro_EEA,OUKITEL WP36_Pro,Oukitel,WP36_Pro,false
-Packard Bell DAYTONA_G8,packard_bell BL_9UEEP_104,BL_9UEEP_104,Packard Bell,false
+Packard Bell DAYTONA_G8,packard_bell BL_9UEEP_104,Packard Bell,BL_9UEEP_104,false
 PCD Argentina P63L,PCD P63L,PCD,P63L,false
 PCD Argentina P63L,PCD P63L_PR,PCD,P63L_PR,false
 PCD LLC Bengal Max,PCD Bengal_Max_iW,PCD,Bengal_Max_iW,false
@@ -743,6 +746,8 @@ Redmi Turbo 3,Redmi peridot,Redmi,peridot,false
 Reeder S19 Max 32GB,Reeder S19_Max_32GB,Reeder,S19_Max_32GB,false
 Reeder S19 Max 64GB,Reeder S19_Max_64GB,Reeder,S19_Max_64GB,false
 Reeder S19 MaxL 128GB,reeder S19_MaxL_128GB,Reeder,S19_MaxL_128GB,false
+Reeder S23 Pro Max,reeder S23_Pro_Max,Reeder,S23_Pro_Max,false
+Reeder S23 Pro Max 256GB,reeder S23_Pro_Max_256GB,Reeder,S23_Pro_Max_256GB,false
 Safaricom Neon Ultra 2,Safaricom Neon_Ultra_2,Safaricom,Neon_Ultra_2,false
 Safaricom Neon_Ray_Ultra,Safaricom Neon_Ray_Ultra,Safaricom,Neon_Ray_Ultra,false
 Safaricom Neon_Smarta_2,Safaricom Neon_Smarta_2,Safaricom,Neon_Smarta_2,false
@@ -775,6 +780,7 @@ Sharp AQUOS wish5,DOCOMO SH-52F,Sharp,SH-52F,false
 Sharp AQUOS wish5,SG SX5,Sharp,SX5,false
 Sharp AQUOS wish5,SHARP SX5,Sharp,SX5,false
 Sharp Leitz Phone1,SG JudauL,Sharp,JudauL,false
+SHIFT SHIFT6mq,SHIFT axolotl,SHIFT,axolotl,false
 SHIFT SHIFTphone 8,SHIFT otter,SHIFT,otter,false
 Sky Devices SKY PAD8PRO,SKY_Devices SKY_PAD8PROUSON,Sky Devices,SKY_PAD8PROUSON,false
 Sony Xperia 1 II,Sony XQ-AT52,Sony,XQ-AT52,false
@@ -943,6 +949,7 @@ Umidigi G3 EEA,UMIDIGI UMIDIGI_G3,Umidigi,UMIDIGI_G3,false
 Umidigi G3 Plus EEA,UMIDIGI G3_Plus,Umidigi,G3_Plus,false
 Umidigi UMIDIGI G3 Max EEA,UMIDIGI G3_Max,Umidigi,G3_Max,false
 Umidigi UMIDIGI G9T,UMIDIGI G9T,Umidigi,G9T,false
+Umidigi UMIDIGI Note 100A,UMIDIGI Note_100A,Umidigi,Note_100A,false
 Unihertz Jelly Star,Unihertz Jelly_Star,Unihertz,Jelly_Star,false
 Vgo Tel Flex_2,VGO_TEL Flex_2,Vgo Tel,Flex_2,false
 Vgo Tel NEW 24,VGOTEL NEW_24,Vgo Tel,NEW_24,false
@@ -1081,6 +1088,7 @@ Vortex J24,Vortex J24,Vortex,J24,false
 Vortex ZG55,Vortex ZG55,Vortex,ZG55,false
 Vortex ZG65 Pro,Vortex ZG65_Pro,Vortex,ZG65_Pro,false
 Walton NEXG N73,WALTON NEXG_N73,Walton,NEXG_N73,false
+Walton NEXG_N10,WALTON NEXG_N10,Walton,NEXG_N10,false
 Walton NEXG_N25,WALTON NEXG_N25,Walton,NEXG_N25,false
 Walton ORBIT Y12,WALTON ORBIT_Y12,Walton,ORBIT_Y12,false
 Walton XANON X20,WALTON XANON_X20,Walton,XANON_X20,false
