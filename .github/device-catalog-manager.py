@@ -80,7 +80,7 @@ def get_manufacturer_link(letter: str, index: int) -> str:
       return f" name=\"{letter}\""
 
 
-data = OrderedDict()
+data = {}
 output = ""
 print(f"Reading CSV file in {os.getcwd()}")
 with open("excluded_devices.csv", "r", encoding="utf-8") as file:
@@ -123,6 +123,8 @@ with open("excluded_devices.csv", "r", encoding="utf-8") as file:
         # data[manufacturer_letter] = {...}
         data[manufacturer_letter] = prev_manufacturer_letter
 
+# Sort manufacturer letters
+data = OrderedDict(sorted(data.items()))
 output = f"<b>Total: {get_dict_leaves_count(data)}</b>\n\n" + get_quicklinks(data)
 
 # iterate through manufacturer letters

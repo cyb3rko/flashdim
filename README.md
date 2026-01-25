@@ -174,7 +174,7 @@ If the list contains any phone which does has a dimmable flashlight, please let 
 <!--- marker1 -->
 <b>Total: 1058</b>
 
-[8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [X](#x) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [Z](#z)  
+[8](#8) [A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Z](#z)  
 *Links may only work in common browsers*
 
 <details name="8">
@@ -1252,67 +1252,6 @@ If the list contains any phone which does has a dimmable flashlight, please let 
     <li>Reeder S23 Pro Max 256GB [reeder S23_Pro_Max_256GB]</li>
   </ul>
 </details>
-<details name="X">
-  <summary>Xiaomi (49)</summary>
-  <ul>
-    <li>Redmi Note 10 Pro [Redmi sweetin]</li>
-    <li>Xiaomi 11 Lite 5G NE [Xiaomi lisa]</li>
-    <li>Xiaomi 11 Lite NE [Xiaomi lisa]</li>
-    <li>Xiaomi 11i [Xiaomi pissarroin]</li>
-    <li>Xiaomi 11i HyperCharge [Xiaomi pissarroinpro]</li>
-    <li>Xiaomi 11T [Xiaomi amber]</li>
-    <li>Xiaomi 12 [Xiaomi cupid]</li>
-    <li>Xiaomi 12 Lite [Xiaomi taoyao]</li>
-    <li>Xiaomi 12 Pro [Xiaomi zeus]</li>
-    <li>Xiaomi 12 Pro Dimensity [Xiaomi daumier]</li>
-    <li>Xiaomi 12S [Xiaomi mayfly]</li>
-    <li>Xiaomi 12S Pro [Xiaomi unicorn]</li>
-    <li>Xiaomi 12S Ultra [Xiaomi thor]</li>
-    <li>Xiaomi 12T [Xiaomi plato]</li>
-    <li>Xiaomi 12T Pro [Redmi diting, Xiaomi diting]</li>
-    <li>Xiaomi 12X [Xiaomi psyche]</li>
-    <li>Xiaomi 13 Lite [Xiaomi ziyi]</li>
-    <li>Xiaomi 13 Pro [Xiaomi nuwa]</li>
-    <li>Xiaomi 13T [Xiaomi XIG04]</li>
-    <li>Xiaomi 14 [Xiaomi houji]</li>
-    <li>Xiaomi 14 Ultra [Xiaomi aurora]</li>
-    <li>Xiaomi 7 [xiaomi onc]</li>
-    <li>Xiaomi A3 [Xiaomi blue]</li>
-    <li>Xiaomi Civi [Xiaomi mona]</li>
-    <li>Xiaomi Mi 10 [Xiaomi umi]</li>
-    <li>Xiaomi Mi 10 Pro [Xiaomi cmi]</li>
-    <li>Xiaomi Mi 10 Ultra [Xiaomi cas]</li>
-    <li>Xiaomi Mi 10S [Xiaomi thyme]</li>
-    <li>Xiaomi Mi 10T Pro [Xiaomi apollo]</li>
-    <li>Xiaomi Mi 11 [Xiaomi venus]</li>
-    <li>Xiaomi Mi 11 Lite [Xiaomi courbet, Xiaomi courbetin]</li>
-    <li>Xiaomi Mi 11 Lite 5G [Xiaomi renoir]</li>
-    <li>Xiaomi Mi 11 Pro [Xiaomi mars]</li>
-    <li>Xiaomi Mi 11 Ultra [Xiaomi star]</li>
-    <li>Xiaomi Mi 11i [Xiaomi haydn]</li>
-    <li>Xiaomi Mi 11X [Xiaomi aliothin]</li>
-    <li>Xiaomi Mi 11X Pro [Xiaomi haydnin]</li>
-    <li>Xiaomi Mi 8 [Xiaomi dipper]</li>
-    <li>Xiaomi Mi A1 [xiaomi tissot_sprout]</li>
-    <li>Xiaomi Mi A2 [xiaomi jasmine_sprout]</li>
-    <li>Xiaomi Note 8 [xiaomi ginkgo]</li>
-    <li>Xiaomi Pad 5 [Xiaomi nabu]</li>
-    <li>Xiaomi Pad 5 Pro [Xiaomi dagu, Xiaomi elish]</li>
-    <li>Xiaomi Pad 5 Pro 5G [Xiaomi enuma]</li>
-    <li>Xiaomi Pad 6 [Xiaomi pipa]</li>
-    <li>Xiaomi Pad 6 Max 14 [Xiaomi yudi]</li>
-    <li>Xiaomi pad 6 Pro [Xiaomi liuqin]</li>
-    <li>Xiaomi POCO F1 [Xiaomi beryllium]</li>
-    <li>Xiaomi Redmi Note 5 Pro [xiaomi whyred]</li>
-  </ul>
-</details>
-<details>
-  <summary>Xmobile (2)</summary>
-  <ul>
-    <li>Xmobile X55 [XMOBILE X55NALU, XMOBILE X_55_A]</li>
-    <li>Xmobile X55USA [XMOBILE X55USA]</li>
-  </ul>
-</details>
 <details name="S">
   <summary>Safaricom (3)</summary>
   <ul>
@@ -1733,6 +1672,67 @@ If the list contains any phone which does has a dimmable flashlight, please let 
   <summary>WCED (1)</summary>
   <ul>
     <li>WCED H1010_M50 [WCED H1010_M50]</li>
+  </ul>
+</details>
+<details name="X">
+  <summary>Xiaomi (49)</summary>
+  <ul>
+    <li>Redmi Note 10 Pro [Redmi sweetin]</li>
+    <li>Xiaomi 11 Lite 5G NE [Xiaomi lisa]</li>
+    <li>Xiaomi 11 Lite NE [Xiaomi lisa]</li>
+    <li>Xiaomi 11i [Xiaomi pissarroin]</li>
+    <li>Xiaomi 11i HyperCharge [Xiaomi pissarroinpro]</li>
+    <li>Xiaomi 11T [Xiaomi amber]</li>
+    <li>Xiaomi 12 [Xiaomi cupid]</li>
+    <li>Xiaomi 12 Lite [Xiaomi taoyao]</li>
+    <li>Xiaomi 12 Pro [Xiaomi zeus]</li>
+    <li>Xiaomi 12 Pro Dimensity [Xiaomi daumier]</li>
+    <li>Xiaomi 12S [Xiaomi mayfly]</li>
+    <li>Xiaomi 12S Pro [Xiaomi unicorn]</li>
+    <li>Xiaomi 12S Ultra [Xiaomi thor]</li>
+    <li>Xiaomi 12T [Xiaomi plato]</li>
+    <li>Xiaomi 12T Pro [Redmi diting, Xiaomi diting]</li>
+    <li>Xiaomi 12X [Xiaomi psyche]</li>
+    <li>Xiaomi 13 Lite [Xiaomi ziyi]</li>
+    <li>Xiaomi 13 Pro [Xiaomi nuwa]</li>
+    <li>Xiaomi 13T [Xiaomi XIG04]</li>
+    <li>Xiaomi 14 [Xiaomi houji]</li>
+    <li>Xiaomi 14 Ultra [Xiaomi aurora]</li>
+    <li>Xiaomi 7 [xiaomi onc]</li>
+    <li>Xiaomi A3 [Xiaomi blue]</li>
+    <li>Xiaomi Civi [Xiaomi mona]</li>
+    <li>Xiaomi Mi 10 [Xiaomi umi]</li>
+    <li>Xiaomi Mi 10 Pro [Xiaomi cmi]</li>
+    <li>Xiaomi Mi 10 Ultra [Xiaomi cas]</li>
+    <li>Xiaomi Mi 10S [Xiaomi thyme]</li>
+    <li>Xiaomi Mi 10T Pro [Xiaomi apollo]</li>
+    <li>Xiaomi Mi 11 [Xiaomi venus]</li>
+    <li>Xiaomi Mi 11 Lite [Xiaomi courbet, Xiaomi courbetin]</li>
+    <li>Xiaomi Mi 11 Lite 5G [Xiaomi renoir]</li>
+    <li>Xiaomi Mi 11 Pro [Xiaomi mars]</li>
+    <li>Xiaomi Mi 11 Ultra [Xiaomi star]</li>
+    <li>Xiaomi Mi 11i [Xiaomi haydn]</li>
+    <li>Xiaomi Mi 11X [Xiaomi aliothin]</li>
+    <li>Xiaomi Mi 11X Pro [Xiaomi haydnin]</li>
+    <li>Xiaomi Mi 8 [Xiaomi dipper]</li>
+    <li>Xiaomi Mi A1 [xiaomi tissot_sprout]</li>
+    <li>Xiaomi Mi A2 [xiaomi jasmine_sprout]</li>
+    <li>Xiaomi Note 8 [xiaomi ginkgo]</li>
+    <li>Xiaomi Pad 5 [Xiaomi nabu]</li>
+    <li>Xiaomi Pad 5 Pro [Xiaomi dagu, Xiaomi elish]</li>
+    <li>Xiaomi Pad 5 Pro 5G [Xiaomi enuma]</li>
+    <li>Xiaomi Pad 6 [Xiaomi pipa]</li>
+    <li>Xiaomi Pad 6 Max 14 [Xiaomi yudi]</li>
+    <li>Xiaomi pad 6 Pro [Xiaomi liuqin]</li>
+    <li>Xiaomi POCO F1 [Xiaomi beryllium]</li>
+    <li>Xiaomi Redmi Note 5 Pro [xiaomi whyred]</li>
+  </ul>
+</details>
+<details>
+  <summary>Xmobile (2)</summary>
+  <ul>
+    <li>Xmobile X55 [XMOBILE X55NALU, XMOBILE X_55_A]</li>
+    <li>Xmobile X55USA [XMOBILE X55USA]</li>
   </ul>
 </details>
 <details name="Z">
