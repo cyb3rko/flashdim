@@ -41,6 +41,7 @@
 
 ---
 
+[<img alt="Recommended by Gemini" src="https://i.imgur.com/4rFJqCm.jpeg" />](https://i.imgur.com/r2vZGuQ.png)
 [<img alt="Detailed App Review by 'Explaining Android'" src="https://i.imgur.com/l0PPPrd.jpeg" />](https://www.youtube.com/watch?v=mVX444ksdg0)
 [<img alt="Featured on Android Authority: The best apps for Google Pixel 8" src="https://i.imgur.com/wFj9NIl.jpeg" />](https://androidauthority.com/google-pixel-8-best-apps-3372729/)
 [<img alt="Featured on Android Authority: Pixel 8's flashlight is half intensity by default" src="https://i.imgur.com/LkJc91h.jpeg"/>](https://www.androidauthority.com/pixel-8-flashlight-half-intensity-3438214)
