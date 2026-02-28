@@ -116,10 +116,12 @@ class SettingsTile : TileService() {
 
     private fun actAsToggle() {
         var level = -1
+        var preactivate = false
         try {
             if (Safe.getBoolean(Safe.QUICK_SETTINGS_LINK, false)) {
                 level = Safe.getInt(Safe.PREFERRED_LEVEL, 1)
             }
+            preactivate = Safe.getBoolean(Safe.TORCH_PREACTIVATION, false)
         } catch (_: Exception) {
             Log.e("FlashDim", "Safe operations failed in SettingsTile")
         }
@@ -133,8 +135,8 @@ class SettingsTile : TileService() {
             cameraManager?.let {
                 Log.d("FlashDim", "Toggling flashlight from SettingsTile (toggle)")
                 when (qsTile.state) {
-                    Tile.STATE_INACTIVE -> sendFlashlightSignal(it, level, true)
-                    Tile.STATE_ACTIVE -> sendFlashlightSignal(it, level, false)
+                    Tile.STATE_INACTIVE -> sendFlashlightSignal(it, level, true, preactivate)
+                    Tile.STATE_ACTIVE -> sendFlashlightSignal(it, level, false, preactivate)
                 }
             }
         } catch (e: Exception) {
@@ -157,6 +159,12 @@ class SettingsTile : TileService() {
                 stage = DIMMER_MIN
             }
         }
+        var preactivate = false
+        try {
+            preactivate = Safe.getBoolean(Safe.TORCH_PREACTIVATION, false)
+        } catch (_: Exception) {
+            Log.e("FlashDim", "Safe operations failed in SettingsTile")
+        }
         description = stage.description()
 
         val maxLevel = Safe.getInt(Safe.MAX_LEVEL, -1)
@@ -175,7 +183,7 @@ class SettingsTile : TileService() {
             }
             cameraManager?.let {
                 Log.d("FlashDim", "Dimming flashlight from SettingsTile (dimmer)")
-                sendFlashlightSignal(it, newLevel, newLevel != DIMMER_OFF)
+                sendFlashlightSignal(it, newLevel, newLevel != DIMMER_OFF, preactivate)
             }
         } catch (e: Exception) {
             Log.e("FlashDim", "Camera access failed in SettingsTile (dimmer")
@@ -191,11 +199,14 @@ class SettingsTile : TileService() {
         Safe.writeInt(Safe.QUICKTILE_DIM_STAGE, stage.next())
     }
 
-    private fun sendFlashlightSignal(cameraManager: CameraManager, level: Int, activate: Boolean) {
+    private fun sendFlashlightSignal(cameraManager: CameraManager, level: Int, activate: Boolean, preactivate: Boolean) {
         if (activate) {
             if (level == -1) {
                 cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
             } else {
+                if (preactivate && !enabled) {
+                    cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
+                }
                 cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
             }
         } else {
