@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
           sparse-checkout: |
@@ -41,6 +41,6 @@ jobs:
           python device-catalog-manager.py
 
       - name: Commit updated README.md
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'docs: fill README with excluded devices'
