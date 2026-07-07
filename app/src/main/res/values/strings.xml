@@ -93,4 +93,6 @@ re    <string name="dialog_links_github">Repository on GitHub</string>
     <string name="shortcut_half_long">Half Brightness</string>
     <string name="shortcut_max_short">Maximum</string>
     <string name="shortcut_max_long">Maximum Brightness</string>
+    <string name="preference_item_volume_button_dimming">Volume Button Dimming</string>
+    <string name="preference_item_volume_button_dimming_summary">Quickly adjust brightness with volume buttons right after activating the flashlight.</string>
 </resources>

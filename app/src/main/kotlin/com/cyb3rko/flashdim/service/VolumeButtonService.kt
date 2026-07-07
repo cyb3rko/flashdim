@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2025 Cyb3rKo
+ * Copyright (c) 2023 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,8 +29,6 @@ import com.cyb3rko.flashdim.utils.Safe
 import kotlin.math.max
 import kotlin.math.min
 
-// included in buildType "debug", "release"
-// excluded in buildType "libre"
 class VolumeButtonService : AccessibilityService() {
     private var volumeUpPressed = false
     private var volumeDownPressed = false
@@ -75,10 +73,12 @@ class VolumeButtonService : AccessibilityService() {
             } else if ((volumeUpPressed || volumeDownPressed) &&
                         event.action == KeyEvent.ACTION_DOWN &&
                         Safe.getBoolean(Safe.FLASH_ACTIVE, false)) {
+                
+                val dimmingEnabled = Safe.getBoolean("volume_button_dimming", false)
                 val timeoutDuration = (Safe.getFloat(Safe.TIMEOUT_DURATION, 2F)) * 1000
 
-                // if the light is on, handle dimming w/ buttons
-                if ((System.currentTimeMillis().toInt() - flashlightOnTime) < timeoutDuration) { // Come back in 31 years to fix this
+                // Only handle dimming if enabled AND within the timeout window
+                if (dimmingEnabled && (System.currentTimeMillis().toInt() - flashlightOnTime) < timeoutDuration) { 
                     val flashLevel = Camera.getLightLevel(applicationContext)
 
                     when (event.keyCode) {
@@ -113,10 +113,10 @@ class VolumeButtonService : AccessibilityService() {
     }
 
     private fun getFlashLevel(): Int {
-        return if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
-            Safe.getInt(Safe.INITIAL_LEVEL, -1)
+        if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
+            return Safe.getInt(Safe.INITIAL_LEVEL, Safe.getInt(Safe.MAX_LEVEL, -1))
         } else {
-            -1
+            return -1
         }
     }
 

@@ -2,12 +2,6 @@
 <PreferenceScreen
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Preference
-        app:key="about"
-        app:title="@string/app_name"
-        app:summary="@string/preference_about"
-        app:icon="@drawable/avatar" />
-
     <PreferenceCategory
         app:title="@string/preference_category_flashlight">
 
@@ -26,12 +20,6 @@
             app:summary="@string/preference_item_instant_flash_extension_summary"
             app:icon="@drawable/ic_restart" />
 
-        <Preference
-            app:key="initial_level"
-            app:title="@string/preference_item_preferred_level"
-            app:summary="@string/preference_item_preferred_level_summary"
-            app:icon="@drawable/ic_level_scaled" />
-
         <SwitchPreferenceCompat
             app:key="pause_flash"
             app:defaultValue="false"
@@ -39,46 +27,46 @@
             app:summary="@string/preference_item_pause_flash_summary"
             app:icon="@drawable/ic_close" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        app:title="@string/preference_category_quick_access">
-
-        <SwitchPreferenceCompat
-            app:key="quick_settings_toggle"
-            app:defaultValue="true"
-            app:title="@string/preference_item_quick_settings_simple"
-            app:summary="@string/preference_item_quick_settings_simple_summary"
-            app:icon="@drawable/ic_link_scaled" />
-
         <SwitchPreferenceCompat
             app:key="quick_settings_link"
             app:defaultValue="false"
-            app:dependency="quick_settings_toggle"
             app:title="@string/preference_item_quick_settings_link"
             app:summary="@string/preference_item_quick_settings_link_summary"
-            app:icon="@drawable/ic_link_scaled" />
-
-        <Preference
-            app:key="volume_buttons"
-            app:title="@string/preference_item_volume_buttons"
-            app:enabled="false"
-            app:summary="@string/preference_item_volume_buttons_summary"
-            app:icon="@drawable/ic_button_service" />
+            app:icon="@drawable/ic_link" />
 
         <SwitchPreferenceCompat
             app:key="volume_buttons_link"
             app:defaultValue="false"
             app:title="@string/preference_item_volume_buttons_link"
-            app:enabled="false"
             app:summary="@string/preference_item_volume_buttons_link_summary"
-            app:icon="@drawable/ic_link_scaled" />
+            app:icon="@drawable/ic_link" />
+
+        <Preference
+            app:key="initial_level"
+            app:title="@string/preference_item_initial_level"
+            app:summary="@string/preference_item_initial_level_summary"
+            app:icon="@drawable/ic_level_scaled" />
+
+        <Preference
+            app:key="volume_buttons"
+            app:title="@string/preference_item_volume_buttons"
+            app:summary="@string/preference_item_volume_buttons_summary"
+            app:icon="@drawable/ic_button_service" />
+
+        <SwitchPreferenceCompat
+            app:key="volume_button_dimming"
+            app:defaultValue="false"
+            app:dependency="volume_buttons_link"
+            app:title="@string/preference_item_volume_button_dimming"
+            app:summary="@string/preference_item_volume_button_dimming_summary"
+            app:icon="@drawable/ic_timer" />
 
         <Preference
             app:key="timeout_duration"
+            app:dependency="volume_button_dimming"
             app:title="@string/preference_item_timeout_duration"
             app:summary="@string/preference_item_timeout_duration_summary"
-            app:icon="@drawable/ic_level_scaled" />
+            app:icon="@drawable/ic_timer" />
 
     </PreferenceCategory>
 
