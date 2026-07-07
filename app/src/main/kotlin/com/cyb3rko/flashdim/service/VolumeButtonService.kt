@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022-2025 Cyb3rKo
+ * Copyright (c) 2023 Cyb3rKo
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,12 +26,14 @@ import android.view.KeyEvent
 import android.view.accessibility.AccessibilityEvent
 import com.cyb3rko.flashdim.Camera
 import com.cyb3rko.flashdim.utils.Safe
+import kotlin.math.max
+import kotlin.math.min
 
-// included in buildType "debug", "release"
-// excluded in buildType "libre"
 class VolumeButtonService : AccessibilityService() {
     private var volumeUpPressed = false
     private var volumeDownPressed = false
+    private var flashlightOnTime = 0            // Timestamp of flashlight on time
+    private val DIM_INCREMENT = 10              // How much each click +/- the brightness
 
     override fun onServiceConnected() {
         Safe.initialize(applicationContext)
@@ -48,6 +50,8 @@ class VolumeButtonService : AccessibilityService() {
 
     override fun onKeyEvent(event: KeyEvent?): Boolean {
         if (event == null) return false
+        var shouldEatMessage = false            // Used to determine if the message should be consumed
+
         if ((event.keyCode == KeyEvent.KEYCODE_VOLUME_UP) ||
             (event.keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)
         ) {
@@ -60,20 +64,60 @@ class VolumeButtonService : AccessibilityService() {
             if (volumeUpPressed && volumeDownPressed) {
                 Log.i("FlashDim Service", "Both volume buttons pressed")
                 val flashActive = Safe.getBoolean(Safe.FLASH_ACTIVE, false)
+                if (!flashActive) flashlightOnTime = System.currentTimeMillis().toInt()
+
                 val flashLevel = if (!flashActive) getFlashLevel() else 0
                 Camera.sendLightLevel(applicationContext, flashLevel, !flashActive)
+                shouldEatMessage = true
+
+            } else if ((volumeUpPressed || volumeDownPressed) &&
+                        event.action == KeyEvent.ACTION_DOWN &&
+                        Safe.getBoolean(Safe.FLASH_ACTIVE, false)) {
+                
+                val dimmingEnabled = Safe.getBoolean("volume_button_dimming", false)
+                val timeoutDuration = (Safe.getFloat(Safe.TIMEOUT_DURATION, 2F)) * 1000
+
+                // Only handle dimming if enabled AND within the timeout window
+                if (dimmingEnabled && (System.currentTimeMillis().toInt() - flashlightOnTime) < timeoutDuration) { 
+                    val flashLevel = Camera.getLightLevel(applicationContext)
+
+                    when (event.keyCode) {
+                        KeyEvent.KEYCODE_VOLUME_UP -> {
+                            Camera.sendLightLevel(
+                                applicationContext,
+                                min(flashLevel + DIM_INCREMENT, Safe.getInt(Safe.MAX_LEVEL, -1)),
+                                true
+                            )
+                            shouldEatMessage = true
+                            flashlightOnTime = System.currentTimeMillis().toInt() // reset time
+                        }
+
+                        KeyEvent.KEYCODE_VOLUME_DOWN -> {
+                            Camera.sendLightLevel(
+                                applicationContext,
+                                max(1, flashLevel - DIM_INCREMENT),
+                                true
+                            )
+                            shouldEatMessage = true
+                            flashlightOnTime = System.currentTimeMillis().toInt() // reset time
+                        }
+                    }
+                }
             }
-        } else {
+        }
+        else {
             volumeUpPressed = false
             volumeDownPressed = false
         }
-        return false
+        return shouldEatMessage
     }
 
-    private fun getFlashLevel(): Int = if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
-        Safe.getInt(Safe.PREFERRED_LEVEL, -1)
-    } else {
-        -1
+    private fun getFlashLevel(): Int {
+        if (Safe.getBoolean(Safe.VOLUME_BUTTONS_LINK, false)) {
+            return Safe.getInt(Safe.INITIAL_LEVEL, Safe.getInt(Safe.MAX_LEVEL, -1))
+        } else {
+            return -1
+        }
     }
 
     override fun onInterrupt() {

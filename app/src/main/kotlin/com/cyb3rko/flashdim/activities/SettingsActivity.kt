@@ -161,16 +161,9 @@ internal class SettingsActivity :
                     true
                 }
             }
-            @Suppress("KotlinConstantConditions")
-            if (BuildConfig.BUILD_TYPE != "libre") {
-                findPreference<Preference>("volume_buttons")?.apply {
-                    isEnabled = true
-                    setOnPreferenceClickListener {
-                        AccessibilityInfoDialog.show(myContext)
-                        true
-                    }
-                }
-                findPreference<Preference>(Safe.VOLUME_BUTTONS_LINK)?.isEnabled = true
+            findPreference<Preference>("volume_buttons")?.setOnPreferenceClickListener {
+                AccessibilityInfoDialog.show(myContext)
+                true
             }
         }
 
@@ -191,5 +184,25 @@ internal class SettingsActivity :
                 )
                 .show()
         }
+
+        private fun showTimeoutDurationDialog(content: View, onSave: () -> Unit) {
+            MaterialAlertDialogBuilder(
+                requireContext(),
+                MaterialR.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
+            )
+                .setIcon(R.drawable.ic_level)
+                .setTitle(getString(R.string.preference_item_timeout_duration_dialog_title))
+                .setView(content)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    onSave()
+                }
+                .setNegativeButton(
+                    getString(R.string.preference_item_initial_level_dialog_negative_button),
+                    null
+                )
+                .show()
+        }
+        // make my own function for the volume dimmer duration view
+
     }
 }

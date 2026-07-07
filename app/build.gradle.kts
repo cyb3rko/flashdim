@@ -68,9 +68,7 @@ android {
             enable = false
         }
     }
-    androidResources {
-        localeFilters += listOf("en")
-    }
+
     packaging {
         resources {
             excludes.add("META-INF/*.version")
@@ -123,7 +121,7 @@ if (project.hasProperty("sign")) {
         android.signingConfigs.getByName("release")
 }
 
-// Automatic Accrescent build
+// Automatic Acc    ent build
 // build with '-Pmanual_upload_oss buildApksLibre'
 // output at 'app/build/outputs/apkset/libre/app-libre.apks'
 if (project.hasProperty("manual_upload_oss")) {
