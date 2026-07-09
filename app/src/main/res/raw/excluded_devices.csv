@@ -623,8 +623,8 @@ Premio S56,Premio S56,Premio,S56,false
 Premio TAB_8.1,PREMIO TAB_8_1,Premio,TAB_8_1,false
 PROTON Infinity 8,Proton Infinity_8,PROTON,Infinity_8,false
 PROTON X20 Pro,Proton Proton_X20_Pro,PROTON,Proton_X20_Pro,false
-Quantum Q03,Quantum Q03,Quantum,Q03,false
 QIN(cn) F22 Pro,QIN F22Pro,QIN(cn),F22Pro,false
+Quantum Q03,Quantum Q03,Quantum,Q03,false
 realme 10,realme RE8DDCL1,realme,RE8DDCL1,false
 realme 10 Pro,realme RE5849,realme,RE5849,false
 realme 10 Pro 5G,realme RE588BL1,realme,RE588BL1,false
@@ -761,8 +761,8 @@ Redmi A3,Redmi blue,Redmi,blue,false
 Redmi A3x,Redmi klein,Redmi,klein,false
 Redmi A4 5G,Redmi warm,Redmi,warm,false
 Redmi A5,Redmi serenity,Redmi,serenity,false
-Redmi K20,Xiaomi davinciin,Redmi,davinciin,false
 Redmi K20,Xiaomi davinci,Redmi,davinci,false
+Redmi K20,Xiaomi davinciin,Redmi,davinciin,false
 Redmi K30 PRO,Redmi lmi,Redmi,lmi,false
 Redmi K40,Redmi alioth,Redmi,alioth,false
 Redmi K40 Gaming,Redmi ares,Redmi,ares,false
@@ -1170,7 +1170,6 @@ Vivo V30 Lite,vivo V2317,Vivo,V2317,false
 Vivo V30 Lite,vivo V2342,Vivo,V2342,false
 Vivo V30 Lite 5G,vivo V2327,Vivo,V2327,false
 Vivo V30 Pro,vivo V2319,Vivo,V2319,false
-Vivo Y300 Plus 5G,vivo V2422,Vivo,V2422,false
 Vivo V40 SE,vivo V2418,Vivo,V2418,false
 vivo V50 Lite 5G,vivo V2440,Vivo,V2440,false
 vivo V60 Lite,vivo V2441,vivo,V2441,false
@@ -1200,6 +1199,7 @@ Vivo Y28,vivo V2352,Vivo,V2352,false
 Vivo Y28e 5G,vivo V2346,Vivo,V2346,false
 Vivo Y28s 5G,vivo V2346,Vivo,V2346,false
 Vivo Y29t 5G,vivo V2446,Vivo,V2446,false
+Vivo Y300 Plus 5G,vivo V2422,Vivo,V2422,false
 vivo Y31 5G,vivo V2521,Vivo,V2521,false
 vivo Y31 5G,vivo V2521L,vivo,V2521L,false
 Vivo Y33t,vivo PD2317,Vivo,PD2317,false
@@ -1291,13 +1291,13 @@ ZTE Blade A34,ZTE P963F94_A,ZTE,P963F94_A,false
 ZTE Blade A35 Core,ZTE P963F10,ZTE,P963F10,false
 ZTE Blade A54,ZTE P963F64,ZTE,P963F64,false
 ZTE Blade A75 5G,ZTE P720F09,ZTE,P720F09,false
-ZTE nubia A76 5G,nubia P780F03,ZTE,P780F03,false
 ZTE Blade A76 5G,ZTE P780F03,ZTE,P780F03,false
 ZTE Blade V50 Vita,ZTE P606F09,ZTE,P606F09,false
 ZTE Blade V60 Design,ZTE P606F10,ZTE,P606F10,false
 ZTE Blade V70 Design,ZTE P606F17,ZTE,P606F17,false
 ZTE Blade V70 Max,nubia P606F19,ZTE,P606F19,false
 ZTE Libero Flip,ZTE Z8888S,ZTE,Z8888S,false
+ZTE nubia A76 5G,nubia P780F03,ZTE,P780F03,false
 ZTE nubia Music,nubia P963F11,ZTE,P963F11,false
 ZTE nubia Music 2,nubia P606F18,ZTE,P606F18,false
 ZTE nubia Neo 2 5G,nubia P820F03,ZTE,P820F03,false
