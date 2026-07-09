@@ -5,7 +5,6 @@ import java.util.Properties
 
 plugins {
     alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.kotlinter) // lintKotlin, formatKotlin
     alias(libs.plugins.dexcount) // :app:countReleaseDexMethods
     alias(libs.plugins.bundletool)
@@ -129,10 +128,10 @@ if (project.hasProperty("sign")) {
 if (project.hasProperty("manual_upload_oss")) {
     bundletool {
         signingConfig {
-            storeFile = file(System.getenv("KEYSTORE_FILE"))
-            storePassword = System.getenv("KEYSTORE_PASSWD")
-            keyAlias = System.getenv("KEYSTORE_KEY_ALIAS")
-            keyPassword = System.getenv("KEYSTORE_KEY_PASSWD")
+            storeFile.set(file(System.getenv("KEYSTORE_FILE")))
+            storePassword.set(System.getenv("KEYSTORE_PASSWD"))
+            keyAlias.set(System.getenv("KEYSTORE_KEY_ALIAS"))
+            keyPassword.set(System.getenv("KEYSTORE_KEY_PASSWD"))
         }
     }
 }
