@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
     private var vibrateButtons = false
     private var vibrateMorse = false
     private var intentFlash = false
+    private var torchPreactivation = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -121,6 +122,7 @@ class MainActivity : AppCompatActivity() {
 
         vibrateButtons = Safe.getBoolean(Safe.BUTTON_VIBRATION, true)
         vibrateMorse = Safe.getBoolean(Safe.MORSE_VIBRATION, true)
+        torchPreactivation = Safe.getBoolean(Safe.TORCH_PREACTIVATION, false)
         val systemVibrator = (getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager)
             .defaultVibrator
         Vibrator.initialize(systemVibrator)
@@ -130,6 +132,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Safe.initialize(applicationContext)
+        torchPreactivation = Safe.getBoolean(Safe.TORCH_PREACTIVATION, false)
         val restored = restoreLightLevelUi()
         if (!restored) executeAppOpenFlash()
         intentFlash = false
@@ -144,7 +147,7 @@ class MainActivity : AppCompatActivity() {
             "DIMMER_MAX" -> maxLevel
             else -> -1
         }
-        camera.sendLightLevel(this, currentLevel, newLevel)
+        camera.sendLightLevel(this, currentLevel, newLevel, torchPreactivation)
         updateLightLevelView(if (newLevel > 0) newLevel else 0)
         binding.seekBar.setProgress(if (newLevel > 0) newLevel else 0)
         currentLevel = newLevel
@@ -171,10 +174,10 @@ class MainActivity : AppCompatActivity() {
                 if (progress > 0) {
                     if (progress <= maxLevel) {
                         if (vibrateButtons) Vibrator.vibrateTick()
-                        camera.sendLightLevel(this@MainActivity, currentLevel, progress)
+                        camera.sendLightLevel(this@MainActivity, currentLevel, progress, torchPreactivation)
                         updateLightLevelView(progress)
                     } else {
-                        camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel)
+                        camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel, torchPreactivation)
                         updateLightLevelView(maxLevel)
                     }
                     currentLevel = progress
@@ -212,7 +215,7 @@ class MainActivity : AppCompatActivity() {
                 if (vibrateButtons) Vibrator.vibrateDoubleClick()
                 if (isDimAllowed()) {
                     updateLightLevelView(maxLevel)
-                    camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel)
+                    camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel, torchPreactivation)
                     currentLevel = maxLevel
                     seekBar.setProgress(maxLevel)
                 } else {
@@ -222,14 +225,14 @@ class MainActivity : AppCompatActivity() {
             halfButton.setOnClickListener {
                 if (vibrateButtons) Vibrator.vibrateClick()
                 updateLightLevelView(maxLevel / 2)
-                camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel / 2)
+                camera.sendLightLevel(this@MainActivity, currentLevel, maxLevel / 2, torchPreactivation)
                 currentLevel = maxLevel / 2
                 seekBar.setProgress(maxLevel / 2)
             }
             minButton.setOnClickListener {
                 if (vibrateButtons) Vibrator.vibrateClick()
                 updateLightLevelView(1)
-                camera.sendLightLevel(this@MainActivity, currentLevel, 1)
+                camera.sendLightLevel(this@MainActivity, currentLevel, 1, torchPreactivation)
                 currentLevel = 1
                 seekBar.setProgress(1)
             }
@@ -323,7 +326,7 @@ class MainActivity : AppCompatActivity() {
     private fun activateInitialFlash() {
         if (maxLevel > 1) {
             val level = Safe.getInt(Safe.PREFERRED_LEVEL, -1)
-            camera.sendLightLevel(this@MainActivity, currentLevel, level)
+            camera.sendLightLevel(this@MainActivity, currentLevel, level, torchPreactivation)
             updateLightLevelView(level)
             binding.seekBar.setProgress(level)
         } else {
@@ -423,7 +426,7 @@ class MainActivity : AppCompatActivity() {
             val handler = MorseHandler { letter, code, delay, on ->
                 if (on) {
                     if (maxLevel > 1) {
-                        camera.sendLightLevel(this@MainActivity, -1, maxLevel)
+                        camera.sendLightLevel(this@MainActivity, -1, maxLevel, torchPreactivation)
                     } else {
                         camera.setTorchMode(true)
                     }

@@ -61,7 +61,8 @@ class VolumeButtonService : AccessibilityService() {
                 Log.i("FlashDim Service", "Both volume buttons pressed")
                 val flashActive = Safe.getBoolean(Safe.FLASH_ACTIVE, false)
                 val flashLevel = if (!flashActive) getFlashLevel() else 0
-                Camera.sendLightLevel(applicationContext, flashLevel, !flashActive)
+                val preactivate = !flashActive && Safe.getBoolean(Safe.TORCH_PREACTIVATION, false)
+                Camera.sendLightLevel(applicationContext, flashLevel, !flashActive, preactivate)
             }
         } else {
             volumeUpPressed = false
