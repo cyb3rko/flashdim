@@ -21,6 +21,10 @@ import android.content.pm.PackageManager
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import androidx.appcompat.app.AppCompatActivity
+import com.cyb3rko.flashdim.utils.Safe
+
+internal fun clampFlashStrengthLevel(level: Int, maximumLevel: Int): Int =
+    level.coerceIn(1, maximumLevel)
 
 internal class Camera(activity: AppCompatActivity) {
     private val cameraManager: CameraManager
@@ -79,18 +83,39 @@ internal class Camera(activity: AppCompatActivity) {
             try {
                 val cameraManager = context.getSystemService(Context.CAMERA_SERVICE)
                     as CameraManager
-                val cameraId = cameraManager.cameraIdList[0]
-                if (activate) {
-                    if (level == -1) {
-                        cameraManager.setTorchMode(cameraId, true)
-                    } else {
-                        cameraManager.turnOnTorchWithStrengthLevel(cameraId, level)
-                    }
-                } else {
-                    cameraManager.setTorchMode(cameraId, false)
-                }
+                sendLightLevel(context, cameraManager, level, activate)
             } catch (e: Exception) {
                 handleFlashlightException(e)
+            }
+        }
+
+        fun sendLightLevel(
+            context: Context,
+            cameraManager: CameraManager,
+            level: Int,
+            activate: Boolean
+        ) {
+            val cameraId = cameraManager.cameraIdList[0]
+            if (activate) {
+                if (level == -1) {
+                    cameraManager.setTorchMode(cameraId, true)
+                } else {
+                    val maximumLevel = cameraManager.getCameraCharacteristics(cameraId).get(
+                        CameraCharacteristics.FLASH_INFO_STRENGTH_MAXIMUM_LEVEL
+                    )
+                    val safeLevel = if (maximumLevel != null && maximumLevel > 0) {
+                        clampFlashStrengthLevel(level, maximumLevel)
+                    } else {
+                        level
+                    }
+                    if (safeLevel != level) {
+                        Safe.initialize(context)
+                        Safe.writeInt(Safe.PREFERRED_LEVEL, safeLevel)
+                    }
+                    cameraManager.turnOnTorchWithStrengthLevel(cameraId, safeLevel)
+                }
+            } else {
+                cameraManager.setTorchMode(cameraId, false)
             }
         }
     }

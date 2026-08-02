@@ -33,6 +33,7 @@ import com.cyb3rko.flashdim.BuildConfig
 import com.cyb3rko.flashdim.Camera
 import com.cyb3rko.flashdim.MorseHandler
 import com.cyb3rko.flashdim.R
+import com.cyb3rko.flashdim.clampFlashStrengthLevel
 import com.cyb3rko.flashdim.databinding.ActivityMainBinding
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.modals.AboutDialog
@@ -96,8 +97,12 @@ class MainActivity : AppCompatActivity() {
         maxLevel = camera.maxLevel
         Safe.initialize(this)
         Safe.writeInt(Safe.MAX_LEVEL, maxLevel)
-        if (Safe.getInt(Safe.PREFERRED_LEVEL, -1) == -1) {
-            Safe.writeInt(Safe.PREFERRED_LEVEL, maxLevel)
+        if (maxLevel > 0) {
+            val preferredLevel = Safe.getInt(Safe.PREFERRED_LEVEL, maxLevel)
+            Safe.writeInt(
+                Safe.PREFERRED_LEVEL,
+                clampFlashStrengthLevel(preferredLevel, maxLevel)
+            )
         }
 
         if (maxLevel > 1 || couldBeRunningOnEmulator()) {

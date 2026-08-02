@@ -23,6 +23,7 @@ import android.os.Looper
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import android.util.Log
+import com.cyb3rko.flashdim.Camera
 import com.cyb3rko.flashdim.handleFlashlightException
 import com.cyb3rko.flashdim.utils.Safe
 
@@ -192,15 +193,7 @@ class SettingsTile : TileService() {
     }
 
     private fun sendFlashlightSignal(cameraManager: CameraManager, level: Int, activate: Boolean) {
-        if (activate) {
-            if (level == -1) {
-                cameraManager.setTorchMode(cameraManager.cameraIdList[0], true)
-            } else {
-                cameraManager.turnOnTorchWithStrengthLevel(cameraManager.cameraIdList[0], level)
-            }
-        } else {
-            cameraManager.setTorchMode(cameraManager.cameraIdList[0], false)
-        }
+        Camera.sendLightLevel(this, cameraManager, level, activate)
     }
 
     private fun Int.next() = when (this) {

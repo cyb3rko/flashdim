@@ -61,6 +61,7 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        resValues = true
     }
     bundle {
         storeArchive {
@@ -91,6 +92,7 @@ dependencies {
     implementation(libs.androidx.preference.ktx)
     implementation(libs.androidx.profileinstaller)
     implementation(libs.material)
+    testImplementation("junit:junit:4.13.2")
     "baselineProfile"(project(":baseline"))
 }
 
