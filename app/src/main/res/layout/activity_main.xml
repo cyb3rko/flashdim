@@ -129,7 +129,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="6dp"
         android:orientation="vertical"
-        android:weightSum="6.2"
+        android:weightSum="6.8"
         app:layout_constraintBottom_toTopOf="@id/device_name"
         app:layout_constraintEnd_toStartOf="@id/seek_bar"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -164,11 +164,23 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.6"
             android:text="@string/button_interval_text"
             app:icon="@android:drawable/stat_notify_sync" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:id="@+id/timer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.6"
+            android:text="@string/button_timer_text"
+            app:icon="@drawable/ic_timer" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/max_button"

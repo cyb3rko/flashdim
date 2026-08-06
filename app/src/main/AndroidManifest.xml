@@ -5,6 +5,11 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
+    <!-- Required by the flashlight timer (TimerService) and its countdown notification -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <!-- This feature is required for a flashlight app -->
     <uses-feature
         android:name="android.hardware.camera.flash"
@@ -53,6 +58,17 @@
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
                 android:value="false" />
+        </service>
+
+        <!-- There is no dedicated foreground service type for the flashlight, so the timer
+             has to declare itself as "special use" (mandatory subtype since Android 14) -->
+        <service
+            android:name=".service.TimerService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Keeps the flashlight on until the user defined timer expires" />
         </service>
 
         <!-- included in buildType "debug", "release" -->

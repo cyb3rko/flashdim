@@ -61,6 +61,8 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        // required for the per buildType "app_name", disabled by default since AGP 9
+        resValues = true
     }
     bundle {
         storeArchive {
@@ -163,12 +165,15 @@ if (project.hasProperty("manual_upload")) {
     android.buildTypes.getByName("release").signingConfig = android.signingConfigs.getByName("upload")
 }
 
-fun getGitVersion(): String {
+// Falls back to "unknown" when building outside of a git checkout (e.g. from a source archive)
+fun getGitVersion(): String = try {
     val branch = providers.exec {
         commandLine("git", "rev-parse", "--abbrev-ref", "HEAD")
     }.standardOutput.asText.get().trim()
     val hash = providers.exec {
         commandLine("git", "rev-parse", "--short=7", "HEAD")
     }.standardOutput.asText.get().trim()
-    return "$branch-$hash"
+    "$branch-$hash"
+} catch (e: Exception) {
+    "unknown"
 }

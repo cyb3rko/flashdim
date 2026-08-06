@@ -16,9 +16,11 @@
 
 package com.cyb3rko.flashdim.activities
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.VibratorManager
@@ -26,7 +28,9 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.cyb3rko.flashdim.AppReviewManager
 import com.cyb3rko.flashdim.BuildConfig
@@ -40,7 +44,9 @@ import com.cyb3rko.flashdim.modals.DeviceSupportDialog
 import com.cyb3rko.flashdim.modals.IntervalDialog
 import com.cyb3rko.flashdim.modals.LinksDialog
 import com.cyb3rko.flashdim.modals.MorseDialog
+import com.cyb3rko.flashdim.modals.TimerDialog
 import com.cyb3rko.flashdim.seekbar.SeekBarChangeListener
+import com.cyb3rko.flashdim.service.TimerService
 import com.cyb3rko.flashdim.utils.DeviceSupportManager
 import com.cyb3rko.flashdim.utils.Safe
 import com.cyb3rko.flashdim.utils.Vibrator
@@ -69,6 +75,24 @@ class MainActivity : AppCompatActivity() {
     private var vibrateButtons = false
     private var vibrateMorse = false
     private var intentFlash = false
+
+    // Kept as a field so that the listener can be identified again in onDestroy
+    private val onTimerFinished: () -> Unit = {
+        // Don't fight with the morse mode over the level indicator, it manages its own text
+        if (!morseActivated && maxLevel > 1) {
+            updateLightLevelView(0)
+            binding.seekBar.setProgress(0)
+            currentLevel = 0
+        }
+        TimerDialog.onTimerFinished()
+    }
+
+    // The timer works without this permission too, its notification just stays hidden
+    private val requestNotificationPermission = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) {
+        openTimerDialog()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -113,6 +137,7 @@ class MainActivity : AppCompatActivity() {
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         if (!Camera.doesDeviceHaveFlash(packageManager)) return
+        TimerService.onFinished = onTimerFinished
         initButtonClickListeners()
         checkDeviceSupport()
         if (!Safe.getBoolean(Safe.FLASH_ACTIVE, false) && !intentFlash) {
@@ -162,6 +187,10 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         IntervalDialog.stop()
+        TimerDialog.stop()
+        // On configuration changes the new instance already registered itself at this point,
+        // so only clear the listener if it still is the one of this instance
+        if (TimerService.onFinished === onTimerFinished) TimerService.onFinished = null
     }
 
     private fun initSeekbar() {
@@ -193,6 +222,7 @@ class MainActivity : AppCompatActivity() {
                 sosButton.disable()
                 morseButton.hide()
                 intervalButton.hide()
+                timerButton.hide()
                 switchMorseMode(true, getString(R.string.light_level_sos))
                 handleMorseCall("SOS")
             }
@@ -207,6 +237,9 @@ class MainActivity : AppCompatActivity() {
                         camera.setTorchMode(false)
                     }
                 }
+            }
+            timerButton.setOnClickListener {
+                showTimerDialog()
             }
             maxButton.setOnClickListener {
                 if (vibrateButtons) Vibrator.vibrateDoubleClick()
@@ -236,6 +269,8 @@ class MainActivity : AppCompatActivity() {
             offButton.setOnClickListener {
                 if (vibrateButtons) Vibrator.vibrateClick()
                 morseActivated = false
+                // Switching the light off manually makes a pending timer pointless
+                TimerService.stop(this@MainActivity)
                 if (isDimAllowed()) {
                     updateLightLevelView(0)
                     currentLevel = 0
@@ -368,14 +403,44 @@ class MainActivity : AppCompatActivity() {
             binding.sosButton.hide()
             binding.morseButton.disable()
             binding.intervalButton.hide()
+            binding.timerButton.hide()
             switchMorseMode(true, getString(R.string.light_level_morse))
             handleMorseCall(message)
+        }
+    }
+
+    private fun showTimerDialog() {
+        val permission = Manifest.permission.POST_NOTIFICATIONS
+        if (ContextCompat.checkSelfPermission(this, permission) ==
+            PackageManager.PERMISSION_GRANTED
+        ) {
+            openTimerDialog()
+        } else {
+            requestNotificationPermission.launch(permission)
+        }
+    }
+
+    private fun openTimerDialog() {
+        // The dialog only handles the countdown, switching the light on stays the job of the
+        // activity because it owns the light level and the matching UI
+        TimerDialog.show(this) {
+            if (maxLevel > 1) {
+                val level = Safe.getInt(Safe.PREFERRED_LEVEL, maxLevel)
+                camera.sendLightLevel(this, currentLevel, level)
+                updateLightLevelView(level)
+                binding.seekBar.setProgress(level)
+                currentLevel = level
+            } else {
+                camera.setTorchMode(true)
+            }
         }
     }
 
     private fun switchMorseMode(activate: Boolean, message: String = "") {
         if (activate) {
             camera.setTorchMode(false)
+            // A running timer would switch the light off in the middle of a message
+            TimerService.stop(this)
             morseActivated = true
             binding.apply {
                 binding.seekBar.setProgress(0)
@@ -395,6 +460,8 @@ class MainActivity : AppCompatActivity() {
                 morseButton.show()
                 intervalButton.enable()
                 intervalButton.show()
+                timerButton.enable()
+                timerButton.show()
                 if (isDimAllowed()) {
                     halfButton.show()
                     minButton.show()

@@ -161,10 +161,19 @@
             android:id="@+id/interval_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
             android:layout_marginTop="10dp"
             android:text="@string/button_interval_text"
             app:icon="@android:drawable/stat_notify_sync" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:id="@+id/timer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/button_timer_text"
+            app:icon="@drawable/ic_timer" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/max_button"
