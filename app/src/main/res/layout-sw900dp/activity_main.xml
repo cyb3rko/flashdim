@@ -167,13 +167,25 @@
             android:id="@+id/interval_button"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginBottom="12dp"
             android:layout_marginTop="20dp"
             android:text="@string/button_interval_text"
             app:icon="@android:drawable/stat_notify_sync"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/morse_button" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:id="@+id/timer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/button_timer_text"
+            app:icon="@drawable/ic_timer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/interval_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/max_button"
@@ -183,7 +195,7 @@
             android:text="@string/button_max_maximum"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/interval_button" />
+            app:layout_constraintTop_toBottomOf="@id/timer_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/half_button"

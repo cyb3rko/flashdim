@@ -42,11 +42,7 @@ internal class Camera(activity: AppCompatActivity) {
         activity: AppCompatActivity,
         cameraManager: CameraManager
     ): String {
-        val firstCameraWithFlash = cameraManager.cameraIdList.find { camera ->
-            cameraManager.getCameraCharacteristics(camera).keys.any { key ->
-                key == CameraCharacteristics.FLASH_INFO_AVAILABLE
-            }
-        }
+        val firstCameraWithFlash = findFlashCameraId(cameraManager)
 
         if (firstCameraWithFlash != null) {
             return firstCameraWithFlash
@@ -75,11 +71,13 @@ internal class Camera(activity: AppCompatActivity) {
         fun doesDeviceHaveFlash(packageManager: PackageManager): Boolean =
             packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
 
+        fun turnOffFlashlight(context: Context) = sendLightLevel(context, -1, false)
+
         fun sendLightLevel(context: Context, level: Int, activate: Boolean) {
             try {
                 val cameraManager = context.getSystemService(Context.CAMERA_SERVICE)
                     as CameraManager
-                val cameraId = cameraManager.cameraIdList[0]
+                val cameraId = findFlashCameraId(cameraManager) ?: return
                 if (activate) {
                     if (level == -1) {
                         cameraManager.setTorchMode(cameraId, true)
@@ -93,5 +91,13 @@ internal class Camera(activity: AppCompatActivity) {
                 handleFlashlightException(e)
             }
         }
+
+        // The first camera of the device isn't necessarily the one carrying the flashlight
+        private fun findFlashCameraId(cameraManager: CameraManager) =
+            cameraManager.cameraIdList.find { camera ->
+                cameraManager.getCameraCharacteristics(camera).keys.any { key ->
+                    key == CameraCharacteristics.FLASH_INFO_AVAILABLE
+                }
+            }
     }
 }
