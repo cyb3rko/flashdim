@@ -1,0 +1,17 @@
+<b>Über</b>
+Ab Android 13 ist es möglich, mehrere Helligkeitsstufen der Taschenlampe zu steuern.<br/>
+Um diese neue Funktion nutzen zu können, habe ich diese App entwickelt.
+
+Der volle Funktionsumfang dieser App ist NUR für Geräte verfügbar, die die Dimmfunktion der Taschenlampe unterstützen (hardwarebedingt).<br/>
+Siehe <a href="https://github.com/cyb3rko/flashdim#supported-devices">Unterstützte Geräte</a> auf GitHub
+
+Wenn Sie der Meinung sind, dass dieses Projekt unterstützenswert ist, können Sie gerne eine kleine Spende geben. ♥️ (<a href="https://github.com/cyb3rko/flashdim#donate">Spenden</a>).
+
+Treten Sie dem FlashDim Matrix-Chatraum bei, um mit der Community über die App zu sprechen oder mir (dem Entwickler) Fragen zu stellen:<br/>
+<a href="https://matrix.to/#/#flashdim:matrix.org">https://matrix.to/#/#flashdim:matrix.org</a>
+
+<b>Funktionen</b>
+<ul><li>🔦 Dimmen Sie Ihre Taschenlampe Stufe für Stufe</li><li>🎚 Schnellzugriffstasten für verschiedene Helligkeitsstufen</li><li>🆘 SOS-Blitztaste</li><li>📫 Morsezeichen-Blitzmodus</li><li>⏲️ Intervall-/BPM-Modus</li><li>⚡ Schnellzugriffskachel für schnellen Zugriff</li><li>🔊 Beide Lautstärketasten drücken, um die Taschenlampe einfach ein- und auszuschalten.</li><li>🔒 Privat, keine Werbung, keine Internetverbindung</li><li>💯 Moderne Material You (M3) Designelemente</li><li>🎨 Die App-Farben passen sich den Systemfarben des Geräts an.</li></ul>
+
+<b>Verwendete Symbole</b>
+<ul><li><a href="https://pictogrammers.com/library/mdi/icon/information-slab-circle-outline">information-slab-circle-outline erstellt von Jeff Anders - Pictogrammers</a></li><li><a href="https://pictogrammers.com/library/mdi/icon/vibrate">vibrate erstellt von Google - Pictogrammers</a></li><li><a href="https://pictogrammers.com/library/mdi/icon/rocket-launch-outline">rocket-launch-outline erstellt von Michael Irigoyen - Pictogrammers</a></li></ul>
