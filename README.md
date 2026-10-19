@@ -1987,11 +1987,11 @@ Find the links here or in the section 'Sponsor this project' of this repo:
 
 ## Star History
 
-<a href="https://repostars.dev/?repos=cyb3rko%2Fflashdim&theme=noir">
+<a href="https://app.repohistory.com/star-history">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://repostars.dev/api/embed?repo=cyb3rko%2Fflashdim&theme=noir" />
-    <source media="(prefers-color-scheme: light)" srcset="https://repostars.dev/api/embed?repo=cyb3rko%2Fflashdim&theme=light" />
-    <img alt="Star History Chart" src="https://repostars.dev/api/embed?repo=cyb3rko%2Fflashdim&theme=light" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://app.repohistory.com/api/svg?repo=cyb3rko/flashdim&type=Date&background=0D1117&color=62C3F8" />
+    <source media="(prefers-color-scheme: light)" srcset="https://app.repohistory.com/api/svg?repo=cyb3rko/flashdim&type=Date&background=FFFFFF&color=6278f8" />
+    <img alt="Star History Chart" src="https://app.repohistory.com/api/svg?repo=cyb3rko/flashdim&type=Date&background=0D1117&color=62C3F8" />
   </picture>
 </a>
 
